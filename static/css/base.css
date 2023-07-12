@@ -1,0 +1,27 @@
+html {
+    height: 100%;
+}
+
+body {
+    background: url('') no-repeat center center fixed;
+    background-size: cover;
+    height: calc(120vh - 184px);
+    color: #555;
+    font-family: 'Lato';
+}
+
+.icon {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+.shop-now-button {
+    background: black;
+    color: white;
+    min-width: 260px;
+}
+
+
