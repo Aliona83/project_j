@@ -1,0 +1,74 @@
+[
+    {
+        "pk": 1,
+        "model": "jewelleries.category",
+        "fields": {
+            "name": "diamond_rings",
+            "friendly_name": "Diamond rings"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "jewelleries.category",
+        "fields": {
+            "name": "diamond_earrings",
+            "friendly_name": "Diamond earrings"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "jewelleries.category",
+        "fields": {
+            "name": "diamond_necklaces",
+            "friendly_name": "Diamond necklaces"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "jewelleries.category",
+        "fields": {
+            "name": "jewellery_of_silver",
+            "friendly_name": "Jewellery of silver"
+        }
+    },
+    {
+        "pk": 5,
+        "model": "jewelleries.category",
+        "fields": {
+            "name": "jewellery_of_gold",
+            "friendly_name": "Jewellery of gold"
+        }
+    },
+    {
+        "pk": 6,
+        "model": "jewelleries.category",
+        "fields": {
+            "name": "new_arrivals",
+            "friendly_name": "New Arrivals"
+        }
+    },
+    {
+        "pk": 7,
+        "model": "jewelleries.category",
+        "fields": {
+            "name": "deals",
+            "friendly_name": "Deals"
+        }
+    },
+    {
+        "pk": 8,
+        "model": "jewelleries.category",
+        "fields": {
+            "name": "clearance",
+            "friendly_name": "Clearance"
+        }
+    },
+    {
+        "pk": 9,
+        "model": "jewelleries.category",
+        "fields": {
+            "name": "jewellery_pearl",
+            "friendly_name": "Jewellery pearl"
+        }
+    }
+]
