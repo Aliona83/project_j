@@ -3,7 +3,11 @@ html {
 }
 
 body {
-  
+    background: url('/media/new1\ \(2\).png') no-repeat center center fixed;
+    background-size: cover;
+    height: calc(120vh - 164px);
+    color: #555;
+    font-family: 'Lato';
   
 }
 
@@ -21,7 +25,9 @@ body {
     min-width: 260px;
 }
 
-
+.footer {
+  padding 15px
+}
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
