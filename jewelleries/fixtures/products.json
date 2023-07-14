@@ -1,7 +1,7 @@
 [
    {
       "pk":1,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5001340155",
          "name":"Arizona Original Bootcut Jeans",
@@ -9,13 +9,12 @@
          "price":53.99,
          "category":6,
          "rating":4.6,
-         "image_url":"http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
-         "image":"DP0709201205510679M.jpg"
+         "image":"pexels-the-glorious-studio-6993816.jpg"
       }
    },
    {
       "pk":2,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5001600425",
          "name":"Liz Claiborne Audra Classic Fit Straight Leg Pants",
@@ -29,7 +28,7 @@
    },
    {
       "pk":3,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5001730010",
          "name":"Royal Velvet Matte Satin Square 3-pc. Coverlet Set",
@@ -43,7 +42,7 @@
    },
    {
       "pk":4,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5001890157",
          "name":"Gibson Infinite Glaze 16-pc. Dinnerware Set",
@@ -57,7 +56,7 @@
    },
    {
       "pk":5,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5002111605",
          "name":"Simply Calphalon Enameled Cast Iron Panini Pan",
@@ -71,7 +70,7 @@
    },
    {
       "pk":6,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5002260206",
          "name":"The Foundry Supply Co. Solid Pocket TeeBig & Tall",
@@ -85,7 +84,7 @@
    },
    {
       "pk":7,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5002440521",
          "name":"Liz Claiborne Classic Sophie Secretly Slender Trouser Leg Pants - Plus",
@@ -99,7 +98,7 @@
    },
    {
       "pk":8,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5002601115",
          "name":"Rachael Ray Ceramic Olive Oil Dispenser",
@@ -113,7 +112,7 @@
    },
    {
       "pk":9,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5002690715",
          "name":"Protech Performance Sheet Set",
@@ -127,7 +126,7 @@
    },
    {
       "pk":10,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5002701115",
          "name":"Reflections Set of 4 Microfiber Napkins",
@@ -141,7 +140,7 @@
    },
    {
       "pk":11,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5002761055",
          "name":"Chef Designs Black-Trimmed Cook ShirtBig & Tall",
@@ -155,7 +154,7 @@
    },
    {
       "pk":12,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5002820069",
          "name":"Nike 3-pk. Performance Crew Socks - Boys",
@@ -169,7 +168,7 @@
    },
    {
       "pk":13,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5002820147",
          "name":"Champion Jersey Tee",
@@ -183,7 +182,7 @@
    },
    {
       "pk":14,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5002910572",
          "name":"Stafford 4-pk. Blended Cotton A-Shirts",
@@ -197,7 +196,7 @@
    },
    {
       "pk":15,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5002990740",
          "name":"Stafford 4-pk. Heavyweight Crewneck T-ShirtsBig & Tall",
@@ -211,7 +210,7 @@
    },
    {
       "pk":16,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5003050248",
          "name":"Levi's 529 Curvy Bootcut Jeans",
@@ -225,7 +224,7 @@
    },
    {
       "pk":17,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5003070787",
          "name":"Worthington Essential Short-Sleeve Tee - Plus",
@@ -239,7 +238,7 @@
    },
    {
       "pk":18,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5003090182",
          "name":"Marvel Comics Avengers Hulk Pillow Buddy",
@@ -253,7 +252,7 @@
    },
    {
       "pk":19,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5003090186",
          "name":"Marvel Spiderman Pillow Buddy",
@@ -267,7 +266,7 @@
    },
    {
       "pk":20,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5003161326",
          "name":"JCPenney Home Oven Mitt",
@@ -281,7 +280,7 @@
    },
    {
       "pk":21,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5003230723",
          "name":"Farberware Sonoma 2-qt. Whistling Tea Kettle",
@@ -295,7 +294,7 @@
    },
    {
       "pk":22,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5003270936",
          "name":"Silver Superman Shield Cufflinks",
@@ -309,7 +308,7 @@
    },
    {
       "pk":23,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5003360384",
          "name":"Dickies Heavyweight Long-Sleeve Pocket Tee",
@@ -323,7 +322,7 @@
    },
    {
       "pk":24,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5003440111",
          "name":"Royal Velvet Down Chamber Pillow",
@@ -337,7 +336,7 @@
    },
    {
       "pk":25,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5003540313",
          "name":"Dickies Heavyweight Fleece Full Zip HoodieBig & Tall",
@@ -351,7 +350,7 @@
    },
    {
       "pk":26,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5003560513",
          "name":"JCPenney Home Ashley Scalloped Stoneware 50-pc. Dinnerware Set - Service for 8",
@@ -365,7 +364,7 @@
    },
    {
       "pk":27,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5003560948",
          "name":"Rachael Ray Porcelain II 10-pc. Cookware Set",
@@ -379,7 +378,7 @@
    },
    {
       "pk":28,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5003570628",
          "name":"Hanes 3pk. Cotton Crewneck TShirts  Big & Tall",
@@ -393,7 +392,7 @@
    },
    {
       "pk":29,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5003620308",
          "name":"Chenille Lines Bath Rug Collection",
@@ -407,7 +406,7 @@
    },
    {
       "pk":30,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5003690115",
          "name":"Home Expressions Jacobean Stripe Oblong Decorative Pillow",
@@ -421,7 +420,7 @@
    },
    {
       "pk":31,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5003690116",
          "name":"Armitron Now Womens Crystal-Accent White Leather Strap Watch",
@@ -435,7 +434,7 @@
    },
    {
       "pk":32,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5003780391",
          "name":"Nike NA Swoosh Dri-FIT Cotton Tee",
@@ -449,7 +448,7 @@
    },
    {
       "pk":33,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5003790542",
          "name":"Liz Claiborne 300tc Liquid Cotton Set of 2 Pillowcases",
@@ -463,7 +462,7 @@
    },
    {
       "pk":34,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5003831225",
          "name":"Stafford Year-Round Pleated PantsBig & Tall",
@@ -477,7 +476,7 @@
    },
    {
       "pk":35,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5003861402",
          "name":"Arizona Super-Skinny Jeans",
@@ -491,7 +490,7 @@
    },
    {
       "pk":36,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5003910638",
          "name":"Nike 3-pk. Dri-FIT Fly Rise Crew Socks",
@@ -505,7 +504,7 @@
    },
    {
       "pk":37,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5003950574",
          "name":"Royal Velvet Egyptian Cotton Solid Bath Towels",
@@ -519,7 +518,7 @@
    },
    {
       "pk":38,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5003950576",
          "name":"Levinsohn Master Block All-In-One Mattress Protector",
@@ -533,7 +532,7 @@
    },
    {
       "pk":39,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5003960062",
          "name":"Home Expressions Microfiber Twin XL Sheet Set",
@@ -547,7 +546,7 @@
    },
    {
       "pk":40,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5003960682",
          "name":"Cake Boss Powdered Sugar Shaker with Lid",
@@ -561,7 +560,7 @@
    },
    {
       "pk":41,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5003960775",
          "name":"Cake Boss Set of 2 Silicone Baking Mats",
@@ -575,7 +574,7 @@
    },
    {
       "pk":42,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5003990736",
          "name":"Corelle Livingware 16-pc. Dinnerware Set",
@@ -589,7 +588,7 @@
    },
    {
       "pk":43,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5003990746",
          "name":"Cuisinart Round Classic Waffle Maker",
@@ -603,7 +602,7 @@
    },
    {
       "pk":44,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5004111503",
          "name":"The Foundry Supply Co. Quick-Dri PoloBig & Tall",
@@ -617,7 +616,7 @@
    },
    {
       "pk":45,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5004230059",
          "name":"JCPenney Home Ultra Soft Micro Fleece Blanket",
@@ -631,7 +630,7 @@
    },
    {
       "pk":46,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5004310089",
          "name":"Cottonloft Natural Cotton Blanket",
@@ -645,7 +644,7 @@
    },
    {
       "pk":47,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5004610254",
          "name":"Konitz Dots and Stripes Set of 2 Bone China Mugs",
@@ -659,7 +658,7 @@
    },
    {
       "pk":48,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5004650050",
          "name":"Jacques Mort 2-pk. Short-Sleeve Leotard - Girls",
@@ -673,7 +672,7 @@
    },
    {
       "pk":49,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5004821375",
          "name":"Disney Cars McQueen Pillow Buddy",
@@ -687,7 +686,7 @@
    },
    {
       "pk":50,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5004900522",
          "name":"Dockers Long-Sleeve No-Wrinkle Woven Shirt",
@@ -701,7 +700,7 @@
    },
    {
       "pk":51,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5004910158",
          "name":"Stylus Short-Sleeve V-Neck Slub Tee - Plus",
@@ -715,7 +714,7 @@
    },
    {
       "pk":52,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5004910477",
          "name":"Philips Airfryer Grill Pan",
@@ -729,7 +728,7 @@
    },
    {
       "pk":53,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5004940703",
          "name":"Claiborne Short-Sleeve Woven Shirt",
@@ -743,7 +742,7 @@
    },
    {
       "pk":54,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5004991006",
          "name":"adidas Adilogo Shock Energy Tee",
@@ -757,7 +756,7 @@
    },
    {
       "pk":55,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5004991162",
          "name":"adidas climacool Boxer Briefs",
@@ -771,7 +770,7 @@
    },
    {
       "pk":56,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5005000046",
          "name":"Stylus Slim Straight-Leg Jeans - Plus",
@@ -785,7 +784,7 @@
    },
    {
       "pk":57,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5005070254",
          "name":"Worthington Sateen Cropped Pants - Petite",
@@ -799,7 +798,7 @@
    },
    {
       "pk":58,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5005071145",
          "name":"Madison Park Essentials Concord Reversible Complete Bedding Set with Sheets",
@@ -813,7 +812,7 @@
    },
    {
       "pk":59,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5005140282",
          "name":"Keurig K250 2.0 Compact Brewer",
@@ -827,7 +826,7 @@
    },
    {
       "pk":60,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5005200166",
          "name":"Wrangler Reserve Authentic Relaxed-Fit Jeans-Big & Tall",
@@ -841,7 +840,7 @@
    },
    {
       "pk":61,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5005210241",
          "name":"Eva Longoria Home Solana 4-pc. Comforter Set",
@@ -855,7 +854,7 @@
    },
    {
       "pk":62,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5005280104",
          "name":"Carter's 4-pc. Take Me Home Set - Baby Boys preemie-6m",
@@ -869,7 +868,7 @@
    },
    {
       "pk":63,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5005310360",
          "name":"Pfaltzgraff Everyday Sandy Shore 16-pc. Dinnerware Set",
@@ -883,7 +882,7 @@
    },
    {
       "pk":64,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5005330595",
          "name":"Arizona Graphic Tee - Boys 8-20 and Husky",
@@ -897,7 +896,7 @@
    },
    {
       "pk":65,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5005330596",
          "name":"Armitron Now Womens Crystal-Accent White Leather Strap Watch",
@@ -911,7 +910,7 @@
    },
    {
       "pk":66,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5005430914",
          "name":"Nike Air Sickness Graphic Tee",
@@ -925,7 +924,7 @@
    },
    {
       "pk":67,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5005430944",
          "name":"Claiborne Long-Sleeve Linen Shirt",
@@ -939,7 +938,7 @@
    },
    {
       "pk":68,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5005510265",
          "name":"Arizona Bootcut Jeans",
@@ -953,7 +952,7 @@
    },
    {
       "pk":69,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5005520201",
          "name":"Home Expressions Microfiber Twin XL Sheet Set",
@@ -967,7 +966,7 @@
    },
    {
       "pk":70,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5005520205",
          "name":"Isotonic Iso-Cool Memory Foam Contour Pillow",
@@ -981,7 +980,7 @@
    },
    {
       "pk":71,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5005630545",
          "name":"totes Tracey Womens Cold-Weather Boots",
@@ -995,7 +994,7 @@
    },
    {
       "pk":72,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5005630605",
          "name":"Love Indigo Wing Back Flap Pocket Jeans",
@@ -1009,7 +1008,7 @@
    },
    {
       "pk":73,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5005630637",
          "name":"Love Indigo Embroidered Back Pocket Jeans",
@@ -1023,7 +1022,7 @@
    },
    {
       "pk":74,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5005630638",
          "name":"Love Indigo Cross Back Flap Pocket Jeans",
@@ -1037,7 +1036,7 @@
    },
    {
       "pk":75,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5005650677",
          "name":"Arizona Ankle-Zip Jeggings",
@@ -1051,7 +1050,7 @@
    },
    {
       "pk":76,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5005700140",
          "name":"Vanilla Star Embellished Skinny Jeans - Girls 7-16 and Plus",
@@ -1065,7 +1064,7 @@
    },
    {
       "pk":77,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5005740430",
          "name":"Worthington 3/4-Sleeve Button-Front Oxford Shirt - Petite",
@@ -1079,7 +1078,7 @@
    },
    {
       "pk":78,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5005740561",
          "name":"a.n.a Skinny Jeans",
@@ -1093,7 +1092,7 @@
    },
    {
       "pk":79,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5005740634",
          "name":"a.n.a Bootcut Jeans",
@@ -1107,7 +1106,7 @@
    },
    {
       "pk":80,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5005760088",
          "name":"Levi's Houlihan Short-Sleeve Logo Tee",
@@ -1121,7 +1120,7 @@
    },
    {
       "pk":81,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5005810108",
          "name":"a.n.a Jeggings - Plus",
@@ -1135,7 +1134,7 @@
    },
    {
       "pk":82,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5005820197",
          "name":"Nike Therma-FIT Pullover Hoodie - Boys 8-20",
@@ -1149,7 +1148,7 @@
    },
    {
       "pk":83,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5005840598",
          "name":"Disney Collection Frozen Elsa Graphic Tee - Girls 2-12",
@@ -1163,7 +1162,7 @@
    },
    {
       "pk":84,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5005840776",
          "name":"Dickies Short-Sleeve Performance Polo",
@@ -1177,7 +1176,7 @@
    },
    {
       "pk":85,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5005850180",
          "name":"Sunbeam Comfy Toes Microplush Heated Throw",
@@ -1191,7 +1190,7 @@
    },
    {
       "pk":86,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5005851218",
          "name":"Madison Park Lavinia 6-pc. Quilted Coverlet Set",
@@ -1205,7 +1204,7 @@
    },
    {
       "pk":87,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5005860175",
          "name":"Xersion Quick-Dri Performance Bootcut Pant - Short",
@@ -1219,7 +1218,7 @@
    },
    {
       "pk":88,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5005860263",
          "name":"Lugz Empire Hi Mens Water-Resistant Hiking Boots",
@@ -1233,7 +1232,7 @@
    },
    {
       "pk":89,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5005870183",
          "name":"Made For Life Mesh Jacket - Plus",
@@ -1247,7 +1246,7 @@
    },
    {
       "pk":90,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5005870599",
          "name":"Stafford Travel Brown Check Suit Jacket - Classic Fit",
@@ -1261,7 +1260,7 @@
    },
    {
       "pk":91,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5005870638",
          "name":"Arizona Raglan-Sleeve Thermal Pullover",
@@ -1275,7 +1274,7 @@
    },
    {
       "pk":92,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5005910565",
          "name":"Made For Life Long-Sleeve Flyaway Cardigan",
@@ -1289,7 +1288,7 @@
    },
    {
       "pk":93,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5005930313",
          "name":"Stafford Flannel Pajama Set - Big & Tall",
@@ -1303,7 +1302,7 @@
    },
    {
       "pk":94,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5005940242",
          "name":"Arizona Flannel Shirt - Preschool Boys 4-7",
@@ -1317,7 +1316,7 @@
    },
    {
       "pk":95,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5005940299",
          "name":"Vieste Green Stone Statement Necklace",
@@ -1331,7 +1330,7 @@
    },
    {
       "pk":96,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5005941612",
          "name":"Bonnie Jean Plaid Dress and Cardigan - Girls Plus",
@@ -1345,7 +1344,7 @@
    },
    {
       "pk":97,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5005980058",
          "name":"Arizona Quilted Sweatshirt - Toddler Girls 2t-5t",
@@ -1359,7 +1358,7 @@
    },
    {
       "pk":98,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5005980146",
          "name":"Arlee Jada Plaid Set of 4 Placemats",
@@ -1373,7 +1372,7 @@
    },
    {
       "pk":99,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5006070077",
          "name":"St. John's Bay Short-Sleeve Polo Shirt - Plus",
@@ -1387,7 +1386,7 @@
    },
    {
       "pk":100,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5006081758",
          "name":"Stylus Crossover Ankle Pants",
@@ -1401,7 +1400,7 @@
    },
    {
       "pk":101,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5006082011",
          "name":"Stafford Non-Iron Cotton Oxford Dress Shirt - Big & Tall",
@@ -1415,7 +1414,7 @@
    },
    {
       "pk":102,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5006150186",
          "name":"a.n.a Long-Sleeve Colorblock Sweater",
@@ -1429,7 +1428,7 @@
    },
    {
       "pk":103,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5006153172",
          "name":"Stafford Travel Short-Sleeve Easy-Care Broadcloth Dress Shirt - Big & Tall",
@@ -1443,7 +1442,7 @@
    },
    {
       "pk":104,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5006160127",
          "name":"Gloria Vanderbilt Amanda Jeans - Plus",
@@ -1457,7 +1456,7 @@
    },
    {
       "pk":105,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5006160833",
          "name":"Made For Life Polar Fleece Vest",
@@ -1471,7 +1470,7 @@
    },
    {
       "pk":106,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5006170128",
          "name":"Frank and Lulu Holland Park Comforter Set",
@@ -1485,7 +1484,7 @@
    },
    {
       "pk":107,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5006170131",
          "name":"Frank and Lulu Layne Sheet Set",
@@ -1499,7 +1498,7 @@
    },
    {
       "pk":108,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5006170357",
          "name":"Jamaica Bay Printed Micro Volley Swim Trunks",
@@ -1513,7 +1512,7 @@
    },
    {
       "pk":109,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5006200155",
          "name":"Arizona Raglan Henley Tee - Boys 8-20",
@@ -1527,7 +1526,7 @@
    },
    {
       "pk":110,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5006200658",
          "name":"Brooklyn Xpress Fleece Jogger Pants",
@@ -1541,7 +1540,7 @@
    },
    {
       "pk":111,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5006241766",
          "name":"Bob Marely 1976 T-Shirt",
@@ -1555,7 +1554,7 @@
    },
    {
       "pk":112,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5006242155",
          "name":"Diamond 24-pc. Bath Towel Set",
@@ -1569,7 +1568,7 @@
    },
    {
       "pk":113,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5006242904",
          "name":"Arizona Raglan T-Shirt",
@@ -1583,7 +1582,7 @@
    },
    {
       "pk":114,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5006242905",
          "name":"Arizona Pocket T-Shirt",
@@ -1597,7 +1596,7 @@
    },
    {
       "pk":115,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5006243106",
          "name":"Liz Claiborne City-Fit Skinny Jeans - Plus",
@@ -1611,7 +1610,7 @@
    },
    {
       "pk":116,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5006243276",
          "name":"Nike Dri-FIT Base Layer Tights",
@@ -1625,7 +1624,7 @@
    },
    {
       "pk":117,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5006280064",
          "name":"Clarks Lexi Alloy Slide Strap Sandals",
@@ -1639,7 +1638,7 @@
    },
    {
       "pk":118,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5006280190",
          "name":"Liz Claiborne Long-Sleeve V-Neck Striped Tunic",
@@ -1653,7 +1652,7 @@
    },
    {
       "pk":119,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5006291997",
          "name":"Xersion Colorblock Yoga Shorts - Girls 7-16 and Plus",
@@ -1667,7 +1666,7 @@
    },
    {
       "pk":120,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5006310072",
          "name":"Vans Zone Bluts Short-Sleeve T-Shirt",
@@ -1681,7 +1680,7 @@
    },
    {
       "pk":121,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5006310446",
          "name":"Xersion Short-Sleeve V-Neck Graphic Tee - Girls 7-16 and Plus",
@@ -1695,7 +1694,7 @@
    },
    {
       "pk":122,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5006310918",
          "name":"St. John's Bay Short-Sleeve V-Neck T-Shirt",
@@ -1709,7 +1708,7 @@
    },
    {
       "pk":123,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5006310935",
          "name":"Alfred Dunner Denim Capris",
@@ -1723,7 +1722,7 @@
    },
    {
       "pk":124,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5006311067",
          "name":"Worthington Short-Sleeve Scoopneck T-Shirt - Tall",
@@ -1737,7 +1736,7 @@
    },
    {
       "pk":125,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5006330197",
          "name":"Stylus Flare Jeans",
@@ -1751,7 +1750,7 @@
    },
    {
       "pk":126,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5006330208",
          "name":"Marmellata Sleeveless Dotted Dress - Preschool Girls 4-6x",
@@ -1765,7 +1764,7 @@
    },
    {
       "pk":127,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5006333711",
          "name":"Levi's 527 Bootcut Jeans - Boys 8-20, Slim and Husky",
@@ -1779,7 +1778,7 @@
    },
    {
       "pk":128,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5006340653",
          "name":"Mixit Whitney Leggings - Tall",
@@ -1793,7 +1792,7 @@
    },
    {
       "pk":129,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5006370013",
          "name":"Mixit Side Flower Jelly Strap Sandals",
@@ -1807,7 +1806,7 @@
    },
    {
       "pk":130,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5006380233",
          "name":"Arizona Racerback Tank - Juniors Plus",
@@ -1821,7 +1820,7 @@
    },
    {
       "pk":131,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5006380260",
          "name":"St. John's Bay Long-Sleeve Camp Shirt",
@@ -1835,7 +1834,7 @@
    },
    {
       "pk":132,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5006380337",
          "name":"Alfred Dunner Essential Pull On Capri Pant",
@@ -1849,7 +1848,7 @@
    },
    {
       "pk":133,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5006380693",
          "name":"Worthington Tipped Envelope Skirt - Tall",
@@ -1863,7 +1862,7 @@
    },
    {
       "pk":134,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5006390235",
          "name":"Stylus Destructed Roll-Cuff Boyfriend Crop Jeans",
@@ -1877,7 +1876,7 @@
    },
    {
       "pk":135,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5006420202",
          "name":"a.n.a Roll-Cuff Skinny Ankle Jeans",
@@ -1891,7 +1890,7 @@
    },
    {
       "pk":136,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5006420400",
          "name":"Bounce Comfort Plush Memory Foam Chenille Bath Mats",
@@ -1905,7 +1904,7 @@
    },
    {
       "pk":137,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5006430031",
          "name":"Disney Minnie Mouse Girls Athletic Shoes - Toddler",
@@ -1919,7 +1918,7 @@
    },
    {
       "pk":138,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5006462180",
          "name":"Worthington 3/4-Sleeve Open-Front Cardigan Sweater",
@@ -1933,7 +1932,7 @@
    },
    {
       "pk":139,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5006470681",
          "name":"Champion Vapor Muscle Tank - Plus",
@@ -1947,7 +1946,7 @@
    },
    {
       "pk":142,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5006511030",
          "name":"Xersion Mesh-Back Tank Top - Plus",
@@ -1961,7 +1960,7 @@
    },
    {
       "pk":143,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5006541122",
          "name":"Arizona Cropped Jeans with Belt - Girls 7-16 and Plus",
@@ -1975,7 +1974,7 @@
    },
    {
       "pk":144,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5006590111",
          "name":"Liz Claiborne City-Fit 5-Pocket Flared Cropped Jeans - Tall",
@@ -1989,7 +1988,7 @@
    },
    {
       "pk":145,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5006590213",
          "name":"Presto Pizzazz Plus Rotating Oven",
@@ -2003,7 +2002,7 @@
    },
    {
       "pk":146,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5006590221",
          "name":"Rachael Ray 10-pc. Hard-Anodized Cookware Set",
@@ -2017,7 +2016,7 @@
    },
    {
       "pk":147,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5006620412",
          "name":"Island Shores Short-Sleeve Printed Camp Shirt",
@@ -2031,7 +2030,7 @@
    },
    {
       "pk":148,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5006640930",
          "name":"Black+Decker Stainless Steel Rapid 2-Slice Toaster",
@@ -2045,7 +2044,7 @@
    },
    {
       "pk":149,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5006660007",
          "name":"Stylus Linen Crop Pants",
@@ -2059,7 +2058,7 @@
    },
    {
       "pk":150,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5006750455",
          "name":"Carter's Short-Sleeve Shark Tee - Preschool Boys 4-7",
@@ -2073,7 +2072,7 @@
    },
    {
       "pk":151,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5006790372",
          "name":"Made for Life Secretly Slender Capri Leggings - Plus",
@@ -2087,7 +2086,7 @@
    },
    {
       "pk":152,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5006790745",
          "name":"Arizona Raw-Edge Denim Bermuda Shorts - Juniors Plus",
@@ -2101,7 +2100,7 @@
    },
    {
       "pk":153,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5006820170",
          "name":"Made For Life Short-Sleeve Print V-Neck Mesh T-Shirt - Tall",
@@ -2115,7 +2114,7 @@
    },
    {
       "pk":154,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5006820210",
          "name":"Dockers Signature Classic-Fit Flat-Front Pants",
@@ -2129,7 +2128,7 @@
    },
    {
       "pk":155,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5006820299",
          "name":"Stylus Long-Sleeve Back-Pleat Oversized Shirt- Petite",
@@ -2143,7 +2142,7 @@
    },
    {
       "pk":156,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5006820399",
          "name":"Graham & Co. Dress Shirt, Tie and Pre-Tied Bow Tie",
@@ -2157,7 +2156,7 @@
    },
    {
       "pk":157,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5006870003",
          "name":"Arizona Flex Skinny Jeans",
@@ -2171,7 +2170,7 @@
    },
    {
       "pk":158,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5006950238",
          "name":"Worthington Embroidered Tank Top - Tall",
@@ -2185,7 +2184,7 @@
    },
    {
       "pk":159,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5006960828",
          "name":"Made for Life Mesh Shorts - Tall",
@@ -2199,7 +2198,7 @@
    },
    {
       "pk":160,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5006990785",
          "name":"Worthington Slim-Fit Cropped Pants",
@@ -2213,7 +2212,7 @@
    },
    {
       "pk":161,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5007071033",
          "name":"Arizona Poplin Cargo Shorts - Boys 8-20",
@@ -2227,7 +2226,7 @@
    },
    {
       "pk":162,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5007090227",
          "name":"a.n.a Sleeveless Cinched Waist Knit Jumpsuit",
@@ -2241,7 +2240,7 @@
    },
    {
       "pk":163,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5007160030",
          "name":"i jeans by Buffalo Lace Midi Skirt",
@@ -2255,7 +2254,7 @@
    },
    {
       "pk":164,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5007170155",
          "name":"Liz Claiborne Roll-Cuff Cargo Shorts",
@@ -2269,7 +2268,7 @@
    },
    {
       "pk":165,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5007170182",
          "name":"Worthington Mixed Media Open Back Blouse - Plus",
@@ -2283,7 +2282,7 @@
    },
    {
       "pk":166,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5007210063",
          "name":"Steve Harvey Linen Blend Vest - Big & Tall",
@@ -2297,7 +2296,7 @@
    },
    {
       "pk":167,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5007210967",
          "name":"Studio 1 Sleeveless Embellished-Neck Handkerchief Dress - Plus",
@@ -2311,7 +2310,7 @@
    },
    {
       "pk":168,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5007220049",
          "name":"Danny & Nicole Sleeveless Printed Fit-and-Flare Dress - Plus",
@@ -2325,7 +2324,7 @@
    },
    {
       "pk":169,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5007250126",
          "name":"MaryJane's Home Cotton Clouds Square Decorative Pillow",
@@ -2339,7 +2338,7 @@
    },
    {
       "pk":170,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5007280253",
          "name":"City Triangles Sleeveless Lace Top Printed Short Belted Romper",
@@ -2353,7 +2352,7 @@
    },
    {
       "pk":171,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5007300026",
          "name":"by&by Spaghetti Strap Crochet Inset Waist Dress",
@@ -2367,7 +2366,7 @@
    },
    {
       "pk":172,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5007310136",
          "name":"Stylus Flare Jeans",
@@ -2381,7 +2380,7 @@
    },
    {
       "pk":173,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5007310220",
          "name":"Alyx Printed Maxi Skirt",
@@ -2395,7 +2394,7 @@
    },
    {
       "pk":174,
-      "model":"products.product",
+      "model":"jewelleries.jewellery",
       "fields":{
          "sku":"pp5007320233",
          "name":"St. John's Bay Ikat Sharkbite Tank Top",
