@@ -12,7 +12,7 @@
         "model": "jewelleries.category",
         "fields": {
             "name": "diamond_earrings",
-            "friendly_name": "Diamond earrings"
+            "friendly_name": "Diamond Earrings"
         }
     },
     {
@@ -20,7 +20,7 @@
         "model": "jewelleries.category",
         "fields": {
             "name": "diamond_necklaces",
-            "friendly_name": "Diamond necklaces"
+            "friendly_name": "Diamond Necklaces"
         }
     },
     {
@@ -68,7 +68,7 @@
         "model": "jewelleries.category",
         "fields": {
             "name": "jewellery_pearl",
-            "friendly_name": "Jewellery pearl"
+            "friendly_name": "Jewellery Pearl"
         }
     }
 ]
