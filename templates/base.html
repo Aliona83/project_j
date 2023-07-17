@@ -34,7 +34,7 @@
     {% block extra_js %}
     {% endblock %}
     
-        <title>Jewelry Shop</title>{% block extra_title %}{% endblock %}</title>
+        <title>Jewellery Shop</title>{% block extra_title %}{% endblock %}</title>
 </head>
    <body>
     <header class="container-fluid fixed-top">
@@ -91,6 +91,7 @@
                                         $0.00
                                     {% endif %}
                                 </p>
+
                             </div>
                         </a>
                     </li>
@@ -105,6 +106,13 @@
                 {% include 'includes/mobile-top-header.html' %}
                 {% include 'includes/main-nav.html' %}
             </nav>
+        </div>
+        <div id="discount-banner">
+            <div class="row">
+                <div class="col bg-dark text-white">
+                    <h4 class="text-center">Spending more then 1000 € you will get 100 Off €!</h4>                
+                </div>            
+            </div>
         </div>
     </header>
         

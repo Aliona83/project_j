@@ -18,11 +18,31 @@ body {
     height: 1.5rem;
     width: 1.5rem;
 }
+.text-black {
+    color: #000 !important;
+}
+.border-black {
+    border: 1px solid black !important;
+}
+
+.bg-black {
+    background: #000 !important;
+}
 
 .shop-now-button {
     background: black;
     color: white;
     min-width: 260px;
+}
+
+.overlay {
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	position: fixed;
+	background: white;
+	z-index: -1;
 }
 
 .footer {
@@ -46,7 +66,10 @@ body {
           left: 0;
           z-index: 1030;
       }
-  
+  .jewellery-card {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
       .header-container {
           padding-top: 164px;
       }
