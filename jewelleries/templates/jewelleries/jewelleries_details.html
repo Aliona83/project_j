@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+<div class="overlay"></div>
+<div class="container-fluid">
+    <div clas="row">
+        <div class="col-12 col-md-8 col-lg-8 offset-md-2">
+            <div class="image-container my-5">
+                {% if jewellery.image %}
+                        <a href="{{ jewellery.image.url }}" target="_blank">
+                            <img class="card-img-top img-fluid" src="{{ jewellery.image.url }}" alt="{{ jewellery.name }}">
+                        </a>
+                        {% else %}
+                        <a href="">
+                            <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ jewellery.name }}">
+                        </a>
+                    {% endif %}
+            </div>
+        </div>
+        <div class="col-12 col-md-7 col-lg-4">
+            <div class="jewellery-details-container mb-5 mt-md-5 text-right">
+                <p class="mb=0">{{ jewellery.name }}</p>
+                <p class="lead mb=0 text-right font-weight-bold">${{jewellery.price }}</p>
+                {% if jewellery.rating %}
+                        <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ jewellery.rating }} / 5</small>
+                    {% else %}
+                        <small class="text-muted">No Rating</small>
+                    {% endif %}
+                    <p class="mt-3">{{ jewellery.description }}</p>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+{% endblock %}

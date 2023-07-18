@@ -10,8 +10,8 @@
 {% endblock %}
 
 {% block content %}
-<div class="overlay"></div>
-<div class="container-fluid">
+ <div class="overlay"></div>
+ <div class="container-fluid">
     <div class="row">
         <div class="col text-center mt-3">
             <h2 class="logo-font">Products</h2>
@@ -19,14 +19,22 @@
         </div>
     </div>
     <div class="row">
-        <div class="jewellery-container col-10 offset-1">
-            <div class="row mt-1 mb-2" ></div>
-            <div class="row" ></div>
+        <div class="jewellery-container col-7 offset-1">
+            <div class="row mt-1 mb-2">
+                {% for jewellery in jewelleries %}
+            <div class="row mt-1 mb-2" >
+                {% for jewellery in jewelleries|slice:":3" %}
+                <div class="col-sm-6 col-md-4 col-lg-4 col-xl-3">
+                    <!-- Your card content here -->
+                </div>
+            {% endfor %}
+            </div>
+            {% endfor %}
             {% for jewellery in jewelleries %}
-            <div class="col-sm-6 col-md-4 col-lg-3 col-xl -3">
+            <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3">
                 <div class="card h-100 border-0">
                     {% if jewellery.image %}
-                                <a href="">
+                                <a href="{% url 'jewelleries:jewelleries_details' jewellery.id %}">
                                     <img class="card-img-top img-fluid" src="{{ jewellery.image.url}}" alt="{{ jewellery.name }}">
                                 </a>
                                 {% else %}
@@ -43,7 +51,7 @@
                                             <p class="lead mb-0 text-left font-weight-bold">${{ jewellery.price }}</p>
                                             {% if jewellery.category %}
                                             <p class="small mt-1 mb-0">
-                                                <a class="text-muted" href="{% url 'jewelleries:all_jewelleries'  %}?category={{ jewellery.category.name }}">
+                                                <a class="text-muted" href="{% url 'jewelleries:all_jewelleries' %}?category={{ jewellery.category.name }}">
                                                     <i class="fas fa-tag mr-1"></i>{{ jewellery.category.friendly_name }}
                                                 </a>
                                             </p>
@@ -53,13 +61,13 @@
                                             {% else %}
                                                 <small class="text-muted">No Rating</small>
                                             {% endif %}
-                                           
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-                       {% if forloop.counter|divisibleby:1 %}
+                                                                
+                                        </div>
+                                    </div>
+                                    </div>
+                            </div>
+                            </div>
+                        {% if forloop.counter|divisibleby:1 %}
                             <div class="col-12 d-sm-none mb-5">
                                 <hr>
                             </div>
