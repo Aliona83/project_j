@@ -10,7 +10,7 @@
 {% endblock %}
 
 {% block content %}
-<div class="container h-100">
+ <div class="container h-100">
     <div class="row h-100">
         <div class="col-7 col-md-6 my-auto">
             <h1 class="display-4 mt-3 logo-font text-black">
@@ -25,40 +25,56 @@
             </div>
         </div>
     </div>
-</div>
-{% if featured_jewellery %}
-<div id="carouselExampleSlidesOnly" class="carousel slide h-100" data-ride="carousel">
-    <div class="carousel-inner">
+ </div>
+ <div class="container">
+    <h2 class="text-center p-5 mb-8">Features Jewellery</h2>
+    <div class="row">
         {% for jewellery in featured_jewellery %}
-      <div class="carousel-item {% if forloop.first %}active{% endif %}">
-        div class="card h-100 border-0">
-                    {% if jewellery.image %}
-                                <a href="{% url 'jewelleries:all_jewelleries' jewellery.id %}">
-                                    <img class="card-img-top img-fluid" src="{{ jewellery.image.url}}" alt="{{ jewellery.name }}">
-                                </a>
-                                {% else %}
-                                <a href="">
-                                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ jewellery.name }}">
-                                </a>
-                                {% endif %}
-        <img class="d-block w-100" src="{{ jewellery.image.url }}" alt="{{ jewellery.name }}">
-      </div>
-      <div class="carousel-item">
-        <img class="d-block w-100" src="{{ jewellery.image.url }}" alt="{{ jewellery.name }}">
-      </div>
-      <div class="carousel-item">
-        <img class="d-block w-100" src="{{ jewellery.image.url }}" alt="{{ jewellery.name }}"> -->
-      </div> 
-      {% endfor %}
+        <div class="col-2">
+            <img src="{{ jewellery.image.url }}" class="card-img-top img-fluid" style="max-width: 100%; height: auto;" alt="{{ jewellery.name }}">
+            <h2>{{ jewellery.name }}</h2>
+                <p>Price: ${{ jewellery.price }}</p>
+                <p>Category: {{ jewellery.category }}</p>
+        </div>
+        {% for jewellery in featured_jewellery %}
+    <div class="col-2">
+        <a href="{% url 'jewelleries:jewelleries_details' jewellery_id=jewellery.pk %}">
+            <img src="{{ jewellery.image.url }}" class="card-img-top img-fluid" style="max-width: 100%; height: auto;" alt="{{ jewellery.name }}">
+        </a>
+    </div>
+{% endfor %}
+        {% endfor %}
     </div>
 </div>
-{% else %}
-    <p>No featured jewellery available.</p>
-{% endif %}
-{% include 'includes/footer.html' %}
-{% endblock%}
+
+ {% include 'includes/footer.html' %}
+
+{% endblock %}
 {% block corejs %}
-<script>
-    $('.carousel').carousel();
-</script>
+    <!-- ... Your other core JS includes ... -->
+    <script>
+        $(document).ready(function(){
+            $('.owl-carousel').owlCarousel({
+                // Owl Carousel options and settings
+                // Customize the carousel as per your requirements
+                items: 6,
+                loop: true,
+                margin: 10,
+                nav: true,
+                responsive:{
+                    0:{
+                        items:1
+                    },
+                    600:{
+                        items:3
+                    },
+                    1000:{
+                        items:5
+                    }
+                }
+            });
+        });
+    </script>
+    
+    
 {% endblock %}
