@@ -2,79 +2,69 @@
 {% load static %}
 
 {% block page_header %}
-<div class="container header-container">
-    <div class="row">
-        <div class="col"></div>
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
     </div>
-</div>
 {% endblock %}
 
 {% block content %}
- <div class="container h-100">
-    <div class="row h-100">
-        <div class="col-7 col-md-6 my-auto">
-            <h1 class="display-4 mt-3 logo-font text-black">
-               Welcome to Elegance Jewellery Shop
-            </h1>
-            <p class="text-left">Explore our stunning collection, handcrafted with passion and attention to details.
-                From shimmering diamonds to lustrous pearls, our collection exudes timeless elegance</p>
-            <div class="my-5">
-                <h4>
-                    <a href="{% url 'jewelleries:all_jewelleries' %}" class="shop-now-button btn btn-lg rounded-0 text-uppercase py-3">Shop Now</a>
-                </h4>
+    <div class="container h-100">
+        <div class="row h-100">
+            <div class="col-7 col-md-6 my-auto">
+                <h1 class="display-4 logo-font text-black">
+                    The new collections are here
+                </h1>
+                <div class="my-5">
+                    <h4>
+                        <a href="{% url 'jewelleries:jewelleries' %}" class="shop-now-button btn btn-lg rounded-0 text-uppercase py-3">Shop Now</a>
+                    </h4>
+                </div>
             </div>
         </div>
     </div>
- </div>
- <div class="container">
-    <h2 class="text-center p-5 mb-8">Features Jewellery</h2>
-    <div class="row">
-        {% for jewellery in featured_jewellery %}
-        <div class="col-2">
-            <img src="{{ jewellery.image.url }}" class="card-img-top img-fluid" style="max-width: 100%; height: auto;" alt="{{ jewellery.name }}">
-            <h2>{{ jewellery.name }}</h2>
-                <p>Price: ${{ jewellery.price }}</p>
-                <p>Category: {{ jewellery.category }}</p>
+
+    <section class="feature-container h-100">
+        <h2 class="display-4 text-black text-center">Best Features of this month</h2>
+        <div class="card-group">
+            {% for jewellery in jewelleries %}
+            <div class="card m-2">
+                {% if jewellery.image %}
+                <a href="{% url 'jewelleries:jewelleries_details' jewellery.id %}">
+                    <img class="card-img-top img-fluid" src="{{ jewellery.image.url }}"  alt="{{ jewellery.name }}">
+                </a>
+                {% else %}
+                <a href="">
+                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png"  alt="{{ jewellery.name }}">
+                </a>
+                {% endif %}
+                <div class="card-body">
+                    <h5 class="card-title">{{ jewellery.name }}</h5>
+                    <p class="card-text">{{ jewellery.description }}</p>
+                </div>
+            </div>
+            {% endfor %}
+            {% for jewellery in jewelleries %}
+            <div class="card m-2">
+                {% if jewellery.image %}
+                <a href="{% url 'jewelleries:jewelleries_details' jewellery.id %}">
+                    <img class="card-img-top img-fluid" src="{{ jewellery.image.url }}"  alt="{{ jewellery.name }}">
+                </a>
+                {% else %}
+                <a href="">
+                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png"  alt="{{ jewellery.name }}">
+                </a>
+                {% endif %}
+                <div class="card-body">
+                    <h5 class="card-title">{{ jewellery.name }}</h5>
+                    <p class="card-text">{{ jewellery.description }}</p>
+                </div>
+            </div>
+            {% endfor %}
+
         </div>
-        {% for jewellery in featured_jewellery %}
-    <div class="col-2">
-        <a href="{% url 'jewelleries:jewelleries_details' jewellery_id=jewellery.pk %}">
-            <img src="{{ jewellery.image.url }}" class="card-img-top img-fluid" style="max-width: 100%; height: auto;" alt="{{ jewellery.name }}">
-        </a>
-    </div>
-{% endfor %}
-        {% endfor %}
-    </div>
-</div>
-
- {% include 'includes/footer.html' %}
-
-{% endblock %}
-{% block corejs %}
-    <!-- ... Your other core JS includes ... -->
-    <script>
-        $(document).ready(function(){
-            $('.owl-carousel').owlCarousel({
-                // Owl Carousel options and settings
-                // Customize the carousel as per your requirements
-                items: 6,
-                loop: true,
-                margin: 10,
-                nav: true,
-                responsive:{
-                    0:{
-                        items:1
-                    },
-                    600:{
-                        items:3
-                    },
-                    1000:{
-                        items:5
-                    }
-                }
-            });
-        });
-    </script>
-    
+    </section>
     
 {% endblock %}
+

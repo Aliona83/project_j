@@ -3,9 +3,9 @@ html {
 }
 
 body {
-    /* background: url('/media/new1\ \(2\).png') no-repeat center center fixed; */
+    background: url('/media/') no-repeat center center fixed; */
     background-size: cover;
-    height: calc(120vh - 164px);
+    height: calc(100vh - 164px);
     color: #555;
     font-family: 'Lato';
 }
@@ -44,23 +44,13 @@ body {
 }
 
 
-/* Style the navigation buttons */
-.featured-jewellery-img {
-    width: 200px; /* Set a fixed width for the images */
-    height: 200px; /* Set a fixed height for the images */
-    object-fit: cover;
-}
-.featured-jewellery-container {
+.flex-row {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
 }
 
-.featured-jewellery-item {
-    width: 200px; /* Adjust the width as per your needs */
-    height: 200px; /* Adjust the height as per your needs */
-    object-fit:cover;
+.flex-nowrap {
+    flex-wrap: nowrap;
+}
 
 .footer {
   padding: 15px;
