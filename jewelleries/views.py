@@ -1,6 +1,8 @@
-from django.shortcuts import render
+from django.shortcuts import render, reverse, redirect
 from .models import Jewellery, Category
 from django.shortcuts import get_object_or_404
+from django.db.models import Q 
+from django.contrib import messages
 
 
 # Create your views here.
@@ -8,9 +10,20 @@ def all_jewelleries(request):
    """  A view to show all jewelleries, including sorting and search queries """
     
    jewelleries = Jewellery.objects.all()
+   query = None
+   if request.GET:
+       if 'q' in request.GET:
+           query = request.GET['q']
+           if not query:
+               messages.error(request, 'You didnt enter search criteria !')
+               return redirect(reverse('jewelleries:jewelleries'))
+            
+           queries = Q(name__icontains=query) | Q(description__icontains=query)
+           jewelleries = jewelleries.filter(queries)
 
    context = {
         'jewelleries': jewelleries,
+        'search_term': query,
     }
    return render(request, 'jewelleries/jewelleries.html', context)
 
