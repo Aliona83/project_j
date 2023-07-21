@@ -3,6 +3,7 @@ from .models import Jewellery, Category
 from django.shortcuts import get_object_or_404
 from django.db.models import Q 
 from django.contrib import messages
+from django.db.models.functions import Lower
 
 
 # Create your views here.
