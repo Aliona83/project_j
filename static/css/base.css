@@ -64,20 +64,10 @@ img {
     height: 300px;
     vertical-align: middle;
 }
-.flex-row {
-    display: flex;
+a.category-badge > span.badge:hover {
+    background: #212529 !important;
+    color: #fff !important;
 }
-
-.flex-nowrap {
-    flex-wrap: nowrap;
-}
-.container-wrapper {
-    min-height: 100%;
-}
-/* .content-container {
-    padding: 20px;
-    padding-bottom: 50px;
-} */
 .footer {
     background-color: #f0f0f0;
     position: fixed;
