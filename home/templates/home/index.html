@@ -10,29 +10,30 @@
 {% endblock %}
 
 {% block content %}
-    <div class="container h-100">
-        <div class="row h-100">
-            <div class="col-7 col-md-6 my-auto">
-                <h1 class="display-4 logo-font text-black">
-                    The new collections are here
+    <div class=" home-page container-fliud">
+        <div class="row justify-content-center">
+            <div class="home-page-text col-lg-12 my-auto">
+                <h1 class="text-black text-center py-5">
+                   Welcome to Elegancy Jewellery Shop
                 </h1>
-                <div class="my-5">
-                    <h4>
-                        <a href="{% url 'jewelleries:jewelleries' %}" class="shop-now-button btn btn-lg rounded-0 text-uppercase py-3">Shop Now</a>
-                    </h4>
-                </div>
             </div>
+                <div class="container">
+                    <div class="row justify-content-center">
+
+                        <a href="{% url 'jewelleries:jewelleries' %}" class="shop-now-button btn btn-lg rounded-0 text-uppercase py-3">Shop Now</a>
+                    </div>
+                </div>
         </div>
     </div>
 
-    <section class="feature-container h-100">
-        <h2 class="display-4 text-black text-center">Best Features of this month</h2>
-        <div class="card-group">
-            {% for jewellery in jewelleries %}
-            <div class="card m-2">
+    <section class="feature-text container h-100 py-5">
+        <h2 class="display-3 text-black text-center">Best Features of this month</h2>
+        <div class="card-group col-lg-12">
+            {% for jewellery in featured_jewellery  %}
+            <div class="card" style="">
                 {% if jewellery.image %}
                 <a href="{% url 'jewelleries:jewelleries_details' jewellery.id %}">
-                    <img class="card-img-top img-fluid" src="{{ jewellery.image.url }}"  alt="{{ jewellery.name }}">
+                    <img class="card-img-top img-fluid" src="{{ jewellery.image.url }}"  alt="{{ jewellery.name }}" height="500" width="500">
                 </a>
                 {% else %}
                 <a href="">
@@ -41,30 +42,13 @@
                 {% endif %}
                 <div class="card-body">
                     <h5 class="card-title">{{ jewellery.name }}</h5>
-                    <p class="card-text">{{ jewellery.description }}</p>
                 </div>
-            </div>
-            {% endfor %}
-            {% for jewellery in jewelleries %}
-            <div class="card m-2">
-                {% if jewellery.image %}
-                <a href="{% url 'jewelleries:jewelleries_details' jewellery.id %}">
-                    <img class="card-img-top img-fluid" src="{{ jewellery.image.url }}"  alt="{{ jewellery.name }}">
-                </a>
-                {% else %}
-                <a href="">
-                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png"  alt="{{ jewellery.name }}">
-                </a>
-                {% endif %}
-                <div class="card-body">
-                    <h5 class="card-title">{{ jewellery.name }}</h5>
-                    <p class="card-text">{{ jewellery.description }}</p>
-                </div>
-            </div>
+                <a href="#" class="btn btn-primary">View</a>
+            </div> 
             {% endfor %}
 
         </div>
     </section>
-    
+    {% include 'includes/footer.html'%}
 {% endblock %}
 
