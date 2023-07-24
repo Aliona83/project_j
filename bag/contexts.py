@@ -26,7 +26,7 @@ def bag_contents(request):
     discount = 0
 
     if total >= 1000:
-        discount = settings.DISCOUNT_AMOUNT
+        discount = (total // 1000 ) * settings.DISCOUNT_PER_1000_EURO
 
     # Calculate the grand total after applying the discount
     grand_total = total - discount
@@ -36,7 +36,7 @@ def bag_contents(request):
         'total': total,
         'product_count': product_count,
         'grand_total': grand_total,
-        'discount_amount': settings.DISCOUNT_AMOUNT
+        'discount_amount': settings.DISCOUNT_PER_1000_EURO
     }
 
     return context
