@@ -23,5 +23,5 @@ urlpatterns = [
     path('accounts/', include('allauth.urls')),
     path('', include('home.urls')),
     path('jewelleries/', include('jewelleries.urls')),
-    path('bag/', include('bag.urls')),
+    path('bag/', include('bag.urls', namespace='bag')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
