@@ -81,7 +81,7 @@
                         </div>
                     </li>
                     <li class="list-inline-item">
-                        <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="">
+                        <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'view_bag:view_bag'%}">
                             <div class="text-center">
                                 <div><i class="fas fa-shopping-bag fa-lg"></i></div>
                                 <p class="my-0">
@@ -110,7 +110,7 @@
         <div id="discount-banner">
             <div class="row">
                 <div class="col bg-dark text-white">
-                    <h4 class="text-center">Spending more then 1000€ and  get 100€!</h4>                
+                    <h4 class="text-center">Spending more then 1000€ and  get 100 Euro discount!</h4>                
                 </div>            
             </div>
         </div>

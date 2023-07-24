@@ -7,6 +7,10 @@
             <div class="col"></div>
         </div>
     </div>
+
+{% if discount %}
+ <p>You have received a discount of {{ discount }} euros!</p>
+{% endif %}
 {% endblock %}
 
 {% block content %}
