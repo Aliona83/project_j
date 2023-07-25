@@ -94,6 +94,14 @@ html {
     color: white;
     background-color: #000;
 }
+
+.btt-link,
+.update-link,
+.remove-item {
+    cursor: pointer;
+}
+
+
 img {
     display: flex;
     width: 300px;
