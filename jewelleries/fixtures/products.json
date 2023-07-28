@@ -284,5 +284,1059 @@
          "rating":3.0,
          "image":"pexels-duygu-kamar-12124621.jpg"
       }
+   },
+   
+   {
+      "pk":23,
+      "model":"jewelleries.jewellery",
+      "fields":{
+         "sku":"pp5003360384",
+         "name":"Lab Grown Diamond Earrings 0.50ct",
+         "description":"This beautiful pair of lab-grown diamond earrings feature a total of 0.50ct of sparkling lab-grown round cut diamonds secured by an 18ct  gold 4-claw centre setting with a large butterfly backing so you can feel safe knowing your diamond earrings are completely secure.",
+         "price":529.99,
+         "category":2,
+         "rating":4.8,
+         "image":"pexels-the-glorious-studio-8398842.jpg"
+      }
+   },
+   {
+      "pk":24,
+      "model":"jewelleries.jewellery",
+      "fields":{
+         "sku":"pp5003440111",
+         "name":"Pear Diamond Earrings 0.54ct",
+         "description":"This beautiful pair of drop diamond earrings feature .54ct of sparkling diamond surrounded by white gold. These earrings offer an elegant dangle of the pear drop design, allowing the diamonds to sparkle beautifully.",
+         "price":882.0,
+         "category":2,
+         "rating":4.6,
+         "image":"pexels-the-glorious-studio-9332187.jpg"
+      }
+   },
+   {
+      "pk":25,
+      "model":"jewelleries.jewellery",
+      "fields":{
+         "sku":"pp5003540313",
+         "name":"Four Claw Solitaire Diamond Earrings 0.40ct",
+         "description":"Sparkling Round Brilliant Cut Diamond Studs with a classic 4 claw design masterfully set in 18ct white Gold.",
+         "price":506.99,
+         "category":2,
+         "rating":4.1,
+         "image":"pexels-the-glorious-studio-5737290.jpg"
+      }
+   },
+   {
+      "pk":26,
+      "model":"jewelleries.jewellery",
+      "fields":{
+         "sku":"pp5003560513",
+         "name":"Diamond Disco Lab Grown Diamond Earrings",
+         "description":"Earrings Eclosion - Pink Lace - white gold, yellow gold and diamonds A pair of flower petals spattered with diamonds sparkle graciously 18 diamonds: 0.07 carat - Yellow gold.",
+         "price":241.99,
+         "category":2,
+         "rating":5.0,
+         "image":"pexels-the-glorious-studio-10976654.jpg"
+      }
+   },
+   {
+      "pk":27,
+      "model":"jewelleries.jewellery",
+      "fields":{
+         "sku":"pp5003560948",
+         "name":"Classic Diamond Studded Double Hoop Earrings",
+         "description":"These diamond double hoop earrings are crafted with double the exquisiteness in 14ct yellow gold. The glistening loops, one larger than the other, are connected to hinged clip closures. Prong set white diamonds on the front lend an extra hint of extravagance to these striking hoop earrings.",
+         "price":1338.99,
+         "category":2,
+         "rating":5.0,
+         "image":"pexels-the-glorious-studio-10983781.jpg"
+      }
+   },
+   {
+      "pk":28,
+      "model":"jewelleries.jewellery",
+      "fields":{
+         "sku":"pp5003570628",
+         "name":"Floating Drop Diamond Clustre Halo Hoop Earrings",
+         "description":"A clustre of diamonds studded in a pear-shaped frame floats within a halo of shimmering diamonds that dangles from an embellished hinged hoop. Crafted in 14ct rose gold, these pear halo earrings dipped in diamonds look exquisitely elegant.",
+         "price":53.99,
+         "category":2,
+         "rating":4.3,
+         "image":"pexels-the-glorious-studio-10983783.jpg"
+      }
+   },
+   {
+      "pk":29,
+      "model":"jewelleries.jewellery",
+      "fields":{
+         "sku":"pp5003620308",
+         "name":"Round Diamond Hexagonal Floating Double Halo Studs",
+         "description":"These 14k white gold stud earrings feature a stylish geometric pattern. The prong-set round diamonds are nestled within double hexagonal halos and look brilliant.",
+         "price":631.99,
+         "category":2,
+         "rating":4.6,
+         "image":"pexels-the-glorious-studio-5370642.jpg"
+      }
+   },
+   {
+      "pk":30,
+      "model":"jewelleries.jewellery",
+      "fields":{
+         "sku":"pp5003690115",
+         "name":"Scallop Framed Diamond Drop Earrings",
+         "description":"Exquisitely designed in 14CT white gold, these diamond drop earrings are a visual delight. The drop-shaped scalloped frame, studded with sparkling diamonds, is connected to a floral clustre by a bezel set station diamond. The intricate milgrain work along the edges adds refined texture to these gorgeous diamond dangle drop earrings.",
+         "price":272.99,
+         "category":2,
+         "rating":3.0,
+         "image":"silver-jewelry-g29c3e914c_1920.jpg"
+      }
+   },
+   {
+      "pk":31,
+      "model":"jewelleries.jewellery",
+      "fields":{
+         "sku":"pp5003690116",
+         "name":"Prong-Set Diamond Beaded Double Row Hoop Earrings",
+         "description":"These hoop earrings feature a row of glittering round diamonds, adjacent to a row with bead detailing. Crafted in 14k yellow gold, these double row hoops allure with their contemporary style.",
+         "price":369.99,
+         "category":2,
+         "rating":4.0,
+         "image":"pexels-jana-kukebal-6689398.jpg"
+      }
+   },
+   {
+      "pk":32,
+      "model":"jewelleries.jewellery",
+      "fields":{
+         "sku":"pp5003780391",
+         "name":"Diamond Teardrop Hoop Earrings",
+         "description":"This pair of hoop earrings features a row of twinkling round diamonds on the front, exuding dazzling elegance in pave setting. Crafted in 14k rose gold, these diamond hoop earrings come with hinged clips and hug your earlobes comfortably.",
+         "price":1335.99,
+         "category":2,
+         "rating":5.0,
+         "image":"pexels-the-glorious-studio-10983778.jpg"
+      }
+   },
+   {
+      "pk":33,
+      "model":"jewelleries.jewellery",
+      "fields":{
+         "sku":"pp5003790542",
+         "name":"Prong-Set Diamond Clover Stud Earrings",
+         "description":"Inspired by nature, these 14ct white gold stud earrings are designed to resemble four-leaf clovers. They are encrusted with prong-set brilliant diamonds.",
+         "price":258.99,
+         "category":2,
+         "rating":4.0,
+         "image":"pexels-the-glorious-studio-9332189.jpg"
+      }
+   },
+   {
+      "pk":34,
+      "model":"jewelleries.jewellery",
+      "fields":{
+         "sku":"pp5003831225",
+         "name":"Aquamarine 0.34ct and diamond 9k white gold pendant necklace",
+         "description":"Subtle blue-green quamarines are famous for their beautiful sparkle and we've added an exquisite accent diamond to create even more radiance. As one of our top selling necklaces, this is an excellent choice for any special occasion.",
+         "price":895.99,
+         "category":3,
+         "rating":4.0,
+         "image":"pexels-the-glorious-studio-5370650.jpg"
+      }
+   },
+   {
+      "pk":35,
+      "model":"jewelleries.jewellery",
+      "fields":{
+         "sku":"pp5003861402",
+         "name":"Pave Starburst Necklace",
+         "description":"Inspired by the fire and radiance of our superlative diamonds, Tiffany Victoria uses a unique combination of cuts for a distinctly romantic sensibility. The elegant simplicity of this pendant makes it as appropriate for day as it is for evening.",
+         "price":650.99,
+         "category":3,
+         "rating":4.7,
+         "image":"pexels-the-glorious-studio-10983780.jpg"
+      }
+   },
+   {
+      "pk":36,
+      "model":"jewelleries.jewellery",
+      "fields":{
+         "sku":"pp5003910638",
+         "name":"Bean design Pendant necklace",
+         "description":"A beautifully humble form, the bean’s simple shape, natural contours and smoothness always appealed to her. The sculptural, organic collection captures Peretti’s signature talent for creating irresistibly tactile objects that remind us of the beauty inherent in nature.",
+         "price":1123.99,
+         "category":3,
+         "rating":5.0,
+         "image":"pexels-the-glorious-studio-10983785.jpg"
+      }
+   },
+   {
+      "pk":37,
+      "model":"jewelleries.jewellery",
+      "fields":{
+         "sku":"pp5003950574",
+         "name":"Springe Necklace",
+         "description":"Beauty and elegance abound in this magnificent transformable necklace, which drapes the decolletage",
+         "price":2221.99,
+         "category":3,
+         "rating":4.9,
+         "image":"pexels-the-glorious-studio-12026052.jpg"
+      }
+   },
+   {
+      "pk":38,
+      "model":"jewelleries.jewellery",
+      "fields":{
+         "sku":"pp5003950576",
+         "name":"Tiffany Knot Pendant",
+         "description":"This pendant is crafted with rose gold and polished by hand for high shine. Each round brilliant diamond—specifically chosen to meet Tiffany’s high standards—is hand set at precise angles to maximise brilliance.",
+         "price":460.99,
+         "category":3,
+         "rating":3.2,
+         "image":"pexels-the-glorious-studio-13204122.jpg"
+      }
+   },
+   {
+      "pk":39,
+      "model":"jewelleries.jewellery",
+      "fields":{
+         "sku":"pp5003960062",
+         "name":"Necklace with Charms",
+         "description":"Keep it chic and modern with this fashionable 14k gold plated sun, moon and stars necklace from Newbridge Silverware. A fantastic finishing touch to any outfit that will look superb each time you wear it. Layer with some of your favourites to create a sunning on trend look, day or night.",
+         "price":341.99,
+         "category":3,
+         "rating":3.2,
+         "image":"pexels-walter-ipiña-7958254.jpg"
+      }
+   },
+   {
+      "pk":40,
+      "model":"jewelleries.jewellery",
+      "fields":{
+         "sku":"pp5003960682",
+         "name":"Argento Silver Crystal Heart Necklace",
+         "description":"Perfect for a romantic gift, this Argento necklace is a timeless statement that can carry you from day to night. Crafted from sterling silver, this pendant features a heart shaped crystal, adorned with a border of smaller crystal accents.",
+         "price":331.99,
+         "category":3,
+         "rating":4.6,
+         "image":"pexels-the-glorious-studio-9924688.jpg"
+      }
+   },
+   {
+      "pk":41,
+      "model":"jewelleries.jewellery",
+      "fields":{
+         "sku":"pp5003960775",
+         "name":" Iced Stone Heart Bezel Necklace - Gold",
+         "description":"An elegant choice for everyday, this delicate necklace will become a new wardrobe staple. It features shimmering pavé butterfly motifs suspended from a rose gold-tone plated chain. The perfect partner to white T-shirts, cashmere jumpers, denim, or eveningwear – essentially, anything goes",
+         "price":541.99,
+         "category":3,
+         "rating":4.4,
+         "image":"pexels-the-glorious-studio-10983782.jpg"
+      }
+   },
+   {
+      "pk":42,
+      "model":"jewelleries.jewellery",
+      "fields":{
+         "sku":"pp5003990736",
+         "name":"Glamira Pendant Kinsey",
+         "description":"Very Good precision, delivering a total carat weight of 0.96. The pendant is designed with an additional 1 centre stones and 22 accent stones, featuring an exquisite White Sapphire accent stone with AAA clarity and a radiant White colour, precisely cut with Very Good precision and offering a total carat weight of 0.226.",
+         "price":980.00,
+         "category":3,
+         "rating":4.2,
+         "image":"pexels-superlens-photography-15684182.jpg"
+      }
+   },
+   {
+      "pk":43,
+      "model":"jewelleries.jewellery",
+      "fields":{
+         "sku":"pp5003990746",
+         "name":"Oval Solitaire Necklace",
+         "description":"Dress up your look with a stunning necklace that will be the centre of attraction. Minimal yet bold and alluring!18K Gold over eco brass. 925 Sterling Silver. Cubic Zirconia. Nickel free. Suitable for sensitive skin.",
+         "price":465.99,
+         "category":3,
+         "rating":4.0,
+         "image":"pexels-the-glorious-studio-5442469.jpg"
+      }
+   },
+   {
+      "pk":44,
+      "model":"jewelleries.jewellery",
+      "fields":{
+         "sku":"pp5004111503",
+         "name":"Angelic Crystal Necklace",
+         "description":"This detailed necklace from Swarovski is a true showstopper. Created from a rhodium plated chain, this necklace has been adorned with daimonds that have been outlined with smaller stones. This glamorous necklace is the perfect way to finish off any evening look.",
+         "price":1560.99,
+         "category":3,
+         "rating":5.0,
+         "image":"pexels-the-glorious-studio-12026050.jpg"
+      }
+   },
+   {
+      "pk":45,
+      "model":"jewelleries.jewellery",
+      "fields":{
+         "sku":"pp5004230059",
+         "name":"August Woods Rose Gold Opal Star Long Necklace",
+         "description":"Update your knitwear by throwing this dazzling necklace on top! This long length necklace is the perfect way to inject some sparkle into your everyday look. A rose gold tone chain has been dotted throughout with sparkling faux opal crystals and a shimmering star.",
+         "price":241.0,
+         "category":3,
+         "rating":4.6,
+         "image":"pexels-micky-jone-13325931.jpg"
+      }
+   },
+   {
+      "pk":46,
+      "model":"jewelleries.jewellery",
+      "fields":{
+         "sku":"pp5004310089",
+         "name":"Argento Recycled Gold Midnight Star Necklace",
+         "description":"Glow as bright as the stars with this radiant necklace from Argento. Crafted in sterling silver with a gold plating, this fine chain necklace features a beautiful crystal adorned star. An enchanting gift for a loved one.",
+         "price":362.99,
+         "category":3,
+         "rating":4.1,
+         "image":"pexels-micky-jone-13325937.jpg"
+      }
+   },
+   {
+      "pk":47,
+      "model":"jewelleries.jewellery",
+      "fields":{
+         "sku":"pp5004610254",
+         "name":"Little Treasure Sterling Silver Cubic Zirconia Dot Star Earrings",
+         "description":"With a total of six of the sparkling stones on each stud earring, this set shimmers and shines at all times. Perfect for the younger wearer, perhaps as their first set of earrings, they sit nicely on the ear and stay securely in place due to being made in the classic stud style. They also make a great gift idea for the little recipient who shines along with their jewellery.",
+         "price":448.99,
+         "category":4,
+         "rating":4.4,
+         "image":"pexels-the-glorious-studio-12680628.jpg"
+      }
+   },
+   {
+      "pk":48,
+      "model":"jewelleries.jewellery",
+      "fields":{
+         "sku":"pp5004650050",
+         "name":"Infinite Spade Engraved Spade Bangle bracelet",
+         "description":"The Tennis Bracelet is a classic staple piece for every woman's jewellery collection. Set in Sterling Silver, this bracelet features exquisitely cut and polished round brilliant stones formed in a simple line design, offering the perfect mix of glamour and sophistication. Complete with our secure safety clasp, wear this timeless piece as your everyday signature piece for that extra touch of sparkle.",
+         "price":434.99,
+         "category":4,
+         "rating":4.1,
+         "image":"pexels-melike-benli-12194324.jpg"
+      }
+   },
+   {
+      "pk":49,
+      "model":"jewelleries.jewellery",
+      "fields":{
+         "sku":"pp5004821375",
+         "name":"Sterling Silver Chalice",
+         "description":"A tiny chalice pendant symbolizing the first holy Communion, set with tiny cubic zirconia stones for an added element of glamour - a beautiful gift for a young lady on her big day.",
+         "price":360.99,
+         "category":4,
+         "rating":4.4,
+         "image":"pexels-the-glorious-studio-5442455.jpg"
+      }
+   },
+   {
+      "pk":50,
+      "model":"jewelleries.jewellery",
+      "fields":{
+         "sku":"pp5004900522",
+         "name":"Diamond Chain - 10mm Prong Set Cuban Link",
+         "description":"The diamonds are arranged horizontally in graduating sizes with the largest stone in the centre. This elaborately designed diamond journey pendant necklace has a rich and modish appeal that is sure to garner attention.",
+         "price":866.99,
+         "category":4,
+         "rating":4.6,
+         "image":"pexels-the-glorious-studio-8891956.jpg"
+      }
+   },
+   {
+      "pk":51,
+      "model":"jewelleries.jewellery",
+      "fields":{
+         "sku":"pp5004910158",
+         "name":"Petra Engagement Rings",
+         "description":"The stunning lab grown diamond solitaire is a sustainable choice. Its quality grade is H/Si which means it creates exquisite, white sparkle and allows you to propose with confidence. Perfect for a promise ring or an engagement ring.",
+         "price":519.99,
+         "category":4,
+         "rating":3.8,
+         "image":"pexels-superlens-photography-15684127.jpg"
+      }
+   },
+   {
+      "pk":52,
+      "model":"jewelleries.jewellery",
+      "fields":{
+         "sku":"pp5004910477",
+         "name":"Colorful Teardrop Earrings",
+         "description":"Teardrop earrings are small hoops from which a green or pink teardrop falls with a mini white zirconia. The main hoop is covered with small white zircons ideal to give a touch of light to your looks. Elegant and colorful, you can wear them in your daily life or for a special occasion.",
+         "price":588.99,
+         "category":4,
+         "rating":4.7,
+         "image":"pexels-superlens-photography-13595669.jpg"
+      }
+   },
+   {
+      "pk":53,
+      "model":"jewelleries.jewellery",
+      "fields":{
+         "sku":"pp5004940703",
+         "name":"Sparkling Infinity Heart Collier Necklace",
+         "description":"Celebrate your love to infinity and beyond with the Sparkling Infinity Heart Collier Necklace. Featuring a fixed infinity symbol and heart pendant, this piece symbolises the power of unbreakable bonds and serves as a reminder of the love you share with those that matter most to you.",
+         "price":153.99,
+         "category":4,
+         "rating":3.7,
+         "image":"pexels-superlens-photography-4595717.jpg"
+      }
+   },
+   {
+      "pk":54,
+      "model":"jewelleries.jewellery",
+      "fields":{
+         "sku":"pp5004991006",
+         "name":"Trillion Cut Ruby Jewellery Set in Sterling Silver",
+         "description":"Pure Sterling Silver Stone Set Red Ruby Like Stone Earrings Drop 22mm Gift Boxed For Hygiene Reasons Earrings May Not Be Exchanged",
+         "price":526.99,
+         "category":4,
+         "rating":5.0,
+         "image":"pexels-superlens-photography-16438531.jpg"
+      }
+   },
+   {
+      "pk":55,
+      "model":"jewelleries.jewellery",
+      "fields":{
+         "sku":"pp5004991162",
+         "name":"Sparkling Heart Halo Pendant Collier Necklace",
+         "description":"Give a gift from the heart with our Sparkling Heart Halo Pendant Collier Necklace. This necklace features a heart-shaped red man-made crystal pendant that's fixed to a sterling silver chain adjustable to two lengths for versatile styling. ",
+         "price":28.99,
+         "category":4,
+         "rating":4.5,
+         "image":"pexels-superlens-photography-15684182.jpg"
+      }
+   },
+   {
+      "pk":56,
+      "model":"jewelleries.jewellery",
+      "fields":{
+         "sku":"pp5005000046",
+         "name":"18ct Gold Vermeil on Silver Rolo Chain",
+         "description":"Designed to hold your favourite pendants, this solid link Rolo Chain is ideal. Diamond cut for that splash of sparkle.",
+         "price":265.99,
+         "category":5,
+         "rating":3.9,
+         "image":"pexels-the-glorious-studio-14111392.jpg"
+      }
+   },
+   {
+      "pk":57,
+      "model":"jewelleries.jewellery",
+      "fields":{
+         "sku":"pp5005070254",
+         "name":"9ct Gold & Silver Bonded Hoop Earrings",
+         "description":"Beautifully crafted and with the luxury of 9ct Gold & Silver Bonded, these Lucia hoops are absolutely divine. Perfectly proportioned and with a gentle twist design, these earrings will complement any outfit and look fabulous day or night.",
+         "price":366.0,
+         "category":5,
+         "rating":4.7,
+         "image":"pexels-melike-benli-12194365.jpg"
+      }
+   },
+   {
+      "pk":58,
+      "model":"jewelleries.jewellery",
+      "fields":{
+         "sku":"pp5005071145",
+         "name":" 18ct Gold Vermeil on Silver Solid Curb Chain 18",
+         "description":"Classic Solid Curb Link Chain. Strong, flexible and ideal for Men and Ladies. Diamond Milled Edges give this chain a stunning profile. Highly Recommended.",
+         "price":265.0,
+         "category":5,
+         "rating":3.3,
+         "image":"pexels-melike-benli-12194385.jpg"
+      }
+   },
+   {
+      "pk":59,
+      "model":"jewelleries.jewellery",
+      "fields":{
+         "sku":"pp5005140282",
+         "name":"18ct Gold Vermeil on Silver Sparkle Mirror Chain",
+         "description":"With it's reflective sparkle and instant attraction, Necklace layering has never been so easy. Perfect for transitioning from day to play.",
+         "price":211.99,
+         "category":5,
+         "rating":4.0,
+         "image":"pexels-gustavo-gimenez-9726884.jpg"
+      }
+   },
+   {
+      "pk":60,
+      "model":"jewelleries.jewellery",
+      "fields":{
+         "sku":"pp5005200166",
+         "name":"18ct Gold Vermeil on Silver Curb Chain Necklace Solid",
+         "description":"Lets start a chain reaction with this Diamond Cut, Solid Curb Chain Necklace. Perfect worn solo or layered to make a statement effect.",
+         "price":365.99,
+         "category":5,
+         "rating":4.4,
+         "image":"pexels-the-glorious-studio-14111399.jpg"
+      }
+   },
+   {
+      "pk":61,
+      "model":"jewelleries.jewellery",
+      "fields":{
+         "sku":"pp5005210241",
+         "name":"18ct Gold Vermeil On Silver Tennis Bracelet 2.5mm",
+         "description":"Own the wins with this Hand Set Tennis Bracelet. Opulent and lots of sparkle - perfect worn solo or stacked.",
+         "price":544.99,
+         "category":5,
+         "rating":4.5,
+         "image":"pexels-melike-benli-12194301.jpg"
+      }
+   },
+   {
+      "pk":62,
+      "model":"jewelleries.jewellery",
+      "fields":{
+         "sku":"pp5005280104",
+         "name":"18ct Gold Vermeil on Silver 18 Sparkle Ribbon Chain",
+         "description":"Beautifully crafted with expert detailing, this Sparkle Ribbon Chain is stunning. Perfect worn solo or mixed together.",
+         "price":431.99,
+         "category":5,
+         "rating":5.0,
+         "image":"pexels-the-glorious-studio-14111397.jpg"
+      }
+   },
+   {
+      "pk":63,
+      "model":"jewelleries.jewellery",
+      "fields":{
+         "sku":"pp5005310360",
+         "name":"18ct Gold on Silver Designer Torque",
+         "description":"Just Landed, this exclusively Hand Finished Designer Bangle looks insanely good. Vibrant, upscale yet informal.",
+         "price":569.99,
+         "category":5,
+         "rating":5.0,
+         "image":"pexels-melike-benli-12194337.jpg"
+      }
+   },
+   {
+      "pk":64,
+      "model":"jewelleries.jewellery",
+      "fields":{
+         "sku":"pp5005330595",
+         "name":"9ct Gold Real Diamond Lab Grown Heart Necklace 1.00ct",
+         "description":"This gorgeous piece is lovingly crafted and exclusively Hand Set with Exquisitely Beautiful Real Diamonds - Lab Grown. ",
+         "price":419.99,
+         "category":5,
+         "rating":4.9,
+         "image":"pexels-maryam-7250143.jpg"
+      }
+   },
+   {
+      "pk":65,
+      "model":"jewelleries.jewellery",
+      "fields":{
+         "sku":"pp5005330596",
+         "name":"18ct Gold  on Silver Huggie Earrings",
+         "description":"Crafted in luxurious 18ct Gold Vermeil on Silver, these Huggie Earrings are stylish and versatile... Plain polish on one side, sparkle cut on the other side.",
+         "price":269.99,
+         "category":5,
+         "rating":4.0,
+         "image":"pexels-bka-photos-9211671.jpg"
+      }
+   },
+   {
+      "pk":66,
+      "model":"jewelleries.jewellery",
+      "fields":{
+         "sku":"pp5005430914",
+         "name":"2 PACK Gold Disc Necklace & Earring Set",
+         "description":"The perfect addition to your jewellery collection! Featuring a gold-tone, disc style finished in a 2 pack style. Wear it with any outfit to elevate your style.",
+         "price":630.99,
+         "category":6,
+         "rating":4.6,
+         "image":"pexels-the-glorious-studio-8891952.jpg"
+      }
+   },
+   {
+      "pk":67,
+      "model":"jewelleries.jewellery",
+      "fields":{
+         "sku":"pp5005430944",
+         "name":"Austrian Crystal Teardrop Cluster Statement Necklace Dangle Earrings Link Bracelet Set",
+         "description":" Made of crystals. If you are going out to a party or banquet, these rhinestone jewellery set is he perfect accessory that will enhance your outfit.It will be an ideal gift for your bride, bridesmaids, best friends, grandma, sister, girlfriend, wife, fiancee, daughter, mother, your special someone, or just yourself.",
+         "price":572.99,
+         "category":6,
+         "rating":4.5,
+         "image":"pexels-the-glorious-studio-6716444.jpg"
+      }
+   },
+   {
+      "pk":68,
+      "model":"jewelleries.jewellery",
+      "fields":{
+         "sku":"pp5005510265",
+         "name":"Gold Plated Necklace, Simple Women's Layered Collarbone Chain, Fashionable Charm Pendant Necklace, Jewelry Gift For Women",
+         "description":"Our beautiful necklaces are made of brass plated 18K real gold, free of nickel and lead, non-toxic and corrosion resistant.Choker necklace comes with a beautiful gift box, it is the perfect gift for women and girls, suitable for mother's day, christmas, birthday party, wedding, graduation and any occasion.",
+         "price":550.99,
+         "category":6,
+         "rating":4.7,
+         "image":"pexels-the-glorious-studio-8891953.jpg"
+      }
+   },
+   {
+      "pk":69,
+      "model":"jewelleries.jewellery",
+      "fields":{
+         "sku":"pp5005520201",
+         "name":"Jancosta 18K Gold Plated Jewelry Set of One Necklace with Triple Loops and and Two Earring Studs",
+         "description":"This cute jewelry set wedding necklace and earring set has one necklace with triple rings pendant and two earring studs. The special design can match different styles according to your preferences such as skirt, dinner dress, shirt, or other outfits.",
+         "price":442.0,
+         "category":6,
+         "rating":4.3,
+         "image":"pexels-the-glorious-studio-7541801.jpg"
+      }
+   },
+   {
+      "pk":70,
+      "model":"jewelleries.jewellery",
+      "fields":{
+         "sku":"pp5005520205",
+         "name":"YAZILIND Women Rhinestone Wedding Bridal Hollow Water Drop Pendant Necklace Stud Earrings Set Gold",
+         "description":"Material: alloy; Size: chain length: 45 + 5 cm You can wear it in any occasions and it makes you eye catching.A great gift for parents and also lovely as a sentimental gift from parents to their grown child.",
+         "price":608.99,
+         "category":6,
+         "rating":4.8,
+         "image":"pexels-the-glorious-studio-8891955.jpg"
+      }
+   },
+   {
+      "pk":71,
+      "model":"jewelleries.jewellery",
+      "fields":{
+         "sku":"pp5005630545",
+         "name":"Zolkamery Bridal Jewellery Bracelet",
+         "description":"Bracelet:17.5cm and the weight is 18.5g.There are 3 different colors and you can choose the Bridal Jewellery Sets you like to match your wedding style.",
+         "price":708.99,
+         "category":6,
+         "rating":4.7,
+         "image":"pexels-the-glorious-studio-8891958.jpg"
+      }
+   },
+   {
+      "pk":72,
+      "model":"jewelleries.jewellery",
+      "fields":{
+         "sku":"pp5005630605",
+         "name":"Epinki Women's Jewellery Set Stainless Steel Tree Branch Shape Earrings Necklace 43 + 5.5 cm",
+         "description":"Material: Epinki jewellery set are made of stainless steel, hypoallergenic, free of lead and nickel. Highly polished smooth surface, comfortable for long time wear.",
+         "price":560.99,
+         "category":6,
+         "rating":4.6,
+         "image":"pexels-the-glorious-studio-7541805.jpg"
+      }
+   },
+   {
+      "pk":73,
+      "model":"jewelleries.jewellery",
+      "fields":{
+         "sku":"pp5005630637",
+         "name":"Hanie Jewellery Set for Women, 18K White Gold/Rose Gold Plated",
+         "description":"Jewellery Sets Package Include: A pair of Drop Earrings & Necklace, come with a beautiful jewellery gift box. It is the best gift for your mother wife girlfriend sister on birthday Valentine's Day mother?s day anniversary or other important days.",
+         "price":560.99,
+         "category":6,
+         "rating":4.7,
+         "image":"pexels-the-glorious-studio-8891961.jpg"
+      }
+   },
+   {
+      "pk":74,
+      "model":"jewelleries.jewellery",
+      "fields":{
+         "sku":"pp5005630638",
+         "name":"Ted Baker Hannela Crystal Necklace",
+         "description":"This crystal pendant necklace is strung on a thin chain with a necklace extender for the perfect fit in your stack",
+         "price":260.99,
+         "category":6,
+         "rating":4.2,
+         "image":"pexels-superlens-photography-4595719.jpg"
+      }
+   },
+   {
+      "pk":75,
+      "model":"jewelleries.jewellery",
+      "fields":{
+         "sku":"pp5005650677",
+         "name":"Hanie Silver Jewellery Set for Women",
+         "description":"Beautiful necklace to wear everyday, great to give as a gift for a special female friend, teacher, mom,mother,sister or a special one in your life.Occasion: Party, wedding, anniversary, engagement, birthday gifts.",
+         "price":248.99,
+         "category":7,
+         "rating":4.4,
+         "image":"pexels-adi-wang-5116272.jpg"
+      }
+   },
+   {
+      "pk":76,
+      "model":"jewelleries.jewellery",
+      "fields":{
+         "sku":"pp5005700140",
+         "name":"Gold and white gold bangle bracelet cuff with safety closure circumference ",
+         "description":"white gold/ yellow gold 375/1000 cuff bangle bracelet in high shine finish 58 mm thick and cuff of 185mm. 2 Colour gold bangle with safety closure",
+         "price":450.99,
+         "category":7,
+         "rating":5.0,
+         "image":"pexels-the-glorious-studio-8891954.jpg"
+      }
+   },
+   {
+      "pk":77,
+      "model":"jewelleries.jewellery",
+      "fields":{
+         "sku":"pp5005740430",
+         "name":"Classic Bracelets for Women Rose Gold Bracelet",
+         "description":"The combination of small crystals add an irresistible sparkle to your daily look. It is a perfect for any occasion, everyday wear, office, wedding, party, prom night, going out, weekend, date, special occasion, bar, etc",
+         "price":336.99,
+         "category":7,
+         "rating":4.7,
+         "image":"pexels-the-glorious-studio-8398911.jpg"
+      }
+   },
+   {
+      "pk":78,
+      "model":"jewelleries.jewellery",
+      "fields":{
+         "sku":"pp5005740561",
+         "name":"Two Tone Dangle Polished Gold Sparkle Cut Leverback Earrings",
+         "description":" 2023 Fine Jewelry Gifts Offering; 14ct earrings in white and yellow gold ; Width: 15MM ; Hypoallergenic",
+         "price":360.99,
+         "category":7,
+         "rating":4.4,
+         "image":"pexels-melike-benli-12194353.jpg"
+      }
+   },
+   {
+      "pk":79,
+      "model":"jewelleries.jewellery",
+      "fields":{
+         "sku":"pp5005740634",
+         "name":" Plain Gold Women's Earrings",
+         "description":" Fashionable, gold-plated silver dangle earrings with twisted heart design - suitable for any occasion and versatile combinations",
+         "price":160.99,
+         "category":7,
+         "rating":4.5,
+         "image":"pexels-melike-benli-12194347.jpg"
+      }
+   },
+   {
+      "pk":80,
+      "model":"jewelleries.jewellery",
+      "fields":{
+         "sku":"pp5005760088",
+         "name":"Ted Baker Sininaa Crystal Pendant Necklace",
+         "description":"This crystal necklace makes a beautiful gift for her birthday and can be worn for any casual or formal occasion, including a wedding and anniversary",
+         "price":429.0,
+         "category":7,
+         "rating":5.0,
+         "image":"pexels-the-glorious-studio-12680629.jpg"
+      }
+   },
+   {
+      "pk":81,
+      "model":"jewelleries.jewellery",
+      "fields":{
+         "sku":"pp5005810108",
+         "name":"Women Adjustable Spinner Ring",
+         "description":"Spinner ring stylish and delicate look design will add style and class to any outfit that you wear to any occasion.Strong and shiny, this sterling silver ring is comfortable to wear for long periods of time.",
+         "price":560.99,
+         "category":7,
+         "rating":4.7,
+         "image":"pexels-the-glorious-studio-8891950.jpg"
+      }
+   },
+   {
+      "pk":82,
+      "model":"jewelleries.jewellery",
+      "fields":{
+         "sku":"pp5005820197",
+         "name":"Sterling Gold Statement Pendant Necklace",
+         "description":"Ideal for any occasion weddings, engagement parties, birthdays, anniversaries.",
+         "price":148.99,
+         "category":7,
+         "rating":4.3,
+         "image":"pexels-gustavo-gimenez-9726883.jpg"
+      }
+   },
+   {
+      "pk":83,
+      "model":"jewelleries.jewellery",
+      "fields":{
+         "sku":"pp5005840598",
+         "name":"Circle Pendant Necklace with Pearl decoration",
+         "description":"Layered Circle Pendant Necklace is made of alloy, durable, not fade, fits your skin and meets your daily wearing needs.",
+         "price":127.0,
+         "category":7,
+         "rating":5.0,
+         "image":"pexels-superlens-photography-11655516.jpg"
+      }
+   },
+   {
+      "pk":84,
+      "model":"jewelleries.jewellery",
+      "fields":{
+         "sku":"pp5005840776",
+         "name":"Sterling Gold July (Ruby) Birthstone Necklace Created with Zircondia® Crystals",
+         "description":"Made with Style. Stylish and fashionable necklace from The Philip Jones Jewellery Collection. Classic and contemporary pieces with a luxe finish.",
+         "price":129.99,
+         "category":7,
+         "rating":4.3,
+         "image":"pexels-soumia-photography-10662887.jpg"
+      }
+   },
+   {
+      "pk":85,
+      "model":"jewelleries.jewellery",
+      "fields":{
+         "sku":"pp5005850180",
+         "name":"Crux Ring In White Gold",
+         "description":"This ring evokes modernity with its clean and minimal design. Crafted in sterling silver with micro-set detail this is the perfect piece to wear as your everyday statement ring. Team it with some simple studs to complete the look",
+         "price":338.99,
+         "category":8,
+         "rating":4.2,
+         "image":"pexels-the-glorious-studio-5442463.jpg"
+      }
+   },
+   {
+      "pk":86,
+      "model":"jewelleries.jewellery",
+      "fields":{
+         "sku":"pp5005851218",
+         "name":"Silver Diamond Blue Topaz Celtic Necklace",
+         "description":"Sterling silver is also hypoallergenic and therefore perfect for those with sensitive skin enabling them to wear these sapphire blue necklaces comfortably.",
+         "price":326.99,
+         "category":8,
+         "rating":4.1,
+         "image":"pexels-the-glorious-studio-13907891.jpg"
+      }
+   },
+   {
+      "pk":87,
+      "model":"jewelleries.jewellery",
+      "fields":{
+         "sku":"pp5005860175",
+         "name":"Skagen Necklace for Women Sea glass, necklace with lob",
+         "description":"The Sterling Silver Material itself is Relatively Soft, and it Needs to be Handled Gently to Avoid Scratching.",
+         "price":258.99,
+         "category":8,
+         "rating":4.8,
+         "image":"pexels-the-glorious-studio-5442446.jpg"
+      }
+   },
+   {
+      "pk":88,
+      "model":"jewelleries.jewellery",
+      "fields":{
+         "sku":"pp5005860263",
+         "name":"Two-Tone in White Gold and Rose Gold Ring",
+         "description":"Price for two rings – Material:titanium (ergonomic ring).Wedding Rin GM20053 eng Width for men:6 mm. Width for women:4 mm. Women’s size G 1/2 to W.Colour:multi-coloured (rose gold & silver)",
+         "price":108.99,
+         "category":8,
+         "rating":4.0,
+         "image":"pexels-the-glorious-studio-5737292.jpg"
+      }
+   },
+   {
+      "pk":89,
+      "model":"jewelleries.jewellery",
+      "fields":{
+         "sku":"pp5005870183",
+         "name":"Tennis bracelet, Round cut, White, Rhodium plated",
+         "description":"Vividly Sparkling: Brilliant white crystals created and cut to the Swarovski standard with a detailed clasp and rhodium plated chain are combined to bring a touch of glamour to any outfit",
+         "price":352.99,
+         "category":8,
+         "rating":4.2,
+         "image":"pexels-the-glorious-studio-7093761.jpg"
+      }
+   },
+   {
+      "pk":90,
+      "model":"jewelleries.jewellery",
+      "fields":{
+         "sku":"pp5005870599",
+         "name":"Chain Necklace Vintage Multilayer Necklace Chain Jewelry for Women",
+         "description":"Bohemia Layered Gold Necklace Choker approach 45cm,with 5cm extension chain,adjustable for you.",
+         "price":144.99,
+         "category":8,
+         "rating":4.4,
+         "image":"pexels-superlens-photography-11655208.jpg"
+      }
+   },
+   {
+      "pk":91,
+      "model":"jewelleries.jewellery",
+      "fields":{
+         "sku":"pp5005870638",
+         "name":"Chain Charm Bracelet ",
+         "description":" Snake chain bracelet is perfect for most bracelet charms. Ideal gifts for Christmas Gifts, Mother's Day, Valentine's Day, Graduation Gifts, Bridal Gifts or your other special occasion you would like to make memorable.",
+         "price":233.99,
+         "category":8,
+         "rating":4.4,
+         "image":"pexels-pixabay-266621.jpg"
+      }
+   },
+   {
+      "pk":92,
+      "model":"jewelleries.jewellery",
+      "fields":{
+         "sku":"pp5005910565",
+         "name":"Gold Plated Sterling Hammered Hoop Earrings",
+         "description":"Made with Style. Stylish and fashionable earrings from The Philip Jones Jewellery Collection. Classic and contemporary pieces with a luxe finish.",
+         "price":250.99,
+         "category":8,
+         "rating":4.3,
+         "image":"pexels-superlens-photography-11655459.jpg"
+      }
+   },
+   {
+      "pk":93,
+      "model":"jewelleries.jewellery",
+      "fields":{
+         "sku":"pp5005930313",
+         "name":"terling Silver Gold Horoscope Chains Pendant Locker Necklace",
+         "description":" Very stylish necklace designed by top designers. No matter what clothes you wear, anti-allergic materials can show your beauty. A necklace that can be worn all year round",
+         "price":270.99,
+         "category":8,
+         "rating":4.9,
+         "image":"pexels-the-glorious-studio-13204125.jpg"
+      }
+   },
+   {
+      "pk":94,
+      "model":"jewelleries.jewellery",
+      "fields":{
+         "sku":"pp5005940242",
+         "name":"Pearl Necklace",
+         "description":" this pearl necklace is exquisite and classic, with each beautiful pearl carefully hand selected for its dazzling lustre and full roundness. Simple and elegant,with tiny heard around it is a must-have fashion basic for women's necklaces that will make you stand out from the crowd and add a unique touch of elegance and class.",
+         "price":231.99,
+         "category":9,
+         "rating":3.7,
+         "image":"pexels-superlens-photography-11655517.jpg"
+      }
+   },
+   {
+      "pk":95,
+      "model":"jewelleries.jewellery",
+      "fields":{
+         "sku":"pp5005940299",
+         "name":"Vieste Green Stone Statement Necklace",
+         "description":"Give any dress a sultry splash of style with this green stone statement necklace that's sure to get you noticed. Metal: Gold-tone metal Stones: Glass stones Closure: Lobster clasp Dimensions: 18\" long chain with 3\" extender Jewelry photos are enlarged to show detail.",
+         "price":142.99,
+         "category":8,
+         "rating":4.0,
+         "image":"pexels-superlens-photography-11655206.jpg"
+      }
+   },
+   {
+      "pk":96,
+      "model":"jewelleries.jewellery",
+      "fields":{
+         "sku":"pp5005941612",
+         "name":"Brown Freshwater Cultured Pearl Bracelet",
+         "description":"Sterling brown bracelet with cultured freshwater pearls. Pearl width 5 mm to 6 mm. Length 19.5 + 2.5 cm extender. Fits a wrist size of up to 20 cm. Weight 14.18 grams. This solid 925 silver bracelet would make a stunning luxury friendship bracelet.",
+         "price":392.99,
+         "category":9,
+         "rating":5.0,
+         "image":"pexels-nurfa-khoirunnisa-11260679.jpg"
+      }
+   },
+   {
+      "pk":97,
+      "model":"jewelleries.jewellery",
+      "fields":{
+         "sku":"pp5005980058",
+         "name":"TreasureBay Handmade Sterling Silver Drop Earrings",
+         "description":"They are handmade from selected natural gemstone finsihed with 925 sterling silver hook. You can sellect from rose quartz, pink agate, Red Agate, Green Agate, blue turquoise , brown tiger's eye and much more...",
+         "price":226.99,
+         "category":9,
+         "rating":5.0,
+         "image":"pexels-eugenia-remark-14558499.jpg"
+      }
+   },
+   {
+      "pk":98,
+      "model":"jewelleries.jewellery",
+      "fields":{
+         "sku":"pp5005980146",
+         "name":"Faux Pearl Bracelet",
+         "description":"A classic set of women's jewellery set made from imitation pearls, available in a wide range of colours pearl size: 6mm",
+         "price":258.99,
+         "category":9,
+         "rating":4.5,
+         "image":"pexels-alexey-demidov-10961465.jpg"
+      }
+   },
+   {
+      "pk":99,
+      "model":"jewelleries.jewellery",
+      "fields":{
+         "sku":"pp5006070077",
+         "name":"Women Pearl Ring,925 Sterling Silver Ring ",
+         "description":"Metal of Silver Ring :925 Sterling Silver Great gift for Christmas,Daily Life, Valentine's Day, Anniversary, Birthday ,Engagement, Wedding, etc",
+         "price":429.99,
+         "category":9,
+         "rating":4.4,
+         "image":"pexels-superlens-photography-15827695.jpg"
+      }
+   },
+   {
+      "pk":100,
+      "model":"jewelleries.jewellery",
+      "fields":{
+         "sku":"pp5006081758",
+         "name":"Pearl Drop Earrings for Women, Sterling Silver Pearl ",
+         "description":"Sophisticated sterling silver hoop earrings with pearl drop, white round shape pearl drop earrings design symbolizes your elegance and noble, the best choice for all the perfect women's fashion jewellry.",
+         "price":453.99,
+         "category":9,
+         "rating":4.8,
+         "image":"pexels-kader-d-kahraman-11790271.jpg"
+      }
+   },
+   {
+      "pk":101,
+      "model":"jewelleries.jewellery",
+      "fields":{
+         "sku":"pp5006082011",
+         "name":"9ct Yellow Gold Ladies Lustrous Pearl & Ceylon Sapphire Swirl Ring",
+         "description":"Freshwater Cultured Pearl & Natural earth-mined Sapphire Completely Solid 9ct Yellow Gold, purity 375",
+         "price":572.99,
+         "category":9,
+         "rating":5.0,
+         "image":"perl_ring.png.jpg"
+      }
+   },
+   {
+      "pk":102,
+      "model":"jewelleries.jewellery",
+      "fields":{
+         "sku":"pp5006150186",
+         "name":"Philip Jones Freshwater Baroque Pearl Friendship Bracelet",
+         "description":"Philip Jones Freshwater Baroque Pearl Friendship Bracelet",
+         "price":271.99,
+         "category":9,
+         "rating":4.0,
+         "image":"pexels-nana-lapushkina-10330851.jpg"
+      }
+   },
+   {
+      "pk":103,
+      "model":"jewelleries.jewellery",
+      "fields":{
+         "sku":"pp5006153172",
+         "name":"Creame Pearl Bead Chain Choker for Women",
+         "description":"The Saturn pendant is full of rhinestones. very shiny and transparent. The color will make your skin look whiter, and the real things will look more beautiful than the pictures.",
+         "price":455.0,
+         "category":9,
+         "rating":4.2,
+         "image":"pexels-мария-maria-11678215.jpg"
+      }
    }
 ]
