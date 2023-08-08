@@ -5,8 +5,11 @@ from django.db.models import Q
 from django.contrib import messages
 from django.db.models.functions import Lower
 
+# Import Pagination Stuff
+from django.core.paginator import Paginator
 
-# Create your views here.
+
+# Create jewellery views here.
 def all_jewelleries(request):
    """  A view to show all jewelleries, including sorting and search queries """
     
@@ -49,13 +52,22 @@ def all_jewelleries(request):
            queries = Q(name__icontains=query) | Q(description__icontains=query)
            jewelleries = jewelleries.filter(queries)
 
+             # Set up Pagination
+   p = Paginator(Jewellery.objects.all(),2)
+   page = request.GET.get('page')
+   see_jewelleries = p.get_page(page)
+
    current_sorting = f'{sort}_{direction}'
    context = {
         'jewelleries': jewelleries,
         'search_term': query,
         'current_categories': categories,
         'current_sorting': current_sorting,
+        'see_jewelleries': see_jewelleries
     }
+
+   
+
    return render(request, 'jewelleries/jewelleries.html', context)
 
 
