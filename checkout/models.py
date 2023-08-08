@@ -35,11 +35,11 @@ class Order(models.Model):
         Update grand total each time a line item is added,
         accounting for delivery costs.
         """
-        self.order_total = self.lineitems.aggregate(Sum('lineitem_total'))['lineitem_total__sum']
+        self.order_total = self.lineitems.aggregate(Sum('lineitem_total'))['lineitem_total__sum'] or 0
         if self.order_total > settings.DISCOUNT_PER_1000_EURO:
-            self.discount_apply = self.discount = (self.order_total // 1000 ) * settings.DISCOUNT_PER_1000_EURO
+            self.discount_apply = (self.order_total // 1000 ) * settings.DISCOUNT_PER_1000_EURO
         else:
-            self.discount_apply = self.discount = 0
+            self.discount_apply = 0
         self.grand_total = self.order_total - self.discount_apply
         self.save()
 
@@ -48,7 +48,8 @@ class Order(models.Model):
         Override the original save method to set the order number
         if it hasn't been set already.
         """
-        self.lineitem_total = self.product.price * self.quantity
+        if not self.order_number:
+            self.order_number = self._generate_order_number()
         super().save(*args, **kwargs)
 
 
