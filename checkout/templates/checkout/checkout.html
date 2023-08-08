@@ -43,7 +43,7 @@
                                 {% if item.product.image %}
                                     <img class="img" src="{{ item.product.image.url }}" alt="{{ jewellery.name }}">
                                 {% else %}
-                                    <img class="imgs" src="{{ MEDIA_URL }}noimage.png" alt="{{ jewellery.name }}">
+                                    <img class="img" src="{{ MEDIA_URL }}noimage.png" alt="{{ jewellery.name }}">
                                 {% endif %}
                             </a>
                         </div>
@@ -60,12 +60,12 @@
                 <div class="row text-black text-right">
                     <div class="col-7 offset-2">
                         <p class="my-0">Order Total:</p>
-                        <p class="my-0">Discount:</p>
+                        <!-- <p class="my-0">Discount:${{ discount_amount | floatformat:2 }}</p> -->
                         <p class="my-0">Grand Total:</p>
                     </div>
                     <div class="col-3">
                         <p class="my-0">${{ total | floatformat:2 }}</p>
-                        <p class="my-0">${{ discount_amount | floatformat:2 }}</p>
+                        <!-- <p class="my-0">${{ discount_amount | floatformat:2 }}</p> -->
                         <p class="my-0"><strong>${{ grand_total  | floatformat:2 }}</strong></p>
                     </div>
                 </div>
@@ -80,7 +80,7 @@
                         {{ order_form.email | as_crispy_field }}
                     </fieldset>
                     <fieldset class="rounded px-3 mb-5">
-                        <legend class="fieldset-label small text-black px-2 w-auto">Discount</legend>
+                        <legend class="fieldset-label small text-black px-2 w-auto"></legend>
                         {{ order_form.phone_number | as_crispy_field }}
                         {{ order_form.country | as_crispy_field }}
                         {{ order_form.postcode | as_crispy_field }}
@@ -139,5 +139,5 @@
     {{ block.super }}
     {{ stripe_public_key|json_script:"id_stripe_public_key" }}
     {{ client_secret|json_script:"id_client_secret" }}
-    <script src="{% static 'checkout/js/stripe_elements.js' %}"></script>
+    <script src="{% static 'checkout/css/js/stripe_elements.js' %}"></script>
 {% endblock %}

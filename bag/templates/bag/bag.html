@@ -93,6 +93,11 @@
                                              You get a  <strong>{{ discount_amount }}€</strong> discount!
                                         </p>
                                     {% endif %}
+                                    {% if total < 1000 %}
+                                        <p class="mb-1 text-danger">
+                                             Add <strong>{{ remaining_for_discount }}€</strong> to get discount!
+                                        </p>
+                                        {% endif %} 
                                 </td>
                             </tr>
                             <tr>
