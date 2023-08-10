@@ -47,6 +47,16 @@
   z-index: 9999;
 }
 
+select,
+select option {
+    color: #000000;
+}
+
+select:invalid,
+select option[value=""] {
+    color: #aab7c4 !important;
+}
+
 .loading-spinner {
   display: flex;
   align-items: center;
