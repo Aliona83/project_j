@@ -58,7 +58,7 @@ form.addEventListener('submit', function(ev) {
     var csrfToken = $('input[name="csrfmiddlewaretoken"]').val();
     var postData = {
         'csrfmiddlewaretoken': csrfToken,
-        'client_secret': clientSecret,
+        'client_secret': client_secret,
         'save_info': saveInfo,
     };
     var url = '/checkout/cache_checkout_data/';
@@ -70,14 +70,14 @@ form.addEventListener('submit', function(ev) {
                 card: card,
                 billing_details: {
                     name: $.trim(form.full_name.value),
-                    phone: $.trim(phone_number.value),
+                    phone: $.trim(form.phone_number.value),
                     email: $.trim(form.email.value),
                     address:{
-                        line1: $.trim(street_address1.value),
-                        line2: $.trim(street_address2.value),
-                        city: $.trim(town_or_city.value),
-                        country: $.trim(country.value),
-                        state: $.trim(county.value),
+                        line1: $.trim(form.street_address1.value),
+                        line2: $.trim(form.street_address2.value),
+                        city: $.trim(form.town_or_city.value),
+                        country: $.trim(form.country.value),
+                        state: $.trim(form.county.value),
                 }
             
             }
