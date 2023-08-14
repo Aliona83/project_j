@@ -53,7 +53,7 @@ def all_jewelleries(request):
            jewelleries = jewelleries.filter(queries)
 
              # Set up Pagination
-   p = Paginator(jewelleries,2)
+   p = Paginator(jewelleries,8)
    page = request.GET.get('page')
    see_jewelleries = p.get_page(page)
 
@@ -65,9 +65,6 @@ def all_jewelleries(request):
         'current_sorting': current_sorting,
         'see_jewelleries': see_jewelleries
     }
-
-   
-
    return render(request, 'jewelleries/jewelleries.html', context)
 
 

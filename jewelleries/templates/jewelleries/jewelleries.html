@@ -13,7 +13,7 @@
 <div class="container-fluid mt-3">
     <div class="row mt-5">
         <div class="col text-center">
-            <h2 class="logo-font">Jewellery</h2>
+            <h2 class="logo-font mt-3">Jewellery</h2>
             {% for c in current_categories %}
                     <a class="category-badge text-decoration-none" href="{% url 'jewelleries:jewelleries' %}?category={{ c.name }}">
                         <span class="p-2 mt-2 badge badge-white text-black rounded-0 border border-dark">{{ c.friendly_name }}</span>
@@ -23,7 +23,7 @@
         </div>
     </div>
     <div class="row">
-        <div class="product-container col-10 offset-1">
+        <div class="product-container col-12 offset-1">
             <div class="row mt-1 mb-2">
                 <div class="col-12 col-md-6 my-auto order-md-last d-flex justify-content-center justify-content-md-end">
                     <div class="sort-select-wrapper w-50">
@@ -49,22 +49,24 @@
                     </p>
                 </div>
             </div>
-    <div class="row  py-5 mt-5">
+    <div class="row col-12 py-5 mt-5">
         {% for jewellery in jewelleries %}
-        <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2">
+        <div class="col-12 col-sm-6 col-md- col-lg-4 col-xl-3 mb-4">
             <div class="card h-100 border-0">
+                <div class="card-body pb-0">
                 {% if jewellery.image %}
                 <a href="{% url 'jewelleries:jewelleries_details' jewellery.id %}">
-                    <img class="card-img-top img-fluid" src="{{ jewellery.image.url }}" style="max-width: 100%; height: auto;" alt="{{ jewellery.name }}">
+                    <img class="card-img-top img-fluid" src="{{ jewellery.image.url }}"  alt="{{ jewellery.name }}">
                 </a>
                 {% else %}
                 <a href="">
-                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" style="max-width: 100%; height: auto;" alt="{{ jewellery.name }}">
+                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png"  alt="{{ jewellery.name }}">
                 </a>
                 {% endif %}
                 <div class="card-body pb-0">
                     <p class="mb-0">{{ jewellery.name }}</p>
                 </div>
+            </div>
                 <div class="card-footer bg-white pt-0 border-0 text-left">
                     <div class="row">
                         <div class="col">
@@ -110,7 +112,6 @@
                 </div>
             </div>
         </div>
-    </div>
     </div>
 </div>
 <div class= "pagination container justify-content-center">
