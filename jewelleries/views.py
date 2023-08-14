@@ -53,7 +53,7 @@ def all_jewelleries(request):
            jewelleries = jewelleries.filter(queries)
 
              # Set up Pagination
-   p = Paginator(Jewellery.objects.all(),2)
+   p = Paginator(jewelleries,2)
    page = request.GET.get('page')
    see_jewelleries = p.get_page(page)
 
