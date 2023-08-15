@@ -1,6 +1,4 @@
-* {
-    box-sizing: border-box;
-}
+
 body {
     background-color: #f3c8cd69;
 }
@@ -317,14 +315,10 @@ a.category-badge > span.badge:hover {
     }
 }
   /* fixed top navbar only on medium and up */
-  @media (min-width: 380px) {
-      
-      .header-container { 
-          padding-top: 164px;
-      }
-  }
-
   @media (max-width: 380px) {
+    .header-container { 
+        padding-top: 164px;
+    }
     .fixed-top-desktop-only {
         position: fixed;
         top: 0;
