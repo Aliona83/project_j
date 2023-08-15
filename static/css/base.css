@@ -1,6 +1,9 @@
 * {
     box-sizing: border-box;
 }
+body {
+    background-color: #f3c8cd69;
+}
 html {
     height: 100%;
     margin: 0;
@@ -205,6 +208,22 @@ a.category-badge > span.badge:hover {
 
 .toast-capper {
     height: 2px;
+}
+/* pagination */
+
+/* Change color of pagination links */
+.pagination .page-item .page-link {
+    color: #daa3a9;
+    border-color:#000;
+    color: #000;
+    margin-bottom: 20px;
+}
+
+/* Change color of active pagination link */
+.pagination .page-item.active .page-link {
+    background-color: #daa3a9;;
+    border-color:#000;
+    color: white; /* For better visibility */
 }
 
   

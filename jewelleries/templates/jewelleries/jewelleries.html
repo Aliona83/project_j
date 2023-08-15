@@ -49,8 +49,8 @@
                     </p>
                 </div>
             </div>
-    <div class="row col-12 py-5 mt-5">
-        {% for jewellery in jewelleries %}
+    <div class="row col-12">
+        {% for jewellery in all_jewellery %}
         <div class="col-12 col-sm-6 col-md- col-lg-4 col-xl-3 mb-4">
             <div class="card h-100 border-0">
                 <div class="card-body pb-0">
@@ -114,61 +114,31 @@
         </div>
     </div>
 </div>
-<div class= "pagination container justify-content-center">
-    <ul class="pagination">
-      <li class="page-item disabled">
-        {% if see_jewelleries.has_previous %}
-          <li class="page-item">
-            <a class="page-link" href="{{ request.path }}?page={{ see_jewelleries.previous_page_number }}">Previous</a>
-          </li>
-        {% endif %}
-        {% if see_jewelleries.number > 3 %}
-          <li class="page-item">
-            <a class="page-link" href="{{ request.path }}?page=1">1</a>
-          </li>
-        {% endif %}
-        {% if see_jewelleries.number > 4 %}
-            <li class="page-item">
-            <span class="page-link">....</span>
-            </li>
-        {% endif %}
-      </li>
-  
-      {% for i in see_jewelleries.paginator.page_range %}
-        {% if page_obj.number == i %}
-          <li class="page-item active">
-            <span class="page-link">
-              {{ i }}
-              <span class="sr-only"></span>
-            </span>
-          </li>
-          {% elif i > see_jewelleries.number|add:'-3' and i < see_jewelleries.number|add:'3' %}
-            <li class="page-item">
-              <a class="page-link" href="{{ request.path }}?page={{ i }}">{{ i }}</a>
-            </li>
-        {% endif %}
-      {% endfor %}
-  
-      {% if page_obj.has_next %}
-        {% if see_jewelleries.number < see_jewelleries.paginator.num_pages|add:'-3' %}
-            <li class="page-item">
-                <span class="page-link">....</span>
-            </li>
-            <li class="page-item">
-                <a class="page-link" href="?page={{ see_jewelleries.paginator.num_pages }}">{{ see_jewelleries.paginator.num_pages }}</a>
-            </li>
-        {% elif see_jewelleries.number < see_jewelleries.paginator.num_pages|add:'-2' %}
-            <li class="page-item">
-                <a class="page-link" href="?page={{ see_jewelleries.paginator.num_pages }}">{{ see_jewelleries.paginator.num_pages }}</a>
-            </li>
-        {% endif %}  
-        <li class="page-item">
-          <a class="page-link" href="?page={{ see_jewelleries.next_page_number }}"> Next</a>
-        </li>
+
+  {% if all_jewellery.has_other_pages %}
+  <ul class="pagination pagination-sm justify-content-center flex-wrap">
+    {% if all_jewellery.has_previous %}
+      <li class="page-item"><a class="page-link" href="?page={{ all_jewellery.previous_page_number }}">Previous</a></li>
+    {% else %}
+      <li class="page-item disabled"><span class="page-link">Previous</span></li>
+    {% endif %}
+    {% for i in all_jewellery.paginator.page_range %}
+      {% if all_jewellery.number == i %}
+        <li class="page-item active"><span class="page-link">{{ i }}</span></li>
+      {% else %}
+        <li class="page-item"><a class="page-link" href="?page={{ i }}">{{ i }}</a></li>
       {% endif %}
-    </ul>
-  </div>
-<!-- {{ see_jewelleries }} -->
+    {% endfor %}
+    {% if all_jewellery.has_next %}
+      <li class="page-item"><a class="page-link" href="?page={{ all_jewellery.next_page_number }}">Next</a></li>
+    {% else %}
+      <li class="page-item disabled"><span class="page-link">Next</span></li>
+    {% endif %}
+  </ul>
+{% endif %}
+
+
+
 {% endblock %}
 {% block postloadjs %}
     {{ block.super }}
