@@ -1,7 +1,7 @@
 
 # Table of Contents
 ## [Jewellery Shop Introduction](#jewllery-shop---introduction)
-## Ux
+## [Ux](#ux)
    * User Stories
    * Agile Methodologies
    * The Scope(?)
@@ -18,6 +18,7 @@
  
  ## Deployment
  * Creating a Clone 
+ * Forking this repository
  * Heroku Deployment
  * AWS S3 Bucket setup
  * AWS IAM(Identity and Access Managenent) setup ) 
@@ -35,14 +36,71 @@
   * youtube
   
 # Jewllery Shop - Introduction 
-
-
 The Jewelry Shop is  an E-commerce shop where users can find and buy jewellery also search for jewelleries by filtering different categories. They can also register by filling in their personal information on the website’s profile page. The application has a good appearance with an easy, clear and concise site navigation. web application built using Python, JavaScript, and Django, designed to provide a seamless and user-friendly platform for buying and selling exquisite jewelery pieces. Whether you are a jewelery enthusiast, a buyer looking for the perfect gift, or an artisan seeking to showcase your creations, this platform caters to all.
 
 (Add live project here)
 (Add image of project from I am response)
 
-Features
+# UX 
+User stories help us understand the needs and expectations of our users. They serve as a basis for defining features and guide our development process. Below are some user stories that represent the different roles and interactions within the Jewelry Project:
+
+## User stories what to see in shop :
+## As a Buyer, I want to:
+## As the User I want to :
+
+  * As a user, I can use the website on all device sizes so that I can see the same information on small and large devices.
+      
+  * As a user, I can use the navigation bar so that I can view all pages of the website easily
+
+  * As a site user, I want to be able to sign up, so that I can have a personal account on the site.
+
+  * As a site user, I want to be able to receive an email confirmation after registering, so that I can verify that my account registration was successful.
+
+  * As User I want to been able to add and remove products from my cart
+
+  * As User I want to recieve feedback that my order was proccessed succesfully.
+
+  * As User I want to see the features of the month
+
+  * As User I want to subscribe to the store newletters
+  * As User I want 
+
+  ## Agile Methodologies
+  
+
+  
+
+# Deployment
+[Link to DEPLOYMENT.md]()
+
+# Technologies Used
+ 
+ ## Languages
+  * Javascript
+  * Python
+  * HTML
+  * CSS
+
+  ## Frameworks - Libraries - Programs Used
+
+   * Django: Main python framework used in the development of this project
+   * Django-allauth: Authentication library used to create user accounts
+   * Heroku - Used as the cloud-based platform to deploy the site.
+   * GitHub - Used for version control and agile methodology.
+   * PostgreSQL Used as the database for this project.
+   * W3C - Used for HTML & CSS Validation.
+   * Font Awesome - Used for icons on the home page and stars on the About page.
+   * Font Awesome - Used for icons on the home page and stars on the About page.
+   * Jshint - Used to validate the JavaScript page.
+   * Crispy Forms Used to manage Django Forms.
+   * Bootstrap: CSS used for developing responsiveness and styling the website.
+
+   ## Credit 
+
+
+
+
+<!-- Features
 User Authentication: The application offers a secure and robust user authentication system, allowing users to create accounts, log in, and manage their profiles.
 
 Product Listings: Users can browse through a wide range of jewelry items, beautifully displayed with detailed descriptions and high-quality images.
@@ -110,7 +168,7 @@ User stories help us understand the needs and expectations of our users. They se
 
 As a Buyer, I want to:
 
-Browse through a variety of jewelry items sorted by category, price, and popularity.
+c
 View detailed product descriptions, including materials, gemstones, and sizes.
 Add items to my shopping cart and proceed to checkout securely.
 Create a wishlist of jewelry items for future reference.
@@ -159,4 +217,4 @@ Regenerate
 Send a message
 
 Free Research Preview. ChatGPT may produce inaccurate information about pe
-
+ -->
