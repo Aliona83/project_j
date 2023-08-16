@@ -8,7 +8,6 @@ html {
     padding: 0;
     display: flex;
     flex-direction: column;
-    background-color: #f3c8cd69;
 }
 .home-page {
     background-image: url('/media/pexels-terje-sollie-298852.jpg');
@@ -93,7 +92,7 @@ html {
 	top: 0;
 	left: 0;
 	position: fixed;
-	background: white;
+	background: #f3c8cd69;;
 	z-index: -1;
 }
 .btn-primary {
@@ -310,9 +309,6 @@ a.category-badge > span.badge:hover {
         padding-top: 116px;
     }
 
-    body {
-        height: calc(100vh - 116px);
-    }
 }
   /* fixed top navbar only on medium and up */
   @media (max-width: 380px) {
