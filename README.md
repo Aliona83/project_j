@@ -1,40 +1,162 @@
 
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Table of Contents
+## [Jewellery Shop Introduction](#jewllery-shop---introduction)
+## Ux
+   * User Stories
+   * Agile Methodologies
+   * The Scope(?)
+   * Structure(colors, images, fonts WhishList, UserProfile, Order..)
+   * Skeleton(Wireframes, Shopping Bag Wireframes, All Products Wireframes, Account page, Checkout Page ....)
+   * Surface(Features: Nav bar, Store Page, Search, Toast,Shopping bag )
 
-Welcome,
+## Testing 
+  * Link to Testing.md 
 
-This is the Code Institute student template for Codeanywhere. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+## Technologies Used
+ * Languages Used
+ * Frameworks/Libraries 
+ 
+ ## Deployment
+ * Creating a Clone 
+ * Heroku Deployment
+ * AWS S3 Bucket setup
+ * AWS IAM(Identity and Access Managenent) setup ) 
+ * Connecting Heroku to AWS S3
+ 
+ ## Credits
+  * Product images
+  * Code
+  * Bootstarp
+  * Django Documentation
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Codeanywhere and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **May 11th, 2023**
+## Aknowledgements
+  * Linkedin
+  * GitHub
+  * youtube
+  
+# Jewllery Shop - Introduction 
 
-## Codeanywhere Reminders
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere, in the terminal, type:
+The Jewelry Shop is  an E-commerce shop where users can find and buy jewellery also search for jewelleries by filtering different categories. They can also register by filling in their personal information on the website’s profile page. The application has a good appearance with an easy, clear and concise site navigation. web application built using Python, JavaScript, and Django, designed to provide a seamless and user-friendly platform for buying and selling exquisite jewelery pieces. Whether you are a jewelery enthusiast, a buyer looking for the perfect gift, or an artisan seeking to showcase your creations, this platform caters to all.
 
-`python3 -m http.server`
+(Add live project here)
+(Add image of project from I am response)
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+Features
+User Authentication: The application offers a secure and robust user authentication system, allowing users to create accounts, log in, and manage their profiles.
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere with no-cache, you can use this alias for `python3 -m http.server`.
+Product Listings: Users can browse through a wide range of jewelry items, beautifully displayed with detailed descriptions and high-quality images.
 
-`http_server`
+Search and Filtering: A powerful search and filtering functionality enable users to quickly find specific jewelry items based on various parameters like type, material, gemstone, and price range.
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+Shopping Cart: Users can add their favorite jewelry pieces to the shopping cart and proceed to checkout seamlessly.
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+Payment Integration: The project integrates a secure payment gateway, enabling users to make safe and convenient online transactions.
 
-In Codeanywhere you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+Order Tracking: Once a purchase is made, users can track their orders and receive notifications on the status of their shipments.
 
-To log into the Heroku toolbelt CLI:
+Seller Dashboard: Artisans and sellers have access to a dedicated dashboard, where they can manage their products, view order details, and track their earnings.
 
-1. Log in to your Heroku account and go to _Account Settings_ in the menu under your avatar.
-2. Scroll down to the _API Key_ and click _Reveal_
-3. Copy the key
-4. In Codeanywhere, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+Reviews and Ratings: Users can leave reviews and ratings for products, fostering a community-driven platform and helping others make informed purchasing decisions.
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+Wishlist: Users can create a wishlist of their desired jewelry items for future reference.
 
----
+Admin Panel: The application includes a comprehensive admin panel that facilitates easy management of products, user accounts, and order processing.
 
-Happy coding!
+Tech Stack
+Python: The project leverages the power and versatility of Python to handle the backend logic and database operations.
+
+JavaScript: JavaScript is used to create dynamic and interactive user interfaces, enhancing the overall user experience.
+
+Django: As a high-level Python web framework, Django provides a robust foundation for building secure and scalable web applications.
+
+HTML/CSS: The front-end is crafted using HTML and CSS, ensuring a visually appealing and responsive design.
+
+Database: The project employs a relational database (e.g., PostgreSQL, MySQL) to store user information, product details, and order history.
+
+Installation
+To set up the Jewelry Project locally, follow these steps:
+
+Clone the repository from [GitHub Repo URL].
+
+Install Python [version] and pip on your system.
+
+Create a virtual environment and activate it.
+
+Install the required Python packages using the requirements.txt file.
+
+Set up the database and run migrations.
+
+Start the development server and access the application via the provided URL.
+
+Contributing
+We welcome contributions from the community to improve the Jewelry Project. If you encounter any bugs, have suggestions, or wish to add new features, feel free to submit a pull request or raise an issue on our GitHub repository.
+
+License
+The Jewelry Project is licensed under [License Type]. Please refer to the LICENSE file for more details.
+
+Acknowledgments
+We extend our gratitude to the open-source community for providing valuable tools and resources that have contributed to the development of this project.
+
+Contact
+For any inquiries or support, please contact us at [contact@example.com].
+
+Note: Replace placeholders such as [GitHub Repo URL], [version], [License Type], and [contact@example.com] with the actual values specific to your project. Provide clear instructions for installation and contribution guidelines if applicable.
+
+
+User storie
+
+User stories help us understand the needs and expectations of our users. They serve as a basis for defining features and guide our development process. Below are some user stories that represent the different roles and interactions within the Jewelry Project:
+
+As a Buyer, I want to:
+
+Browse through a variety of jewelry items sorted by category, price, and popularity.
+View detailed product descriptions, including materials, gemstones, and sizes.
+Add items to my shopping cart and proceed to checkout securely.
+Create a wishlist of jewelry items for future reference.
+Leave reviews and ratings for products I have purchased.
+Track the status of my orders and receive notifications on shipment updates.
+Have an intuitive and user-friendly interface to easily navigate and interact with the website.
+As an Artisan/Seller, I want to:
+
+Register and create an account with my profile details.
+Upload images and descriptions of my jewelry pieces to showcase my work.
+Manage my product listings, including adding new products and updating existing ones.
+View and track the status of orders placed for my products.
+Receive notifications when a buyer purchases one of my items.
+Have access to a seller dashboard with insights into sales and earnings.
+Interact with buyers by responding to reviews and inquiries.
+As an Administrator, I want to:
+
+Manage user accounts, including authentication and authorization.
+Monitor and moderate user-generated content, such as reviews and ratings.
+Have control over the product listings and the ability to add, edit, or remove products.
+View sales and revenue reports for the entire platform and individual sellers.
+Resolve disputes between buyers and sellers if they arise.
+Receive alerts for any critical system issues or security concerns.
+Access an admin panel with an intuitive interface for managing various aspects of the platform.
+As a Guest User, I want to:
+
+Have the option to register an account or log in to access additional features.
+View the website's landing page, showcasing the platform's unique selling points.
+Browse through a limited selection of featured jewelry items without logging in.
+Be informed about the benefits of creating an account, such as wishlist creation and personalized recommendations.
+Access the website from any device, ensuring a responsive and mobile-friendly design.
+As a Potential Seller, I want to:
+
+Easily find information on how to become a seller on the platform.
+Understand the terms and conditions for selling jewelry through the website.
+Contact the administrators or support team for assistance with the seller onboarding process.
+Receive guidance on setting competitive prices and optimizing product listings.
+These user stories serve as a foundation for defining the functionalities and requirements of the Jewelry Project. They will be used in conjunction with Agile methodologies to prioritize features, plan sprints, and ensure the development aligns with the needs of our users.
+
+
+
+
+
+
+Regenerate
+Send a message
+
+Free Research Preview. ChatGPT may produce inaccurate information about pe
+
