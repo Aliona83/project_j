@@ -4,6 +4,7 @@ from django.shortcuts import get_object_or_404
 from django.db.models import Q
 from django.contrib import messages
 from django.db.models.functions import Lower
+from .forms import ProductForm
 
 # Import Pagination Stuff
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
@@ -76,3 +77,13 @@ def jewelleries_details(request, jewellery_id):
         'jewellery': jewellery,
     }
     return render(request, 'jewelleries/jewelleries_details.html', context)
+
+def add_jewellery(request):
+    """ Add a product to the store """
+    form = ProductForm()
+    template = 'jewelleries/add_jewellery.html'
+    context = {
+        'form': form,
+    }
+
+    return render(request, template, context)    
