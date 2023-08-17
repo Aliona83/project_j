@@ -1,7 +1,7 @@
 <div class="collapse navbar-collapse" id="main-nav">
     <ul class="navbar-nav w-auto mx-auto">
         <li class="nav-item dropdown">
-            <a class="nav-link active d-xl-none" aria-current="page" href="{% url 'home' %}">Home</a>
+            <a class="nav-link active d-xl-none d-lg-none" aria-current="page" href="{% url 'home' %}">Home</a>
             <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 All Jewelleries
             </a>
@@ -44,7 +44,7 @@
             <div class="dropdown-menu border-0" aria-labelledby="specials-link">
                 <a href="{% url 'jewelleries:jewelleries' %}?category=new_arrivals" class="dropdown-item">New Arrivals</a>
                 <a href="{% url 'jewelleries:jewelleries' %}?category=deals" class="dropdown-item">Deals</a>
-                <a href="{% url 'jewelleries:jewelleries' %}?category=clearance" class="dropdown-item" class="dropdown-item">Clearance</a>
+                <a href="{% url 'jewelleries:jewelleries' %}?category=clearance" class="dropdown-item">Clearance</a>
                 <a href="{% url 'jewelleries:jewelleries' %}?category=new_arrivals,deals,clearance" class="dropdown-item">All Specials</a>
             </div>
         </li>

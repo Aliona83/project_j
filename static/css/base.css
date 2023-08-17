@@ -237,6 +237,7 @@ a.category-badge > span.badge:hover {
       max-width: 90%;
     }
 
+  
 /* Allauth form formatting */
 
 .allauth-form-inner-content p {
@@ -288,7 +289,7 @@ a.category-badge > span.badge:hover {
 }
 
 .allauth-form-inner-content a {
-	color: #17a2b8; /* text-info */
+	color: #da186c; /* text-info */
 }
 
   }
@@ -304,14 +305,14 @@ a.category-badge > span.badge:hover {
     }
 
     .header-container {
-        padding-top: 320px;
+        padding-top: 184px;
     }
 }
   
 /* pad the top a bit when navbar is collapsed on mobile */
 @media (max-width: 991px) {
     .header-container {
-        padding-top: 320px;
+        padding-top: 184px;
     }
 
 }

@@ -96,4 +96,27 @@ def add_jewellery(request):
         'form': form,
     }
 
-    return render(request, template, context)    
+    return render(request, template, context) 
+
+def edit_jewellery(request, jewellery_id):
+    """ Edit a product in the store """
+    jewellery = get_object_or_404(Jewellery, pk=jewellery_id)
+    if request.method == 'POST':
+        form = ProductForm(request.POST, request.FILES, instance=jewellery)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully updated product!')
+            return redirect(reverse('jewelleries:jewelleries_details', args=[jewellery.id]))
+        else:
+            messages.error(request, 'Failed to update product. Please ensure the form is valid.')
+    else:
+        form = ProductForm(instance=jewellery)
+        messages.info(request, f'You are editing {jewellery.name}')
+
+    template = 'jewelleries/edit_jewellery.html'
+    context = {
+        'form': form,
+        'jewellery': jewellery,
+    }
+
+    return render(request, template, context)   
