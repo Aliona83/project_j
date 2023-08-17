@@ -71,7 +71,7 @@ User stories help us understand the needs and expectations of our users. They se
   
 
 # Deployment
-[Link to DEPLOYMENT.md]()
+[Link to DEPLOYMENT.md](https://github.com/Aliona83/project_j/blob/main/DEPLOYMENT.md)
 
 # Technologies Used
  

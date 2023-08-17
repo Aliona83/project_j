@@ -1,6 +1,6 @@
 # Table of Contents
 
- [## Deployment](#deployment)
+ # [Deployment](#deployment)
   * [Creating a Clone](#creating-a-clone)
   * [Forking this repository](#forking-this-repository)
   * [Heroku Deployment](#deployment---heroku)

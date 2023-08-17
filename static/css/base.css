@@ -237,7 +237,10 @@ a.category-badge > span.badge:hover {
       max-width: 90%;
     }
 
-  
+    .header-container {
+        padding-top: 184px;
+    }
+
 /* Allauth form formatting */
 
 .allauth-form-inner-content p {
@@ -306,7 +309,7 @@ jewelleries/templates/jewelleries/custom_widget_templates
     }
 
     .header-container {
-        padding-top: 184px;
+        padding-top: 89px;
     }
 }
   
@@ -320,8 +323,9 @@ jewelleries/templates/jewelleries/custom_widget_templates
 
 @media (max-width: 380px) {
     .header-container {
-        padding-top: 221px;
+        padding-top: 201px;
     }
+  
     .fixed-top-desktop-only {
         position: fixed;
         top: 0;
