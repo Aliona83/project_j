@@ -119,4 +119,11 @@ def edit_jewellery(request, jewellery_id):
         'jewellery': jewellery,
     }
 
-    return render(request, template, context)   
+    return render(request, template, context)
+
+def delete_jewellery(request, jewellery_id):
+    """ Delete a product from the store """
+    jewellery = get_object_or_404(Jewellery, pk=jewellery_id)
+    jewellery.delete()
+    messages.success(request, 'Jewellery was successful  deleted!')
+    return redirect(reverse('jewelleries:jewelleries'))       

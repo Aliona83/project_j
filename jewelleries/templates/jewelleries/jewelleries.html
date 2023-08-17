@@ -83,6 +83,12 @@
                             {% else %}
                             <small class="text-muted">No Rating</small>
                             {% endif %}
+                            {% if request.user.is_superuser %}
+                                                <small class="ml-3">
+                                                    <a href="{% url 'jewelleries:edit_jewellery' jewellery.id %}">Edit</a> | 
+                                                    <a class="text-danger" href="{% url 'jewelleries:delete_jewellery' jewellery.id %}">Delete</a>
+                                                </small>
+                                            {% endif %}
                         </div>
                     </div>
                 </div>
