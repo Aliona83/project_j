@@ -24,7 +24,10 @@ html {
 .home-page-text {
    padding-top: 20rem;
 }
-
+.text-info {
+color: #da186c;
+}
+    
 
 .icon {
     align-items: center;
@@ -43,8 +46,10 @@ html {
 .btn-black {
     background: black;
     color: white;
+    margin: px;
 }
 .bg-black {
+    
     background: #000 !important;
     color: #fff;
 }
@@ -172,7 +177,7 @@ a.category-badge > span.badge:hover {
 }
 
 .arrow-info {
-    border-bottom-color: #17a2b8 !important;
+    border-bottom-color: #da186c !important;
 }
 
 .arrow-light {
@@ -299,21 +304,26 @@ a.category-badge > span.badge:hover {
     }
 
     .header-container {
-        padding-top: 164px;
+        padding-top: 320px;
     }
 }
   
 /* pad the top a bit when navbar is collapsed on mobile */
 @media (max-width: 991px) {
     .header-container {
-        padding-top: 116px;
+        padding-top: 320px;
     }
 
 }
   /* fixed top navbar only on medium and up */
-  @media (max-width: 380px) {
+  /* @media (max-width: 880px) {
     .header-container { 
-        padding-top: 164px;
+        padding-top: 320px;
+    }
+    */
+@media (max-width: 380px) {
+    .header-container {
+        padding-top: 320px;
     }
     .fixed-top-desktop-only {
         position: fixed;
@@ -334,15 +344,10 @@ a.category-badge > span.badge:hover {
     .home-page-text {
         padding-top: 20rem;
      }
-@media (max-width: 380px) {
-    .header-container {
-        padding-top: 270px;
-    }
-
     body {
         height: calc(100vh - 116px);
     }
     .home-page-text {
         padding-top: 20rem;
      }
-}
+

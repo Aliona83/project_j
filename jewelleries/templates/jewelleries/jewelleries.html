@@ -13,7 +13,7 @@
 <div class="container-fluid mt-3">
     <div class="row mt-5">
         <div class="col text-center">
-            <h2 class="logo-font mt-5 p-5">Jewellery</h2>
+            <h2 class="logo-font">Jewellery</h2>
             {% for c in current_categories %}
                     <a class="category-badge text-decoration-none" href="{% url 'jewelleries:jewelleries' %}?category={{ c.name }}">
                         <span class="p-2 mt-2 badge badge-white text-black rounded-0 border border-dark">{{ c.friendly_name }}</span>
