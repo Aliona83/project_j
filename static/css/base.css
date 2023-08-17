@@ -292,6 +292,7 @@ a.category-badge > span.badge:hover {
 	color: #da186c; /* text-info */
 }
 
+jewelleries/templates/jewelleries/custom_widget_templates
   }
 
   /* fixed top navbar only on medium and up */
@@ -316,15 +317,10 @@ a.category-badge > span.badge:hover {
     }
 
 }
-  /* fixed top navbar only on medium and up */
-  /* @media (max-width: 880px) {
-    .header-container { 
-        padding-top: 320px;
-    }
-    */
+
 @media (max-width: 380px) {
     .header-container {
-        padding-top: 320px;
+        padding-top: 221px;
     }
     .fixed-top-desktop-only {
         position: fixed;
@@ -352,3 +348,5 @@ a.category-badge > span.badge:hover {
         padding-top: 20rem;
      }
 
+  
+    
