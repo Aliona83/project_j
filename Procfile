@@ -1,1 +1,1 @@
-web: gunicorn project_j.wsgi:application
+web: gunicorn jewelry_shop.wsgi:application
