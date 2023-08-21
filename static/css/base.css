@@ -21,6 +21,29 @@ html {
     justify-content: center;
     font-weight: bold;
 }
+.card-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 100%; /* 1:1 aspect ratio (square) */
+}
+.card-img-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.card-footer {
+    background-color:#F9FBFB;
+}
+
+.card-footer a {
+    color:  #1A702A; /* Darker shade of green for better contrast */
+}
+.card-footer .delete {
+   color: #D92636
+}
 .home-page-text {
    padding-top: 20rem;
 }

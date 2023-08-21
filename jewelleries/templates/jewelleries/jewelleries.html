@@ -11,6 +11,7 @@
 
 {% block content %}
 <div class="container-fluid mt-3">
+    <main class="main">
     <div class="row mt-5 p-5">
         <div class="col text-center">
             <h2 class="logo-font">Jewellery</h2>
@@ -22,11 +23,13 @@
             <hr class="w-50 mb-1">
         </div>
     </div>
+</main>
     <div class="flex-row">
         <div class="product-container offset-1">
             <div class="row mt-1 mb-2">
                 <div class="col-12 col-md-6 my-auto order-md-last d-flex justify-content-center justify-content-md-end">
                     <div class="sort-select-wrapper w-50">
+                        <label for="sort-selector" class="sr-only">Sort by</label> 
                         <select id="sort-selector" class="custom-select custom-select-sm rounded-0 border border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
                             <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...</option>
                             <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price (low to high)</option>
@@ -54,6 +57,7 @@
         <div class="col-12 col-sm-5 col-md-6 col-lg-3 col-xl-3">
             <div class="card h-100 border-0">
                 <div class="card-body pb-0">
+                    <div class="card-container">
                 {% if jewellery.image %}
                 <a href="{% url 'jewelleries:jewelleries_details' jewellery.id %}">
                     <img class="card-img-top img-fluid" src="{{ jewellery.image.url }}"  alt="{{ jewellery.name }}">
@@ -67,28 +71,29 @@
                     <p class="mb-0">{{ jewellery.name }}</p>
                 </div>
             </div>
-                <div class="card-footer bg-white pt-0 border-0 text-left">
+                <div class="card-footer pt-0 border-0 text-left">
                     <div class="row">
                         <div class="col">
                             <p class="lead mb-0 text-left font-weight-bold">${{ jewellery.price }}</p>
                             {% if jewellery.category %}
                             <p class="small mt-1 mb-0">
-                                <a class="text-muted" href="{% url 'jewelleries:jewelleries' %}?category={{ jewellery.category.name }}">
+                                <a class="text-black" href="{% url 'jewelleries:jewelleries' %}?category={{ jewellery.category.name }}">
                                     <i class="fas fa-tag mr-1"></i>{{ jewellery.category.friendly_name }}
                                 </a>
                             </p>
                             {% endif %}
                             {% if jewellery.rating %}
-                            <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ jewellery.rating }} / 5</small>
+                            <small class="text-black"><i class="fas fa-star mr-1"></i>{{ jewellery.rating }} / 5</small>
                             {% else %}
-                            <small class="text-muted">No Rating</small>
+                            <small class="text-black">No Rating</small>
                             {% endif %}
                             {% if request.user.is_superuser %}
-                                                <small class="ml-3">
+                                                <small class="ml-4">
                                                     <a href="{% url 'jewelleries:edit_jewellery' jewellery.id %}">Edit</a> | 
-                                                    <a class="text-danger" href="{% url 'jewelleries:delete_jewellery' jewellery.id %}">Delete</a>
+                                                    <a class="delete" href="{% url 'jewelleries:delete_jewellery' jewellery.id %}">Delete</a>
                                                 </small>
                                             {% endif %}
+                            </div>                
                         </div>
                     </div>
                 </div>
@@ -120,7 +125,7 @@
         </div>
     </div>
 </div>
-
+<section>
   {% if all_jewellery.has_other_pages %}
   <ul class="pagination pagination-sm justify-content-center flex-wrap">
     {% if all_jewellery.has_previous %}
@@ -142,7 +147,7 @@
     {% endif %}
   </ul>
 {% endif %}
-
+</section>
 
 {% include 'includes/footer.html'%}
 {% endblock %}
