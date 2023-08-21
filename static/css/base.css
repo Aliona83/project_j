@@ -25,7 +25,7 @@ html {
    padding-top: 20rem;
 }
 .text-info {
-color: #da186c;
+ color: #da186c !important;
 }
     
 
@@ -112,7 +112,7 @@ color: #da186c;
 }
 
 input[name='q']::placeholder {
-    color: #aab7c4;
+    color: #df84ab;
 }
 /* home page card with features */
 
@@ -157,11 +157,11 @@ a.category-badge > span.badge:hover {
 
 /* Convenience classes - colors copied from Bootstrap */
 .arrow-primary {
-    border-bottom-color: #007bff !important;
+    border-bottom-color: #14273c !important;
 }
 
 .arrow-secondary {
-    border-bottom-color: #6c757d !important;
+    border-bottom-color: #f476ac !important;
 }
 
 .arrow-success {
@@ -177,7 +177,7 @@ a.category-badge > span.badge:hover {
 }
 
 .arrow-info {
-    border-bottom-color: #da186c !important;
+    border-bottom-color: #17a2b8 !important;
 }
 
 .arrow-light {
@@ -245,7 +245,7 @@ a.category-badge > span.badge:hover {
 
 .allauth-form-inner-content p {
     margin-top: 1.5rem; /* mt-4 */
-    color: #6c757d; /* text-secondary */
+    color: #373c40; /* text-secondary */
 }
 
 .allauth-form-inner-content input {
@@ -258,7 +258,7 @@ a.category-badge > span.badge:hover {
 }
 
 .allauth-form-inner-content input::placeholder {
-    color: #aab7c4;
+    color: #2a323a;
 }
 
 .allauth-form-inner-content button,
@@ -295,11 +295,18 @@ a.category-badge > span.badge:hover {
 	color: #da186c; /* text-info */
 }
 
-jewelleries/templates/jewelleries/custom_widget_templates
+/* jewelleries/templates/jewelleries/custom_widget_templates */
   }
 
   /* fixed top navbar only on medium and up */
 @media (min-width: 992px) {
+    .arrow-info {
+        border-bottom-color: #da186c ;
+        
+    }
+    .text-info {
+       color: #da186c ;
+    }
     .fixed-top-desktop-only {
         position: fixed;
         top: 0;

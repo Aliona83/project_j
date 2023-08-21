@@ -10,6 +10,7 @@
 {% endblock %}
 
 {% block content %}
+<main>
     <div class=" home-page container-fliud">
         <div class="row justify-content-center">
             <div class="home-page-text col-lg-12 my-auto">
@@ -25,7 +26,7 @@
                 </div>
         </div>
     </div>
-
+</main>
     <section class="feature-text container-fluid col-md-12">
         <h2 class="display-3 text-black text-center">Best Features of this month</h2>
         <div class="card-group">
@@ -43,7 +44,7 @@
                     {% endif %}
                 </div>
                 <div class="card-body">
-                    <h5 class="card-title">{{ jewellery.name }}</h5>
+                    <h3 class="card-title">{{ jewellery.name }}</h3>
                 </div>
                 <!-- <a href="" class="btn btn-primary">View</a> -->
             </div>

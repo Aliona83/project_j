@@ -14,7 +14,7 @@
 .StripeElement--focus,
 .stripe-style-input:focus,
 .stripe-style-input:active {
-  box-shadow: 0 1px 3px 0 #cfd7df;
+  box-shadow: 0 1px 3px 0 #f476ac;
 }
 
 .StripeElement--webkit-autofill {
@@ -22,8 +22,10 @@
 }
 
 .stripe-style-input::placeholder {
-    color: #aab7c4;
-}
+    color: #da186c !important;
+     }
+       ;
+
 
 .fieldset-label {
     position: relative;
@@ -43,7 +45,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(23, 162, 184, .85);
+  background:#da186c ;
   z-index: 9999;
 }
 
