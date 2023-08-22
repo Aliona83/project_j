@@ -11,10 +11,10 @@
 
 {% block content %}
 <div class="overlay"></div>
-<div class="container-fluid">
-    <div clas="row">
-        <div class="col-12 col-md-6 col-lg-4 offset-lg-4">
-            <div class="image-container my-5">
+<div class="container-fluid p-5">
+    <div class="row p-3">
+        <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
+            <div class="image-container mt-5 mb-5">
                 {% if jewellery.image %}
                         <a href="{{ jewellery.image.url }}" target="_blank">
                             <img class="card-img-top img-fluid" src="{{ jewellery.image.url }}" alt="{{ jewellery.name }}">

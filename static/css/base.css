@@ -21,6 +21,7 @@ html {
     justify-content: center;
     font-weight: bold;
 }
+
 .card-container {
     position: relative;
     width: 100%;
@@ -37,7 +38,12 @@ html {
 .card-footer {
     background-color:#F9FBFB;
 }
-
+.custom-card-body {
+    min-height: 100px;
+}
+a {
+    color:  #1A702A
+}
 .card-footer a {
     color:  #1A702A; /* Darker shade of green for better contrast */
 }
@@ -159,7 +165,7 @@ input[name='q']::placeholder {
 .footer-container-fluid {
     background-color: #daa3a9;
     position: relative;
-    bottom: 0;
+    bottom: -151px;
     width: 100%;
 }
 a.category-badge > span.badge:hover {
@@ -261,7 +267,7 @@ a.category-badge > span.badge:hover {
     }
 
     .header-container {
-        padding-top: 184px;
+        padding-top: 200px;
     }
 
 /* Allauth form formatting */
@@ -348,14 +354,25 @@ a.category-badge > span.badge:hover {
     .header-container {
         padding-top: 184px;
     }
+    .image-container {
+        padding: 8rem;
+      }
+}
 
+@media (max-width: 576px) {
+    .card {
+      width: 100%;  ;
+    }
 }
 
 @media (max-width: 380px) {
     .header-container {
         padding-top: 201px;
     }
-  
+  .image-container {
+    padding: 160px;
+    
+  }
     .fixed-top-desktop-only {
         position: fixed;
         top: 0;
@@ -375,9 +392,6 @@ a.category-badge > span.badge:hover {
     .home-page-text {
         padding-top: 20rem;
      }
-    body {
-        height: calc(100vh - 116px);
-    }
     .home-page-text {
         padding-top: 20rem;
      }
