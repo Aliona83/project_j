@@ -35,6 +35,9 @@ html {
     height: 100%;
     object-fit: cover;
 }
+.large-container {
+    min-height: 65vh;
+}
 .card-footer {
     background-color:#F9FBFB;
 }
@@ -146,7 +149,8 @@ input[name='q']::placeholder {
 /* home page card with features */
 
 .card {
-    margin: 15px;
+    margin: 10px;
+    
 }
 .image-wrapper {
     width: 100%;
@@ -359,11 +363,16 @@ a.category-badge > span.badge:hover {
       }
 }
 
-@media (max-width: 576px) {
-    .card {
-      width: 100%;  ;
+@media (max-width: 876px) {
+    .card ,h3 {
+      width: 100%;  
+      margin: 10px;
+      display: block;
+      justify-content: space-between;
+      font-size: 22px;
     }
-}
+    }
+
 
 @media (max-width: 380px) {
     .header-container {

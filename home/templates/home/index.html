@@ -10,6 +10,7 @@
 {% endblock %}
 
 {% block content %}
+<!-- Home Page -->
 <main>
     <div class=" home-page container-fliud">
         <div class="row justify-content-center">
@@ -27,11 +28,12 @@
         </div>
     </div>
 </main>
+<!-- Features -->
     <section class="feature-text container-fluid col-md-12">
         <h2 class="display-3 text-black text-center">Best Features of this month</h2>
-        <div class="card-group">
+        <div class="card-group col-md-12">
             {% for jewellery in featured_jewellery %}
-            <div class="card 20rem mb-4">
+            <div class="card mb-4">
                 <div class="image-wrapper">
                     {% if jewellery.image %}
                     <a href="{% url 'jewelleries:jewelleries_details' jewellery.id %}">
@@ -46,7 +48,6 @@
                 <div class="card-body">
                     <h3 class="card-title">{{ jewellery.name }}</h3>
                 </div>
-                <!-- <a href="" class="btn btn-primary">View</a> -->
             </div>
             {% endfor %}
         </div>
