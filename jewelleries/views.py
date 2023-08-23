@@ -10,7 +10,9 @@ from .forms import ProductForm
 # Import Pagination Stuff
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
-@login_required
+# @login_required
+
+
 def all_jewelleries(request):
     """  A view to show all jewelleries, including sorting and search queries """
     jewelleries = Jewellery.objects.all()
@@ -27,7 +29,6 @@ def all_jewelleries(request):
         all_jewellery = p.page(page)
     except (EmptyPage, PageNotAnInteger):
         all_jewellery = p.page(1)
-    
     if request.GET:
         if 'sort' in request.GET:
             sortkey = request.GET['sort']
@@ -55,7 +56,7 @@ def all_jewelleries(request):
             if not query:
                 messages.error(request, 'You didnt enter search criteria !')
                 return redirect(reverse('jewelleries:jewelleries'))
-            queries = Q(name__icontains=query) | Q(description__icontains=query)
+            queries = Q(name__icontains=query)| Q(description__icontains=query)
             jewelleries = jewelleries.filter(queries)
 
     current_sorting = f'{sort}_{direction}'
@@ -78,6 +79,7 @@ def jewelleries_details(request, jewellery_id):
     }
     return render(request, 'jewelleries/jewelleries_details.html', context)
 
+
 @login_required
 def add_jewellery(request):
     """ Add a product to the store """
@@ -95,13 +97,12 @@ def add_jewellery(request):
             messages.error(request, 'Failed to add product. Please ensure the form is valid.')
     else:
         form = ProductForm()
-    
     template = 'jewelleries/add_jewellery.html'
     context = {
         'form': form,
     }
+    return render(request, template, context)
 
-    return render(request, template, context) 
 
 @login_required
 def edit_jewellery(request, jewellery_id):
@@ -131,6 +132,7 @@ def edit_jewellery(request, jewellery_id):
 
     return render(request, template, context)
 
+
 @login_required
 def delete_jewellery(request, jewellery_id):
     """ Delete a product from the store """
@@ -141,4 +143,4 @@ def delete_jewellery(request, jewellery_id):
     jewellery = get_object_or_404(Jewellery, pk=jewellery_id)
     jewellery.delete()
     messages.success(request, 'Jewellery was successful  deleted!')
-    return redirect(reverse('jewelleries:jewelleries'))       
+    return redirect(reverse('jewelleries:jewelleries'))
