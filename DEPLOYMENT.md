@@ -5,11 +5,56 @@
   * [Forking this repository](#forking-this-repository)
   * [Heroku Deployment](#deployment---heroku)
   * [AWS S3 Bucket setup](#aws-s3-bucket-setup)
-  * AWS IAM(Identity and Access Managenent) setup ) 
-  * Connecting Heroku to AWS S3
+  * [Connecting Django to AWS S3](#connecting-heroku-to-aws-s3)
 
  #  Deployment
+ 
+ # Creating a Clone
 
+To clone this repository follow the below steps:
+
+* Locate the repository at this link The Wine Garden BnB.
+* Under 'Code', see the different cloning options, HTTPS, SSH, and GitHub CLI. 
+* Click the prefered cloning option, and then copy the link provided.
+* Open Terminal.
+* In Terminal, change the current working directory to the desired location of the cloned directory.
+* Type 'git clone', and then paste the URL previously copied from GitHub.
+* Type 'Enter' to create the local clone.
+
+# Forking this repository
+
+* Locate the repository at this link The Wine Garden BnB.
+* At the top of the repository, on the right side of the page, select "Fork" from the buttons available.
+* This creates a copy of the repository
+
+# Deployment - Heroku
+
+1. Deploying to Heroku
+
+ * Install gunicorn and freeze into requirements.txt
+     * pip3 install gunicorn
+     * pip3 freeze > requirements.txt
+ * Create a Procfile in the root directory for Heroku to read:
+      * web: gunicorn level_up_loot.wsgi:application
+* Temporarily disable collectstatic by logging into the Heroku CLI in the terminal or on Heroku.com and set DISABLE_COLLECTSTATIC to 1:
+      * heroku config:set DISABLE_COLLECTSTATIC=1 --app heroku-app-name
+ * Add the hostname of the Heroku app to allowed hosts in settings.py:
+      * ALLOWED_HOSTS = ['deployed-site-url', 'localhost']
+* Save the settings.py file, and add and commit the changes:
+      * git push Heroku main
+* To enable automatic deploys on Heroku, go to the app in Heroku. On the deploy tab, connect to GitHub. Search for the repository and then click connect. Then click Enable Automatic Deploys.
+2. Generate SECRET_KEY
+
+* Django creates a Secret Key for each project upon creation. Unless you immediately added this to your env.py file, the key may now be compromised. 
+* We can create a new one with the link below.
+* Go to miniwebtool's Django Secret Key Generator, click on the Generate Django Secret Key button and copy the value.
+* In Heroku, add a new Config Var SECRET_KEY and give it the value of the newly generated secret key and then click add.
+* In the settings.py file add:
+     * SECRET_KEY = os.environ.get('SECRET_KEY', '')
+     * Change the DEBUG
+     * DEBUG = 'DEVELOPMENT' in os.environ
+
+* Save the settings.py file, add, commit and then git push these changes.
 
  ## AWS (S3 bucket setup):
  Sign in or create an account on AWS(l add link to AWS)
@@ -125,25 +170,56 @@ Navigate and Click "Next: Permissions."
 * Navigate and Click "Download .csv" to download the credentials.
 * Navigate and Click "Close."
 
-4 .Connect S3 Bucket to Project by adding folloeing code t your settings.py file:(add screenschot with code)
+## Connecting Django to AWS S3
 
-# Deployment - Heroku
+* Connecting Heroku to AWS S3
+  pip3 install boto3
+  pip3 install django-storages
+  pip3 freeze > requirements.txt
 
-# Creating a Clone
+* Add storages to the installed apps in settings.py
+* Add the bucket configuration:
 
-To clone this repository follow the below steps:
+       if 'USE_AWS' in os.environ:
+        AWS_S3_OBJECT_PARAMETERS = {
+            'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
+            'CacheControl': 'max-age=9460800',
+        }
 
-* Locate the repository at this link The Wine Garden BnB.
-* Under 'Code', see the different cloning options, HTTPS, SSH, and GitHub CLI. 
-* Click the prefered cloning option, and then copy the link provided.
-* Open Terminal.
-* In Terminal, change the current working directory to the desired location of the cloned directory.
-* Type 'git clone', and then paste the URL previously copied from GitHub.
-* Type 'Enter' to create the local clone.
+        AWS_STORAGE_BUCKET_NAME = 'your bucket name goes here'
+        AWS_S3_REGION_NAME = 'your selected region goes here'
+        AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
+        AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
+        AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
 
-# Forking this repository
+* Add the Secret Keys from the downloaded CSV file to Heroku: | AWS_ACCESS_KEY_ID | | AWS_SECRET_ACCESS_KEY | | USE_AWS | True |
+* Remove COLLECTSTATIC variable from the Config Vars
+* Create custom_storages.py file and add:    
 
-* Locate the repository at this link The Wine Garden BnB.
-* At the top of the repository, on the right side of the page, select "Fork" from the buttons available.
-* This creates a copy of the repository
+     from django.conf import settings
+from storages.backends.s3boto3 import S3Boto3Storage
+
+
+class StaticStorage(S3Boto3Storage):
+    location = settings.STATICFILES_LOCATION
+
+
+class MediaStorage(S3Boto3Storage):
+    location = settings.MEDIAFILES_LOCATION
+
+* In settings.py, set the static locations as follows.
+
+         # Static and media files
+    STATICFILES_STORAGE = 'custom_storages.StaticStorage'
+    STATICFILES_LOCATION = 'static'
+    DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
+    MEDIAFILES_LOCATION = 'media'
+
+    # Override static and media URLs in production
+    STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATICFILES_LOCATION}/'
+    MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}/'
+
+* Git add . and git push to save these changes.
+* Go to s3 and create a new folder called media then click upload. Add the product images files, click next and under manage public permissions, * * * select grant public read access to these objects. Then click next through to the end and finally, click upload.
+
 
