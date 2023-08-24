@@ -33,6 +33,14 @@
         <h2 class="display-3 text-black text-center">Best Features of this month</h2>
         <div class="card-group col-md-12">
             {% for jewellery in featured_jewellery %}
+            <div class="product">
+                <h2>{{ product.name }}</h2>
+                <p>{{ product.description }}</p>
+                <p>Price: ${{ product.price }}</p>
+                <!-- Display other product information -->
+                </div>
+                {% endfor %}
+                </div>
             <div class="card mb-4">
                 <div class="image-wrapper">
                     {% if jewellery.image %}

@@ -5,7 +5,7 @@ from jewelleries.models import Jewellery
 
 def index(request):
     """ A view to return the index page """
-    featured_jewellery = Jewellery.objects.filter(is_featured=True)
+    featured_jewellery = Jewellery.objects.filter(category__name__in='New Arrivals', is_featured=True)[:3]
     print("Number of featured jewellery items:", featured_jewellery.count())
     context = {
         'featured_jewellery': featured_jewellery,
