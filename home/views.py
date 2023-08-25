@@ -1,15 +1,29 @@
 from django.shortcuts import render
-from jewelleries.models import Jewellery
-
-
-
+from jewelleries.models import Jewellery, Category
+import random
 def index(request):
     """ A view to return the index page """
-    featured_jewellery = Jewellery.objects.filter(category__name__in='New Arrivals', is_featured=True)[:3]
-    print("Number of featured jewellery items:", featured_jewellery.count())
+    
+    try:
+        new_arrivals_category = Category.objects.get(name='new_arrivals')
+        
+    except Category.DoesNotExist:
+        new_arrivals_category = None
+       
+
+    featured_jewellery = []
+    
+    if new_arrivals_category:
+        featured_jewellery = list(Jewellery.objects.filter(category=new_arrivals_category, is_featured=True))
+        random.shuffle(featured_jewellery)
+        
+        num_products_to_display = min(3, len(featured_jewellery))
+        random_featured_jewellery = random.sample(featured_jewellery, num_products_to_display)
+
+    else:
+        random_featured_jewellery = []
+
     context = {
-        'featured_jewellery': featured_jewellery,
-}
+        'featured_jewellery': random_featured_jewellery,
+    }
     return render(request, 'home/index.html', context)
-
-

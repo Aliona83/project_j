@@ -29,6 +29,7 @@ def all_jewelleries(request):
         all_jewellery = p.page(page)
     except (EmptyPage, PageNotAnInteger):
         all_jewellery = p.page(1)
+        
     if request.GET:
         if 'sort' in request.GET:
             sortkey = request.GET['sort']

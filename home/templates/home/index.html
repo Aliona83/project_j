@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% load static %}
 
+
 {% block page_header %}
     <div class="container header-container m-5">
         <div class="row">
@@ -12,55 +13,54 @@
 {% block content %}
 <!-- Home Page -->
 <main>
-    <div class=" home-page container-fliud">
+    <div class="home-page container-fluid">
         <div class="row justify-content-center">
             <div class="home-page-text col-lg-12 my-auto">
                 <h1 class="text-black text-center">
                    Welcome to Elegancy Jewellery Shop
                 </h1>
             </div>
-                <div class="container">
-                    <div class="row justify-content-center">
-
-                        <a href="{% url 'jewelleries:jewelleries' %}" class="shop-now-button btn btn-lg rounded-0 text-uppercase py-3">Shop Now</a>
-                    </div>
+            <div class="container">
+                <div class="row justify-content-center">
+                    <a href="{% url 'jewelleries:jewelleries' %}" class="shop-now-button btn btn-lg rounded-0 text-uppercase py-3">Shop Now</a>
                 </div>
+            </div>
         </div>
     </div>
 </main>
 <!-- Features -->
-    <section class="feature-text container-fluid col-md-12">
-        <h2 class="display-3 text-black text-center">Best Features of this month</h2>
-        <div class="card-group col-md-12">
+<section class="feature-text container-fluid col-md-12">
+    <h2 class="display-3 text-black text-center">Best Features of this month</h2>
+    <div class="card-group col-md-12">
+       
             {% for jewellery in featured_jewellery %}
-            <div class="product">
-                <h2>{{ product.name }}</h2>
-                <p>{{ product.description }}</p>
-                <p>Price: ${{ product.price }}</p>
-                <!-- Display other product information -->
+               
+                <div class="card mb-4">
+                    <div class="image-wrapper">
+                        {% if jewellery.image %}
+                            <a href="{% url 'jewelleries:jewelleries_details' jewellery.id %}">
+                                <img class="card-img-top img-fluid" src="{{ jewellery.image.url }}" alt="{{ jewellery.name }}">
+                            </a>
+                        {% else %}
+                            <a href="{% url 'jewelleries:jewelleries_details' jewellery.id %}">
+                                <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ jewellery.name }}">
+                            </a>
+                        {% endif %}
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">{{ jewellery.name }}</h3>
+                        <p>Price: ${{ jewellery.price }}</p>
+                        <!-- Display other product information -->
+                    </div>
                 </div>
-                {% endfor %}
-                </div>
-            <div class="card mb-4">
-                <div class="image-wrapper">
-                    {% if jewellery.image %}
-                    <a href="{% url 'jewelleries:jewelleries_details' jewellery.id %}">
-                        <img class="card-img-top img-fluid" src="{{ jewellery.image.url }}" alt="{{ jewellery.name }}">
-                    </a>
-                    {% else %}
-                    <a href="{% url 'jewelleries:jewelleries_details' jewellery.id %}">
-                        <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ jewellery.name }}">
-                    </a>
-                    {% endif %}
-                </div>
-                <div class="card-body">
-                    <h3 class="card-title">{{ jewellery.name }}</h3>
-                </div>
-            </div>
             {% endfor %}
-        </div>
-    </section>
-    
-    {% include 'includes/footer.html'%}
+    </div>
+</section>
+
+{% include 'includes/footer.html'%}
 {% endblock %}
+
+
+    
+
 
