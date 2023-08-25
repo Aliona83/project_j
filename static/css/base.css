@@ -261,6 +261,10 @@ a.category-badge > span.badge:hover {
     color: white; /* For better visibility */
 }
 
+#mc_embed_signup{
+    background:#fff; false;clear:left; font:14px Helvetica,Arial,sans-serif; width: 600px;
+    padding: 0;
+}
   
 /* -------------------------------- Media Queries */
 
