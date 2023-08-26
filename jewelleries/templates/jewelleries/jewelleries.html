@@ -57,7 +57,7 @@
             </div>
              <!-- Products -->
     <div class="row d-flex justify-content-between">
-        {% for jewellery in all_jewellery %}
+        {% for jewellery in jewelleries %}
         <div class="col-12 col-sm-5 col-md-6 col-lg-3 col-xl-3">
             <div class="card h-100 border-0">
                 <div class="card-body pb-0">
@@ -130,22 +130,22 @@
     </div>
    
 <!-- Pagination -->
-<!-- <section>
-    {% if all_jewellery.has_other_pages %}
+ <section>
+    {% if jewelleries.has_other_pages %}
     <ul class="pagination pagination-sm justify-content-center flex-wrap">
-      {% if all_jewellery.has_previous %}
+      {% if jewelleries.has_previous %}
         <li class="page-item"><a class="page-link" href="?category={{ current_categories|join:',' }}&page={{ all_jewellery.previous_page_number }}">Previous</a></li>
       {% else %}
         <li class="page-item disabled"><span class="page-link">Previous</span></li>
       {% endif %}
-      {% for i in all_jewellery.paginator.page_range %}
-        {% if all_jewellery.number == i %}
+      {% for i in jewelleries.paginator.page_range %}
+        {% if jewelleries.number == i %}
           <li class="page-item active"><span class="page-link">{{ i }}</span></li>
         {% else %}
           <li class="page-item"><a class="page-link" href="?category={{ current_categories|join:',' }}&page={{ i }}">{{ i }}</a></li>
         {% endif %}
       {% endfor %}
-      {% if all_jewellery.has_next %}
+      {% if jewelleries.has_next %}
         <li class="page-item"><a class="page-link" href="?category={{ current_categories|join:',' }}&page={{ all_jewellery.next_page_number }}">Next</a></li>
       {% else %}
         <li class="page-item disabled"><span class="page-link">Next</span></li>
@@ -153,7 +153,7 @@
     </ul>
   {% endif %}
   </section>
-   -->
+  
 {% include 'includes/footer.html'%}
 {% endblock %}
 {% block postloadjs %}

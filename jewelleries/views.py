@@ -3,7 +3,7 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
-
+from django.core.paginator import Paginator
 from .models import Jewellery, Category
 
 # Create your views here.
@@ -16,7 +16,12 @@ def all_jewelleries(request):
     categories = None
     sort = None
     direction = None
+    paginator = Paginator(jewelleries, 12)
+    
 
+    page_number = request.GET.get('page')
+    page = paginator.get_page(page_number)
+    
     if request.GET:
         if 'sort' in request.GET:
             sortkey = request.GET['sort']
@@ -53,6 +58,7 @@ def all_jewelleries(request):
         'search_term': query,
         'current_categories': categories,
         'current_sorting': current_sorting,
+        'jewelleries': page,
     }
 
     return render(request, 'jewelleries/jewelleries.html', context)
