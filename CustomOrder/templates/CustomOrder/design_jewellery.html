@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block page_header %}
+
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="overlay"></div>
+    <div class="container p-5">
+        <div class="row p-5">
+            <div class="col">
+                <hr>
+                <h1>Design Your Own Jewellery</h1>
+    
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        
+        <label for="id_design_name">Design Name:</label>
+        {{ form.design_name }}
+        
+        <label for="id_jewellery_type">Jewellery Type:</label>
+        {{ form.jewellery_type }}
+        
+        <label for="id_metal_type">Metal Type:</label>
+        {{ form.metal_type }}
+        
+        <label for="id_stone_type">Stone Type:</label>
+        {{ form.stone_type }}
+        
+        <label for="id_description">Description:</label>
+        {{ form.description }}
+        
+        <label for="id_design_image">Design Image:</label>
+        {{ form.design_image }}
+        
+        <button type="submit">Create Design</button>
+    </form>
+    
+    <a href="">Back to Main Page</a>
+</body>
+</html>
+                <a href="">Back to List</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}
