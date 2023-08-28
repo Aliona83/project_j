@@ -37,8 +37,8 @@ class CustomJewelleryDesign(models.Model):
         return self.design_name
 
     
-    def __str__(self):
-        return self.design_name
+    # def __str__(self):
+    #     return self.design_name
 
 
 class CustomerDetails(models.Model):
