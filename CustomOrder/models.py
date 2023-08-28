@@ -31,6 +31,7 @@ class CustomJewelleryDesign(models.Model):
     stone_type = models.CharField(max_length=20, choices=STONE_TYPE_CHOICES)
     description = models.TextField()
     design_image = models.ImageField(null=True, blank=True)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
     
     def __str__(self):
         return self.design_name
