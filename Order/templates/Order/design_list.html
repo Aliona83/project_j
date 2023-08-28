@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+  <h1>Custom Jewellery Designs</h1>
+  <ul>
+    {% for design in designs %}
+      <li><a href="{% url 'customjewellery:design_detail' design.id %}">{{ design.name }}</a></li>
+    {% endfor %}
+  </ul>
+  <a href="{% url 'customjewellery:create_design' %}">Create New Design</a>
+{% endblock %}
