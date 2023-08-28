@@ -1,12 +1,40 @@
-<h1>Submitted Forms</h1>
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block page_header %}
+<div class="container header-container">
+    <div class="row p-5">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<h1 class="text-center">Your Submitted Form History</h1>
     <ul>
         {% for submission in user_submissions %}
         <li>
-            <!-- Display submission details -->
-            Design Name: {{ submission.design_name }}
+            <strong>Design Name:</strong> {{ submission.design_name }}<br>
+            <strong>Jewellery Type:</strong> {{ submission.get_jewellery_type_display }}<br>
+            <strong>Metal Type:</strong> {{ submission.get_metal_type_display }}<br>
+            <strong>Stone Type:</strong> {{ submission.get_stone_type_display }}<br>
+            <strong>Description:</strong> {{ submission.description }}<br>
+            <strong>Design Image:</strong> <img src="{{ submission.design_image.url }}" alt="Design Image"><br>
+    
+            <strong>Customer Name:</strong> {{ submission.customer_details.full_name }}<br>
+            <strong>Email:</strong> {{ submission.customer_details.email }}<br>
+            <strong>Phone Number:</strong> {{ submission.customer_details.phone_number }}<br>
+            <strong>Country:</strong> {{ submission.customer_details.country }}<br>
+            <strong>Postcode:</strong> {{ submission.customer_details.postcode }}<br>
+            <strong>Town or City:</strong> {{ submission.customer_details.town_or_city }}<br>
+            <strong>Street Address 1:</strong> {{ submission.customer_details.street_address1 }}<br>
+            <strong>Street Address 2:</strong> {{ submission.customer_details.street_address2 }}<br>
+            <strong>County:</strong> {{ submission.customer_details.county }}<br>
             <!-- Add more fields as needed -->
         </li>
         {% empty %}
         <li>No forms submitted yet.</li>
         {% endfor %}
     </ul>
+   {% endblock%} 

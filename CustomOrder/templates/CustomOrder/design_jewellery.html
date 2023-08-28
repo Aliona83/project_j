@@ -16,38 +16,24 @@
         <div class="row p-5">
             <div class="col">
                 <hr>
-                <h1>Design Your Own Jewellery</h1>
+                <h1 class="text-center">Design Your Own Jewellery</h1>
     
     <form method="post" enctype="multipart/form-data">
         {% csrf_token %}
-        
-        <label for="id_design_name">Design Name:</label>
-        {{ form.design_name }}
-        
-        <label for="id_jewellery_type">Jewellery Type:</label>
-        {{ form.jewellery_type }}
-        
-        <label for="id_metal_type">Metal Type:</label>
-        {{ form.metal_type }}
-        
-        <label for="id_stone_type">Stone Type:</label>
-        {{ form.stone_type }}
-        
-        <label for="id_description">Description:</label>
-        {{ form.description }}
-        
-        <label for="id_design_image">Design Image:</label>
-        {{ form.design_image }}
-        
-        <button type="submit">Create Design</button>
+        {% for field in form %}
+                        {% if field.name != 'image' %}
+                            {{ field | as_crispy_field }}
+                        {% else %}
+                            {{ field }}
+                        {% endif %}
+                    {% endfor %}
+        <div class="text-right">
+            <a class="btn btn-outline-black rounded-0" href="{% url 'jewelleries:jewelleries' %}">Cancel</a>
+            <button class="btn btn-black rounded-0" type="submit">Create</button>
+            <a href="{% url 'CustomOrder:view_submitted_forms' %}"></a>
+        </div>          
     </form>
     
-    <a href="{% url 'CustomOrder:submitted_success' %}">Submitted Success Page</a>
-
-</body>
-</html>
-                <a href="{% url 'CustomOrder:view_submitted_forms' %}">Back to List</a>
-            </div>
         </div>
     </div>
 {% endblock %}

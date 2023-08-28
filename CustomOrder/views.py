@@ -11,8 +11,22 @@ def create_custom_jewellery(request):
             custom_design.user = request.user  # Assign the logged-in user
             custom_design.save()
 
+            customer_details = CustomerDetails(
+                user_profile=request.user.userprofile,
+                full_name=form.cleaned_data['full_name'],
+                email=form.cleaned_data['email'],
+                phone_number=form.cleaned_data['phone_number'],
+                country=form.cleaned_data['country'],
+                postcode=form.cleaned_data['postcode'],
+                town_or_city=form.cleaned_data['town_or_city'],
+                street_address1=form.cleaned_data['street_address1'],
+                street_address2=form.cleaned_data['street_address2'],
+                county=form.cleaned_data['county']
+            )
+            customer_details.save()
+
             messages.success(request, 'Successfully submit your form!')
-            return redirect(reverse('jewelleries:jewelleries'))
+            return redirect(reverse('CustomOrder:submitted_success'))
         else:
             messages.error(request, 'Failed to submit form. Please ensure the form is valid.')
             return redirect(reverse('CustomOrder:submitted_success', args=[user.id]))
