@@ -1,40 +1,50 @@
-{% extends "base.html" %}
+{% extends 'base.html' %}
 {% load static %}
 
-
 {% block page_header %}
-<div class="container header-container">
-    <div class="row p-5">
-        <div class="col"></div>
-    </div>
-</div>
+    <!-- Your page header content -->
 {% endblock %}
 
 {% block content %}
-<h1 class="text-center">Your Submitted Form History</h1>
-    <ul>
-        {% for submission in user_submissions %}
-        <li>
-            <strong>Design Name:</strong> {{ submission.design_name }}<br>
-            <strong>Jewellery Type:</strong> {{ submission.get_jewellery_type_display }}<br>
-            <strong>Metal Type:</strong> {{ submission.get_metal_type_display }}<br>
-            <strong>Stone Type:</strong> {{ submission.get_stone_type_display }}<br>
-            <strong>Description:</strong> {{ submission.description }}<br>
-            <strong>Design Image:</strong> <img src="{{ submission.design_image.url }}" alt="Design Image"><br>
-    
-            <strong>Customer Name:</strong> {{ submission.customer_details.full_name }}<br>
-            <strong>Email:</strong> {{ submission.customer_details.email }}<br>
-            <strong>Phone Number:</strong> {{ submission.customer_details.phone_number }}<br>
-            <strong>Country:</strong> {{ submission.customer_details.country }}<br>
-            <strong>Postcode:</strong> {{ submission.customer_details.postcode }}<br>
-            <strong>Town or City:</strong> {{ submission.customer_details.town_or_city }}<br>
-            <strong>Street Address 1:</strong> {{ submission.customer_details.street_address1 }}<br>
-            <strong>Street Address 2:</strong> {{ submission.customer_details.street_address2 }}<br>
-            <strong>County:</strong> {{ submission.customer_details.county }}<br>
-            <!-- Add more fields as needed -->
-        </li>
-        {% empty %}
-        <li>No forms submitted yet.</li>
-        {% endfor %}
-    </ul>
-   {% endblock%} 
+    <div class="container-fluid large-container mb-2">
+        <div class="row">
+            <div class="col text-center mt-3">
+                <h1 class="hero-font text-uppercase">Submitted Forms</h1>
+                <hr class="w-50 mb-5">
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <!-- Loop through user submissions -->
+                {% for submission in user_submissions %}
+                    <div class="row mb-5 justify-content-center">
+                        <div class="col-md-7">
+                            <p class="my-0"><strong>{{ submission.design_name }}</strong></p>
+                            <p class="my-0"><small>{{ submission.description }}</small></p>
+                            <!-- Add other details you want to display -->
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+            <div class="col-md-6">
+                <!-- Loop through user submissions and display images -->
+                {% for submission in user_submissions %}
+                    <div class="row mb-5 justify-content-center">
+                        <div class="col-md-7">
+                            {% if submission.design_image %}
+                                <img class="img-fluid rounded" src="{{ submission.design_image.url }}" alt="{{ submission.design_name }}">
+                            {% else %}
+                                <img class="img-fluid rounded" src="{% static 'noimage.png' %}" alt="{{ submission.design_name }}">
+                            {% endif %}
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    <!-- Your other content here -->
+{% endblock %}
+
+{% block postloadjs %}
+    <!-- Your post-load JavaScript here -->
+{% endblock %}
