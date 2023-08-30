@@ -27,9 +27,9 @@
                             {{ field }}
                         {% endif %}
                     {% endfor %}
-        <div class="text-right">
-            <a class="btn btn-outline-black rounded-0" href="{% url 'jewelleries:jewelleries' %}">Cancel</a>
-            <button class="btn btn-black rounded-0" type="submit">Create</button>
+        <div class="text-right d-flex justify-content-center mb-2">
+            <a class="btn btn-outline-black rounded-0 mr-5" href="{% url 'jewelleries:jewelleries' %}">Cancel</a>
+            <button class="btn btn-black rounded-0 mr-5" type="submit">Create</button>
             <a href="{% url 'CustomOrder:view_submitted_forms' %}"></a>
         </div>          
     </form>

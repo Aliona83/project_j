@@ -19,6 +19,23 @@ def add_to_bag(request, item_id):
     quantity = int(request.POST.get('quantity'))
     bag = request.session.get('bag', {})
 
+    current_item_count = sum(bag.values())
+
+    # Check if adding the new item would exceed the limit
+    if current_item_count + quantity > 2:
+        messages.error(request, 'You are allowed to buy only 2 items at the same time.')
+        return redirect(redirect_url, status=400)
+
+    if item_id in bag:
+        bag[item_id] += quantity
+        messages.success(request, f'Updated {jewellery.name} quantity to {bag[item_id]}')
+    else:
+        bag[item_id] = quantity
+        messages.success(request, f'Added {jewellery.name} to your bag')
+
+    request.session['bag'] = bag
+    return redirect(redirect_url)
+
     if item_id in list(bag.keys()):
         bag[item_id] += quantity
         messages.success(request, f'Updated {jewellery.name} quantity to {bag[item_id]}')
