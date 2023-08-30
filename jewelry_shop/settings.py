@@ -52,7 +52,8 @@ INSTALLED_APPS = [
     'bag',
     'checkout',
     'profiles',
-   'CustomOrder',
+    'CustomOrder',
+    'contact',
 
     # Other
     'crispy_forms',
@@ -175,6 +176,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 
+# Media Files
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
@@ -185,7 +187,6 @@ if 'USE_AWS' in os.environ:
         'CacheControl': 'max-age=94608000',
     }
 
-# if 'USE_AWS' in os.environ:
     # Bucket Config
     AWS_STORAGE_BUCKET_NAME = 'jewelryshop83'
     AWS_S3_REGION_NAME = 'us-west-1'
