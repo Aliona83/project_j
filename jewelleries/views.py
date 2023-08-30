@@ -3,7 +3,7 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
-from django.core.paginator import Paginator
+# from django.core.paginator import Paginator
 from .models import Jewellery, Category
 
 # Create your views here.
@@ -16,11 +16,11 @@ def all_jewelleries(request):
     categories = None
     sort = None
     direction = None
-    paginator = Paginator(jewelleries, 12)
+    # paginator = Paginator(jewelleries, 12)
     
 
-    page_number = request.GET.get('page')
-    page = paginator.get_page(page_number)
+    # page_number = request.GET.get('page')
+    # page = paginator.get_page(page_number)
     
     if request.GET:
         if 'sort' in request.GET:
@@ -58,24 +58,13 @@ def all_jewelleries(request):
         'search_term': query,
         'current_categories': categories,
         'current_sorting': current_sorting,
-        'jewelleries': page,
+        # 'jewelleries': page,
     }
 
     return render(request, 'jewelleries/jewelleries.html', context)
 
 
-def product_detail(request, product_id):
-    """ A view to show individual product details """
-
-    jewelleries = get_object_or_404(Jewellery, pk=jewellery_id)
-
-    context = {
-        'jewellery': jewellery,
-    }
-
-    return render(request, 'jewelleries/jewelleries.html', context)
-
-def jewelleries_details(request, product_id):
+def jewelleries_details(request, jewellery_id):
     """ A view to show individual product details """
 
     jewellery = get_object_or_404(Jewellery, pk=jewellery_id)
@@ -84,7 +73,18 @@ def jewelleries_details(request, product_id):
         'jewellery': jewellery,
     }
 
-    return render(request, 'jewelleries/jewelleries_detail.html', context)
+    return render(request, 'jewelleries/jewelleries_details.html', context)
+
+# def jewelleries_details(request, product_id):
+#     """ A view to show individual product details """
+
+#     jewellery = get_object_or_404(Jewellery, pk=jewellery_id)
+
+#     context = {
+#         'jewellery': jewellery,
+#     }
+
+#     return render(request, 'jewelleries/jewelleries_detail.html', context)
    
 
 @login_required

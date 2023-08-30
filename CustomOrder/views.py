@@ -72,7 +72,14 @@ def submitted_success(request):
      return render(request, 'CustomOrder/submitted_success.html')
 
 def view_submitted_forms(request):
-     user_submissions = CustomJewelleryDesign.objects.filter(user_profile=request.user.userprofile)  
-     print(user_submissions)
-     context = {'user_submissions': user_submissions}
-     return render(request, 'CustomOrder/submitted_forms.html', context)    
+    user_profile = request.user.userprofile 
+    if request.user.is_authenticated:
+        user_submissions = user_profile.created_forms.all()
+        user_submissions = CustomJewelleryDesign.objects.filter(user_profile__user=request.user)
+        print(user_submissions)
+        context = {'user_submissions': user_submissions}
+        return render(request, 'CustomOrder/submitted_forms.html', context)
+    else:
+        
+        return redirect('home')  
+    
