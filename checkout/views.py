@@ -9,6 +9,7 @@ from jewelleries.models import Jewellery
 from profiles.forms import UserProfileForm
 from profiles.models import UserProfile
 from bag.contexts import bag_contents
+from django.contrib.auth.decorators import login_required
 
 import stripe
 import json
@@ -29,7 +30,7 @@ def cache_checkout_data(request):
             processed right now. Please try again later.')
         return HttpResponse(content=e, status=400)
 
-
+@login_required
 def checkout(request):
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
     stripe_secret_key = settings.STRIPE_SECRET_KEY
@@ -55,25 +56,21 @@ def checkout(request):
             order.stripe_pid = pid
             order.original_bag = json.dumps(bag)
             order.save()
+            stripe_total = 0
             for item_id, item_data in bag.items():
                 try:
                     product = Jewellery.objects.get(id=item_id)
                     if isinstance(item_data, int):
-                        order_line_item = OrderLineItem(
-                            order=order,
-                            product=product,
-                            quantity=item_data,
-                        )
-                        order_line_item.save()
+                       stripe_total += product.price * item_data
                     else:
-                        for quantity in item_data['items_by_size'].items():
+                        for size, quantity in item_data['items_by_size'].items():
                             order_line_item = OrderLineItem(
                                 order=order,
                                 product=product,
                                 quantity=quantity,
-                                product_size=size,
                             )
                             order_line_item.save()
+
                 except Jewellery.DoesNotExist:
                     messages.error(request, (
                         "One of the products in your bag wasn't found in our database. "
@@ -134,7 +131,7 @@ def checkout(request):
 
     return render(request, template, context)
 
-
+@login_required
 def checkout_success(request, order_number):
     """
     Handle successful checkouts

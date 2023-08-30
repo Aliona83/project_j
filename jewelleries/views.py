@@ -5,6 +5,7 @@ from django.db.models import Q
 from django.db.models.functions import Lower
 # from django.core.paginator import Paginator
 from .models import Jewellery, Category
+from .forms import ProductForm
 
 # Create your views here.
 

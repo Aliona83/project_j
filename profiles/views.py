@@ -11,6 +11,14 @@ from checkout.models import Order
 @login_required
 def profile(request):
     """ Display the user's profile. """
+    if request.user.is_authenticated:
+        user_profile = request.user.userprofile
+        custom_orders = CustomJewelleryDesign.objects.filter(user_profile=user_profile)
+        context = {'custom_orders': custom_orders}
+        return render(request, 'profiles/profile.html', context)
+    else:
+        return redirect('login')  # Redirect to login page if user is not authenticated
+
     profile = get_object_or_404(UserProfile, user=request.user)
     if request.method == 'POST':
         form = UserProfileForm(request.POST, instance=profile)

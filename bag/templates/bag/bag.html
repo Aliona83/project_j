@@ -88,12 +88,21 @@
                         </span>
                         <span class="btn-primary font-weight-bold text-uppercase">Keep Shopping</span>
                     </a>
-                    <a class="btn btn-primary mt-1" href="{% url 'checkout' %}">
+                    <a class="btn btn-primary mt-1 secure-checkout-btn"
+                    href="{% url 'checkout' %}"
+                    data-product-id="{{ item.product.id }}"
+                    data-product-price="{{ item.product.price }}">
+                        <span class="text-uppercase font-weight-bold text-light">Secure Checkout</span>
+                        <span class="icon">
+                            <i class="fas fa-lock"></i>
+                </span>
+                    </a>
+                    <!-- <a class="btn btn-primary mt-1" href="{% url 'checkout' %}">
                         <span class="text-uppercase font-weight-bold text-light">Secure Checkout</span>
                         <span class="icon">
                             <i class="fas fa-lock"></i>
                         </span>
-                    </a>
+                    </a> -->
                 </div>
             </div>  
         {% else %}
@@ -115,7 +124,7 @@
 {% block postloadjs %}
 {{ block.super }}
 {% include 'jewelleries/includes/quantity_input_script.html' %}
-<script>
+ <script>
 	//Update product quantity on update click
 	$('.update-link').click(function(e) {
 		var form = $(this).prev('.update-form');
@@ -135,4 +144,7 @@
 		});
 	});
 </script>
+
+
 {% endblock %}
+
