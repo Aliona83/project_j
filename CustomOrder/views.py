@@ -47,6 +47,7 @@ from django.shortcuts import render, redirect, reverse
 from .forms import CustomJewelleryDesignForm
 from .models import CustomJewelleryDesign
 from django.contrib import messages
+from .models import UserProfile
 
 def create_custom_jewellery(request):
     if request.method == 'POST':

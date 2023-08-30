@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404
 from .models import UserProfile
 from django.contrib.auth.decorators import login_required
+from CustomOrder.models import CustomJewelleryDesign
 
 from django.contrib import messages
 from .forms import UserProfileForm
@@ -26,6 +27,7 @@ def profile(request):
     context = {
         'form': form,
         'orders': orders,
+        'custom_orders': custom_orders,
         'on_profile_page': True
     }
 

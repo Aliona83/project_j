@@ -2,46 +2,61 @@
 {% load static %}
 
 {% block page_header %}
-    <!-- Your page header content -->
+
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
 {% endblock %}
+
 
 {% block content %}
     <div class="container-fluid large-container mb-2">
         <div class="row">
             <div class="col text-center mt-3">
+                <div class="overlay"></div>
+    <div class="container p-5">
+        <div class="row p-5">
+            <div class="col">
+                <hr>
                 <h1 class="hero-font text-uppercase">Submitted Forms</h1>
                 <hr class="w-50 mb-5">
             </div>
         </div>
-        <div class="row justify-content-center">
-            <div class="col-md-6">
-                <!-- Loop through user submissions -->
-                {% for submission in user_submissions %}
-                    <div class="row mb-5 justify-content-center">
-                        <div class="col-md-7">
-                            <p class="my-0"><strong>{{ submission.design_name }}</strong></p>
-                            <p class="my-0"><small>{{ submission.description }}</small></p>
-                            <!-- Add other details you want to display -->
-                        </div>
-                    </div>
-                {% endfor %}
-            </div>
-            <div class="col-md-6">
-                <!-- Loop through user submissions and display images -->
-                {% for submission in user_submissions %}
-                    <div class="row mb-5 justify-content-center">
-                        <div class="col-md-7">
-                            {% if submission.design_image %}
-                                <img class="img-fluid rounded" src="{{ submission.design_image.url }}" alt="{{ submission.design_name }}">
+       <!-- Custom Order History -->
+<div class="col-12 col-lg-6">
+    <p class="text-muted">Custom Order History</p>
+    <div class="order-history table-responsive">
+        <table class="table table-sm table-borderless">
+            <thead>
+                <tr>
+                    <th>Design Name</th>
+                    <th>Date</th>
+                    <th>Image</th>
+                    <!-- Add more columns if needed -->
+                </tr>
+            </thead>
+            <tbody>
+                {% for custom_order in custom_orders %}
+                    <tr>
+                        <td>{{ custom_order.design_name }}</td>
+                        <td>{{ custom_order.date }}</td>
+                        <td>
+                            {% if custom_order.design_image %}
+                                <img class="img-fluid" src="{{ custom_order.design_image.url }}" alt="{{ custom_order.design_name }}">
                             {% else %}
-                                <img class="img-fluid rounded" src="{% static 'noimage.png' %}" alt="{{ submission.design_name }}">
+                                No Image
                             {% endif %}
-                        </div>
-                    </div>
+                        </td>
+                        <!-- Add more cells if needed -->
+                    </tr>
                 {% endfor %}
-            </div>
-        </div>
+            </tbody>
+        </table>
     </div>
+</div>
+
     <!-- Your other content here -->
     {% include 'includes/footer.html'%}
 {% endblock %}
