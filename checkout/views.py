@@ -63,7 +63,7 @@ def checkout(request):
                     if isinstance(item_data, int):
                        stripe_total += product.price * item_data
                     else:
-                        for size, quantity in item_data['items_by_size'].items():
+                        for quantity in item_data.items():
                             order_line_item = OrderLineItem(
                                 order=order,
                                 product=product,

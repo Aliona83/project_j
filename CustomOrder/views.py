@@ -43,11 +43,14 @@
 #     context = {'user_submissions': user_submissions}
 #     return render(request, 'CustomOrder/submitted_forms.html', context)
 
-from django.shortcuts import render, redirect, reverse
+from django.shortcuts import render, redirect, reverse, get_object_or_404
 from .forms import CustomJewelleryDesignForm
 from .models import CustomJewelleryDesign
 from django.contrib import messages
 from .models import UserProfile
+from checkout.models import Order
+from profiles.forms import UserProfileForm
+
 
 def create_custom_jewellery(request):
     if request.method == 'POST':
@@ -72,15 +75,9 @@ def create_custom_jewellery(request):
 def submitted_success(request):
      return render(request, 'CustomOrder/submitted_success.html')
 
+
+
 def view_submitted_forms(request):
-    user_profile = request.user.userprofile 
-    if request.user.is_authenticated:
-        user_submissions = user_profile.created_forms.all()
-        user_submissions = CustomJewelleryDesign.objects.filter(user_profile__user=request.user)
-        print(user_submissions)
-        context = {'user_submissions': user_submissions}
-        return render(request, 'CustomOrder/submitted_forms.html', context)
-    else:
-        
-        return redirect('home')  
-    
+    custom_orders = CustomJewelleryDesign.objects.all()
+    context = {'custom_orders': custom_orders}
+    return render(request, 'CustomOrder/submitted_forms.html', context)

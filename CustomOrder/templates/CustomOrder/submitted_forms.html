@@ -2,7 +2,6 @@
 {% load static %}
 
 {% block page_header %}
-
 <div class="container header-container">
     <div class="row">
         <div class="col"></div>
@@ -10,59 +9,52 @@
 </div>
 {% endblock %}
 
-
 {% block content %}
 <div class="container-fluid large-container mb-2">
-        <div class="row">
-            <div class="col text-center mt-3">
-                <div class="overlay"></div>
-    <div class="container p-5 mt-5">
-        <div class="row mb-5">
-            <div class="col">
-                <hr>
-                <h1 class="hero-font text-uppercase">Submitted Forms</h1>
-                <hr class="w-50 mb-5">
+    <div class="row">
+        <div class="col text-center mt-3">
+            <div class="overlay"></div>
+            <div class="container p-5 mt-5">
+                <div class="row mb-5">
+                    <div class="col">
+                        <hr>
+                        <h1 class="hero-font text-uppercase">Submitted Forms</h1>
+                        <hr class="w-50 mb-5">
+                    </div>
+                </div>
+                <div class="row">
+                    {% for custom_order in custom_orders %}
+                    <div class="col-12 col-md-6 mt-5">
+                        {% if custom_order.design_image %}
+                        <img class="img-fluid" src="{{ custom_order.design_image.url }}" alt="{{ custom_order.design_name }}">
+                        {% else %}
+                        No Image attached
+                        {% endif %}
+                    </div>
+                    <div class="col-12 col-md-6 mt-5 p-5">
+                        <div class="col-lg-6">
+                            <p class="text-muted">Order Details</p>
+                            <ul class="list-unstyled">
+                                <li><strong>Type of Jewellery:</strong> {{ custom_order.design_name }}</li>
+                                <li><strong>Metal Type:</strong> {{ custom_order.metal_type }}</li>
+                                <li><strong>Stone Type:</strong> {{ custom_order.stone_type }}</li>
+                                <li><strong>Description:</strong> {{ custom_order.description }}</li>
+                                <li><strong>Full name:</strong> {{ custom_order.full_name }}</li>
+                                <li><strong>Email Address:</strong> {{ custom_order.email }}</li>
+                                <li><strong>Phone Number</strong> {{ custom_order.phone_number }}</li>
+                            </ul>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
             </div>
         </div>
-       <!-- Custom Order History -->
-    <div class="col-12 col-lg-6">
-    <p class="text-muted">Custom Order History</p>
-    <div class="order-history table-responsive">
-        <table class="table table-sm table-borderless">
-            <thead>
-                <tr>
-                    <th>Design Name</th>
-                    <th>Date</th>
-                    <th>Image</th>
-                    <!-- Add more columns if needed -->
-                </tr>
-            </thead>
-            <tbody>
-                {% for custom_order in custom_orders %}
-                    <tr>
-                        <td>{{ custom_order.design_name }}</td>
-                        <td>{{ custom_order.date }}</td>
-                        <td>
-                            {% if custom_order.design_image %}
-                                <img class="img-fluid" src="{{ custom_order.design_image.url }}" alt="{{ custom_order.design_name }}">
-                            {% else %}
-                                No Image
-                            {% endif %}
-                        </td>
-                        <!-- Add more cells if needed -->
-                    </tr>
-                {% endfor %}
-            </tbody>
-        </table>
     </div>
-  </div>
-  </div>
-  </div>
+    <a href="{% url 'home' %}" class="btn btn-black rounded-0 text-center mr-5">Back Home Page</a>
 </div>
-    <!-- Your other content here -->
-    {% include 'includes/footer.html'%}
+{% include 'includes/footer.html'%}
 {% endblock %}
 
 {% block postloadjs %}
-    <!-- Your post-load JavaScript here -->
+
 {% endblock %}

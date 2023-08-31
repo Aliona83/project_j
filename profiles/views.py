@@ -9,39 +9,27 @@ from .forms import UserProfileForm
 from checkout.models import Order
 
 @login_required
+# def @login_required
 def profile(request):
     """ Display the user's profile. """
-    if request.user.is_authenticated:
-        user_profile = request.user.userprofile
-        custom_orders = CustomJewelleryDesign.objects.filter(user_profile=user_profile)
-        context = {'custom_orders': custom_orders}
-        return render(request, 'profiles/profile.html', context)
-    else:
-        return redirect('login')  # Redirect to login page if user is not authenticated
-
     profile = get_object_or_404(UserProfile, user=request.user)
+
     if request.method == 'POST':
         form = UserProfileForm(request.POST, instance=profile)
         if form.is_valid():
             form.save()
             messages.success(request, 'Profile updated successfully')
-        else:
-            messages.error(request, 'Update failed. Please ensure the form is valid.')
-    else:
-        form = UserProfileForm(instance=profile)
+
+    form = UserProfileForm(instance=profile)
     orders = profile.orders.all()
 
     template = 'profiles/profile.html'
     context = {
         'form': form,
         'orders': orders,
-        'custom_orders': custom_orders,
         'on_profile_page': True
     }
-
-
     return render(request, template, context)
-
 
 def order_history(request, order_number):
     order = get_object_or_404(Order, order_number=order_number)

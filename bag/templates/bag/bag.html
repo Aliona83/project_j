@@ -64,7 +64,7 @@
                         <a class="remove-item btt-link text-danger float-right" id="remove_{{ item.item_id }}">
                             <small>Remove</small>
                         </a>
-                        <p class="my-0">£ {{ item.product.price | calc_subtotal:item.quantity }}</p>
+                        <p class="my-0  item-price" data-product-price="{{ item.product.price }}"> {{ item.product.price | calc_subtotal:item.quantity }}</p>
                     </div>
                 </div>       
             {% endfor %}
@@ -88,7 +88,7 @@
                         </span>
                         <span class="btn-primary font-weight-bold text-uppercase">Keep Shopping</span>
                     </a>
-                    <a class="btn btn-primary mt-1 secure-checkout-btn"
+                    <a class="btn btn-primary mt-1 secure-checkout-btn-trigger"
                     href="{% url 'checkout' %}"
                     data-product-id="{{ item.product.id }}"
                     data-product-price="{{ item.product.price }}">
