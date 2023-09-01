@@ -3,7 +3,7 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
-# from django.core.paginator import Paginator
+from django.core.paginator import Paginator
 from .models import Jewellery, Category
 from .forms import ProductForm
 
@@ -11,17 +11,14 @@ from .forms import ProductForm
 
 def all_jewelleries(request):
     """ A view to show all products, including sorting and search queries """
-
+    
     jewelleries = Jewellery.objects.all()
+    
     query = None
     categories = None
     sort = None
     direction = None
-    # paginator = Paginator(jewelleries, 12)
     
-
-    # page_number = request.GET.get('page')
-    # page = paginator.get_page(page_number)
     
     if request.GET:
         if 'sort' in request.GET:
@@ -39,13 +36,16 @@ def all_jewelleries(request):
             jewelleries = jewelleries.order_by(sortkey)
             
         if 'category' in request.GET:
+            categories = request.GET.getlist('category')
             categories = request.GET['category'].split(',')
             jewelleries = jewelleries.filter(category__name__in=categories)
+            print(f"Total products before pagination: {jewelleries.count()}")
             categories = Category.objects.filter(name__in=categories)
 
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
+
                 messages.error(request, "You didn't enter any search criteria!")
                 return redirect(reverse('products'))
             
@@ -53,13 +53,21 @@ def all_jewelleries(request):
             jewelleries = jewelleries.filter(queries)
 
     current_sorting = f'{sort}_{direction}'
+    if len(jewelleries) <= 12:
+        page = jewelleries
+    else:
+        # Pagination
+        page_number = request.GET.get('page')
+        paginator = Paginator(jewelleries, 12)  # Show 12 products per page
+        page = paginator.get_page(page_number)
+
 
     context = {
         'jewelleries': jewelleries,
         'search_term': query,
         'current_categories': categories,
         'current_sorting': current_sorting,
-        # 'jewelleries': page,
+       'jewelleries': page,
     }
 
     return render(request, 'jewelleries/jewelleries.html', context)

@@ -130,11 +130,14 @@
     </div>
    
 <!-- Pagination -->
- <!-- <section>
+  <section>
+    
     {% if jewelleries.has_other_pages %}
+   
     <ul class="pagination pagination-sm justify-content-center flex-wrap">
       {% if jewelleries.has_previous %}
-        <li class="page-item"><a class="page-link" href="?category={{ current_categories|join:',' }}&page={{ all_jewellery.previous_page_number }}">Previous</a></li>
+        <li class="page-item"><a class="page-link" href="?category={{ current_categories|join:',' }}&page={{ jewelleries.previous_page_number }}&q={{ search_term }}&sort={{ current_sorting }}">Previous</a></li>
+       
       {% else %}
         <li class="page-item disabled"><span class="page-link">Previous</span></li>
       {% endif %}
@@ -146,13 +149,13 @@
         {% endif %}
       {% endfor %}
       {% if jewelleries.has_next %}
-        <li class="page-item"><a class="page-link" href="?category={{ current_categories|join:',' }}&page={{ all_jewellery.next_page_number }}">Next</a></li>
+        <li class="page-item"><a class="page-link" href="?category={{ current_categories|join:',' }}&page={{ jewelleries.next_page_number }}&q={{ search_term }}&sort={{ current_sorting }}">Next</a></li>
       {% else %}
         <li class="page-item disabled"><span class="page-link">Next</span></li>
       {% endif %}
     </ul>
   {% endif %}
-  </section> -->
+  </section> 
   
 {% include 'includes/footer.html'%}
 {% endblock %}
