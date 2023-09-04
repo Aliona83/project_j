@@ -56,10 +56,10 @@
                 </div>
             </div>
              <!-- Products -->
-    <div class="row d-flex justify-content-between">
+    <div class="row d-flex justify-content-between" id="product-container">
         {% for jewellery in jewelleries %}
         <div class="col-12 col-sm-5 col-md-6 col-lg-3 col-xl-3">
-            <div class="card h-100 border-0">
+            <div class="card h-100 border-0 product-card">
                 <div class="card-body pb-0">
                     <div class="card-container">
                 {% if jewellery.image %}
@@ -125,35 +125,15 @@
                         {% endif %}
                     {% endfor %}
                 </div>
+                {% if jewelleries_page.has_next %}
+                <div class="text-center mt-3">
+                    <button id="show-more-btn" class="btn btn-primary">Show More</button>
+                </div>
+                {% endif %}
             </div>
         </div>
     </div>
-<!-- Pagination -->
-  <section>
-    {% if jewelleries.has_other_pages %}
-   
-    <ul class="pagination pagination-sm justify-content-center flex-wrap">
-      {% if jewelleries.has_previous %}
-        <li class="page-item"><a class="page-link" href="?category={{ current_categories|join:',' }}&page={{ jewelleries.previous_page_number }}&q={{ search_term }}&sort={{ current_sorting }}">Previous</a></li>
-       
-      {% else %}
-        <li class="page-item disabled"><span class="page-link">Previous</span></li>
-      {% endif %}
-      {% for i in jewelleries.paginator.page_range %}
-        {% if jewelleries.number == i %}
-          <li class="page-item active"><span class="page-link">{{ i }}</span></li>
-        {% else %}
-          <li class="page-item"><a class="page-link" href="?category={{ current_categories|join:',' }}&page={{ i }}">{{ i }}</a></li>
-        {% endif %}
-      {% endfor %}
-      {% if jewelleries.has_next %}
-        <li class="page-item"><a class="page-link" href="?category={{ current_categories|join:',' }}&page={{ jewelleries.next_page_number }}&q={{ search_term }}&sort={{ current_sorting }}">Next</a></li>
-      {% else %}
-        <li class="page-item disabled"><span class="page-link">Next</span></li>
-      {% endif %}
-    </ul>
-  {% endif %}
-  </section> 
+
   
 {% include 'includes/footer.html'%}
 {% endblock %}
@@ -187,4 +167,32 @@
             }
         })
     </script>
+    <script>   
+      
+      var currentPage = 1;  // Initialize current page
+      var totalPages = {{ jewelleries_page.paginator.num_pages }};  // Get the total number of pages from Django
+
+$('#show-more-btn').on('click', function () {
+    currentPage++;
+    if (currentPage <= totalPages) {
+        $.ajax({
+            type: 'GET',
+            url: window.location.href,
+            data: { page: currentPage },
+            success: function (data) {
+                $('#product-container').append($(data).find('.product-card'));
+            },
+            error: function (xhr, status, error) {
+                console.log("AJAX request failed with status: " + status + ", error: " + error);
+            }
+        });
+    }
+    if (currentPage >= totalPages) {
+        $('#show-more-btn').hide();
+    }
+});
+   
+        
+      </script>
+      
 {% endblock %}

@@ -3,22 +3,38 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
-from django.core.paginator import Paginator
 from .models import Jewellery, Category
 from .forms import ProductForm
-
+from django.core.paginator import Paginator
+from django.http import JsonResponse
 # Create your views here.
 
 def all_jewelleries(request):
     """ A view to show all products, including sorting and search queries """
     
     jewelleries = Jewellery.objects.all()
+    paginator = Paginator(jewelleries, 12)  # 12 items per page
+    page = request.GET.get('page')
+    jewelleries_page = paginator.get_page(page)
+    
     
     query = None
     categories = None
     sort = None
     direction = None
     
+    data = []
+
+    for jewellery in jewelleries_page:
+        data.append({
+            'id': jewellery.id,
+            'name': jewellery.name,
+            'description': jewellery.description,
+            'price': jewellery.price,
+            'category': jewellery.category.name if jewellery.category else '',
+            # Add more attributes as needed
+        })
+    return JsonResponse({'jewelleries': data})    
     
     if request.GET:
         if 'sort' in request.GET:
@@ -39,7 +55,6 @@ def all_jewelleries(request):
             categories = request.GET.getlist('category')
             categories = request.GET['category'].split(',')
             jewelleries = jewelleries.filter(category__name__in=categories)
-            print(f"Total products before pagination: {jewelleries.count()}")
             categories = Category.objects.filter(name__in=categories)
 
         if 'q' in request.GET:
@@ -52,22 +67,20 @@ def all_jewelleries(request):
             queries = Q(name__icontains=query) | Q(description__icontains=query)
             jewelleries = jewelleries.filter(queries)
 
+            
+
     current_sorting = f'{sort}_{direction}'
-    if len(jewelleries) <= 12:
-        page = jewelleries
-    else:
-        # Pagination
-        page_number = request.GET.get('page')
-        paginator = Paginator(jewelleries, 12)  # Show 12 products per page
-        page = paginator.get_page(page_number)
+
 
 
     context = {
-        'jewelleries': jewelleries,
+        'jewelleries': jewelleries[:num_items],
         'search_term': query,
         'current_categories': categories,
         'current_sorting': current_sorting,
-       'jewelleries': page,
+        'num_items':num_items,
+        'jewelleries_page': jewelleries_page,
+       
     }
 
     return render(request, 'jewelleries/jewelleries.html', context)
