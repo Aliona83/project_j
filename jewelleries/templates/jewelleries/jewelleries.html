@@ -10,127 +10,129 @@
 {% endblock %}
 
 {% block content %}
-<!-- Products Page -->
-<div class="container-fluid mt-3">
-    <main class="main">
-    <div class="row mt-5 p-5">
-        <div class="col text-center">
-            <h2 class="logo-font">Jewellery</h2>
-            {% for c in current_categories %}
-                    <a class="category-badge text-decoration-none" href="{% url 'jewelleries:jewelleries' %}?category={{ c.name }}">
-                        <span class="p-2 mt-2 badge badge-white text-black rounded-0 border border-dark">{{ c.friendly_name }}</span>
-                    </a>
-                {% endfor %}
-            <hr class="w-50 mb-1">
-        </div>
-    </div>
-</main>
- <!-- Sorting Selector -->
-    <div class="flex-row">
-        <div class="product-container offset-1">
-            <div class="row mt-1 mb-2">
-                <div class="col-12 col-md-6 my-auto order-md-last d-flex justify-content-center justify-content-md-end">
-                    <div class="sort-select-wrapper w-50">
-                        <label for="sort-selector" class="sr-only">Sort by</label> 
-                        <select id="sort-selector" class="custom-select custom-select-sm rounded-0 border border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
-                            <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...</option>
-                            <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price (low to high)</option>
-                            <option value="price_desc" {% if current_sorting == 'price_desc' %}selected{% endif %}>Price (high to low)</option>
-                            <option value="rating_asc" {% if current_sorting == 'rating_asc' %}selected{% endif %}>Rating (low to high)</option>
-                            <option value="rating_desc" {% if current_sorting == 'rating_desc' %}selected{% endif %}>Rating (high to low)</option>
-                            <option value="name_asc" {% if current_sorting == 'name_asc' %}selected{% endif %}>Name (A-Z)</option>
-                            <option value="name_desc" {% if current_sorting == 'name_desc' %}selected{% endif %}>Name (Z-A)</option>
-                            <option value="category_asc" {% if current_sorting == 'category_asc' %}selected{% endif %}>Category (A-Z)</option>
-                            <option value="category_desc" {% if current_sorting == 'category_desc' %}selected{% endif %}>Category (Z-A)</option>
-                        </select>
-                    </div>
-                </div>
-                <!-- Search Results -->
-                <div class="col-12 col-md-6 order-md-first">
-                    <p class="text-black mt-3 text-center text-md-left">
-                        {% if search_term or current_categories or current_sorting != 'None_None' %}
-                            <span class="small"><a href="{% url 'jewelleries:jewelleries' %}">Products</a> | </span>
-                        {% endif %}
-                        {{ jewelleries|length }} Products{% if search_term %} found for <strong>"{{ search_term }}"</strong>{% endif %}
-                    </p>
+    <!-- Products Page -->
+    <div class="container-fluid mt-3">
+        <main class="main">
+            <div class="row mt-5 p-5">
+                <div class="col text-center">
+                    <h2 class="logo-font">Jewellery</h2>
+                    {% for c in current_categories %}
+                        <a class="category-badge text-decoration-none" href="{% url 'jewelleries:jewelleries' %}?category={{ c.name }}">
+                            <span class="p-2 mt-2 badge badge-white text-black rounded-0 border border-dark">{{ c.friendly_name }}</span>
+                        </a>
+                    {% endfor %}
+                    <hr class="w-50 mb-1">
                 </div>
             </div>
-             <!-- Products -->
-    <div class="row d-flex justify-content-between" id="product-container">
-        {% for jewellery in jewelleries %}
-        <div class="col-12 col-sm-5 col-md-6 col-lg-3 col-xl-3">
-            <div class="card h-100 border-0 product-card">
-                <div class="card-body pb-0">
-                    <div class="card-container">
-                {% if jewellery.image %}
-                <a href="{% url 'jewelleries:jewelleries_details' jewellery.id %}">
-                    <img class="card-img-top img-fluid" src="{{ jewellery.image.url }}"  alt="{{ jewellery.name }}">
-                </a>
-                {% else %}
-                <a href="">
-                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png"  alt="{{ jewellery.name }}">
-                </a>
-                {% endif %}
-                <div class="card-body pb-0">
-                    <p class="mb-0">{{ jewellery.name }}</p>
-                </div>
-            </div>
-                <div class="card-footer pt-0 border-0 text-left">
-                    <div class="row">
-                        <div class="col">
-                            <p class="lead mb-0 text-left font-weight-bold">${{ jewellery.price }}</p>
-                            {% if jewellery.category %}
-                            <p class="small mt-1 mb-0">
-                                <a class="text-black" href="{% url 'jewelleries:jewelleries' %}?category={{ jewellery.category.name }}">
-                                    <i class="fas fa-tag mr-1"></i>{{ jewellery.category.friendly_name }}
-                                </a>
-                            </p>
-                            {% endif %}
-                            {% if jewellery.rating %}
-                            <small class="text-black"><i class="fas fa-star mr-1"></i>{{ jewellery.rating }} / 5</small>
-                            {% else %}
-                            <small class="text-black">No Rating</small>
-                            {% endif %}
-                            {% if request.user.is_superuser %}
-                                                <small class="ml-4">
-                                                    <a href="{% url 'jewelleries:edit_jewellery' jewellery.id %}">Edit</a> | 
-                                                    <a class="delete" href="{% url 'jewelleries:delete_jewellery' jewellery.id %}">Delete</a>
-                                                </small>
-                                            {% endif %}
-                            </div>                
+        </main>
+        <!-- Sorting Selector -->
+        <div class="flex-row">
+            <div class="product-container offset-1">
+                <div class="row mt-1 mb-2">
+                    <div class="col-12 col-md-6 my-auto order-md-last d-flex justify-content-center justify-content-md-end">
+                        <div class="sort-select-wrapper w-50">
+                            <label for="sort-selector" class="sr-only">Sort by</label>
+                            <select id="sort-selector" class="custom-select custom-select-sm rounded-0 border border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
+                                <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...</option>
+                                <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price (low to high)</option>
+                                <option value="price_desc" {% if current_sorting == 'price_desc' %}selected{% endif %}>Price (high to low)</option>
+                                <option value="rating_asc" {% if current_sorting == 'rating_asc' %}selected{% endif %}>Rating (low to high)</option>
+                                <option value="rating_desc" {% if current_sorting == 'rating_desc' %}selected{% endif %}>Rating (high to low)</option>
+                                <option value="name_asc" {% if current_sorting == 'name_asc' %}selected{% endif %}>Name (A-Z)</option>
+                                <option value="name_desc" {% if current_sorting == 'name_desc' %}selected{% endif %}>Name (Z-A)</option>
+                                <option value="category_asc" {% if current_sorting == 'category_asc' %}selected{% endif %}>Category (A-Z)</option>
+                                <option value="category_desc" {% if current_sorting == 'category_desc' %}selected{% endif %}>Category (Z-A)</option>
+                            </select>
                         </div>
                     </div>
+                    <!-- Search Results -->
+                    <div class="col-12 col-md-6 order-md-first">
+                        <p class="text-black mt-3 text-center text-md-left">
+                            {% if search_term or current_categories or current_sorting != 'None_None' %}
+                                <span class="small"><a href="{% url 'jewelleries:jewelleries' %}">Products</a> | </span>
+                            {% endif %}
+                            {{ jewelleries|length }} Products{% if search_term %} found for <strong>"{{ search_term }}"</strong>{% endif %}
+                        </p>
+                    </div>
                 </div>
-            </div>
-        </div>
-        {% if forloop.counter|divisibleby:1 %}
-                            <div class="col-12 d-sm-none mb-5">
-                                <hr>
+                <!-- Products -->
+                <div class="row justify-content-center" id="jewelleries-container">
+                    {% for jewellery in jewelleries|slice:":12" %}
+                    <div class="col-12 col-sm-6 col-md-6 col-lg-3 md-0">
+                        <div class="card h-100 border-0">
+                            <div class="card-body pb-0">
+                                <div class="card-container">
+                                    {% if jewellery.image %}
+                                    <a href="{% url 'jewelleries:jewelleries_details' jewellery.id %}">
+                                        <img class="card-img-top img-fluid" src="{{ jewellery.image.url }}" alt="{{ jewellery.name }}">
+                                    </a>
+                                    {% else %}
+                                    <a href="">
+                                        <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ jewellery.name }}">
+                                    </a>
+                                    {% endif %}
+                                    <div class="card-body pb-0">
+                                        <p class="mb-0">{{ jewellery.name }}</p>
+                                    </div>
+                                </div>
                             </div>
-                        {% endif %}                        
-                        {% if forloop.counter|divisibleby:2 %}
-                            <div class="col-12 d-none d-sm-block d-md-block d-lg-none mb-5">
-                                <hr>
+                            <div class="card-footer pt-0 border-0 text-left">
+                                <div class="row">
+                                    <div class="col">
+                                        <p class="lead mb-0 text-left font-weight-bold">${{ jewellery.price }}</p>
+                                        {% if jewellery.category %}
+                                        <p class="small mt-1 mb-0">
+                                            <a class="text-black" href="{% url 'jewelleries:jewelleries' %}?category={{ jewellery.category.name }}">
+                                                <i class="fas fa-tag mr-1"></i>{{ jewellery.category.friendly_name }}
+                                            </a>
+                                        </p>
+                                        {% endif %}
+                                        {% if jewellery.rating %}
+                                        <small class="text-black"><i class="fas fa-star mr-1"></i>{{ jewellery.rating }} / 5</small>
+                                        {% else %}
+                                        <small class="text-black">No Rating</small>
+                                        {% endif %}
+                                        {% if request.user.is_superuser %}
+                                        <small class="ml-4">
+                                            <a href="{% url 'jewelleries:edit_jewellery' jewellery.id %}">Edit</a> | 
+                                            <a class="delete" href="{% url 'jewelleries:delete_jewellery' jewellery.id %}">Delete</a>
+                                        </small>
+                                        {% endif %}
+                                    </div>
+                                </div>
                             </div>
-                        {% endif %}
-                        {% if forloop.counter|divisibleby:3 %}
-                            <div class="col-12 d-none d-lg-block d-xl-none mb-5">
-                                <hr>
-                            </div>
-                        {% endif %}
-                        {% if forloop.counter|divisibleby:4 %}
-                            <div class="col-12 d-none d-xl-block mb-5">
-                                <hr>
-                            </div>
-                        {% endif %}
+                        </div>
+                    </div>
+                    {% if forloop.counter|divisibleby:1 %}
+                    <div class="col-12 d-sm-none mb-5">
+                        <hr>
+                    </div>
+                    {% endif %}                        
+                    {% if forloop.counter|divisibleby:2 %}
+                    <div class="col-12 d-none d-sm-block d-md-block d-lg-none mb-5">
+                        <hr>
+                    </div>
+                    {% endif %}
+                    {% if forloop.counter|divisibleby:3 %}
+                    <div class="col-12 d-none d-lg-block d-xl-none mb-5">
+                        <hr>
+                    </div>
+                    {% endif %}
+                    {% if forloop.counter|divisibleby:4 %}
+                    <div class="col-12 d-none d-xl-block mb-5">
+                        <hr>
+                    </div>
+                    {% endif %}
                     {% endfor %}
                 </div>
-                {% if jewelleries_page.has_next %}
-                <div class="text-center mt-3">
-                    <button id="show-more-btn" class="btn btn-primary">Show More</button>
+                <div class="go-up-button">
+                    <a href="#" class="btt-link">
+                        <i class="fas fa-arrow-up"></i>
+                    </a>
                 </div>
-                {% endif %}
-            </div>
+             
+                <button id="show-more-button">Show More</button>
+               
         </div>
     </div>
 
@@ -167,32 +169,44 @@
             }
         })
     </script>
-    <script>   
-      
-      var currentPage = 1;  // Initialize current page
-      var totalPages = {{ jewelleries_page.paginator.num_pages }};  // Get the total number of pages from Django
-
-$('#show-more-btn').on('click', function () {
-    currentPage++;
-    if (currentPage <= totalPages) {
-        $.ajax({
-            type: 'GET',
-            url: window.location.href,
-            data: { page: currentPage },
-            success: function (data) {
-                $('#product-container').append($(data).find('.product-card'));
-            },
-            error: function (xhr, status, error) {
-                console.log("AJAX request failed with status: " + status + ", error: " + error);
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const jewelleriesContainer = document.getElementById("jewelleries-container");
+            const showMoreButton = document.getElementById("show-more-button");
+            const jewelleriesCount = "{{ jewelleries|length }}";
+            let displayedItems = 12; // Initially display 12 items
+    
+            // Initially hide the "Show More" button if all items are already displayed
+            if (displayedItems >= jewelleriesCount) {
+                showMoreButton.style.display = "none";
             }
+    
+            showMoreButton.addEventListener("click", function () {
+                // Calculate the number of items to load each time
+                const loadCount = 12; // You can adjust this number
+    
+                // Calculate the range of items to display
+                const startIndex = displayedItems;
+                const endIndex = Math.min(startIndex + loadCount, jewelleriesCount);
+    
+                // Create a new request to load more items
+                fetch(`?load_more=${loadCount}`)
+                    .then((response) => response.text())
+                    .then((data) => {
+                        // Append the new items to the container
+                        jewelleriesContainer.innerHTML = data;
+                        displayedItems += loadCount;
+    
+                        // Hide the "Show More" button if all items are displayed
+                        if (displayedItems >= jewelleriesCount) {
+                            showMoreButton.style.display = "none";
+                        }
+                    });
+            });
         });
-    }
-    if (currentPage >= totalPages) {
-        $('#show-more-btn').hide();
-    }
-});
-   
-        
-      </script>
-      
-{% endblock %}
+    </script>
+    {% endblock %}
+    {% block scripts %}
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> 
+    {% endblock %}
+    

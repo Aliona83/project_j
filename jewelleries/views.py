@@ -5,37 +5,30 @@ from django.db.models import Q
 from django.db.models.functions import Lower
 from .models import Jewellery, Category
 from .forms import ProductForm
-from django.core.paginator import Paginator
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.http import JsonResponse
 # Create your views here.
 
+# def get_total_image_count():
+#     # Use the count() method to get the total count of images
+    
+#     return total_image_count
+
+#     total_images = get_total_image_count()
+#     print(f'Total Images: {total_images}')
+
+
 def all_jewelleries(request):
     """ A view to show all products, including sorting and search queries """
-    
-    jewelleries = Jewellery.objects.all()
-    paginator = Paginator(jewelleries, 12)  # 12 items per page
-    page = request.GET.get('page')
-    jewelleries_page = paginator.get_page(page)
-    
     
     query = None
     categories = None
     sort = None
     direction = None
     
-    data = []
-
-    for jewellery in jewelleries_page:
-        data.append({
-            'id': jewellery.id,
-            'name': jewellery.name,
-            'description': jewellery.description,
-            'price': jewellery.price,
-            'category': jewellery.category.name if jewellery.category else '',
-            # Add more attributes as needed
-        })
-    return JsonResponse({'jewelleries': data})    
+    jewelleries = Jewellery.objects.all()
     
+
     if request.GET:
         if 'sort' in request.GET:
             sortkey = request.GET['sort']
@@ -74,12 +67,11 @@ def all_jewelleries(request):
 
 
     context = {
-        'jewelleries': jewelleries[:num_items],
+        'jewelleries': jewelleries,
         'search_term': query,
         'current_categories': categories,
         'current_sorting': current_sorting,
-        'num_items':num_items,
-        'jewelleries_page': jewelleries_page,
+        
        
     }
 
