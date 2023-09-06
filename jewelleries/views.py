@@ -8,6 +8,7 @@ from .forms import ProductForm
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.http import JsonResponse
 # Create your views here.
+import math
 
 # def get_total_image_count():
 #     # Use the count() method to get the total count of images
@@ -27,7 +28,12 @@ def all_jewelleries(request):
     direction = None
     
     jewelleries = Jewellery.objects.all()
+    total_images = jewelleries.count()
+    # Calculate the total number of pages
+    items_per_page = 12
+    total_pages = math.ceil(total_images / items_per_page)
     
+   
 
     if request.GET:
         if 'sort' in request.GET:
@@ -71,11 +77,29 @@ def all_jewelleries(request):
         'search_term': query,
         'current_categories': categories,
         'current_sorting': current_sorting,
+        'total_pages': total_pages, 
         
        
     }
 
     return render(request, 'jewelleries/jewelleries.html', context)
+
+def load_more_products(request):
+    # Get the page number from the 'load_more' parameter in the request's GET data
+    page_number = request.GET.get('load_more')
+    
+    # Calculate the range of products to load based on the page number
+    items_per_page = 12
+    start_index = (int(page_number) - 1) * items_per_page
+    end_index = start_index + items_per_page
+
+    # Query the database to retrieve the products for the current page
+    products = Jewellery.objects.all()[start_index:end_index]
+    print(products)
+    # Render the products as HTML
+    product_html = render(request, 'jewelleries/jewelleries_list.html', {'jewelleries': products})
+
+    return JsonResponse({'jewelleries.html': all_jewelleries.content.decode('utf-8')})
 
 
 def jewelleries_details(request, jewellery_id):

@@ -56,7 +56,7 @@
                     </div>
                 </div>
                 <!-- Products -->
-                <div class="row justify-content-center" id="jewelleries-container">
+                <div id="jewelleries-container" class="row justify-content-center">
                     {% for jewellery in jewelleries|slice:":12" %}
                     <div class="col-12 col-sm-6 col-md-6 col-lg-3 md-0">
                         <div class="card h-100 border-0">
@@ -125,14 +125,12 @@
                     {% endif %}
                     {% endfor %}
                 </div>
+                <button id="show-more-button" data-page="2">Show More</button>
                 <div class="go-up-button">
                     <a href="#" class="btt-link">
                         <i class="fas fa-arrow-up"></i>
                     </a>
-                </div>
-             
-                <button id="show-more-button">Show More</button>
-               
+                </div>     
         </div>
     </div>
 
@@ -169,44 +167,56 @@
             }
         })
     </script>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const jewelleriesContainer = document.getElementById("jewelleries-container");
-            const showMoreButton = document.getElementById("show-more-button");
-            const jewelleriesCount = "{{ jewelleries|length }}";
-            let displayedItems = 12; // Initially display 12 items
-    
-            // Initially hide the "Show More" button if all items are already displayed
-            if (displayedItems >= jewelleriesCount) {
-                showMoreButton.style.display = "none";
-            }
-    
-            showMoreButton.addEventListener("click", function () {
-                // Calculate the number of items to load each time
-                const loadCount = 12; // You can adjust this number
-    
-                // Calculate the range of items to display
-                const startIndex = displayedItems;
-                const endIndex = Math.min(startIndex + loadCount, jewelleriesCount);
-    
-                // Create a new request to load more items
-                fetch(`?load_more=${loadCount}`)
-                    .then((response) => response.text())
-                    .then((data) => {
-                        // Append the new items to the container
-                        jewelleriesContainer.innerHTML = data;
-                        displayedItems += loadCount;
-    
-                        // Hide the "Show More" button if all items are displayed
-                        if (displayedItems >= jewelleriesCount) {
-                            showMoreButton.style.display = "none";
-                        }
-                    });
+    <!-- Add this JavaScript code at the end of your 'jewelleries.html' template -->
+<script>
+    $(document).ready(function () {
+        const showMoreButton = $('#show-more-button');
+        const totalPages = parseInt(showMoreButton.data('total-pages'));
+        let currentPage = 2; // Start with page 2
+
+
+        showMoreButton.click(function (e) {
+            e.preventDefault();
+            const nextPage = $(this).data('page');
+            if (nextPage !== undefined) {
+            // Make an AJAX request to load more images
+            $.ajax({
+                url: window.location.pathname + `?load_more=${nextPage}`,
+                method: 'GET',
+                dataType: 'html',
+                success: function (data) {
+                    const extractedContent = $(data).find('#jewelleries-container').html();
+                    const container = $('#jewelleries-container');
+                    container.append(extractedContent);
+
+                    // Update the "Show More" button data-page attribute
+                    showMoreButton.data('page', nextPage + 1);
+
+                    // Hide the button if no more images to load
+                    if (data.indexOf('id="show-more-button"') === -1) {
+                        showMoreButton.hide();
+                    }
+                },
+                error: function (error) {
+                    console.log(error);
+                }
             });
+        }
         });
-    </script>
+        // Here's where you can add the code to modify the data-page attribute
+        // Modify the data-page attribute using jQuery
+        showMoreButton.data('page', 3);
+
+        // Retrieve the modified data-page value
+        var modifiedDataPage = showMoreButton.data('page');
+});
+    
+
+    
+</script>
+
     {% endblock %}
-    {% block scripts %}
+    <!-- {% block scripts %}
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> 
     {% endblock %}
-    
+     -->
