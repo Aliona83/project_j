@@ -44,31 +44,54 @@ The Jewelry Shop is  an E-commerce shop where users can find and buy jewellery a
 # UX 
 User stories help us understand the needs and expectations of our users. They serve as a basis for defining features and guide our development process. Below are some user stories that represent the different roles and interactions within the Jewelry Project:
 
-## User stories what to see in shop :
 ## As a Buyer, I want to:
-## As the User I want to :
+  * Provide buyers with an extensive range of jewelry options.
+  * Categorize jewelry for easy navigation, such as necklaces, rings, and bracelets, by type of material: gold, silver etc.
+  * Implement filters to refine search results by material, style, price, and more.
+  * Easily access a "New Arrivals" section on the home page to stay updated with the latest additions.
+  * Display high-quality images of each product.
+  * Include product descriptions, product categories, materials, rates and prices.
+  * Allow buyers to click on each product to view all details.
+  * Ensure a user-friendly and responsive website or app design.
+  * Enable easy account creation and login.
+  * Provide a streamlined shopping cart and checkout process. 
+  * As a logged-in user, I want to be able to add products to my wishlist, so that I can view those products later.
+  * As a logged-in user, I was to be able to remove products from my wishlist, so that my wishlist is only full of products I want to be saved.
+  * Allow buyers to access a profile page where they can submit a form to order custom-made jewellery.  
+  * To see a history of all submitted custom-made orders.
+  * Enable buyers to easily access and review their order history. 
+  * As a buyer, I want to provide secure payment options for customers, such as integrating with secure payment gateways (e.g. Stripe)
+         
+## As the Register User I want to :
 
   * As a user, I can use the website on all device sizes so that I can see the same information on small and large devices.
-      
   * As a user, I can use the navigation bar so that I can view all pages of the website easily
-
   * As a site user, I want to be able to sign up, so that I can have a personal account on the site.
-
   * As a site user, I want to be able to receive an email confirmation after registering, so that I can verify that my account registration was successful.
-
   * As User I want to been able to add and remove products from my cart
+  * As User I want to recieve feedback that my order was processed successfully.
+  * As User I want to subscribe to the store newsletters
 
-  * As User I want to recieve feedback that my order was proccessed succesfully.
+## As the Unregistered User I want to:
 
-  * As User I want to see the features of the month
+1. As Unregistered User I want to see the purpose of the site when landing on it
+    * Landing page with clear reference to objective of the app
+ 2. As an Unregistered User I want to get a benefit if I register*
+    * Information recieved in the registration mail
+ 3. As an Unregistered User, I want to be able to register so that I   can create my account and access to the registered user features
+    *  Link for Sign Up in Navbar
+  4. As an Unregistered User I want to see the detailed information of the wares
+    * Ware's details page
 
-  * As User I want to subscribe to the store newletters
-  * As User I want 
 
   ## Agile Methodologies
   
-
-  
+  The Agile Methodology approach was adopted during the development of the Elegancy Jewellery - store. I have utilized GitHub's built-in features such as issue tracking and project management to effectively manage tasks and monitor progress.
+    1. Epic - Instalation 
+      *
+    2. Home page
+      * Navigations bar with categories, search bar, home back button, footer, features and shop now button.
+    3.   
 
 # Deployment
 [Link to DEPLOYMENT.md](https://github.com/Aliona83/project_j/blob/main/DEPLOYMENT.md)
