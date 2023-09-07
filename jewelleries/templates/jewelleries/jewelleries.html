@@ -55,9 +55,27 @@
                         </p>
                     </div>
                 </div>
+                <div class="pagination">
+                    <span class="step-links">
+                        {% if page_obj.has_previous %}
+                            <a href="?page=1">&laquo; first</a>
+                            <a href="?page={{ page_obj.previous_page_number }}">previous</a>
+                        {% endif %}
+                
+                        <span class="current">
+                            Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
+                        </span>
+                
+                        {% if page_obj.has_next %}
+                            <a href="?page={{ page_obj.next_page_number }}">next</a>
+                            <a href="?page={{ page_obj.paginator.num_pages }}">last &raquo;</a>
+                        {% endif %}
+                    </span>
+                </div>
+                
                 <!-- Products -->
                 <div id="jewelleries-container" class="row justify-content-center">
-                    {% for jewellery in jewelleries|slice:":12" %}
+                    {% for jewellery in jewelleries %}
                     <div class="col-12 col-sm-6 col-md-6 col-lg-3 md-0">
                         <div class="card h-100 border-0">
                             <div class="card-body pb-0">
@@ -125,7 +143,7 @@
                     {% endif %}
                     {% endfor %}
                 </div>
-                <button id="show-more-button" data-page="2">Show More</button>
+               
                 <div class="go-up-button">
                     <a href="#" class="btt-link">
                         <i class="fas fa-arrow-up"></i>
@@ -167,56 +185,6 @@
             }
         })
     </script>
-    <!-- Add this JavaScript code at the end of your 'jewelleries.html' template -->
-<script>
-    $(document).ready(function () {
-        const showMoreButton = $('#show-more-button');
-        const totalPages = parseInt(showMoreButton.data('total-pages'));
-        let currentPage = 2; // Start with page 2
-
-
-        showMoreButton.click(function (e) {
-            e.preventDefault();
-            const nextPage = $(this).data('page');
-            if (nextPage !== undefined) {
-            // Make an AJAX request to load more images
-            $.ajax({
-                url: window.location.pathname + `?load_more=${nextPage}`,
-                method: 'GET',
-                dataType: 'html',
-                success: function (data) {
-                    const extractedContent = $(data).find('#jewelleries-container').html();
-                    const container = $('#jewelleries-container');
-                    container.append(extractedContent);
-
-                    // Update the "Show More" button data-page attribute
-                    showMoreButton.data('page', nextPage + 1);
-
-                    // Hide the button if no more images to load
-                    if (data.indexOf('id="show-more-button"') === -1) {
-                        showMoreButton.hide();
-                    }
-                },
-                error: function (error) {
-                    console.log(error);
-                }
-            });
-        }
-        });
-        // Here's where you can add the code to modify the data-page attribute
-        // Modify the data-page attribute using jQuery
-        showMoreButton.data('page', 3);
-
-        // Retrieve the modified data-page value
-        var modifiedDataPage = showMoreButton.data('page');
-});
-    
-
-    
-</script>
 
     {% endblock %}
-    <!-- {% block scripts %}
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> 
-    {% endblock %}
-     -->
+  

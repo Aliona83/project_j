@@ -7,6 +7,7 @@ from .models import Jewellery, Category
 from .forms import ProductForm
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.http import JsonResponse
+from django.core.paginator import Paginator
 # Create your views here.
 import math
 
@@ -28,11 +29,13 @@ def all_jewelleries(request):
     direction = None
     
     jewelleries = Jewellery.objects.all()
-    total_images = jewelleries.count()
-    # Calculate the total number of pages
-    items_per_page = 12
-    total_pages = math.ceil(total_images / items_per_page)
-    
+
+    paginator = Paginator(jewelleries, 16)  # Show 25 contacts per page.
+
+    page_number = request.GET.get("page")
+    page_obj = paginator.get_page(page_number)
+    # return render(request, "jewelleries/jewelleries.html", {"page_obj": page_obj})
+    categories = request.GET.getlist('category')
    
 
     if request.GET:
@@ -51,7 +54,7 @@ def all_jewelleries(request):
             jewelleries = jewelleries.order_by(sortkey)
             
         if 'category' in request.GET:
-            categories = request.GET.getlist('category')
+            
             categories = request.GET['category'].split(',')
             jewelleries = jewelleries.filter(category__name__in=categories)
             categories = Category.objects.filter(name__in=categories)
@@ -77,29 +80,30 @@ def all_jewelleries(request):
         'search_term': query,
         'current_categories': categories,
         'current_sorting': current_sorting,
-        'total_pages': total_pages, 
+        'page_obj': page_obj
+         
         
        
     }
 
     return render(request, 'jewelleries/jewelleries.html', context)
 
-def load_more_products(request):
-    # Get the page number from the 'load_more' parameter in the request's GET data
-    page_number = request.GET.get('load_more')
+# def load_more_products(request):
+#     # Get the page number from the 'load_more' parameter in the request's GET data
+#     page_number = request.GET.get('load_more')
     
-    # Calculate the range of products to load based on the page number
-    items_per_page = 12
-    start_index = (int(page_number) - 1) * items_per_page
-    end_index = start_index + items_per_page
+#     # Calculate the range of products to load based on the page number
+#     items_per_page = 12
+#     start_index = (int(page_number) - 1) * items_per_page
+#     end_index = start_index + items_per_page
 
-    # Query the database to retrieve the products for the current page
-    products = Jewellery.objects.all()[start_index:end_index]
-    print(products)
-    # Render the products as HTML
-    product_html = render(request, 'jewelleries/jewelleries_list.html', {'jewelleries': products})
+#     # Query the database to retrieve the products for the current page
+#     products = Jewellery.objects.all()[start_index:end_index]
+#     # print(products)
+#     # Render the products as HTML
+#     product_html = render(request, 'jewelleries/jewelleries_list.html', {'jewelleries': products})
 
-    return JsonResponse({'jewelleries.html': all_jewelleries.content.decode('utf-8')})
+#     return JsonResponse({'jewelleries.html': all_jewelleries.content.decode('utf-8')})
 
 
 def jewelleries_details(request, jewellery_id):
