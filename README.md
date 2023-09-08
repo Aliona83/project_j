@@ -87,12 +87,43 @@ User stories help us understand the needs and expectations of our users. They se
   ## Agile Methodologies
   
   The Agile Methodology approach was adopted during the development of the Elegancy Jewellery - store. I have utilized GitHub's built-in features such as issue tracking and project management to effectively manage tasks and monitor progress.
-    1. Epic - Instalation 
-      *
-    2. Home page
-      * Navigations bar with categories, search bar, home back button, footer, features and shop now button.
-    3.   
-
+    1. Epic - Project Setup
+      * Install Django framework that provides tools and libraries for building web application.
+      * Install Django Allauth, it allaows us to manage user authentication, registration,and account management seamlessly.
+      * Crispy Forms this Django package that will help us style our forms easily and effficiently.
+      * Create jewelry_shop app.
+      * Create superuser
+    2. Epic - Homepage and Navigation Setup 
+      * Navigation bar. Will provide easy access to different sections of application, easy to navigate on mobile screens.
+      * Implement categories links in the navigation bar for organized content access, also include a home button to quickly return to the home page. 
+      * Enhance the aesthetic appeal of the homepage with background image. 
+      * Implement a search bar to enable to search for products or content.
+      * Create cart functionality for user to add items they want to purchase.
+      * Populate the homepage with fixture data to showcase new arrivals.
+      * Implement user authentication with login and logout buttons.
+      * Create footer section with the links and newsletter subcription form.
+    3.   Implementing Login and Logout 
+      * Create login, registration and logout pages.
+      * Create forms for user login, registration and logout, ensuring data validation and security. 
+      * Implement email configuration for the user accounts to verify the authenticity of email addresses during registration.
+    4. Creating a Product App
+      * Create Product app
+      * Design and create templates for displaying products,products_details.
+      * Populate your database with fixture data conatining product information, including images and categories.
+      * Implement functionality to cotegorize products and allow users to filter products by categories. Implement a search bar that enables users to search for specific products based on keywords. Also implement sorting options(by price, name, and letters..)
+      * Add pagination to the product listings to ensure that large catalogues can be easily navigated.
+    5. Creating a Cart App
+      * Create a Cart App, and add models, views and templates. 
+      * Implement cart functionality to add, update and remove items from the cart.
+      * Calculate the total cost of items in the cart, including discounts.
+      * Develop checkout process,including user authentication,address input and payment process.
+      * Create templates and view to display order confirmation details after a successful purchase.
+    6. Creating a Profile App
+      * Implement functionality to allow users to view and update their personal information and preferences.
+      * Integrate user authentication to ensure that users can access and manage their profile.
+      Extend the profile app to include a section where users can view their order history.
+      * Create a custom form whithin the profile app that allows users to order custom jewellery, either for themself or friends also can view their custom jewellery order.
+    7. 
 # Deployment
 [Link to DEPLOYMENT.md](https://github.com/Aliona83/project_j/blob/main/DEPLOYMENT.md)
 
