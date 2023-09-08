@@ -2,14 +2,13 @@
 # Table of Contents
 ## [Jewellery Shop Introduction](#jewllery-shop---introduction)
 ## [Ux](#ux)
-   * User Stories
-   * Agile Methodologies
-   * The Scope(?)
-   * Structure(colors, images, fonts WhishList, UserProfile, Order..)
-   * Skeleton(Wireframes, Shopping Bag Wireframes, All Products Wireframes, Account page, Checkout Page ....)
-   * Surface(Features: Nav bar, Store Page, Search, Toast,Shopping bag )
+   * [User Stories](#)
+   * [Agile Methodologies]
+   * [Surface](Features: Nav bar, Store Page, Search, Toast,Shopping bag )
+   * [Skeleton](Wireframes, Shopping Bag Wireframes, All Products Wireframes, Account page, Checkout Page ....)
+   * [Structure](colors, images, fonts WhishList, UserProfile, Order..)
 
-## Testing 
+## [Testing](#testing)
   * Link to Testing.md 
 
 ## Technologies Used
@@ -70,7 +69,7 @@ User stories help us understand the needs and expectations of our users. They se
   * As a site user, I want to be able to receive an email confirmation after registering, so that I can verify that my account registration was successful.
   * As User I want to been able to add and remove products from my cart
   * As User I want to recieve feedback that my order was processed successfully.
-  * As User I want to subscribe to the store newsletters
+  * As User I want to subscribe to the store newsletters.
 
 ## As the Unregistered User I want to:
 
@@ -86,7 +85,7 @@ User stories help us understand the needs and expectations of our users. They se
 
   ## Agile Methodologies
   
-  The Agile Methodology approach was adopted during the development of the Elegancy Jewellery - store. I have utilized GitHub's built-in features such as issue tracking and project management to effectively manage tasks and monitor progress.
+  The Agile Methodology approach was adopted during the development of the Elegancy Jewellery - store. I have utilized GitHub's built-in features such as issue tracking and project management to effectively manage tasks and monitor progress. 
     1. Epic - Project Setup
       * Install Django framework that provides tools and libraries for building web application.
       * Install Django Allauth, it allaows us to manage user authentication, registration,and account management seamlessly.
@@ -123,7 +122,43 @@ User stories help us understand the needs and expectations of our users. They se
       * Integrate user authentication to ensure that users can access and manage their profile.
       Extend the profile app to include a section where users can view their order history.
       * Create a custom form whithin the profile app that allows users to order custom jewellery, either for themself or friends also can view their custom jewellery order.
-    7. 
+    7. Creating Custom Order app
+      * Users can access a user-friendly order form where they can specify their custom jewelry requirements.
+      * The form includes fields for selecting materials, gemstones, a description of the design, and type of jewellery: ring necklace, earrings.
+    8. Checkout App
+      * Click the button "Secure Checkout" button similar call-to-action on the cart page.
+      * Provide the shipping address where you want users to order to be delivered.
+      * Users may have the option to save address for future orders.
+      * Enter payment details, which typically include credit/debit card information or order payment methods.
+      * Users can carefully review the order summary, including, the items, shipping address and total cost.
+    9. Contact Us App 
+      * Users can easily reach out to customer support for assistance with product inquiries, order issues, returns, or any other concerns.
+      * Contact Us include a user-friendly contact form that user can fill out.
+      * Fields in the form should typically include: the name, email address, message, and contact information. 
+     10. Stripe payment 
+      *  
+# Features 
+ ## Home Page  Features Description 
+ 1.![Logo](./readmeImages/logo.png)
+   * Logo: The home page prominently displays shop logo at the top, by clicking on the logo users will be able to return to homepage.
+  2.![Navigation bar](./readmeImages/navigation.png)
+   * Navigation Bar with Categories:A navigation bar provides easy access to various product categories, making it simple for users to browse and find the products they're interested in.
+    ![Burger Menu](./readmeImages/burgerMenu.png)
+    * Mobile navigation(Burger Menu): on mobile screens,a convenient burger menu icon is provided, which, when tapped, opens a dropdown menu with navigation options.  This ensure a responsive and user-friendly experience on smaller devices.
+    * Clicking the "Home" button in the navigation bar takes users back to the homepage from any pages on the website, ensuring smooth navigation.
+  3.![Profile](./readmeImages/myAccount.png)  
+    * User can create and personalize their profiles,and their profile logo are displayed in the right side of screen.
+    * The login and logout buttons are conveniently located in the header, allowing users to securely access their accounts or log out when needed.
+    ![Profile.Mobile](./readmeImages/profile.png)
+  4.![Shop Now](./readmeImages/shopNow.png)
+    * A prominent "Shop Now" button is strategically placed to encourage users to start shopping immediately upon viting the site.
+  5.![Features](./readmeImages/features.png)  
+    * The home page features a dedicated section showcasing the latest arrivals. Users can quickly see and explore the newest products store has to offer.
+  6.![Footer]()  
+    * At the button of the page, a comprehensive footer contains various links, such as Facebook, LinkedIn, Twitter, GitHub, Google, and Instagram.
+    ![Newsletter]()
+    * Users can subscribe to newsletter directly from the footer . This allows you to build a mailing list and keep customers informed about promotions,updates, and news related to your brand.
+    
 # Deployment
 [Link to DEPLOYMENT.md](https://github.com/Aliona83/project_j/blob/main/DEPLOYMENT.md)
 
@@ -260,15 +295,4 @@ Easily find information on how to become a seller on the platform.
 Understand the terms and conditions for selling jewelry through the website.
 Contact the administrators or support team for assistance with the seller onboarding process.
 Receive guidance on setting competitive prices and optimizing product listings.
-These user stories serve as a foundation for defining the functionalities and requirements of the Jewelry Project. They will be used in conjunction with Agile methodologies to prioritize features, plan sprints, and ensure the development aligns with the needs of our users.
-
-
-
-
-
-
-Regenerate
-Send a message
-
-Free Research Preview. ChatGPT may produce inaccurate information about pe
- -->
+These user stories serve as a foundation for defining the functionalities and requirements of the Jewelry Project. They will be used in conjunction with Agile methodologies to prioritize features, plan sprints, and ensure the development aligns with the needs of o
