@@ -17,7 +17,8 @@
                 <div class="col text-center">
                     <h2 class="logo-font">Jewellery</h2>
                     {% for c in current_categories %}
-                        <a class="category-badge text-decoration-none" href="{% url 'jewelleries:jewelleries' %}?category={{ c.name }}">
+                        <a class="category-badge text-decoration-none" href="{% url 'jewelleries:jewelleries' %}?category={{ c.name }}&page={{ page_obj.number }}">
+
                             <span class="p-2 mt-2 badge badge-white text-black rounded-0 border border-dark">{{ c.friendly_name }}</span>
                         </a>
                     {% endfor %}
@@ -75,7 +76,7 @@
                 
                 <!-- Products -->
                 <div id="jewelleries-container" class="row justify-content-center">
-                    {% for jewellery in jewelleries %}
+                    {% for jewellery in page_obj %}
                     <div class="col-12 col-sm-6 col-md-6 col-lg-3 md-0">
                         <div class="card h-100 border-0">
                             <div class="card-body pb-0">

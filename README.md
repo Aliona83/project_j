@@ -158,7 +158,13 @@ User stories help us understand the needs and expectations of our users. They se
     * At the button of the page, a comprehensive footer contains various links, such as Facebook, LinkedIn, Twitter, GitHub, Google, and Instagram.
     ![Newsletter]()
     * Users can subscribe to newsletter directly from the footer . This allows you to build a mailing list and keep customers informed about promotions,updates, and news related to your brand.
-    
+  7.![Search](./readmeImages/searchBar.png)
+      * A prominent search bar is located in the navigation bar, allowing users to quickly search for specific products or content on your website. This feature ennhance the user's ability to find what they need efficiently.
+  ## Product Page
+  1.![Products]()  
+  2.![Sort By]()
+  3.![Pgination]()
+  4.![Product Details]()
 # Deployment
 [Link to DEPLOYMENT.md](https://github.com/Aliona83/project_j/blob/main/DEPLOYMENT.md)
 
