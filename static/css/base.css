@@ -1,6 +1,6 @@
 
 body {
-    background-color: #f3c8cd69;
+    background-color: #f9E7E9;
 }
 html {
     height: 100%;
@@ -45,10 +45,10 @@ html {
     min-height: 100px;
 }
 a {
-    color:  #1A702A
+    color:  #660003
 }
 .card-footer a {
-    color:  #1A702A; /* Darker shade of green for better contrast */
+    color:  #660003; /* Darker shade of green for better contrast */
 }
 .card-footer .delete {
    color: #D92636
@@ -80,9 +80,9 @@ a {
     color: white;
     margin: px;
 }
-.bg-black {
+.bg-dark {
     
-    background: #000 !important;
+    background: #f07b88 !important;
     color: #fff;
 }
 .btn-outline-black {
@@ -129,7 +129,7 @@ a {
 	top: 0;
 	left: 0;
 	position: fixed;
-	background: #f3c8cd69;;
+	background: #f3c8cd69;
 	z-index: -1;
 }
 .btn-primary {
@@ -166,17 +166,17 @@ input[name='q']::placeholder {
     object-fit: cover;
 }
 /* footer */
-footer .main-footer{  padding: 20px 0;  background: #df84ab;}
+footer .main-footer{  padding: 0px 0; margin-top: 15px;  background: #f5b1b9;}
 footer ul{  padding-left: 0;  list-style: none;}
 
-/* Footer Top */
-.footer-top{  background: #df84ab; padding-bottom: 30px; margin-bottom: 30px;  border-bottom: 3px solid #222;}
-
+/* .footer-top{  background: #f07b88; padding-bottom: 30px; margin-bottom: 30px;  border-bottom: 3px solid #222;} */
+h4 {
+    color: #000;
+}
 #subscribe-box .emailfield {
     margin: auto;
 }
 
-c
 a.category-badge > span.badge:hover {
     background: #212529 !important;
     color: #fff !important;
@@ -223,7 +223,7 @@ a.category-badge > span.badge:hover {
 }
 
 .arrow-dark {
-    border-bottom-color: #343a40 !important;
+    border-bottom-color: #f07b88!important;
 }
 
 .bag-notification-wrapper {
