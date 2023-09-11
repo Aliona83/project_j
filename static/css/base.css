@@ -166,12 +166,17 @@ input[name='q']::placeholder {
     object-fit: cover;
 }
 /* footer */
-.footer-container-fluid {
-    background-color: #daa3a9;
-    position: relative;
-    bottom: -151px;
-    width: 100%;
+footer .main-footer{  padding: 20px 0;  background: #df84ab;}
+footer ul{  padding-left: 0;  list-style: none;}
+
+/* Footer Top */
+.footer-top{  background: #df84ab; padding-bottom: 30px; margin-bottom: 30px;  border-bottom: 3px solid #222;}
+
+#subscribe-box .emailfield {
+    margin: auto;
 }
+
+c
 a.category-badge > span.badge:hover {
     background: #212529 !important;
     color: #fff !important;
@@ -245,11 +250,6 @@ a.category-badge > span.badge:hover {
     height: 2px;
 }
 
-
-#mc_embed_signup{
-    background:#fff; false;clear:left; font:14px Helvetica,Arial,sans-serif; width: 600px;
-    padding: 0;
-}
   
 /* -------------------------------- Media Queries */
 
