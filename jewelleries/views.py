@@ -17,47 +17,55 @@ def all_jewelleries(request):
     categories = None
     sort = None
 
-    category_filter = request.GET.get('category')
-    sort = request.GET.get('sort')
-    direction = request.GET.get('direction')
+    # category_filter = request.GET.get('category')
+    # sort = request.GET.get('sort')
+    # direction = request.GET.get('direction')
 
-    # Get all jewellery items
-    jewelleries = Jewellery.objects.all()
+    # # Get all jewellery items
+    # jewelleries = Jewellery.objects.all()
+    # print(jewelleries)
+    # categories = request.GET.getlist('category')
+    # print(categories)
+    # # Apply category filter if present
+    # if category_filter:
+    #     jewelleries = jewelleries.filter(category__name=category_filter)
 
-    # Apply category filter if present
-    if category_filter:
-        jewelleries = jewelleries.filter(category__name=category_filter)
+    # # Apply sorting
+    # if sort and direction:
+    #     if direction == 'asc':
+    #         jewelleries = jewelleries.order_by(sort)
+    #     elif direction == 'desc':
+    #         jewelleries = jewelleries.order_by(f'-{sort}')
 
-    # Apply sorting
-    if sort and direction:
-        if direction == 'asc':
-            jewelleries = jewelleries.order_by(sort)
-        elif direction == 'desc':
-            jewelleries = jewelleries.order_by(f'-{sort}')
+    # # Pagination
+    # paginator = Paginator(jewelleries, 12)  # Show 12 items per page
+    # page = request.GET.get('page')
 
-    # Pagination
-    paginator = Paginator(jewelleries, 12)  # Show 12 items per page
-    page = request.GET.get('page')
-
-    try:
-        page_obj = paginator.page(page)
-    except PageNotAnInteger:
-        # If page is not an integer, deliver first page.
-        page_obj = paginator.page(1)
-    except EmptyPage:
-        # If page is out of range (e.g., 9999), deliver last page of results.
-        page_obj = paginator.page(paginator.num_pages)
+    # try:
+    #     page_obj = paginator.page(page)
+    # except PageNotAnInteger:
+    #     # If page is not an integer, deliver first page.
+    #     page_obj = paginator.page(1)
+    # except EmptyPage:
+    #     # If page is out of range (e.g., 9999), deliver last page of results.
+    #     page_obj = paginator.page(paginator.num_pages)
         
 
-    context = {
-        'jewelleries': page_obj,
-        'current_categories': Jewellery.objects.all(),
-        'current_sorting': f'{sort}_{direction}' if sort and direction else 'None_None',
-        'search_term': category_filter,
-        'page_obj': page_obj,
-    }
+    # context = {
+    #     'jewelleries': page_obj,
+    #     'current_categories': Jewellery.objects.all(),
+    #     'current_sorting': f'{sort}_{direction}' if sort and direction else 'None_None',
+    #     'search_term': category_filter,
+    #     'page_obj': page_obj,
+    # }
 
-    return render(request, 'jewelleries/jewelleries.html', context)
+    # return render(request, 'jewelleries/jewelleries.html', context)
+    
+    
+    
+    
+    
+    
     # direction = None
     
     # jewelleries = Jewellery.objects.all()
