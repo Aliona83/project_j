@@ -10,7 +10,7 @@ html {
     flex-direction: column;
 }
 .home-page {
-    background-image: url('/media/pexels-terje-sollie-298852.jpg');
+    background-image: url('/media/project5/pexels-terje-sollie-298852.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
