@@ -23,20 +23,43 @@ def all_jewelleries(request):
 
     # Get all jewellery items
     jewelleries = Jewellery.objects.all()
-    print(jewelleries)
     categories = request.GET.getlist('category')
-    print(categories)
+   
     # Apply category filter if present
     if category_filter:
+        categories = category_filter.split(',')
         jewelleries = jewelleries.filter(category__name=category_filter)
-
+    else:
+        jewelleries = Jewellery.objects.all()
     # Apply sorting
     if sort and direction:
         if direction == 'asc':
             jewelleries = jewelleries.order_by(sort)
         elif direction == 'desc':
             jewelleries = jewelleries.order_by(f'-{sort}')
+    if 'sort' in request.GET:
+            sortkey = request.GET['sort']
+            sort = sortkey
+            if sortkey == 'name':
+                sortkey = 'lower_name'
+                jewelleries= jewelleries.annotate(lower_name=Lower('name'))
+            if sortkey == 'category':
+                sortkey = 'category__name'
+            if 'direction' in request.GET:
+                direction = request.GET['direction']
+                if direction == 'desc':
+                    sortkey = f'-{sortkey}'
+            jewelleries = jewelleries.order_by(sortkey)
+    
+    if 'q' in request.GET:
+            query = request.GET['q']
+            if not query:
+                messages.error(request, "You didn't enter any search criteria!")
+                return redirect(reverse('products'))
+            queries = Q(name__icontains=query) | Q(description__icontains=query)
+            jewelleries = jewelleries.filter(queries)
 
+    current_sorting = f'{sort}_{direction}'
     # Pagination
     paginator = Paginator(jewelleries, 12)  # Show 12 items per page
     page = request.GET.get('page')
@@ -59,10 +82,10 @@ def all_jewelleries(request):
         'page_obj': page_obj,
     }
 
-    # return render(request, 'jewelleries/jewelleries.html', context)
+    return render(request, 'jewelleries/jewelleries.html', context)
     
 
-    return JsonResponse({'jewelleries.html': all_jewelleries.content.decode('utf-8')})
+
 
 
 def jewelleries_details(request, jewellery_id):
