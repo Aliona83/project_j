@@ -13,7 +13,7 @@
 
 To clone this repository follow the below steps:
 
-* Locate the repository at this link The Wine Garden BnB.
+* Locate the repository at this link project_j.
 * Under 'Code', see the different cloning options, HTTPS, SSH, and GitHub CLI. 
 * Click the prefered cloning option, and then copy the link provided.
 * Open Terminal.
@@ -23,7 +23,7 @@ To clone this repository follow the below steps:
 
 # Forking this repository
 
-* Locate the repository at this link The Wine Garden BnB.
+* Locate the repository at this link project_j
 * At the top of the repository, on the right side of the page, select "Fork" from the buttons available.
 * This creates a copy of the repository
 
@@ -117,10 +117,10 @@ Enter the following snippet into the text box:
 * When back on the buckets permissions tab, scroll down to the "Access Control List" section and click "Edit."
 enable "List" for "Everyone (public access)", tick the box to accept that "I understand the effects of these changes on my objects and buckets." and click "Save changes."
 
-<details>
+<!-- <details>
 <summary>Click to see more</summary>
 See Image quick guide(add screenschot images)
-</details>
+</details> -->
 3. Create AWS static files User and assign to S3 Bucket:
 
    * Create "User Group": 
