@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<main  class="d-flex bg-dark" id="cust-error">
+    <div class="container-fluid fof d-flex flex-column align-items-center my-auto">
+        <img src="{{ MEDIA_URL }}logo2.png" alt="logo of project on a custom error page" width="300">
+        <h1 class=" h1 text-danger fw-bold pb-3 display-1 mt-2"> 404</h1>
+        <h2 class="h2 text-white fw-bold pb-3 display-3 text-center">Page Not Found</h2>
+        <a href="{% url 'home:home' %}" class="btn btn-outline-success active px-5">Back Home</a>
+    </div>
+</main>
+
+{% endblock %}
