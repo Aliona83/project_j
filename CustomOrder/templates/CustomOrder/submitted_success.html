@@ -21,7 +21,16 @@
                 <div>
                     <h2 class="text-center">Contact Us</h2>
                     <p>If you have any questions, feedback, or need assistance, please don't hesitate to get in touch with us. Our dedicated team is here to help and provide you with the support you nedd.Feel free to reach out to us through our Contact us page</p>
-                    <a href="{% url 'contact' %}" class="btn btn-black rounded-0 text-center mr-5">Cuntact Us</a>
+                    <div class="submit-button text-right mt-5 mb-2">
+                        <a href="{% url 'contact' %}" class="btn btn-outline-red my-2">
+                            <span class="mr-2"><i class="fa-solid fa-chevron-left"></i></span>
+                            <span>Contact Us</span>
+                        </a>
+                        <button class="btn btn-outline-blue my-2" id="submit-button">
+                            <span class="mr-2"><i class="fa-regular fa-paper-plane"></i></span>
+                            <span>Back to Shop</span>
+                        </button>
+                    </div>
                 </div>
                 <a href="{% url 'CustomOrder:view_submitted_forms' %}" class="btn btn-black rounded-0 text-center mr-5">View your submitted Forms</a>
             </div>
