@@ -24,10 +24,8 @@ def bag_contents(request):
 
     # Check if the total is greater than or equal to 1000 euros to apply the discount
     discount = 0
-    remaining_for_discount = Decimal(0)
-    if total >= 1000:
-        remaining_for_discount = total - 1000
-        discount = (total // 1000 ) * settings.DISCOUNT_PER_1000_EURO
+    if total > 1000:
+        discount =100
 
     # Calculate the grand total after applying the discount
     grand_total = total - discount
@@ -37,7 +35,7 @@ def bag_contents(request):
         'total': total,
         'product_count': product_count,
         'grand_total': grand_total,
-        'discount_amount': settings.DISCOUNT_PER_1000_EURO
+        'discount': discount
     }
 
     return context

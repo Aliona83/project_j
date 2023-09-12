@@ -72,13 +72,10 @@
                 <div class="col-12 col-md-7 col-lg-6 text-right">
                     <h6><strong>Bag Total: ${{ total|floatformat:2 }}</strong></h6>
                                     <h4 class="mt-4"><strong>Grand Total: ${{ grand_total|floatformat:2 }}</strong></h4>
-                                    {% if total >= 1000 %}
+                                    {% if total > 1000 %}
+                                    <h4 class="mt-4"><strong>Discoun Total: ${{ discount|floatformat:2 }}</strong></h4>
                                         <p class="mb-1 text-danger">
-                                             You get a  <strong>{{ discount_amount }}€</strong> discount!
-                                        </p>
-                                    {% else %}
-                                        <p class="mb-1 text-danger">
-                                             Add <strong>{{ remaining_for_discount }}€</strong> to get discount!
+                                             You get a  <strong>{{ discount }}€</strong> discount!
                                         </p>
                                         {% endif %} 
                     <a class="btn btn-light mt-1" href="{% url 'jewelleries:jewelleries' %}">

@@ -60,12 +60,11 @@
                 <div class="row text-black text-right">
                     <div class="col-7 offset-2">
                         <p class="my-0">Order Total:</p>
-                        <!-- <p class="my-0">Discount:${{ discount_amount | floatformat:2 }}</p> -->
+                         <p class="my-0">Discount:${{ discount | floatformat:2 }}</p> 
                         <p class="my-0">Grand Total:</p>
                     </div>
                     <div class="col-3">
                         <p class="my-0">${{ total | floatformat:2 }}</p>
-                        <!-- <p class="my-0">${{ discount_amount | floatformat:2 }}</p> -->
                         <p class="my-0"><strong>${{ grand_total  | floatformat:2 }}</strong></p>
                     </div>
                 </div>
@@ -129,6 +128,8 @@
 								<i class="fas fa-exclamation-circle"></i>
 							</span>
 							<span>Your card will be charged <strong>${{ grand_total|floatformat:2 }}</strong></span>
+                            
+
 						</p>
 					</div>
                 </form>
