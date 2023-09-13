@@ -70,21 +70,22 @@
             {% endfor %}
             <div class="row justify-content-center">
                 <div class="col-12 col-md-7 col-lg-6 text-right">
-                    <h6><strong>Bag Total: ${{ total|floatformat:2 }}</strong></h6>
-                                    <h4 class="mt-4"><strong>Grand Total: ${{ grand_total|floatformat:2 }}</strong></h4>
-                                    {% if total > 1000 %}
-                                    <h4 class="mt-4"><strong>Discoun Total: ${{ discount|floatformat:2 }}</strong></h4>
-                                        <p class="mb-1 text-danger">
-                                             You get a  <strong>{{ discount }}€</strong> discount!
-                                        </p>
-                                        {% endif %} 
+                    <h5 class="mt-4"><strong>Bag Total: ${{ total|floatformat:2 }}</strong></h5>
+                           {% if total > 1000 %}
+                    <h5 class="mt-4"><strong>Discount Total: ${{ discount|floatformat:2 }}</strong></h5> 
+                            {% endif %}    
+                    
+                    <h5 class="mt-4"><strong>Grand Total: ${{ grand_total|floatformat:2 }}</strong></h5>
+                            
+                    
+                      
                     <a class="btn btn-light mt-1" href="{% url 'jewelleries:jewelleries' %}">
                         <span class="icon">
                             <i class="text-info fas fa-chevron-left"></i>
                         </span>
-                        <span class="btn-primary font-weight-bold text-uppercase">Keep Shopping</span>
+                        <span class="font-weight-bold text-uppercase">Keep Shopping</span>
                     </a>
-                    <a class="btn btn-primary mt-1 secure-checkout-btn-trigger"
+                    <a class="btn btn-dark mt-1 secure-checkout-btn-trigger"
                     href="{% url 'checkout' %}"
                     data-product-id="{{ item.product.id }}"
                     data-product-price="{{ item.product.price }}">

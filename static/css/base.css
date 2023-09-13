@@ -1,6 +1,7 @@
 
 body {
     background-color: #f9E7E9;
+    overflow-x: hidden;
 }
 html {
     height: 100%;
@@ -166,7 +167,7 @@ input[name='q']::placeholder {
     object-fit: cover;
 }
 /* footer */
-footer .main-footer{  padding: 0px 0; margin-top: 15px;  background: #f5b1b9;}
+footer .main-footer{  padding: 0; margin-top: 15px;  background: #f5b1b9;}
 footer ul{  padding-left: 0;  list-style: none;}
 
 /* .footer-top{  background: #f07b88; padding-bottom: 30px; margin-bottom: 30px;  border-bottom: 3px solid #222;} */

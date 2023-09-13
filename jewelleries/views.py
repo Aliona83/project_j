@@ -27,10 +27,12 @@ def all_jewelleries(request):
    
     # Apply category filter if present
     if category_filter:
-        categories = category_filter.split(',')
+        # categories = category_filter.split(',')
         jewelleries = jewelleries.filter(category__name=category_filter)
+        items_per_page = 1000
     else:
         jewelleries = Jewellery.objects.all()
+        items_per_page = 12
     # Apply sorting
     if sort and direction:
         if direction == 'asc':
@@ -61,7 +63,7 @@ def all_jewelleries(request):
 
     current_sorting = f'{sort}_{direction}'
     # Pagination
-    paginator = Paginator(jewelleries, 12)  # Show 12 items per page
+    paginator = Paginator(jewelleries, items_per_page)  # Show 12 items per page
     page = request.GET.get('page')
 
     try:
@@ -98,19 +100,7 @@ def jewelleries_details(request, jewellery_id):
     }
 
     return render(request, 'jewelleries/jewelleries_details.html', context)
-
-# def jewelleries_details(request, product_id):
-#     """ A view to show individual product details """
-
-#     jewellery = get_object_or_404(Jewellery, pk=jewellery_id)
-
-#     context = {
-#         'jewellery': jewellery,
-#     }
-
-#     return render(request, 'jewelleries/jewelleries_detail.html', context)
    
-
 @login_required
 def add_jewellery(request):
     """Add a product to the store"""
