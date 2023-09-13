@@ -176,6 +176,35 @@ h4 {
 #subscribe-box .emailfield {
     margin: auto;
 }
+/* Pagination */
+.pagination-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px; /* Adjust the margin as needed */
+}
+
+.pagination {
+    display: inline-block;
+}
+
+.step-links {
+    text-align: center;
+}
+
+.step-links a {
+    text-decoration: none;
+    padding: 5px 10px;
+    margin: 0 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    color: #333;
+    background-color: #fff;
+}
+
+.step-links a:hover {
+    background-color: #eee;
+}
 
 a.category-badge > span.badge:hover {
     background: #212529 !important;
