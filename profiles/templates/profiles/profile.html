@@ -68,6 +68,11 @@
                                         </ul>
                                     </td>
                                     <td>${{ order.grand_total }}</td>
+                                    <td>
+                                        <a href="{% url 'delete_order' order.order_number %}" class="btn btn-danger btn-sm">
+                                            Delete
+                                        </a>
+                                    </td>
                                 </tr>
                             {% endfor %}
                         </tbody>
