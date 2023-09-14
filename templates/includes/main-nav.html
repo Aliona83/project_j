@@ -9,7 +9,7 @@
                 <a href="{% url 'jewelleries:jewelleries' %}?sort=price&direction=asc" class="dropdown-item">By Price</a>
                 <a href="{% url 'jewelleries:jewelleries' %}?sort=rating&direction=desc" class="dropdown-item ">By Rating</a>
                 <a href="{% url 'jewelleries:jewelleries' %}?sort=category&direction=asc" class="dropdown-item ">By Category</a>
-                <a href="{% url 'jewelleries:jewelleries' %}" class="dropdown-item">All Jewellery</a>
+                <a href="{% url 'jewelleries:jewelleries' %}?all_jewellery=true" class="dropdown-item">All Jewellery</a>
             </div>
         </li>
 

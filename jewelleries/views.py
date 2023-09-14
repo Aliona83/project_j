@@ -11,40 +11,22 @@ from django.http import JsonResponse
 
 
 def all_jewelleries(request):
-    """ A view to show all products, including sorting and search queries """
-    
+    """ A view to show all jewelleries, including sorting and search queries """
+    jewelleries = Jewellery.objects.all()
+  
+
     query = None
     categories = None
     sort = None
+    direction = None
 
-    category_filter = request.GET.get('category')
-    sort = request.GET.get('sort')
-    direction = request.GET.get('direction')
-
-    # Get all jewellery items
-    jewelleries = Jewellery.objects.all()
-    categories = request.GET.getlist('category')
-   
-    # Apply category filter if present
-    if category_filter:
-        # categories = category_filter.split(',')
-        jewelleries = jewelleries.filter(category__name=category_filter)
-        items_per_page = 1000
-    else:
-        jewelleries = Jewellery.objects.all()
-        items_per_page = 12
-    # Apply sorting
-    if sort and direction:
-        if direction == 'asc':
-            jewelleries = jewelleries.order_by(sort)
-        elif direction == 'desc':
-            jewelleries = jewelleries.order_by(f'-{sort}')
-    if 'sort' in request.GET:
+    if request.GET:
+        if 'sort' in request.GET:
             sortkey = request.GET['sort']
             sort = sortkey
             if sortkey == 'name':
                 sortkey = 'lower_name'
-                jewelleries= jewelleries.annotate(lower_name=Lower('name'))
+                jewelleries = jewelleries.annotate(lower_name=Lower('name'))
             if sortkey == 'category':
                 sortkey = 'category__name'
             if 'direction' in request.GET:
@@ -52,43 +34,49 @@ def all_jewelleries(request):
                 if direction == 'desc':
                     sortkey = f'-{sortkey}'
             jewelleries = jewelleries.order_by(sortkey)
-    
-    if 'q' in request.GET:
+            
+        if 'category' in request.GET:
+            categories = request.GET['category'].split(',')
+            jewelleries = jewelleries.filter(category__name__in=categories)
+            categories = Category.objects.filter(name__in=categories)
+            print(categories)
+
+        if 'q' in request.GET:
             query = request.GET['q']
             if not query:
                 messages.error(request, "You didn't enter any search criteria!")
-                return redirect(reverse('products'))
+                return redirect(reverse('jewelleries'))
+            
             queries = Q(name__icontains=query) | Q(description__icontains=query)
             jewelleries = jewelleries.filter(queries)
+            
+    all_jewellery_param = request.GET.get('all_jewellery')
+    page = request.GET.get('page', 1)
+    paginator = Paginator(jewelleries, 15)  # Show 15 jewelleries per page
+    
+    if all_jewellery_param == 'true':
+        paginator = Paginator(jewelleries, 12)  # Define your desired number of items per page
+        page_number = request.GET.get('page')
+        jewelleries = paginator.get_page(page_number)
+    # try:
+    #     jewelleries = paginator.page(page)
+    # except PageNotAnInteger:
+    #     jewelleries = paginator.page(1)
+    # except EmptyPage:
+    #     jewelleries = paginator.page(paginator.num_pages)
 
     current_sorting = f'{sort}_{direction}'
-    # Pagination
-    paginator = Paginator(jewelleries, items_per_page)  # Show 12 items per page
-    page = request.GET.get('page')
-
-    try:
-        page_obj = paginator.page(page)
-    except PageNotAnInteger:
-        # If page is not an integer, deliver first page.
-        page_obj = paginator.page(1)
-    except EmptyPage:
-        # If page is out of range (e.g., 9999), deliver last page of results.
-        page_obj = paginator.page(paginator.num_pages)
-        
+    
 
     context = {
-        'jewelleries': page_obj,
-        'current_categories': Jewellery.objects.all(),
-        'current_sorting': f'{sort}_{direction}' if sort and direction else 'None_None',
-        'search_term': category_filter,
-        'page_obj': page_obj,
+        'jewelleries': jewelleries,
+        'search_term': query,
+        'current_categories': categories,
+        'current_sorting': current_sorting,
+        'all_jewellery_param': all_jewellery_param,
     }
 
     return render(request, 'jewelleries/jewelleries.html', context)
-    
-
-
-
 
 def jewelleries_details(request, jewellery_id):
     """ A view to show individual product details """

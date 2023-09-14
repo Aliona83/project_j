@@ -17,7 +17,7 @@
                 <div class="col text-center">
                     <h2 class="logo-font">Jewellery</h2>
                     {% for c in current_categories %}
-                        <a class="category-badge text-decoration-none" href="{% url 'jewelleries:jewelleries' %}?category={{ c.name|urlencode }}&page={{ page_obj.number }}">
+                        <a class="category-badge text-decoration-none" href="{% url 'jewelleries:jewelleries' %}?category={{ c.name|urlencode }}&page={{ all_jewelleries_page.number }}">
                             <span class="p-2 mt-2 badge badge-white text-black rounded-0 border border-dark">{{ c.friendly_name }}</span>
                         </a>
                         {% endfor %}
@@ -56,31 +56,38 @@
                         </p>
                     </div>
                 </div>
-              <div class="pagination-container">
-                <div class="pagination">
-                    <span class="step-links">
-                        {% if page_obj.has_previous %}
-                            <a href="?page=1">&laquo; first</a>
-                            <a href="?page={{ page_obj.previous_page_number }}">previous</a>
-                        {% endif %}
-                
-                        <span class="current">
-                            Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
-                        </span>
-                
-                        {% if page_obj.has_next %}
-                            <a href="?page={{ page_obj.next_page_number }}">next</a>
-                            <a href="?page={{ page_obj.paginator.num_pages }}">last &raquo;</a>
-                        {% endif %}
-                    </span>
+                {% if not has_query_parameters %}
+                <div class="pagination-container row justify-content-center">
+                    <div class="col-12">
+                        <ul class="pagination justify-content-center">
+                            {% if jewelleries.has_previous %}
+                            <li class="page-item">
+                                <a class="page" href="?page=1{% if all_jewellery_param %}&all_jewellery=true{% endif %}">First</a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page" href="?page={{ jewelleries.previous_page_number }}">Previous</a>
+                            </li>
+                            {% endif %}
+                            <li class="page-item active">
+                                <span class="page">{{ jewelleries.number }}</span>
+                            </li>
+                            {% if jewelleries.has_next %}
+                            <li class="page-item">
+                                <a class="page" href="?page={{ jewelleries.next_page_number }}&all_jewellery=true">Next</a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page" href="?page={{ jewelleries.paginator.num_pages }}">Last</a>
+                            </li>
+                            {% endif %}
+                        </ul>
+                    </div>
                 </div>
-            </div> 
                 <!-- Products -->
                 <div id="jewelleries-container" class="row justify-content-center">
-                    {% for jewellery in page_obj %}
-                    <div class="col-12 col-sm-6 col-md-6 col-lg-3 md-0">
+                    {% for jewellery in jewelleries %}
+                    <div class="col-12 col-sm-4 col-md-4 col-lg-3">
                         <div class="card h-100 border-0">
-                            <div class="card-body pb-0">
+                            <div class="card-body">
                                 <div class="card-container">
                                     {% if jewellery.image %}
                                     <a href="{% url 'jewelleries:jewelleries_details' jewellery.id %}">
@@ -153,8 +160,8 @@
                 </div>     
         </div>
     </div>
-
-  
+    {% endif %}
+   
 {% include 'includes/footer.html'%}
 {% endblock %}
 {% block postloadjs %}
