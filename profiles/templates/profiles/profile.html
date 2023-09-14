@@ -34,7 +34,7 @@
                 </form>
             </div>
             <!-- User Order History -->
-            <div class="col-12 col-lg-12">
+    <div class="col-12 col-lg-12">
                 <p class="text-muted">Order History</p>
                 <div class="order-history table-responsive">
                     <table class="table table-sm table-borderless">
@@ -47,27 +47,27 @@
                             </tr>
                         </thead>
                         <tbody>
-                            {% for order in orders %}
-                                <tr>
-                                    <td>
-                                        <a href="{% url 'order_history' order.order_number %}"
-                                        title="{{ orders.order_number }}">
-                                            {{ order.order_number|truncatechars:6 }}
-                                        </a>
-                                    </td>
-                                    <td>{{ order.date }}</td>
-                                    <td>
-                                        <ul class="list-unstyled">
-                                            {% for item in order.lineitems.all %}
-                                                <li class="small">
-                                                    {% if item.product.has_sizes %}
-                                                        Size {{ item.product.size|upper }}
-                                                    {% endif %}{{ item.product.name }} x{{ item.quantity }}
-                                                </li>
-                                            {% endfor %}
-                                        </ul>
-                                    </td>
-                                    <td>${{ order.grand_total }}</td>
+                        {% for order in orders %}
+                            <tr>
+                                <td>
+                                    <a href="{% url 'order_history' order.order_number %}"
+                                    title="{{ orders.order_number }}">
+                                        {{ order.order_number|truncatechars:6 }}
+                                    </a>
+                                </td>
+                                <td>{{ order.date }}</td>
+                                <td>
+                                    <ul class="list-unstyled">
+                                        {% for item in order.lineitems.all %}
+                                            <li class="small">
+                                                {% if item.product.has_sizes %}
+                                                    Size {{ item.product.size|upper }}
+                                                {% endif %}{{ item.product.name }} x{{ item.quantity }}
+                                            </li>
+                                        {% endfor %}
+                                    </ul>
+                                </td>
+                                <td>${{ order.grand_total }}</td>
                                     <td>
                                         <a href="{% url 'delete_order' order.order_number %}" class="btn btn-danger btn-sm">
                                             Delete
@@ -80,6 +80,7 @@
                 </div>
             </div>
         </div>
+    </div>    
     {% include 'includes/footer.html'%}    
 {% endblock %}
 

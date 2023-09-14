@@ -5,7 +5,8 @@
   * [Forking this repository](#forking-this-repository)
   * [Heroku Deployment](#deployment---heroku)
   * [AWS S3 Bucket setup](#aws-s3-bucket-setup)
-  * [Connecting Django to AWS S3](#connecting-heroku-to-aws-s3)
+  * [Connecting Django to AWS S3](#connecting-django-to-aws-s3)
+  * [Stripe Setting Up](#stripe-setting-up)
 
  #  Deployment
  
@@ -117,10 +118,7 @@ Enter the following snippet into the text box:
 * When back on the buckets permissions tab, scroll down to the "Access Control List" section and click "Edit."
 enable "List" for "Everyone (public access)", tick the box to accept that "I understand the effects of these changes on my objects and buckets." and click "Save changes."
 
-<!-- <details>
-<summary>Click to see more</summary>
-See Image quick guide(add screenschot images)
-</details> -->
+
 3. Create AWS static files User and assign to S3 Bucket:
 
    * Create "User Group": 
@@ -170,7 +168,7 @@ Navigate and Click "Next: Permissions."
 * Navigate and Click "Download .csv" to download the credentials.
 * Navigate and Click "Close."
 
-## Connecting Django to AWS S3
+# Connecting Django to AWS S3
 
 * Connecting Heroku to AWS S3
   pip3 install boto3
@@ -221,5 +219,23 @@ class MediaStorage(S3Boto3Storage):
 
 * Git add . and git push to save these changes.
 * Go to s3 and create a new folder called media then click upload. Add the product images files, click next and under manage public permissions, * * * select grant public read access to these objects. Then click next through to the end and finally, click upload.
+
+# Stripe Setting Up
+
+ * We now need to add our Stripe keys to our config vars in Heroku to keep these out of our code and keep them private. Log into Stripe, click developers and then API keys.
+
+ * Create 2 new variables in Heroku's config vars - for the publishable key (STRIPE_PUBLIC_KEY) and the secret key (STRIPE_SECRET_KEY) and paste the values in from the Stripe page.
+
+ * Now we need to add the WebHook endpoint for the deployed site. Navigate to the WebHooks link in the left hand menu and click add endpoint button.
+ * Add the URL for our deployed sites WebHook, give it a description and then click the add events button and select all events. Click Create endpoint.
+
+ * Now we can add the WebHook signing secret to our Heroku config variables as STRIPE_WH_SECRET.
+
+ * In settings.py:
+
+STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLIC_KEY', '')
+STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY', '')
+STRIPE_WH_SECRET = os.getenv('STRIPE_WH_SECRET', '')
+
 
 

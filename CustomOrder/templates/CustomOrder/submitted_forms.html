@@ -47,7 +47,7 @@
                     </div>
                     {% endfor %}
                 </div>
-            </div>
+            </div> 
         </div>
     </div>
     <div class="submit-button text-right mt-5 mb-2 text-center">
@@ -55,12 +55,15 @@
             <span class="mr-2"><i class="fa-solid fa-chevron-left"></i></span>
             <span>Back to Shop</span>
         </a>
-        <button class="btn btn-outline-blue my-2" id="submit-button">
+        <div class="btn btn-outline-blue my-2" id="submit-button">
+            <a href="{% url 'home' %}" class="btn btn-outline-red my-2">
             <span class="mr-2"><i class="fa-regular fa-paper-plane"></i></span>
             <span>Back To Home Page</span>
-        </button>
+        </a>
+        </div>
     </div>
-</div>
+   </div>
+</div>  
 {% include 'includes/footer.html'%}
 {% endblock %}
 
