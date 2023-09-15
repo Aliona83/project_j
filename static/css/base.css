@@ -131,12 +131,13 @@ a {
 }
 
 input[name='q']::placeholder {
-    color: #df84ab;
+    color: black;
 }
 /* home page card with features */
 .bg-black {
     background: #000 !important;
 }
+
 .overlay {
 	height: 100%;
 	width: 100%;
@@ -175,7 +176,14 @@ h4 {
 #subscribe-box .emailfield {
     margin: auto;
 }
-
+#mc_embed_signup .asterisk {
+    color: #660003;
+    font-size: 150%;
+    font-weight: normal;
+    position: relative;
+    top: 5px;
+}
+ 
 /* Pagination */
 .pagination-container {
     display: flex;
@@ -189,16 +197,16 @@ h4 {
     margin-right: 10px;
     
 }
-.page {
+/* .page {
     background: #f07b88;
     padding: 10px;
-}
+} */
 .pagination li a {
     text-decoration: none;
     padding: 5px 10px;
     border: 1px solid black;
     background-color: #f7f7f7;
-    color: #333;
+    color: black;
     border-radius: 4px;
     transition: background-color 0.3s;
 }

@@ -58,13 +58,7 @@ def all_jewelleries(request):
         paginator = Paginator(jewelleries, 12)  # Define your desired number of items per page
         page_number = request.GET.get('page')
         jewelleries = paginator.get_page(page_number)
-    # try:
-    #     jewelleries = paginator.page(page)
-    # except PageNotAnInteger:
-    #     jewelleries = paginator.page(1)
-    # except EmptyPage:
-    #     jewelleries = paginator.page(paginator.num_pages)
-
+   
     current_sorting = f'{sort}_{direction}'
     
 
