@@ -173,6 +173,33 @@ This README document outlines the results of manual testing conducted on the hom
 
 </details>
 
+* CSS Testing
+
+<details>
+   <summary>Click to see more</summary>
+
+  ![]()
+
+</details>
+
+* JavaScript
+
+<details>
+   <summary>Click to see more</summary>
+
+  ![]()
+
+</details>
+
+* Paython
+
+<details>
+   <summary>Click to see more</summary>
+
+  ![]()
+
+</details>
+
 
 ## Accessibility
 ## Browser Testing
