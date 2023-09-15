@@ -32,6 +32,6 @@ urlpatterns = [
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 
-handler404 = handler404
-handler500 = handler500
-handler403 = handler403
+handler404 = 'jewelry_shop.views.handler404'
+handler500 = 'jewelry_shop.views.handler500'
+handler403 = 'jewelry_shop.views.handler403'
