@@ -55,7 +55,7 @@ def checkout(request):
             pid = request.POST.get('client_secret').split('_secret')[0]
             order.stripe_pid = pid
             order.original_bag = json.dumps(bag)
-            order.save()
+            # order.save()
             stripe_total = 0
             for item_id, item_data in bag.items():
                 try:
@@ -79,6 +79,10 @@ def checkout(request):
                     order.delete()
                     return redirect(reverse('bag:view_bag'))
 
+            order.order_total = stripe_total
+            order.grand_total = stripe_total  
+            order.save()       
+
             request.session['save_info'] = 'save-info' in request.POST
             return redirect(reverse('checkout_success', args=[order.order_number]))
         else:
@@ -88,7 +92,7 @@ def checkout(request):
         bag = request.session.get('bag', {})
         if not bag:
             messages.error(request, "There's nothing in your bag at the moment")
-            return redirect(reverse('jewelleries'))
+            return redirect(reverse('jewelleries:jewelleries'))
 
         current_bag = bag_contents(request)
         total = current_bag['grand_total']
@@ -139,9 +143,6 @@ def checkout_success(request, order_number):
     print("Entering checkout_success view") 
     save_info = request.session.get('save_info')
     order = get_object_or_404(Order, order_number=order_number)
-
-    print(f"Order Total: {order.order_total}")
-    print(f"Grand Total: {order.grand_total}")
 
     profile = UserProfile.objects.get(user=request.user)
     # Attach the user's profile to the order
