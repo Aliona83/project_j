@@ -62,7 +62,7 @@
                         <ul class="pagination justify-content-center">
                             {% if jewelleries.has_previous %}
                             <li class="page-item">
-                                <a class="page" href="?page=1{% if search_term %}&q={{ search_term }}{% endif %}{% if current_categories %}&category={{ current_categories|join:',' }}{% endif %}{% if current_sorting %}&sort={{ current_sorting|urlencode }}{% endif %}">First</a>
+                                <a class="page" href="?page=1{% if all_jewellery_param %}&all_jewellery=true{% endif %}">First</a>
                             </li>
                             <li class="page-item">
                                 <a class="page" href="?page={{ jewelleries.previous_page_number }}">Previous</a>
@@ -73,7 +73,7 @@
                             </li>
                             {% if jewelleries.has_next %}
                             <li class="page-item">
-                                <a class="page" href="?page=1{% if search_term %}&q={{ search_term }}{% endif %}{% if current_categories %}&category={{ current_categories|join:',' }}{% endif %}{% if current_sorting %}&sort={{ current_sorting|urlencode }}{% endif %}">Next</a>
+                                <a class="page" href="?page={{ jewelleries.next_page_number }}&all_jewellery=true">Next</a>
                             </li>
                             <li class="page-item">
                                 <a class="page" href="?page={{ jewelleries.paginator.num_pages }}">Last</a>
@@ -81,6 +81,9 @@
                             {% endif %}
                         </ul>
                     </div>
+                </div>
+            </div> 
+                      
                 </div>
                 <!-- Products -->
                 <div id="jewelleries-container" class="row justify-content-center">

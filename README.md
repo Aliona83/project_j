@@ -1,4 +1,5 @@
-![image from i am response]()
+![image from i am response](/readmeImages/iAmResponse.png)
+
 Elegancy jewellery is my fifth and final project, part of the Code Institute, Full Stack Web Developer Course.
 The purpose of this project was a build a full-stack site based around a business logic used to control a centrally-owned dataset. The technologies used for this project are HTML, CSS, JavaScript, Python, and Django. Stripe handles online test payments and Heroku Postgres as a relational database.
 
@@ -10,18 +11,18 @@ The purpose of this project was a build a full-stack site based around a busines
    * [Agile Methodologies](#agile-methodologies)
    * [Database Diagram](#deployment)
    * [Surface](#surface)
-   * [Structure](colors, images, fonts WhishList, UserProfile, Order..)
-   * [Skeleton](Wireframes, Shopping Bag Wireframes, All Products Wireframes, Account page, Checkout Page ....)
+   * [Structure](#structure)
+   * [Skeleton](#skeleton)
    
 
 ## [Testing](#testing)
-  * Link to Testing.md 
+  *  [Link to Testing.md](https://github.com/Aliona83/project_j/blob/main/TESTING.md)
 
-## Technologies Used
+## [Technologies Used](#technologies-used)
  * Languages Used
  * Frameworks/Libraries 
  
- ## Deployment
+ ## [Deployment](#deployment)
  * Creating a Clone 
  * Forking this repository
  * Heroku Deployment
@@ -210,9 +211,9 @@ User stories help us understand the needs and expectations of our users. They se
   5. Features ![Features](./readmeImages/features.png)  
    * The home page features a dedicated section showcasing the latest arrivals. Users can quickly see and explore the newest products store has to offer.
 
-  6. Footer ![Footer]()  
+  6. Footer ![Footer](/readmeImages/footer.png)  
    * At the button of the page, a comprehensive footer contains various links, such as Facebook, LinkedIn, Twitter, GitHub, Google, and Instagram.
-    ![Newsletter]()
+    ![Newsletter](/readmeImages/newsletter.png)
    * Users can subscribe to newsletter directly from the footer . This allows you to build a mailing list and keep customers informed about promotions,updates, and news related to your brand.
 
   7. Search ![Search](./readmeImages/searchBar.png)
@@ -220,50 +221,60 @@ User stories help us understand the needs and expectations of our users. They se
 
   * Product Page Features
 
-  1.![Products]() 
+  1.![Products](/readmeImages/products.png) 
    * Main Jewellery page offer products on large resolutions in a row of three. Images are large to attract the user's attention, and clicking the image will redirect the user to the product detail page. 
    * The product title and description provide essential information about the product.
-  2.![Product Details]()
+  2.![Product Details](/readmeImages/prodoctDetailsPage.png)
    * Detailed specifications and additional information about the product are provided.
    * Users can learn about materials, dimensions, care instructions, and more.
    * Users can easily add the product to their shopping cart for future purchase.
-  2.![Sort By]()
+  2.![Sort By](/readmeImages/sortBy.png)
    * The "Sort By" tool is a powerful feature that empowers users to customize how they view and interact with our extensive collection of jewelry products. It provides flexibility and control over the product listing, allowing users to tailor their browsing experience according to their needs and preferences.
-  3.![Pgination]()
+  3.![Pgination](/readmeImages/pagination.png)
    * Pagination is a user interface feature that enhances the browsing experience for users when navigating through extensive lists of jewelry products. It ensures that the product listings remain organized and manageable, enabling users to explore our diverse collection with ease.
-  4. ![Arrow Up]()
+  4. ![Arrow Up](/readmeImages/arrowUp.png)
 
   * Cart/ Shopping Bag 
 
   1. ![Toasts](/readmeImages/bag.png)
    * Almost all actions provide feedback to the user via the bootstrap toasts written to provide user feedback.
    * Users shopping can view the current items within the bag and total cost. The discount is visible and the user is told how much they need to spend to get discount.
-  2. ![Shopping bag]() 
+  2. ![Shopping bag](/readmeImages/shoppingBag.png) 
    * The shopping bag page is fully responsive, showing users a picture of the item, name, price per unit, and total price.
    * Users can also choose to increase/decrease the number of items in their bag, click the update button to have the prices update.
    * User can click the remove link and have all the items within the bag removed, regardless of quantity.
    * At the bottom of the page user can find the cost of the bag, cost of delivery, the total and how much they must spend to be eligible for free delivery.
-  3. ![Checkout Overlay](add image spinner)
+  3. ![Checkout Overlay](/readmeImages/spinner.png)
     * Users who checkout will see a simple overlay with a spinning icon while the payment is processed.
 
   * Jewellery Custom Form
-  1. ![Custom Form]()
-    * 
-  2. ![Submit success page]()
-
+  1. ![Custom Form](/readmeImages/customForm.png)
+    * Once user find a base design he likes, click on create form to start customizing. User can choose the type of metal, gemstones, engraving, and any other personalized details add image.
+  2. ![Submit success page](/readmeImages/successSubmit.png)
+     * After you submit a form on our platform, you will receive a clear and reassuring success message to confirm that your submission was successful. This message serves as confirmation that your Form Submitted Successfully! Thank you for reaching out to us. We have received your request and will process it promptly. If you need any further assistance, please don't hesitate to contact us."
   * Contact Us Page
-  1. ![Contact form]()
-     * 
+  1. ![Contact form](/readmeImages/contacUs.png)
+     * Our "Contact Us" page is designed to provide user with a convenient and efficient way to get in touch with our customer support team. Whether you have questions, need assistance, or want to share feedback, this page is your gateway to direct communication with us.
      
   * Profile   
-  1. ![Profile oprions]()
+  1. ![Profile options]()
      * User can see history of his orders see custom order forms....
 
 ## Structure
   1. Colors
-  ![]()
+
+     * This website's design incorporates a harmonious colour palette to create a visually appealing and user-friendly experience. The following colours are used consistently across the site:
+
+  ![Background colours](/readmeImages/backgroundColour.png)
+    * This pallet colours had been used for text.
+
+  ![Text colours](/readmeImages/textColour.png)
   2. Images
+
+  * All images used on our website are sourced from [Pexels](https://www.pexels.com/), a high-quality and free stock photos platform. We believe in using high-quality images to enhance the overall visual experience and maintain a professional appearance.
   3. Font
+     * I use "Loto" 
+##  Skeleton  
 ## Testing
 [Link to TESTING.md](https://github.com/Aliona83/project_j/blob/main/TESTING.md)
 
