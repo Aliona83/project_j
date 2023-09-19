@@ -18,27 +18,27 @@
                 <hr>
                 <h1 class="text-center">Design Your Own Jewellery</h1>
     
-    <form method="post" enctype="multipart/form-data">
-        {% csrf_token %}
-        {% for field in form %}
-                        {% if field.name != 'image' %}
-                            {{ field | as_crispy_field }}
-                        {% else %}
-                            {{ field }}
-                        {% endif %}
-                    {% endfor %}
-                    <div class="submit-button text-center mt-5 mb-2">
-                        <a href="{% url 'jewelleries:jewelleries' %}" class="btn btn-outline-red my-2">
-                            <span class="mr-2"><i class="fa-solid fa-chevron-left"></i></span>
-                            <span>Cancel</span>
-                        </a>
-                        <button class="btn btn-outline-blue my-2" id="submit-button">
-                            <span class="mr-2"><i class="fa-regular fa-paper-plane"></i></span>
-                            <span>Create</span>
-                        </button>
-                    </div>         
-    </form>
-    
+            <form method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                {% for field in form %}
+                                {% if field.name != 'image' %}
+                                    {{ field | as_crispy_field }}
+                                {% else %}
+                                    {{ field }}
+                                {% endif %}
+                            {% endfor %}
+                            <div class="submit-button text-center mt-5 mb-2">
+                                <a href="{% url 'jewelleries:jewelleries' %}" class="btn btn-outline-red my-2">
+                                    <span class="mr-2"><i class="fa-solid fa-chevron-left"></i></span>
+                                    <span>Cancel</span>
+                                </a>
+                                <button class="btn btn-outline-blue my-2" id="submit-button">
+                                    <span class="mr-2"><i class="fa-regular fa-paper-plane"></i></span>
+                                    <span>Create</span>
+                                </button>
+                            </div>         
+            </form>
+            </div>
         </div>
     </div>
     {% include 'includes/footer.html'%}
