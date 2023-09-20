@@ -21,19 +21,27 @@ def all_jewelleries(request):
     direction = None
 
     if request.GET:
+        sortkey = 'default_sort_key'
+        valid_sort_keys = ['price', 'rating', 'name', 'category']
+        print(request.GET)
         if 'sort' in request.GET:
             sortkey = request.GET['sort']
-            sort = sortkey
+            print(f"Received sortkey: {sortkey}")
+        
+        if sortkey in valid_sort_keys:  
+            direction = request.GET.get('direction', 'asc')
             if sortkey == 'name':
                 sortkey = 'lower_name'
                 jewelleries = jewelleries.annotate(lower_name=Lower('name'))
-            if sortkey == 'category':
+            elif sortkey == 'category':
                 sortkey = 'category__name'
-            if 'direction' in request.GET:
-                direction = request.GET['direction']
-                if direction == 'desc':
-                    sortkey = f'-{sortkey}'
+            elif sortkey == 'price':    
+                 sortkey = 'price'
+            if direction == 'desc':
+               sortkey = f'-{sortkey}'   
+
             jewelleries = jewelleries.order_by(sortkey)
+            print(str(jewelleries.query))
             
     if 'category' in request.GET:
             categories = request.GET['category'].split(',')
@@ -51,9 +59,8 @@ def all_jewelleries(request):
             queries = Q(name__icontains=query) | Q(description__icontains=query)
             jewelleries = jewelleries.filter(queries)
     
-
     
-    current_sorting = f'{sort}_{direction}'
+   
     
     items_per_page = 15
     paginator = Paginator(jewelleries, items_per_page)
@@ -66,13 +73,14 @@ def all_jewelleries(request):
     except EmptyPage:
         jewelleries = paginator.page(paginator.num_pages)
     
+    current_sorting = f'{sort}_{direction}'
+    sort, direction = current_sorting.split('_')
 
     context = {
         'jewelleries': jewelleries,
         'search_term': query,
         'current_categories': categories,
-        'current_sorting': current_sorting,
-
+        
     }
 
     return render(request, 'jewelleries/jewelleries.html', context)

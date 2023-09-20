@@ -17,7 +17,7 @@
                 <div class="col text-center">
                     <h2 class="logo-font">Jewellery</h2>
                     {% for c in current_categories %}
-                        <a class="category-badge text-decoration-none" href="{% url 'jewelleries:jewelleries' %}?category={{ c.name|urlencode }}&page={{ all_jewelleries_page.number }}">
+                        <a class="category-badge text-decoration-none" href="{% url 'jewelleries:jewelleries' %}?category={{ c.name}}">
                             <span class="p-2 mt-2 badge badge-white text-black rounded-0 border border-dark">{{ c.friendly_name }}</span>
                         </a>
                         {% endfor %}
@@ -35,14 +35,14 @@
                             <label for="sort-selector" class="sr-only">Sort by</label>
                             <select id="sort-selector" class="custom-select custom-select-sm rounded-0 border border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
                                 <option value="reset" {% if not current_sorting %}selected{% endif %}>Sort by...</option> 
-                                <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price (low to high)</option>
-                                <option value="price_desc" {% if current_sorting == 'price_desc' %}selected{% endif %}>Price (high to low)</option>
-                                <option value="rating_asc" {% if current_sorting == 'rating_asc' %}selected{% endif %}>Rating (low to high)</option>
-                                <option value="rating_desc" {% if current_sorting == 'rating_desc' %}selected{% endif %}>Rating (high to low)</option>
-                                <option value="name_asc" {% if current_sorting == 'name_asc' %}selected{% endif %}>Name (A-Z)</option>
-                                <option value="name_desc" {% if current_sorting == 'name_desc' %}selected{% endif %}>Name (Z-A)</option>
-                                <option value="category_asc" {% if current_sorting == 'category_asc' %}selected{% endif %}>Category (A-Z)</option>
-                                <option value="category_desc" {% if current_sorting == 'category_desc' %}selected{% endif %}>Category (Z-A)</option>
+                                <option value="price" {% if current_sorting == 'price' %}selected{% endif %}>Price (low to high)</option>
+                                <option value="-price" {% if current_sorting == '-price' %}selected{% endif %}>Price (high to low)</option>
+                                <option value="rating" {% if current_sorting == 'rating' %}selected{% endif %}>Rating (low to high)</option>
+                                <option value="-rating" {% if current_sorting == '-rating' %}selected{% endif %}>Rating (high to low)</option>
+                                <option value="name" {% if current_sorting == 'name' %}selected{% endif %}>Name (A-Z)</option>
+                                <option value="-name" {% if current_sorting == '-name' %}selected{% endif %}>Name (Z-A)</option>
+                                <option value="category" {% if current_sorting == 'category' %}selected{% endif %}>Category (A-Z)</option>
+                                <option value="-category" {% if current_sorting == '-category' %}selected{% endif %}>Category (Z-A)</option>
                             </select>
                         </div>
                     </div>
@@ -73,7 +73,7 @@
                             </li>
                             {% if jewelleries.has_next %}
                             <li class="page-item">
-                                <a class="page" href="?page={{ jewelleries.next_page_number }}&all_jewellery=true">Next</a>
+                                <a class="page" href="?page={{ jewelleries.next_page_number }}{% if search_term %}&q={{ search_term }}{% endif %}{% for c in current_categories %}&category={{ c.name|urlencode }}{% endfor %}{% if current_sorting %}&sort={{ sort }}&direction={{ direction }}{% endif %}">Next</a>
                             </li>
                             <li class="page-item">
                                 <a class="page" href="?page={{ jewelleries.paginator.num_pages }}">Last</a>
