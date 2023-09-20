@@ -30,6 +30,7 @@ def all_jewelleries(request):
         
         if sortkey in valid_sort_keys:  
             direction = request.GET.get('direction', 'asc')
+
             if sortkey == 'name':
                 sortkey = 'lower_name'
                 jewelleries = jewelleries.annotate(lower_name=Lower('name'))

@@ -2,13 +2,20 @@
 {% load static %}
 {% block content %}
 
-<main  class="d-flex bg-dark" id="cust-error">
-    <div class="container-fluid fof d-flex flex-column align-items-center my-auto">
-        <img src="{{ MEDIA_URL }}logo2.png" alt="logo of project on a custom error page" width="300">
-        <h1 class=" h1 text-danger fw-bold pb-3 display-1 mt-2"> 500</h1>
-        <h2 class="h2 text-danger fw-bold pb-3 display-3 text-center  p-2">internal server error</h2>
-        <a href="{% url 'home:home' %}" class="btn btn-outline-success active fw-bold  px-5">Back Home</a>
+<section class="section">
+    <div class="container">
+        <img class="mx-2 mb-2 main-image" src="{% static 'assets/images/r8-chick-burnout.jpg' %}" alt="chicks burning out a toy audi r8">
+        <br>
+        <h1>- 500 -</h1>
+        <hr>
+        <h5>Internal server error</h5>
+        <hr>
+        <h3>Sorry,error !</h3>
+        <hr>
+        <h5>Please return to home</h5>
+        <hr>
+        <a class="btn btn-secondary" href="{% url 'home' %}">HOME</a>
     </div>
-</main>
+</section>
 
 {% endblock %}
