@@ -6,6 +6,7 @@ from django.contrib import messages
 from .models import UserProfile
 from checkout.models import Order
 from profiles.forms import UserProfileForm
+from django.contrib.auth.decorators import login_required
 
 
 def create_custom_jewellery(request):
@@ -34,6 +35,10 @@ def submitted_success(request):
 
 
 def view_submitted_forms(request):
-    custom_orders = CustomJewelleryDesign.objects.all()
+    if request.user.is_superuser:
+       custom_orders = CustomJewelleryDesign.objects.all()
+    else:
+        custom_orders = CustomJewelleryDesign.objects.filter(user_profile__user=request.user)  
+
     context = {'custom_orders': custom_orders}
     return render(request, 'CustomOrder/submitted_forms.html', context)
