@@ -14,51 +14,58 @@ def all_jewelleries(request):
     """ A view to show all jewelleries, including sorting and search queries """
     jewelleries = Jewellery.objects.all()
   
-
     query = None
     categories = None
     sort = None
     direction = None
 
     if request.GET:
-        sortkey = 'default_sort_key'
-        valid_sort_keys = ['price', 'rating', 'name', 'category']
-        print(request.GET)
-        if 'sort' in request.GET:
-            sortkey = request.GET['sort']
-            print(f"Received sortkey: {sortkey}")
-        
-        if sortkey in valid_sort_keys:  
-            direction = request.GET.get('direction', 'asc')
+       
+       valid_sort_keys = ['price', 'rating', 'name', 'category']
+       default_sort = 'name'
+       default_direction = 'asc' 
+    
+       sort = request.GET.get('sort', 'name')
+       direction = request.GET.get('direction', 'asc')
 
-            if sortkey == 'name':
-                sortkey = 'lower_name'
-                jewelleries = jewelleries.annotate(lower_name=Lower('name'))
-            elif sortkey == 'category':
-                sortkey = 'category__name'
-            elif sortkey == 'price':    
-                 sortkey = 'price'
-            if direction == 'desc':
-               sortkey = f'-{sortkey}'   
+    
+       if sort not in valid_sort_keys:
+          sort = default_sort
 
-            jewelleries = jewelleries.order_by(sortkey)
-            print(str(jewelleries.query))
+   
+       sort_key_mapping = {
+            'name': 'name',
+            'category': 'category__name',
+            'price': 'price',
+            'rating': 'rating',
+    }
+
+    
+       model_sort_field = sort_key_mapping.get(sort, default_sort)
+
+   
+       if direction == 'desc':
+           model_sort_field = f'-{model_sort_field}'
+
+   
+       jewelleries = jewelleries.order_by(model_sort_field) 
+      
             
-    if 'category' in request.GET:
+       if 'category' in request.GET:
             categories = request.GET['category'].split(',')
             jewelleries = jewelleries.filter(category__name__in=categories)
             categories = Category.objects.filter(name__in=categories)
-            print(categories)
-
-
-    if 'q' in request.GET:
-            query = request.GET['q']
-            if not query:
-                messages.error(request, "You didn't enter any search criteria!")
-                return redirect(reverse('jewelleries'))
             
-            queries = Q(name__icontains=query) | Q(description__icontains=query)
-            jewelleries = jewelleries.filter(queries)
+   
+
+
+       if 'q' in request.GET:
+            query = request.GET['q']
+            if query:
+                queries = Q(name__icontains=query) | Q(description__icontains=query)
+                jewelleries = jewelleries.filter(queries)
+            else:
+                messages.error(request, "You didn't enter any search criteria!")
     
     
    
@@ -81,6 +88,8 @@ def all_jewelleries(request):
         'jewelleries': jewelleries,
         'search_term': query,
         'current_categories': categories,
+        'sort': sort,
+        'direction': direction,
         
     }
 

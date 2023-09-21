@@ -35,18 +35,9 @@ def checkout(request):
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
     stripe_secret_key = settings.STRIPE_SECRET_KEY
 
-    
-    bag = request.session.get('bag', {})
-    total_items = 0
-    if bag:   
-        total_items = sum(bag.values())
-
-    if total_items > 2:
-        messages.error(
-            request,
-            'You are allowed to buy only 2 items at the same time.')
-        return redirect(reverse('bag:view_bag'))
     if request.method == 'POST':
+        bag = request.session.get('bag', {})
+
         form_data = {
             'full_name': request.POST['full_name'],
             'email': request.POST['email'],
@@ -141,7 +132,7 @@ def checkout(request):
         'stripe_public_key': stripe_public_key,
         'client_secret': intent.client_secret,
     }
-    request.session['bag'] = {}
+
     return render(request, template, context)
 
 @login_required
