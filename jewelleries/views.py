@@ -13,62 +13,46 @@ from django.http import JsonResponse
 def all_jewelleries(request):
     """ A view to show all jewelleries, including sorting and search queries """
     jewelleries = Jewellery.objects.all()
-  
     query = None
     categories = None
     sort = None
     direction = None
 
     if request.GET:
-       
-       valid_sort_keys = ['price', 'rating', 'name', 'category']
-       default_sort = 'name'
-       default_direction = 'asc' 
+        valid_sort_keys = ['price', 'rating', 'name', 'category']
+        default_sort = 'name'
+        default_direction = 'asc'
+        sort = request.GET.get('sort', 'name')
+        direction = request.GET.get('direction', 'asc')
     
-       sort = request.GET.get('sort', 'name')
-       direction = request.GET.get('direction', 'asc')
+        if sort not in valid_sort_keys:
+            sort = default_sort
 
-    
-       if sort not in valid_sort_keys:
-          sort = default_sort
-
-   
-       sort_key_mapping = {
+        sort_key_mapping = {
             'name': 'name',
             'category': 'category__name',
             'price': 'price',
             'rating': 'rating',
-    }
+        }
 
-    
-       model_sort_field = sort_key_mapping.get(sort, default_sort)
+        model_sort_field = sort_key_mapping.get(sort, default_sort)
 
-   
-       if direction == 'desc':
-           model_sort_field = f'-{model_sort_field}'
+        if direction == 'desc':
+            model_sort_field = f'-{model_sort_field}'
 
-   
-       jewelleries = jewelleries.order_by(model_sort_field) 
-      
-            
-       if 'category' in request.GET:
+        jewelleries = jewelleries.order_by(model_sort_field)  
+        if 'category' in request.GET:
             categories = request.GET['category'].split(',')
             jewelleries = jewelleries.filter(category__name__in=categories)
             categories = Category.objects.filter(name__in=categories)
             
-   
-
-
-       if 'q' in request.GET:
+        if 'q' in request.GET:
             query = request.GET['q']
             if query:
                 queries = Q(name__icontains=query) | Q(description__icontains=query)
                 jewelleries = jewelleries.filter(queries)
             else:
                 messages.error(request, "You didn't enter any search criteria!")
-    
-    
-   
     
     items_per_page = 15
     paginator = Paginator(jewelleries, items_per_page)
@@ -80,7 +64,6 @@ def all_jewelleries(request):
         jewelleries = paginator.page(1)
     except EmptyPage:
         jewelleries = paginator.page(paginator.num_pages)
-    
     current_sorting = f'{sort}_{direction}'
     sort, direction = current_sorting.split('_')
 
@@ -90,10 +73,10 @@ def all_jewelleries(request):
         'current_categories': categories,
         'sort': sort,
         'direction': direction,
-        
     }
 
     return render(request, 'jewelleries/jewelleries.html', context)
+
 
 def jewelleries_details(request, jewellery_id):
     """ A view to show individual product details """
@@ -105,7 +88,8 @@ def jewelleries_details(request, jewellery_id):
     }
 
     return render(request, 'jewelleries/jewelleries_details.html', context)
-   
+
+
 @login_required
 def add_jewellery(request):
     """Add a product to the store"""
@@ -128,6 +112,7 @@ def add_jewellery(request):
         'form': form,
     }
     return render(request, template, context)
+
 
 @login_required
 def edit_jewellery(request, jewellery_id):
@@ -155,6 +140,7 @@ def edit_jewellery(request, jewellery_id):
         'jewellery': jewellery,
     }
     return render(request, template, context)
+
 
 @login_required
 def delete_jewellery(request, jewellery_id):

@@ -3,6 +3,7 @@ from .models import Jewellery, Category
 
 # Register your models here.
 
+
 class JewelleryAdmin(admin.ModelAdmin):
     list_display = (
         'sku',
@@ -21,6 +22,7 @@ class CategoryAdmin(admin.ModelAdmin):
         'friendly_name',
         'name',
     )
+
 
 admin.site.register(Jewellery)
 admin.site.register(Category)

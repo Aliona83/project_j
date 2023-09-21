@@ -40,8 +40,7 @@ The purpose of this project was a build a full-stack site based around a busines
 
 The Jewelry Shop is  an E-commerce shop where users can find and buy jewellery also search for jewelleries by filtering different categories. They can also register by filling in their personal information on the website’s profile page. The application has a good appearance with an easy, clear and concise site navigation. web application built using Python, JavaScript, and Django, designed to provide a seamless and user-friendly platform for buying and selling exquisite jewelery pieces. Whether you are a jewelery enthusiast, a buyer looking for the perfect gift, or an artisan seeking to showcase your creations, this platform caters to all.
 
-(Add live project here)
-(Add image of project from I am response)
+[Live project]()
 
 # UX 
 
@@ -228,7 +227,7 @@ User stories help us understand the needs and expectations of our users. They se
   5. Features ![Features](./readmeImages/features.png)  
    * The home page features a dedicated section showcasing the latest arrivals. Users can quickly see and explore the newest products store has to offer. Everytime user will be update home page up features "New Arrivals " will be change products.
 
-  6. Footer ![Footer](/readmeImages/footer.png)  
+  6. Footer ![Footer](/readmeImages/facebookPage.pngreadmeImages/footer.png)  
    * At the button of the page, a comprehensive footer contains various links, such as Facebook, LinkedIn, Twitter, GitHub, Google, and Instagram.
     ![Newsletter](/readmeImages/newsletter.png)
    * Users can subscribe to newsletter directly from the footer . This allows you to build a mailing list and keep customers informed about promotions,updates, and news related to your brand.
@@ -236,6 +235,10 @@ User stories help us understand the needs and expectations of our users. They se
   7. Search 
   ![Search](./readmeImages/searchBar.png)
    * A prominent search bar is located in the navigation bar, allowing users to quickly search for specific products or content on your website. This feature ennhance the user's ability to find what they need efficiently. 
+  8. Social Media
+  ![Social Media]()
+    * Here I have made a Social Media Marketing Page for the Elegancy Jewellery store. It is a fantastic way to boost and increase engagement within the business and in increasing sales. Here is the screenshot of the whole page available to anyone.
+
 
   * Product Page Features
 
