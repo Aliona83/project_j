@@ -8,7 +8,6 @@
   * [Connecting Django to AWS S3](#connecting-django-to-aws-s3)
   * [Stripe Setting Up](#stripe-setting-up)
 
- #  Deployment
  
  # Creating a Clone
 
@@ -36,7 +35,7 @@ To clone this repository follow the below steps:
      * pip3 install gunicorn
      * pip3 freeze > requirements.txt
  * Create a Procfile in the root directory for Heroku to read:
-      * web: gunicorn level_up_loot.wsgi:application
+      * web: gunicorn jewelry_shop.wsgi:application
 * Temporarily disable collectstatic by logging into the Heroku CLI in the terminal or on Heroku.com and set DISABLE_COLLECTSTATIC to 1:
       * heroku config:set DISABLE_COLLECTSTATIC=1 --app heroku-app-name
  * Add the hostname of the Heroku app to allowed hosts in settings.py:

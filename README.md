@@ -23,12 +23,7 @@ The purpose of this project was a build a full-stack site based around a busines
  * Frameworks/Libraries 
  
  ## [Deployment](#deployment)
- * Creating a Clone 
- * Forking this repository
- * Heroku Deployment
- * AWS S3 Bucket setup
- * AWS IAM(Identity and Access Managenent) setup ) 
- * Connecting Heroku to AWS S3
+ [Link to Deployment](https://github.com/Aliona83/project_j/blob/main/DEPLOYMENT.md)
  
  ## Credits
   * Product images
@@ -42,12 +37,14 @@ The purpose of this project was a build a full-stack site based around a busines
   * youtube
   
 # Jewllery Shop - Introduction 
+
 The Jewelry Shop is  an E-commerce shop where users can find and buy jewellery also search for jewelleries by filtering different categories. They can also register by filling in their personal information on the website’s profile page. The application has a good appearance with an easy, clear and concise site navigation. web application built using Python, JavaScript, and Django, designed to provide a seamless and user-friendly platform for buying and selling exquisite jewelery pieces. Whether you are a jewelery enthusiast, a buyer looking for the perfect gift, or an artisan seeking to showcase your creations, this platform caters to all.
 
 (Add live project here)
 (Add image of project from I am response)
 
 # UX 
+
 User stories help us understand the needs and expectations of our users. They serve as a basis for defining features and guide our development process. Below are some user stories that represent the different roles and interactions within the Jewelry Project:
 
 ## User Stories
@@ -95,6 +92,7 @@ User stories help us understand the needs and expectations of our users. They se
   ## Agile Methodologies
   
   The Agile Methodology approach was adopted during the development of the Elegancy Jewellery - store. I have utilized GitHub's built-in features such as issue tracking and project management to effectively manage tasks and monitor progress. 
+
 1. Epic - Project Setup
 
   * Install Django framework that provides tools and libraries for building web application.
@@ -103,6 +101,7 @@ User stories help us understand the needs and expectations of our users. They se
   * Create jewelry_shop app.
   * Create superuser
 2. Epic - Homepage and Navigation Setup 
+
   * Navigation bar. Will provide easy access to different sections of application, easy to navigate on mobile screens.
   * Implement categories links in the navigation bar for organized content access, also include a home button to quickly return to the home page. 
   * Enhance the aesthetic appeal of the homepage with background image. 
@@ -112,43 +111,59 @@ User stories help us understand the needs and expectations of our users. They se
   * Implement user authentication with login and logout buttons.
   * Create footer section with the links and newsletter subcription form.
 3.   Implementing Login and Logout 
+
   * Create login, registration and logout pages.
   * Create forms for user login, registration and logout, ensuring data validation and security. 
   * Implement email configuration for the user accounts to verify the authenticity of email addresses during registration.
 4. Creating a Product App
+
   * Create Product app
   * Design and create templates for displaying products,products_details.
   * Populate your database with fixture data conatining product information, including images and categories.
   * Implement functionality to cotegorize products and allow users to filter products by categories. Implement a search bar that enables users to search for specific products based on keywords. Also implement sorting options(by price, name, and letters..)
   * Add pagination to the product listings to ensure that large catalogues can be easily navigated.
 5. Creating a Cart App
+
   * Create a Cart App, and add models, views and templates. 
   * Implement cart functionality to add, update and remove items from the cart.
   * Calculate the total cost of items in the cart, including discounts.
   * Develop checkout process,including user authentication,address input and payment process.
   * Create templates and view to display order confirmation details after a successful purchase.
 6. Creating a Profile App
+
   * Implement functionality to allow users to view and update their personal information and preferences.
   * Integrate user authentication to ensure that users can access and manage their profile.
     Extend the profile app to include a section where users can view their order history.
   * Create a custom form whithin the profile app that allows users to order custom jewellery, either for themself or friends also can view their custom jewellery order.
 7. Creating Custom Order app
+
   * Users can access a user-friendly order form where they can specify their custom jewelry requirements.
   * The form includes fields for selecting materials, gemstones, a description of the design, and type of jewellery: ring necklace, earrings.
 8. Checkout App
+
   * Click the button "Secure Checkout" button similar call-to-action on the cart page.
   * Provide the shipping address where you want users to order to be delivered.
   * Users may have the option to save address for future orders.
   * Enter payment details, which typically include credit/debit card information or order payment methods.
   * Users can carefully review the order summary, including, the items, shipping address and total cost.
 9. Contact Us App 
+
   * Users can easily reach out to customer support for assistance with product inquiries, order issues, returns, or any other concerns.
   * Contact Us include a user-friendly contact form that user can fill out.
   * Fields in the form should typically include: the name, email address, message, and contact information. 
 10. Stripe payment 
-      *  
+    *  [Stripe](https://stripe.com/ie) has been used in the project to implement the payment system.
+    * Payment information is:
+        * 4242 4242 4242 4242 (card number)
+        * 04/24 (MM/YY)
+        * 424 or 242 (CVC)
+  ![Stripe](/readmeImages/stripe.png)
+
+   <br><hr>
+[🔼 Back to top](#table-of-contents)
+
   ## Database Diagram    
-      [Link Data Shema](https://drawsql.app/teams/aliona/diagrams/jewellery-shop)
+  [Link Data Shema](https://drawsql.app/teams/aliona/diagrams/jewellery-shop)
    ![](/readmeImages/databaDiagram.png)   
   1. User:
     * Relationships:
@@ -189,12 +204,14 @@ User stories help us understand the needs and expectations of our users. They se
        * Products belong to Categories (many-to-one).
 
   ## Surface
-    * Home Page Features Description 
+
+  * Home Page Features Description 
 
   1. Logo![Logo](./readmeImages/logo.png)
    * Logo: The home page prominently displays shop logo at the top, by clicking on the logo users will be able to return to homepage.
 
   2. Navigation Bar ![Navigation bar](./readmeImages/navigation.png)
+
    * Navigation Bar with Categories:A navigation bar provides easy access to various product categories, making it simple for users to browse and find the products they're interested in.
     ![Burger Menu](./readmeImages/burgerMenu.png)
    * Mobile navigation(Burger Menu): on mobile screens,a convenient burger menu icon is provided, which, when tapped, opens a dropdown menu with navigation options.  This ensure a responsive and user-friendly experience on smaller devices.
@@ -209,57 +226,98 @@ User stories help us understand the needs and expectations of our users. They se
    * A prominent "Shop Now" button is strategically placed to encourage users to start shopping immediately upon viting the site.
 
   5. Features ![Features](./readmeImages/features.png)  
-   * The home page features a dedicated section showcasing the latest arrivals. Users can quickly see and explore the newest products store has to offer.
+   * The home page features a dedicated section showcasing the latest arrivals. Users can quickly see and explore the newest products store has to offer. Everytime user will be update home page up features "New Arrivals " will be change products.
 
   6. Footer ![Footer](/readmeImages/footer.png)  
    * At the button of the page, a comprehensive footer contains various links, such as Facebook, LinkedIn, Twitter, GitHub, Google, and Instagram.
     ![Newsletter](/readmeImages/newsletter.png)
    * Users can subscribe to newsletter directly from the footer . This allows you to build a mailing list and keep customers informed about promotions,updates, and news related to your brand.
-
-  7. Search ![Search](./readmeImages/searchBar.png)
+   * Quick links: Home Page, LogIn, Contact Us, Shop Now. Clearly labelled quick links eliminate confusion and provide users with a straightforward path to essential sections of the website. Users can easily understand where each link will take them.
+  7. Search 
+  ![Search](./readmeImages/searchBar.png)
    * A prominent search bar is located in the navigation bar, allowing users to quickly search for specific products or content on your website. This feature ennhance the user's ability to find what they need efficiently. 
 
   * Product Page Features
 
-  1.![Products](/readmeImages/products.png) 
+  1. 
+  ![Products](/readmeImages/products.png) 
    * Main Jewellery page offer products on large resolutions in a row of three. Images are large to attract the user's attention, and clicking the image will redirect the user to the product detail page. 
    * The product title and description provide essential information about the product.
-  2.![Product Details](/readmeImages/prodoctDetailsPage.png)
+  2.
+  ![Product Details](/readmeImages/prodoctDetailsPage.png)
    * Detailed specifications and additional information about the product are provided.
    * Users can learn about materials, dimensions, care instructions, and more.
    * Users can easily add the product to their shopping cart for future purchase.
-  2.![Sort By](/readmeImages/sortBy.png)
+  3. 
+  ![Sort By](/readmeImages/sortBy.png)
    * The "Sort By" tool is a powerful feature that empowers users to customize how they view and interact with our extensive collection of jewelry products. It provides flexibility and control over the product listing, allowing users to tailor their browsing experience according to their needs and preferences.
-  3.![Pgination](/readmeImages/pagination.png)
+  4. 
+  ![Pgination](/readmeImages/pagination.png)
    * Pagination is a user interface feature that enhances the browsing experience for users when navigating through extensive lists of jewelry products. It ensures that the product listings remain organized and manageable, enabling users to explore our diverse collection with ease.
-  4. ![Arrow Up](/readmeImages/arrowUp.png)
+  5. 
+  ![Arrow Up](/readmeImages/arrowUp.png)
 
   * Cart/ Shopping Bag 
 
-  1. ![Toasts](/readmeImages/bag.png)
+  1. 
+  ![Toasts](/readmeImages/bag.png)
+
    * Almost all actions provide feedback to the user via the bootstrap toasts written to provide user feedback.
    * Users shopping can view the current items within the bag and total cost. The discount is visible and the user is told how much they need to spend to get discount.
-  2. ![Shopping bag](/readmeImages/shoppingBag.png) 
+  2. 
+  ![Shopping bag](/readmeImages/shoppingBag.png) 
    * The shopping bag page is fully responsive, showing users a picture of the item, name, price per unit, and total price.
    * Users can also choose to increase/decrease the number of items in their bag, click the update button to have the prices update.
    * User can click the remove link and have all the items within the bag removed, regardless of quantity.
    * At the bottom of the page user can find the cost of the bag, cost of delivery, the total and how much they must spend to be eligible for free delivery.
-  3. ![Checkout Overlay](/readmeImages/spinner.png)
+  3. 
+  ![Checkout Overlay](/readmeImages/spinner.png)
     * Users who checkout will see a simple overlay with a spinning icon while the payment is processed.
 
   * Jewellery Custom Form
-  1. ![Custom Form](/readmeImages/customForm.png)
+  1. 
+  ![Custom Form](/readmeImages/customForm.png)
     * Once user find a base design he likes, click on create form to start customizing. User can choose the type of metal, gemstones, engraving, and any other personalized details add image.
+
   2. ![Submit success page](/readmeImages/successSubmit.png)
      * After you submit a form on our platform, you will receive a clear and reassuring success message to confirm that your submission was successful. This message serves as confirmation that your Form Submitted Successfully! Thank you for reaching out to us. We have received your request and will process it promptly. If you need any further assistance, please don't hesitate to contact us."
+
   * Contact Us Page
-  1. ![Contact form](/readmeImages/contacUs.png)
+  1. 
+  ![Contact form](/readmeImages/contacUs.png)
      * Our "Contact Us" page is designed to provide user with a convenient and efficient way to get in touch with our customer support team. Whether you have questions, need assistance, or want to share feedback, this page is your gateway to direct communication with us.
      
   * Profile   
-  1. ![Profile options]()
-     * User can see history of his orders see custom order forms....
+  1. 
+  ![Profile SuperUser](/readmeImages/superUser.png)
 
+  The application has two types of users: Superusers and Regular Users, each with different capabilities and access levels.
+
+  * Product Management
+
+  ![Edit/Delet](/readmeImages/editDelete.png)
+         * Edit Products: Superusers can edit existing product details, including name, description, and price.
+         * Delete Products: Superusers can remove products from the system.
+         * Add New Products: Superusers can add new products to the system, specifying their details.
+      * Customer Interaction
+         * View Customer Contact Us Forms: Superusers can access and view contact us forms submitted by customers.
+         * View Customer Order History: Superusers can view the order history of all users, including order details and statuses.
+         * View Custom Order Forms: Superusers can access and view custom order forms submitted by users.
+
+2. 
+  ![Profile User](/readmeImages/user.png)
+
+  * Profile
+      *  Regular users can update their profile information, including their personal details.
+      *  Regular users can access their order history, including order details and statuses.
+  ![Delete Order](/readmeImages/deleteOrder.png) 
+
+      * Delete Orders: Regular users can delete orders they no longer need from their order history.
+      * Send Custom Order Forms: Regular users can submit custom order forms to request specific products or services.
+      * Complete Contact Us Form: Regular users can submit inquiries and messages using the contact us form.
+
+   <br><hr>
+[🔼 Back to top](#table-of-contents)
 ## Structure
   1. Colors
 
@@ -272,9 +330,68 @@ User stories help us understand the needs and expectations of our users. They se
   2. Images
 
   * All images used on our website are sourced from [Pexels](https://www.pexels.com/), a high-quality and free stock photos platform. We believe in using high-quality images to enhance the overall visual experience and maintain a professional appearance.
-  3. Font
-     * I use "Loto" 
+
+  3. Font Selection 
+     * 
+     Two fonts were chosen with Google Fonts to be used across the entire site
+     * The chosen fonts were 'Lato', with serif as back up fonts for lists, forms, buttons and paragraphs.
+
 ##  Skeleton  
+
+  *  Wireframes created with Balsamiq
+
+  <details>
+   <summary>Click to see more</summary>
+
+  * Home Page
+
+  ![Home Desktop](/readmeImages/HomePage.png)
+  ![Home Mobile](/readmeImages/homeMobile.png)
+    
+  * Jewellery Page
+
+  ![Desktop](/readmeImages/jewlleryPage.png)
+
+  ![Mobile](/readmeImages/jewelleyMobile.png)
+
+  * Jewellery Details Page
+
+  ![Desktop](/readmeImages/productDetails.png)
+
+  ![Mobile](/readmeImages/detailProductMobile.png)
+
+  * Add To Bag Page
+
+  ![Desktop](/readmeImages/addToBag.png)
+
+  ![Mobile](/readmeImages/addBagMobile.png)
+
+  * Checkout Page
+
+  ![Desktop](/readmeImages/checkoutView.png)
+
+  ![Mobile](/readmeImages/checkoutMobile.png)
+
+  * Payment Page
+
+  ![Desktop](/readmeImages/payment.png)
+
+  ![Mobile](/readmeImages/paymnet.png)
+
+  * Custom Order Page
+
+  ![Desktop](/readmeImages/customOrderForm.png)
+
+  ![Mobile](/readmeImages/customFormMobile.png)
+
+  * Contact Us Page
+
+  ![Desktop](/readmeImages/customOrderForm.png)
+
+  ![Mobile](/readmeImages/contactUsMobile.png)
+</details>
+  
+
 ## Testing
 [Link to TESTING.md](https://github.com/Aliona83/project_j/blob/main/TESTING.md)
 
@@ -304,6 +421,7 @@ User stories help us understand the needs and expectations of our users. They se
    [Link to DEPLOYMENT.md](https://github.com/Aliona83/project_j/blob/main/DEPLOYMENT.md)
    ## Credit 
 
-
+<br><hr>
+[🔼 Back to top](#table-of-contents)
 
 

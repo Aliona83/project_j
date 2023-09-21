@@ -1,25 +1,26 @@
  Return to [Readme](https://github.com/Aliona83/project_j/blob/main/README.md)
+
+This README document outlines the results of manual testing conducted on the homepage of the website/application. The purpose of this testing is to ensure that all essential features and elements of the homepage function as expected.
+
 # [Manual Testing](#manual-testing)
 # [Code Validation](#code-validation)
-    * HTML
-    * CSS
-    * JavaScript
-    * Python
+  * HTML
+  * CSS
+  * JavaScript
+  * Python
 
 # [Accessibility](#accessibility)
-    * Wave
-    * Ax Tools
+  * Wave
+  * Ax Tools
 
 # [Browser Testing](#browser-testing)
 # [Device Testing](#device-testing)
 # [Lighthouse](#lighthouse)
 
 
-This README document outlines the results of manual testing conducted on the homepage of the website/application. The purpose of this testing is to ensure that all essential features and elements of the homepage function as expected.
+# Manual Testing
 
-## Manual Testing
-
-   * Home page all testings
+  * Home page all testings
    <details>
   <summary>Click to see more</summary>
 
@@ -174,6 +175,17 @@ This README document outlines the results of manual testing conducted on the hom
 </details>
 
 * CSS Testing
+  1. Base.css
+
+  ![Base css](/readmeImages/baseCss.png)
+
+  2. Checkout.css
+  
+  ![Checkout css](/readmeImages/checkoutCss.png)
+
+  3. Profile.css
+  
+  ![Profile css](/readmeImages/profileCss.png)
 
 <details>
    <summary>Click to see more</summary>
