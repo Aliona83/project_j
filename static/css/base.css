@@ -46,7 +46,7 @@ html {
     min-height: 100px;
 }
 a {
-    color:  #660003
+    color:  #660003;
 }
 .card-footer a {
     color:  #660003; /* Darker shade of green for better contrast */
