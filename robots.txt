@@ -1,6 +1,6 @@
 User-agent: *
-Disallow:/checkout/
-Disallow:/bag/
+Disallow: /checkout/
+Disallow: /bag/
 Disallow: /profiles/
 Disallow: /admin/
 Sitemap: https://jewelryshop-4c4e9a0b748f.herokuapp.com/sitemap.xml

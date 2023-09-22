@@ -217,3 +217,44 @@ This README document outlines the results of manual testing conducted on the hom
 ## Browser Testing
 ## Device Testing
 ## Lighthouse 
+
+<details>
+   <summary>Click to see more</summary>
+  1. Home Page
+
+   * Desktop 
+
+  ![Home Page](/readmeImages/homeLighthouse.png)
+ 
+  * Mobile
+
+  ![Home Page](/readmeImages/mobileHomeLighthouse.png)
+
+  1. Jewellery Page
+  * Desktop
+
+  ![Jewellery Page](/readmeImages/detailPageLighthouse.png)
+ 
+  * Mobile 
+
+  ![](/readmeImages/detailMobileLighthouse.png)
+
+   1. Jewellery Details Page
+  * Desktop
+
+  ![](/readmeImages/eachProductLighthouse.png)
+ 
+  * Mobile 
+
+  ![](/readmeImages/eachMobileLighthouse.png)
+
+   1. Add to Bag Page
+  * Desktop
+
+  ![](/readmeImages)
+ 
+  * Mobile 
+
+  ![](/readmeImages)
+
+</details>
