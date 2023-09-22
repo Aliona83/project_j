@@ -251,10 +251,37 @@ This README document outlines the results of manual testing conducted on the hom
    1. Add to Bag Page
   * Desktop
 
-  ![](/readmeImages)
+  ![](/readmeImages/bagLighthouse.png)
  
   * Mobile 
 
-  ![](/readmeImages)
+  ![](/readmeImages/mobileLighthouse.png)
+
+   1. Checkout Page Page
+  * Desktop
+
+  ![](/readmeImages/checkoutLighthouse.png)
+ 
+  * Mobile 
+
+  ![](/readmeImages/checkoutMobileLighthouse.png)
+
+   1. Profile Page
+  * Desktop
+
+  ![](/readmeImages/profileLighthouse.png)
+ 
+  * Mobile 
+
+  ![](/readmeImages/profileMobileLigthouse.png)
+
+
 
 </details>
+
+
+## Accessibility
+
+1. Responsive Test
+
+  * Ensuring that your website looks and functions well on various devices, including smartphones, tablets, and desktop computers, is crucial for providing a positive user experience. Responsive design ensures that users can access your content and navigate your site comfortably, regardless of the device they are using. It was done on website [DisignChecker](https://responsivedesignchecker.com/)

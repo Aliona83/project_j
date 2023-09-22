@@ -19,22 +19,22 @@ The purpose of this project was a build a full-stack site based around a busines
   *  [Link to Testing.md](https://github.com/Aliona83/project_j/blob/main/TESTING.md)
 
 ## [Technologies Used](#technologies-used)
- * Languages Used
- * Frameworks/Libraries 
+ * [Languages Used](#languages)
+ * [Frameworks/Libraries](#frameworks---libraries---programs-used)
  
  ## [Deployment](#deployment)
  [Link to Deployment](https://github.com/Aliona83/project_j/blob/main/DEPLOYMENT.md)
  
- ## Credits
-  * Product images
-  * Code
-  * Bootstarp
-  * Django Documentation
+ ## [Credits](#credits)
+   * [Images](#images)
+   * [code](#code)
+ 
 
-## Aknowledgements
-  * Linkedin
-  * GitHub
-  * youtube
+## [Acknowledgments](#acknowledgments)
+
+  * [Linkedin]
+  * [GitHub]
+  * [youtube]
   
 # Jewllery Shop - Introduction 
 
@@ -227,7 +227,7 @@ User stories help us understand the needs and expectations of our users. They se
   5. Features ![Features](./readmeImages/features.png)  
    * The home page features a dedicated section showcasing the latest arrivals. Users can quickly see and explore the newest products store has to offer. Everytime user will be update home page up features "New Arrivals " will be change products.
 
-  6. Footer ![Footer](/readmeImages/facebookPage.pngreadmeImages/footer.png)  
+  6. Footer ![Footer](/readmeImages/footer.png)  
    * At the button of the page, a comprehensive footer contains various links, such as Facebook, LinkedIn, Twitter, GitHub, Google, and Instagram.
     ![Newsletter](/readmeImages/newsletter.png)
    * Users can subscribe to newsletter directly from the footer . This allows you to build a mailing list and keep customers informed about promotions,updates, and news related to your brand.
@@ -236,7 +236,7 @@ User stories help us understand the needs and expectations of our users. They se
   ![Search](./readmeImages/searchBar.png)
    * A prominent search bar is located in the navigation bar, allowing users to quickly search for specific products or content on your website. This feature ennhance the user's ability to find what they need efficiently. 
   8. Social Media
-  ![Social Media]()
+  ![Social Media](/readmeImages/facebookPage.png)
     * Here I have made a Social Media Marketing Page for the Elegancy Jewellery store. It is a fantastic way to boost and increase engagement within the business and in increasing sales. Here is the screenshot of the whole page available to anyone.
 
 
@@ -341,7 +341,7 @@ User stories help us understand the needs and expectations of our users. They se
 
 ##  Skeleton  
 
-  *  Wireframes created with Balsamiq
+  * Wireframes created with Balsamiq
 
   <details>
    <summary>Click to see more</summary>
@@ -400,13 +400,13 @@ User stories help us understand the needs and expectations of our users. They se
 
 ## Technologies Used
  
-* Languages
+##  Languages
   * Javascript
   * Python
   * HTML
   * CSS
 
-* Frameworks - Libraries - Programs Used
+## Frameworks - Libraries - Programs Used
 
    * Django: Main python framework used in the development of this project
    * Django-allauth: Authentication library used to create user accounts
@@ -422,7 +422,25 @@ User stories help us understand the needs and expectations of our users. They se
 
   ## Deployment
    [Link to DEPLOYMENT.md](https://github.com/Aliona83/project_j/blob/main/DEPLOYMENT.md)
+   
    ## Credit 
+    
+  ### Images 
+  * Images used in this project were sourced from [Pexels](https://www.pexels.com/). 
+
+  ### Code 
+  * The majority of the code structure and concepts were inspired by the [Code Institute](https://www.codeinstitute.net/) walkthrough project "Boutique Ado." 
+
+  * Mailchimp and form code was used for the signup newsletter in the footer of the site [Mailchimp](https://mailchimp.com/landers/email-marketing-platform/?ds_c=DEPT_AOC_Google_Search_ROET_EN_Brand_Retarget_Exact_MKAG_T2&gclid=Cj0KCQjw9rSoBhCiARIsAFOiplm2rczG5luenH2Zi0poWx93RjWRFSFDxfIki7eXWVZgPEKvVw8ZhIwaAvwtEALw_wcB&gclsrc=aw.ds)
+  
+  ### Django Documentation
+   
+   * Django have amazing documentation with a tutorial project and in depth explanations on core components.
+   * [Django](https://docs.djangoproject.com/en/3.2/)
+  
+  ## Acknowledgments
+  
+  
 
 <br><hr>
 [🔼 Back to top](#table-of-contents)
