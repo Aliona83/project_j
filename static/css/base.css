@@ -69,7 +69,6 @@ a {
 .text-black {
     color: #000 !important;
 }
-
 /* icons */
 
 .icon {
@@ -88,7 +87,7 @@ a {
 .bg-dark {
     
     background: #f07b88 !important;
-    color: #fff;
+    color: black;
 }
 /* Buttons */
 .btn-outline-black {
@@ -175,11 +174,12 @@ h4 {
 /* Newsletter */
 #subscribe-box .emailfield {
     margin: auto;
+    color: #000;
 }
 #mc_embed_signup .asterisk {
     color: #660003;
     font-size: 150%;
-    font-weight: normal;
+    font-weight:bold;
     position: relative;
     top: 5px;
 }
@@ -217,7 +217,9 @@ h4 {
 .step-links {
     text-align: center;
 }
-
+span {
+    color:black
+}
 .step-links a {
     text-decoration: none;
     padding: 5px 10px;
@@ -269,9 +271,9 @@ a.category-badge > span.badge:hover {
     border-bottom-color: #ffc107 !important;
 }
 
-.arrow-info {
-    border-bottom-color: #17a2b8 !important;
-}
+/* .arrow-info {
+    border-bottom-color: #35636a !important;
+} */
 
 .arrow-light {
     border-bottom-color: #f8f9fa !important;
