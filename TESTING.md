@@ -3,15 +3,25 @@
 This README document outlines the results of manual testing conducted on the homepage of the website/application. The purpose of this testing is to ensure that all essential features and elements of the homepage function as expected.
 
 # [Manual Testing](#manual-testing)
+  * [Home Page Testing](#home-page-all-testings)
+  * [Footer](#footer-testing)
+  * [Shopping bag](#shopping-bag-page-testing)
+  * [checkout bag](#checkout-bag-testing)
+  * [Toast](#toast-testing)
+  * [SuperUser security test](#superuser-security-testing)
+  * [CustomOrder form](#customorder-form-testing)
+  * [Security Measures testing](#security-measures-testing)
+
 # [Code Validation](#code-validation)
-  * HTML
-  * CSS
-  * JavaScript
-  * Python
+  * [HTML](#html-home-page)
+  * [CSS](#css-testing)
+  * [JavaScript](#javascript)
+  * [Python](#python)
 
 # [Accessibility](#accessibility)
-  * Wave
-  * Ax Tools
+  * [Responsive test](#responsive-test)
+  * [Wave](#wave-test)
+  * [Ax Tools](#ax-tools)
 
 # [Browser Testing](#browser-testing)
 # [Device Testing](#device-testing)
@@ -20,7 +30,7 @@ This README document outlines the results of manual testing conducted on the hom
 
 # Manual Testing
 
-  * Home page all testings
+  ###  Home page all testings
    <details>
   <summary>Click to see more</summary>
 
@@ -29,7 +39,7 @@ This README document outlines the results of manual testing conducted on the hom
   ![](/readmeImages/homePageTesting.png)
   </details>
 
-   * Footer testing
+   ### Footer testing
    <details>
    <summary>Click to see more</summary>
 
@@ -37,7 +47,7 @@ This README document outlines the results of manual testing conducted on the hom
 
   </details>
 
-   * Product page testing
+   ### Product page testing
 
    <details>
    <summary>Click to see more</summary>
@@ -46,7 +56,7 @@ This README document outlines the results of manual testing conducted on the hom
 
    </details>
 
-   * Shopping Bag page testing
+   ### Shopping Bag page testing
 
    <details>
    <summary>Click to see more</summary>
@@ -55,7 +65,7 @@ This README document outlines the results of manual testing conducted on the hom
 
 </details>
 
-* Checkout bag testing
+### Checkout bag testing
 
 <details>
    <summary>Click to see more</summary>
@@ -64,7 +74,7 @@ This README document outlines the results of manual testing conducted on the hom
 
 </details>
 
-* Toast testing
+### Toast testing
 
 <details>
    <summary>Click to see more</summary>
@@ -73,7 +83,7 @@ This README document outlines the results of manual testing conducted on the hom
 
 </details>
 
-* Superuser security testing
+### Superuser security testing
 
 <details>
    <summary>Click to see more</summary>
@@ -82,7 +92,7 @@ This README document outlines the results of manual testing conducted on the hom
 
 </details>
 
-* CustomOrder form testing
+### CustomOrder form testing
 
 <details>
    <summary>Click to see more</summary>
@@ -91,7 +101,7 @@ This README document outlines the results of manual testing conducted on the hom
 
 </details>
 
-* Security Measures testing
+### Security Measures testing
 
 <details>
    <summary>Click to see more</summary>
@@ -102,12 +112,14 @@ This README document outlines the results of manual testing conducted on the hom
 
 ## Code Validation
 
-  * HTML Home page
+  ### HTML Home page
+
+* HTML Home page
 
 <details>
    <summary>Click to see more</summary>
 
-  ![]()
+  ![](/readmeImages/homePageValidation.png)
 
 </details>
 
@@ -116,7 +128,7 @@ This README document outlines the results of manual testing conducted on the hom
 <details>
    <summary>Click to see more</summary>
 
-  ![]()
+  ![](/readmeImages/jewelleryPageValidation.png)
 
 </details>
 
@@ -125,7 +137,7 @@ This README document outlines the results of manual testing conducted on the hom
 <details>
    <summary>Click to see more</summary>
 
-  ![]()
+  ![](/readmeImages/addToBagValidation.png)
 
 </details>
 
@@ -134,16 +146,25 @@ This README document outlines the results of manual testing conducted on the hom
 <details>
    <summary>Click to see more</summary>
 
-  ![]()
+  ![](/readmeImages/checkoutFormValidation.png)
 
 </details>
 
-* HTMLLogin/Logout
+* HTML Login/Logout
 
 <details>
    <summary>Click to see more</summary>
 
-  ![]()
+  ![](/readmeImages/siginPageValidation.png)
+
+</details>
+
+* Empty bag page
+
+<details>
+   <summary>Click to see more</summary>
+
+  ![](/readmeImages/emtyBascketValidation.png)
 
 </details>
 
@@ -152,16 +173,16 @@ This README document outlines the results of manual testing conducted on the hom
 <details>
    <summary>Click to see more</summary>
 
-  ![]()
+  ![](/readmeImages/profilePageValidation.png)
 
 </details>
 
-* HTML Payment page
+* HTML Jewellery Details  page
 
 <details>
    <summary>Click to see more</summary>
 
-  ![]()
+  ![](/readmeImages/jewelleryDetailValidation.png)
 
 </details>
 
@@ -170,11 +191,29 @@ This README document outlines the results of manual testing conducted on the hom
 <details>
    <summary>Click to see more</summary>
 
-  ![]()
+  ![](/readmeImages/customFormValidation.png)
 
 </details>
 
-* CSS Testing
+* HTML CustomOrder history page
+
+<details>
+   <summary>Click to see more</summary>
+
+  ![](/readmeImages/customSubmitPageValidation.png)
+
+</details>
+
+* HTML Register page
+
+<details>
+   <summary>Click to see more</summary>
+
+  ![](/readmeImages/registerpageValidation.png)
+
+</details>
+
+### CSS Testing
   1. Base.css
 
   ![Base css](/readmeImages/baseCss.png)
@@ -194,7 +233,7 @@ This README document outlines the results of manual testing conducted on the hom
 
 </details>
 
-* JavaScript
+### JavaScript
 
 <details>
    <summary>Click to see more</summary>
@@ -203,7 +242,7 @@ This README document outlines the results of manual testing conducted on the hom
 
 </details>
 
-* Paython
+### Python
 
 <details>
    <summary>Click to see more</summary>
@@ -214,8 +253,23 @@ This README document outlines the results of manual testing conducted on the hom
 
 
 ## Accessibility
+
+## Responsive Test
+
+1. Responsive Test
+
+  * Ensuring that your website looks and functions well on various devices, including smartphones, tablets, and desktop computers, is crucial for providing a positive user experience. Responsive design ensures that users can access your content and navigate your site comfortably, regardless of the device they are using. It was done on website [DisignChecker](https://responsivedesignchecker.com/)
+
+## Wave Test
+
+## Ax Tools
+
 ## Browser Testing
+
+
 ## Device Testing
+
+
 ## Lighthouse 
 
 <details>
@@ -280,8 +334,5 @@ This README document outlines the results of manual testing conducted on the hom
 </details>
 
 
-## Accessibility
-
-1. Responsive Test
-
-  * Ensuring that your website looks and functions well on various devices, including smartphones, tablets, and desktop computers, is crucial for providing a positive user experience. Responsive design ensures that users can access your content and navigate your site comfortably, regardless of the device they are using. It was done on website [DisignChecker](https://responsivedesignchecker.com/)
+ 
+ 
