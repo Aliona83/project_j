@@ -91,14 +91,14 @@ a {
 }
 /* Buttons */
 .btn-outline-black {
-    background: white;
-    color: #000 !important;
+    background: #f07b88  ;
+    color: #222 !important;
     border: 1px solid black;
 }
 .btn-outline-black:hover,
 .btn-outline-black:active,
 .btn-outline-black:focus {
-    background: black;
+    background: #d16271;
     color: white !important;
 }
 
