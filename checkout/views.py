@@ -1,4 +1,5 @@
-from django.shortcuts import render, redirect, reverse, get_object_or_404, HttpResponse
+from django.shortcuts import (
+    render, redirect, reverse, get_object_or_404, HttpResponse)
 from django.views.decorators.http import require_POST
 from django.contrib import messages
 from django.conf import settings
@@ -13,6 +14,7 @@ from django.contrib.auth.decorators import login_required
 
 import stripe
 import json
+
 
 @require_POST
 def cache_checkout_data(request):
@@ -29,6 +31,7 @@ def cache_checkout_data(request):
         messages.error(request, 'Sorry, your payment cannot be \
             processed right now. Please try again later.')
         return HttpResponse(content=e, status=400)
+
 
 @login_required
 def checkout(request):
@@ -61,7 +64,7 @@ def checkout(request):
                 try:
                     product = Jewellery.objects.get(id=item_id)
                     if isinstance(item_data, int):
-                       stripe_total += product.price * item_data
+                        stripe_total += product.price * item_data
                     else:
                         for quantity in item_data.items():
                             order_line_item = OrderLineItem(
@@ -72,26 +75,30 @@ def checkout(request):
                             order_line_item.save()
 
                 except Jewellery.DoesNotExist:
-                    messages.error(request, (
-                        "One of the products in your bag wasn't found in our database. "
-                        "Please call us for assistance!")
+                    messages.error(
+                        request, (
+                            "One of the products in your"
+                            " bag wasn't found in our database. "
+                            "Please call us for assistance!")
                     )
                     order.delete()
                     return redirect(reverse('bag:view_bag'))
 
             order.order_total = stripe_total
-            order.grand_total = stripe_total  
-            order.save()       
+            order.grand_total = stripe_total
+            order.save()
 
             request.session['save_info'] = 'save-info' in request.POST
-            return redirect(reverse('checkout_success', args=[order.order_number]))
+            return redirect(reverse(
+                'checkout_success', args=[order.order_number]))
         else:
             messages.error(request, 'There was an error with your form. \
                 Please double check your information.')
     else:
         bag = request.session.get('bag', {})
         if not bag:
-            messages.error(request, "There's nothing in your bag at the moment")
+            messages.error(
+                request, "There's nothing in your bag at the moment")
             return redirect(reverse('jewelleries:jewelleries'))
 
         current_bag = bag_contents(request)
@@ -135,21 +142,19 @@ def checkout(request):
 
     return render(request, template, context)
 
+
 @login_required
 def checkout_success(request, order_number):
     """
     Handle successful checkouts
     """
-    print("Entering checkout_success view") 
     save_info = request.session.get('save_info')
     order = get_object_or_404(Order, order_number=order_number)
 
     profile = UserProfile.objects.get(user=request.user)
-    # Attach the user's profile to the order
     order.user_profile = profile
     order.save()
 
-    # Save the user's info
     if save_info:
         profile_data = {
             'default_phone_number': order.phone_number,
@@ -174,7 +179,6 @@ def checkout_success(request, order_number):
     template = 'checkout/checkout_success.html'
     context = {
         'order': order,
-       
     }
 
     return render(request, template, context)

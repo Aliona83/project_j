@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404,redirect
+from django.shortcuts import render, get_object_or_404, redirect
 from .models import UserProfile
 from django.contrib.auth.decorators import login_required
 from CustomOrder.models import CustomJewelleryDesign
@@ -7,6 +7,7 @@ from django.contrib import messages
 from .forms import UserProfileForm
 
 from checkout.models import Order
+
 
 @login_required
 # def @login_required
@@ -31,6 +32,7 @@ def profile(request):
     }
     return render(request, template, context)
 
+
 def order_history(request, order_number):
     """ Display order history """
     order = get_object_or_404(Order, order_number=order_number)
@@ -48,6 +50,7 @@ def order_history(request, order_number):
 
     return render(request, template, context)
 
+
 def delete_order(request, order_number):
     """ Delete user history """
     try:
@@ -55,5 +58,6 @@ def delete_order(request, order_number):
         order.delete()
         messages.success(request, 'Order deleted successfully')
     except Order.DoesNotExist:
-         messages.info(request, 'No such order exists or it does not belong to you.')
+        messages.info(request,
+                      'No such order exists or it does not belong to you.')
     return redirect('profile')

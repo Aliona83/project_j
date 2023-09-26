@@ -20,7 +20,6 @@ This README document outlines the results of manual testing conducted on the hom
 
 # [Accessibility](#accessibility)
   * [Responsive test](#responsive-test)
-  * [Wave](#wave-test)
   * [Ax Tools](#ax-tools)
 
 # [Browser Testing](#browser-testing)
@@ -264,8 +263,12 @@ This README document outlines the results of manual testing conducted on the hom
 
 ## Ax Tools
 
+
+
 ## Browser Testing
 
+Google Chrome: All aspects of the site work perfectly fine. Pages load quickly, all features are working and no problems found with CRUD, logging in or out, signing up, paying for each service etc.
+Mozilla Firefox: All aspects of the site work perfectly fine. Pages load quickly, all features are working and no problems found with CRUD, logging in or out, signing up, paying for each service etc.
 
 ## Device Testing
 

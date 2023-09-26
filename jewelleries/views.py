@@ -7,11 +7,11 @@ from .models import Jewellery, Category
 from .forms import ProductForm
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.http import JsonResponse
-# from django.core.paginator import Paginator
 
 
 def all_jewelleries(request):
-    """ A view to show all jewelleries, including sorting and search queries """
+    """ A view to show all jewelleries, '
+    'including sorting and search queries """
     jewelleries = Jewellery.objects.all()
     query = None
     categories = None
@@ -24,7 +24,6 @@ def all_jewelleries(request):
         default_direction = 'asc'
         sort = request.GET.get('sort', 'name')
         direction = request.GET.get('direction', 'asc')
-    
         if sort not in valid_sort_keys:
             sort = default_sort
 
@@ -40,20 +39,21 @@ def all_jewelleries(request):
         if direction == 'desc':
             model_sort_field = f'-{model_sort_field}'
 
-        jewelleries = jewelleries.order_by(model_sort_field)  
+            jewelleries = jewelleries.order_by(model_sort_field)
         if 'category' in request.GET:
             categories = request.GET['category'].split(',')
             jewelleries = jewelleries.filter(category__name__in=categories)
             categories = Category.objects.filter(name__in=categories)
-            
         if 'q' in request.GET:
             query = request.GET['q']
             if query:
-                queries = Q(name__icontains=query) | Q(description__icontains=query)
+                queries = (
+                    Q(name__icontains=query) | Q(description__icontains=query)
+                )
                 jewelleries = jewelleries.filter(queries)
             else:
-                messages.error(request, "You didn't enter any search criteria!")
-    
+                messages.error(request,
+                               "You didn't enter any search criteria!")
     items_per_page = 15
     paginator = Paginator(jewelleries, items_per_page)
     page_number = request.GET.get('page')
@@ -104,7 +104,9 @@ def add_jewellery(request):
             messages.success(request, 'Successfully added product!')
             return redirect(reverse('jewelleries:add_jewellery'))
         else:
-            messages.error(request, 'Failed to add product. Please ensure the form is valid.')
+            messages.error(request,
+                           'Failed to add product. '
+                           'Please ensure the form is valid.')
     else:
         form = ProductForm()
     template = 'jewelleries/add_jewellery.html'
@@ -127,9 +129,12 @@ def edit_jewellery(request, jewellery_id):
         if form.is_valid():
             form.save()
             messages.success(request, 'Successfully updated product!')
-            return redirect(reverse('jewelleries:jewelleries_details', args=[jewellery.id]))
+            return redirect(reverse(
+                    'jewelleries:jewelleries_details', args=[jewellery.id]))
         else:
-            messages.error(request, 'Failed to update product. Please ensure the form is valid.')
+            messages.error(request,
+                           'Failed to update product. '
+                           'Please ensure the form is valid.')
     else:
         form = ProductForm(instance=jewellery)
         messages.info(request, f'You are editing {jewellery.name}')

@@ -1,12 +1,10 @@
 from django.contrib import messages
 from jewelleries.models import Jewellery
-from django.shortcuts import(
-    render, 
-    redirect, 
-    reverse,  
+from django.shortcuts import (
+    render,
+    redirect,
+    reverse,
     HttpResponse, get_object_or_404)
-
-# Create your views here.
 
 
 def view_bag(request):
@@ -23,7 +21,7 @@ def add_to_bag(request, item_id):
     jewellery = get_object_or_404(Jewellery, pk=item_id)
     redirect_url = request.POST.get('redirect_url')
     quantity = int(request.POST.get('quantity'))
-    bag = request.session.get('bag', {})   
+    bag = request.session.get('bag', {})
     current_item_count = sum(bag.values())
 
     # Check if adding the new item would exceed the limit

@@ -33,9 +33,6 @@ def bag_contents(request):
                     'quantity': quantity,
                     'product': product,
                 })
-
-    # Check if the total is greater than
-    #  or equal to 1000 euros to apply the discount
     discount = 0
     if total > 1000:
         discount = 100

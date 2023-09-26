@@ -8,9 +8,6 @@ from jewelleries.models import Jewellery
 from django_countries.fields import CountryField
 from profiles.models import UserProfile
 
-# Create your models here.
-
-
 class Order(models.Model):
     order_number = models.CharField(max_length=32, null=False, editable=False)
     user_profile = models.ForeignKey(
