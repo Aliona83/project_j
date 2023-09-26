@@ -29,18 +29,17 @@ The purpose of this project was a build a full-stack site based around a busines
    * [Images](#images)
    * [code](#code)
  
-
 ## [Acknowledgments](#acknowledgments)
 
-  * [Linkedin]
-  * [GitHub]
-  * [youtube]
+  * [Acknowledgments](#acknowledgments-1)
+ 
+
   
 # Jewllery Shop - Introduction 
 
 The Jewelry Shop is  an E-commerce shop where users can find and buy jewellery also search for jewelleries by filtering different categories. They can also register by filling in their personal information on the website’s profile page. The application has a good appearance with an easy, clear and concise site navigation. web application built using Python, JavaScript, and Django, designed to provide a seamless and user-friendly platform for buying and selling exquisite jewelery pieces. Whether you are a jewelery enthusiast, a buyer looking for the perfect gift, or an artisan seeking to showcase your creations, this platform caters to all.
 
-[Live project]()
+[Live project](https://jewelryshop-4c4e9a0b748f.herokuapp.com/)
 
 # UX 
 
@@ -411,17 +410,16 @@ User stories help us understand the needs and expectations of our users. They se
 
 ## Frameworks - Libraries - Programs Used
 
-   * Django: Main python framework used in the development of this project
-   * Django-allauth: Authentication library used to create user accounts
-   * Heroku - Used as the cloud-based platform to deploy the site.
-   * GitHub - Used for version control and agile methodology.
-   * PostgreSQL Used as the database for this project.
-   * W3C - Used for HTML & CSS Validation.
-   * Font Awesome - Used for icons on the home page and stars on the About page.
-   * Font Awesome - Used for icons on the home page and stars on the About page.
-   * Jshint - Used to validate the JavaScript page.
-   * Crispy Forms Used to manage Django Forms.
-   * Bootstrap: CSS used for developing responsiveness and styling the website.
+   * [Django](https://docs.djangoproject.com/en/4.2/topics/pagination/): Main python framework used in the development of this project
+   * [Django-allauth](https://django-allauth.readthedocs.io/en/latest/): Authentication library used to create user accounts
+   *[Heroku](https://www.heroku.com/github-students)- Used as the cloud-based platform to deploy the site.
+   * [GitHub](https://github.com/) - Used for version control and agile methodology.
+   * [PostgreSQL](https://www.postgresql.org/)- Used as the database for this project.
+   * [W3C](https://validator.w3.org/) - Used for HTML & CSS Validation.
+   * [Font Awesome ](https://fontawesome.com/)- Used for icons on the home page and stars on the About page.
+   * [Jshint](https://jshint.com/)- Used to validate the JavaScript page.
+   * [Crispy Forms](https://django-crispy-forms.readthedocs.io/en/latest/)- Used to manage Django Forms.
+   * [Bootstrap](https://getbootstrap.com/docs/5.0/getting-started/introduction/)- CSS used for developing responsiveness and styling the website.
 
   ## Deployment
    [Link to DEPLOYMENT.md](https://github.com/Aliona83/project_j/blob/main/DEPLOYMENT.md)
@@ -442,9 +440,26 @@ User stories help us understand the needs and expectations of our users. They se
    * [Django](https://docs.djangoproject.com/en/3.2/)
   
   ## Acknowledgments
-  
-  
 
+     
+  
+  1. [CodeCademy](https://www.codecademy.com/)
+
+  * I was having a course it help me be more confident with creating object, classes. "Learn Object Oriented Programming with Python.
+
+  2. [Youtube](https://www.youtube.com/watch?v=YZvRrldjf1Y&t=12808s)
+
+  3. [Stackoverflow](https://stackoverflow.com/tags)
+
+  4. [Slack](https://slack.com/intl/en-ie/)
+  5. [Code Institute](https://codeinstitute.net/ie/)
+     * Code institute for the amazing Tutors on the course.
+     * For amaizing help with Boutique Ago walkthrough project
+  6. My excellent Mentor Mitko 
+
+  7. [Google](https://www.google.com/)
+  8. [Boostrap Documentations](https://getbootstrap.com/docs/5.0/getting-started/introduction/)
+     
 <br><hr>
 [🔼 Back to top](#table-of-contents)
 

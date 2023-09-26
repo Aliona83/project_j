@@ -23,10 +23,17 @@ This README document outlines the results of manual testing conducted on the hom
   * [Ax Tools](#ax-tools)
 
 # [Browser Testing](#browser-testing)
+ * [Browser Testing](#browser-testing-1)
+
 # [Device Testing](#device-testing)
+ * [Device Testing](#device-testing-1)
+
 # [Lighthouse](#lighthouse)
+  * [Lighthouse](#lighthouse-1)
 
-
+# [Bugs](#bugs)
+  * [Bugs](#bugs-1)
+  * [Unfixed Bugs]()
 # Manual Testing
 
   ###  Home page all testings
@@ -303,7 +310,10 @@ Python codes used throughout the application were validated using CI Python Lint
 ![](/readmeImages/profileAx.png)
 
 ![](/readmeImages/managementAx.png)
+
 ## Browser Testing
+
+* Browser Testing
 
 Google Chrome: All aspects of the site work perfectly fine. Pages load quickly, all features are working and no problems found with CRUD, logging in or out, signing up, paying for each service etc.
 Mozilla Firefox: All aspects of the site work perfectly fine. Pages load quickly, all features are working and no problems found with CRUD, logging in or out, signing up, paying for each service etc.
@@ -373,10 +383,53 @@ The website was tested manually on a variety of devices, either personally by th
 
   ![](/readmeImages/profileMobileLigthouse.png)
 
-
-
 </details>
 
+## Bugs
 
+* Bugs
+1. User and Superuser Seeing the Same Order History:
+
+Issue: Both regular users and superusers should have separate order histories.
+Resolution: I update the order history retrieval logic. When a user logs in, ensure that they only see their own orders. Superusers should have access to all orders. This can be done by checking the user's role and filtering the orders accordingly.
+
+2. HomePage Update Not Reflecting Changes:
+
+Issue: The home page is not dynamically updating with new products or information.
+Resolution: Found the right way how to fix this in Stack Overflow.
+
+3.Bag Item Limit vs. Checkout Item Limit Discrepancy:
+
+Issue: Users can add more than two items in the checkout process, even though there is a limit of two items in the bag.
+Resolution: Fixed item limits throughout the shopping process.  Had to make that input will be able to increase only until 2 quantity after 2 quantity button is disable.
+
+3. Pagination Breaking Functionality of Sort By, Search, and Categories:
+
+Issue: Pagination is interfering with the sorting, searching, and filtering functionality.
+Resolution: Was changin sort by search and categories view logical that the sorting, searching, and filtering parameters are maintained across paginated pages. 
+
+4. 404 Page Not Working as Expected:
+ 
+Issue: The 404 page doesn't seem to be functioning correctly.
+Resolution: Should remove 500 error after that 404 error start show up.
+
+5.Mobile Responsiveness Issues:
+
+Issue: The website doesn't display properly on mobile devices, leading to a poor mobile user experience.
+Resolution: Implement responsive web design to ensure that  website adapts to different screen sizes and devices. Test the website on various mobile devices and browsers to identify and fix layout and usability issues.
+
+## Unfixed Bugs
+
+1. Search bar
+
+Missing or Inadequate Search Functionality:
+
+Issue: Users have difficulty finding products due to limited or ineffective search functionality. Unable search by categories.Will show 0 product found.
+
+2. Issue: Sort By and Search  Not Working on Second Page. 
+
+2. Sort by
+
+* 
  
  
