@@ -239,6 +239,9 @@ User stories help us understand the needs and expectations of our users. They se
   ![Social Media](/readmeImages/facebookPage.png)
     * Here I have made a Social Media Marketing Page for the Elegancy Jewellery store. It is a fantastic way to boost and increase engagement within the business and in increasing sales. Here is the screenshot of the whole page available to anyone.
 
+  9. Admin
+  ![Admin](/readmeImages/admin.png)
+    * Admin page allows site owners to exercise administrative control over; users, orders, email addresses, jewelleries, categories.
 
   * Product Page Features
 

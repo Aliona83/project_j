@@ -1,15 +1,13 @@
 from django.shortcuts import render
-
-# Create your views here.from django.shortcuts import render, redirect
 from .forms import ContactForm
 from profiles.models import UserProfile
 from django.contrib.auth.decorators import login_required
 
 from django.contrib import messages
 
+
 @login_required
 def contact(request):
-     
     if request.method == 'POST':
         contact_form = ContactForm(request.POST)
         if contact_form.is_valid():

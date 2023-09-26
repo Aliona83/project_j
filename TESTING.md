@@ -234,19 +234,52 @@ This README document outlines the results of manual testing conducted on the hom
 
 ### JavaScript
 
+JavaScript codes used on the website were validated using JSHint. No errors were found, though there were a few warnings regarding undefined / unused variables. Please see the image below for explanations.
+
 <details>
    <summary>Click to see more</summary>
 
-  ![]()
+  * Stripe_elements.js
+
+  ![](/readmeImages/stripe_elements.png)
+
+
+  * Javascript in bag.html
+  
+  ![](/readmeImages/bagJavascript.png)
+
+   * Javascript in jewelleries.html
+  
+  ![](/readmeImages/jewelleryJavascript.png)
+
+
+   * Javascript in quantity_input_script.html
+  
+  ![](/readmeImages/quantity_input_javascript.png)
+
+   * Javascript in edit/add_jewelleires.html
+  
+  ![](/readmeImages/editJavascript.png)
+
+   * qountryfield.js
+  
+  ![](/readmeImages/qountryfield.png)
 
 </details>
 
 ### Python
 
+Python codes used throughout the application were validated using CI Python Linter and no issues or errors were found. Please see the results for each page below. 
+
 <details>
    <summary>Click to see more</summary>
 
-  ![]()
+  ![](/readmeImages/pythonTest.png)
+
+  Left unfixed error in two files :
+   
+  ![](/readmeImages/webhook_handlertest.png)
+  ![](/readmeImages/webhooks.png)
 
 </details>
 
@@ -259,18 +292,26 @@ This README document outlines the results of manual testing conducted on the hom
 
   * Ensuring that your website looks and functions well on various devices, including smartphones, tablets, and desktop computers, is crucial for providing a positive user experience. Responsive design ensures that users can access your content and navigate your site comfortably, regardless of the device they are using. It was done on website [DisignChecker](https://responsivedesignchecker.com/)
 
-## Wave Test
-
 ## Ax Tools
 
+![](/readmeImages/homeAx.png)
 
+![](/readmeImages/jewelleryAx.png)
 
+![](/readmeImages/bagAx.png)
+
+![](/readmeImages/profileAx.png)
+
+![](/readmeImages/managementAx.png)
 ## Browser Testing
 
 Google Chrome: All aspects of the site work perfectly fine. Pages load quickly, all features are working and no problems found with CRUD, logging in or out, signing up, paying for each service etc.
 Mozilla Firefox: All aspects of the site work perfectly fine. Pages load quickly, all features are working and no problems found with CRUD, logging in or out, signing up, paying for each service etc.
 
 ## Device Testing
+
+The website was tested manually on a variety of devices, either personally by the site creator (Kayla Smith) or by friends and family members. Devices included laptop computers, iPhone8 plus, iPhoneXR, iPad and Android devices to ensure responsiveness on various screen sizes. The website performed as intended. Responsive design was also checked throughout all stages of development using Chrome developer tools through inspect.
+
 
 
 ## Lighthouse 

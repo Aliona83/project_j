@@ -21,24 +21,26 @@ def create_custom_jewellery(request):
             messages.success(request, 'Successfully submit your form!')
             return redirect(reverse('CustomOrder:submitted_success'))
         else:
-            messages.error(request, 'Failed to submit form. Please ensure the form is valid.')
-            return redirect('CustomOrder:submitted_success')  
+            messages.error(
+                request,
+                'Failed to submit form. Please ensure the form is valid.')
+            return redirect('CustomOrder:submitted_success')
     else:
         form = CustomJewelleryDesignForm()
-    
     context = {'form': form}
     return render(request, 'CustomOrder/design_jewellery.html', context)
 
-def submitted_success(request):
-     return render(request, 'CustomOrder/submitted_success.html')
 
+def submitted_success(request):
+    return render(request, 'CustomOrder/submitted_success.html')
 
 
 def view_submitted_forms(request):
     if request.user.is_superuser:
-       custom_orders = CustomJewelleryDesign.objects.all()
+        custom_orders = CustomJewelleryDesign.objects.all()
     else:
-        custom_orders = CustomJewelleryDesign.objects.filter(user_profile__user=request.user)  
+        custom_orders = CustomJewelleryDesign.objects.filter(
+            user_profile__user=request.user)
 
     context = {'custom_orders': custom_orders}
     return render(request, 'CustomOrder/submitted_forms.html', context)
