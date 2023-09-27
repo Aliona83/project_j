@@ -41,19 +41,46 @@ def all_jewelleries(request):
 
             jewelleries = jewelleries.order_by(model_sort_field)
         if 'category' in request.GET:
-            categories = request.GET['category'].split(',')
-            jewelleries = jewelleries.filter(category__name__in=categories)
-            categories = Category.objects.filter(name__in=categories)
+            categories = request.GET.getlist('category')
+            print(categories)
+            if categories:
+                jewelleries = jewelleries.filter(category__name__in=categories)
+                categories = Category.objects.filter(name__in=categories)
+
         if 'q' in request.GET:
             query = request.GET['q']
             if query:
-                queries = (
-                    Q(name__icontains=query) | Q(description__icontains=query)
-                )
-                jewelleries = jewelleries.filter(queries)
+        # Check if the query contains a comma, which indicates multiple categories
+               if ',' in query:
+                    category_names = query.split(',')
+                    # Search for products in any of the specified categories
+                    queries = (
+                        Q(name__icontains=query) |
+                        Q(description__icontains=query) |
+                        Q(category__name__in=category_names)
+                    )
+                    jewelleries = jewelleries.filter(queries)
+               else:
+                    # Search by product name, description, and exact category name
+                    queries = (
+                        Q(name__icontains=query) |
+                        Q(description__icontains=query) |
+                        Q(category__name__iexact=query)  # Search for exact category name
+                    )
+                    jewelleries = jewelleries.filter(queries)
             else:
-                messages.error(request,
-                               "You didn't enter any search criteria!")
+                    messages.error(request, "You didn't enter any search criteria!")
+        
+        # if 'q' in request.GET:
+        #     query = request.GET['q']
+        #     if query:
+        #         queries = (
+        #             Q(name__icontains=query) | Q(description__icontains=query) | Q(category__name__icontains=query)
+        #         )
+        #         jewelleries = jewelleries.filter(queries)
+        #     else:
+        #         messages.error(request,
+        #                        "You didn't enter any search criteria!")
     items_per_page = 15
     paginator = Paginator(jewelleries, items_per_page)
     page_number = request.GET.get('page')
