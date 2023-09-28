@@ -37,50 +37,41 @@ def all_jewelleries(request):
         model_sort_field = sort_key_mapping.get(sort, default_sort)
 
         if direction == 'desc':
-            model_sort_field = f'-{model_sort_field}'
-
             jewelleries = jewelleries.order_by(model_sort_field)
+            model_sort_field = f'-{model_sort_field}'
+        elif direction == 'asc' and sort == 'price':
+            jewelleries = jewelleries.order_by('price')
+
         if 'category' in request.GET:
-            categories = request.GET.getlist('category')
-            print(categories)
+            categories = request.GET.get('category').split(",")
             if categories:
-                jewelleries = jewelleries.filter(category__name__in=categories)
-                categories = Category.objects.filter(name__in=categories)
+                category_query = Q()
+                for category in categories:
+                    category_query |= Q(category__name=category)
+            jewelleries = jewelleries.filter(category_query)
 
         if 'q' in request.GET:
             query = request.GET['q']
             if query:
-        # Check if the query contains a comma, which indicates multiple categories
-               if ',' in query:
+                if ',' in query:
                     category_names = query.split(',')
-                    # Search for products in any of the specified categories
                     queries = (
                         Q(name__icontains=query) |
                         Q(description__icontains=query) |
                         Q(category__name__in=category_names)
                     )
                     jewelleries = jewelleries.filter(queries)
-               else:
-                    # Search by product name, description, and exact category name
+                else:
                     queries = (
                         Q(name__icontains=query) |
                         Q(description__icontains=query) |
-                        Q(category__name__iexact=query)  # Search for exact category name
+                        Q(category__name__iexact=query)
                     )
                     jewelleries = jewelleries.filter(queries)
             else:
-                    messages.error(request, "You didn't enter any search criteria!")
-        
-        # if 'q' in request.GET:
-        #     query = request.GET['q']
-        #     if query:
-        #         queries = (
-        #             Q(name__icontains=query) | Q(description__icontains=query) | Q(category__name__icontains=query)
-        #         )
-        #         jewelleries = jewelleries.filter(queries)
-        #     else:
-        #         messages.error(request,
-        #                        "You didn't enter any search criteria!")
+                messages.error(request,
+                               "You didn't enter any search criteria!")
+
     items_per_page = 15
     paginator = Paginator(jewelleries, items_per_page)
     page_number = request.GET.get('page')
@@ -101,6 +92,12 @@ def all_jewelleries(request):
         'sort': sort,
         'direction': direction,
     }
+
+    if categories:
+        category_param = '&'.join(
+          [f'category={category}' for category in categories]
+        )
+        context['category_param'] = category_param
 
     return render(request, 'jewelleries/jewelleries.html', context)
 

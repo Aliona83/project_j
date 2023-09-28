@@ -83,13 +83,45 @@ User stories help us understand the needs and expectations of our users. They se
     * Information recieved in the registration mail
   * As an Unregistered User, I want to be able to register so that I   can create my account and access to the registered user features
     *  Link for Sign Up in Navbar
-  * As an Unregistered User I want to see the detailed information of the wares
-    * Ware's details page
+  * As an Unregistered User I want to see the detailed information of the jewelleries
+    * Jewelleries details page
+
+ Super User Features
+
+ * As a super user, you have access to a range of powerful features that allow you to manage and oversee various aspects of the platform. These features are designed to provide you with control and insights into the system's operations.
+
+
+* Add Images
+Super users have the privilege to add images to the platform. Whether you need to upload new product images, banners, or any other visual content, you can easily do so through the super user interface. This feature helps keep the platform's visuals up-to-date and engaging.
+
+* Delete Images
+Should the need arise, you can also delete images as a super user. Whether it's removing outdated content or addressing any other image-related requirements, you have the capability to maintain a clean and relevant image library.
+
+* Edit Images
+Super users have the authority to make edits to existing images. Whether you need to crop, resize, or make other adjustments to optimize images for the platform, you can do so effortlessly through the super user interface.
+
+* Order Management
+
+ View All Orders.
+As a super user, you can access an overview of all orders placed on the platform. This comprehensive view provides insights into order history, allowing you to monitor sales trends and customer preferences.
+
+* View Custom Orders
+
+In addition to regular orders, super users can specifically view custom orders placed by customers. Custom orders often require special attention, and this feature enables you to track and manage them effectively.
+
+* Contact Us Messages
+
+Super users have access to contact us messages sent by users of the platform. This feature enables you to review user inquiries, feedback, and support requests. You can respond to messages, resolve issues, and maintain a positive user experience.
 
 
   ## Agile Methodologies
   
   The Agile Methodology approach was adopted during the development of the Elegancy Jewellery - store. I have utilized GitHub's built-in features such as issue tracking and project management to effectively manage tasks and monitor progress. 
+
+  ![](/readmeImages/agile.png)
+
+ 
+  [ Here is the link ](https://github.com/Aliona83/project_j/issues)
 
 1. Epic - Project Setup
 
@@ -241,6 +273,39 @@ User stories help us understand the needs and expectations of our users. They se
   9. Admin
   ![Admin](/readmeImages/admin.png)
     * Admin page allows site owners to exercise administrative control over; users, orders, email addresses, jewelleries, categories.
+  
+  10. Toast Notifications and Alert Messages
+
+  * In this project, we have implemented a range of toast notifications and alert messages to enhance the user experience. These notifications provide important feedback and information to users during various interactions with the platform. Below, you'll find descriptions of the different types of notifications and when they are displayed.
+    1. Login Success
+
+   Upon a successful login, a personalized notification toast is displayed to greet the user by their name. This personalization helps create a more engaging and connected user experience. The notification is designed to be responsive, ensuring a consistent and visually appealing appearance across different screen sizes and devices.
+ ![](/readmeImages/login.png)
+
+   2. Logout
+
+   When a user logs out of their account, a confirmation toast is shown to inform them that they have been successfully logged out. This helps users confirm that their action was successful and provides a smooth transition out of their session.
+  
+   ![](/readmeImages/logout.png)
+
+  3. Success Message - Delete
+
+  * After successfully deleting an item or performing a similar action, a success notification toast is shown to confirm the action's completion. This positive feedback reassures users that their requested action was carried out successfully.
+
+  ![](/readmeImages/delete.png)
+
+  4. Error Messages
+
+  * I've implemented error toast notifications to alert users when they encounter issues or input errors. These error messages are displayed when, for example, a user submits a form with missing or invalid data. Clear and informative error messages help users understand and address the issues at hand.
+
+ ![](/readmeImages/error.png)
+
+ 4. Alert Messages
+
+ * In situations where email confirmation is required, we display an alert message to prompt users to confirm their email address. This message provides clear instructions and encourages users to complete the necessary steps for email verification.
+
+ ![](/readmeImages/alert.png)
+
 
   * Product Page Features
 
@@ -288,9 +353,11 @@ User stories help us understand the needs and expectations of our users. They se
      * After you submit a form on our platform, you will receive a clear and reassuring success message to confirm that your submission was successful. This message serves as confirmation that your Form Submitted Successfully! Thank you for reaching out to us. We have received your request and will process it promptly. If you need any further assistance, please don't hesitate to contact us."
 
   * Contact Us Page
-  1. 
+
   ![Contact form](/readmeImages/contacUs.png)
-     * Our "Contact Us" page is designed to provide user with a convenient and efficient way to get in touch with our customer support team. Whether you have questions, need assistance, or want to share feedback, this page is your gateway to direct communication with us.
+
+  * Our "Contact Us" page is designed to provide user with a convenient and efficient way to get in touch with our customer support team. Whether you have questions, need assistance, or want to share feedback, this page is your gateway to direct communication with us.
+    
      
   * Profile   
   1. 

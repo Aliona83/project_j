@@ -62,10 +62,10 @@
                     <ul class="pagination justify-content-center">
                         {% if jewelleries.has_previous %}
                         <li class="page-item">
-                            <a class="page" href="?page=1&sort={{ sort }}&direction={{ direction }}">First</a>
+                            <a class="page" href="?page=1&sort={{ sort }}&direction={{ direction }}{% for category in current_categories %}&category={{ category }}{% endfor %}{% if search_term %}&q={{ search_term }}{% endif %}">First</a>
                         </li>
                         <li class="page-item">
-                            <a class="page" href="?page={{ jewelleries.previous_page_number }}&sort={{ sort }}&direction={{ direction }}">Previous</a>
+                            <a class="page" href="?page={{ jewelleries.previous_page_number }}&sort={{ sort }}&direction={{ direction }}{% for category in current_categories %}&category={{ category }}{% endfor %}{% if search_term %}&q={{ search_term }}{% endif %}">Previous</a>
                         </li>
                         {% endif %}
                         <li class="page-item active">
@@ -73,10 +73,10 @@
                         </li>
                         {% if jewelleries.has_next %}
                         <li class="page-item">
-                            <a class="page" href="?page={{ jewelleries.next_page_number }}&sort={{ sort }}&direction={{ direction }}">Next</a>
+                            <a class="page" href="?page={{ jewelleries.next_page_number }}&sort={{ sort }}&direction={{ direction }}{% for category in current_categories %}&category={{ category }}{% endfor %}{% if search_term %}&q={{ search_term }}{% endif %}">Next</a>
                         </li>
                         <li class="page-item">
-                            <a class="page" href="?page={{ jewelleries.paginator.num_pages }}&sort={{ sort }}&direction={{ direction }}">Last</a>
+                            <a class="page" href="?page={{ jewelleries.paginator.num_pages }}&sort={{ sort }}&direction={{ direction }}{% for category in current_categories %}&category={{ category }}{% endfor %}{% if search_term %}&q={{ search_term }}{% endif %}">Last</a>
                         </li>
                         {% endif %}
                     </ul>
