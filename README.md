@@ -368,13 +368,19 @@ Super users have access to contact us messages sent by users of the platform. Th
   * Product Management
 
   ![Edit/Delet](/readmeImages/editDelete.png)
-         * Edit Products: Superusers can edit existing product details, including name, description, and price.
-         * Delete Products: Superusers can remove products from the system.
-         * Add New Products: Superusers can add new products to the system, specifying their details.
-      * Customer Interaction
-         * View Customer Contact Us Forms: Superusers can access and view contact us forms submitted by customers.
-         * View Customer Order History: Superusers can view the order history of all users, including order details and statuses.
-         * View Custom Order Forms: Superusers can access and view custom order forms submitted by users.
+         
+  * Edit Products: Superusers can edit existing product details, including name, description, and price.
+
+  * Delete Products: Superusers can remove products from the system.
+
+   * Add New Products: Superusers can add new products to the system, specifying their details.
+
+  * Customer Interaction
+  View Customer Contact Us Forms: Superusers can access and view contact us forms submitted by customers.
+
+  * View Customer Order History: Superusers can view the order history of all users, including order details and statuses.
+
+  * View Custom Order Forms: Superusers can access and view custom order forms submitted by users.
 
 2. 
   ![Profile User](/readmeImages/user.png)
@@ -404,8 +410,9 @@ Super users have access to contact us messages sent by users of the platform. Th
   * All images used on our website are sourced from [Pexels](https://www.pexels.com/), a high-quality and free stock photos platform. We believe in using high-quality images to enhance the overall visual experience and maintain a professional appearance.
 
   3. Font Selection 
-     * 
-     Two fonts were chosen with Google Fonts to be used across the entire site
+
+     * One fonts were chosen with Google Fonts to be used across the entire site.
+
      * The chosen fonts were 'Lato', with serif as back up fonts for lists, forms, buttons and paragraphs.
 
 ##  Skeleton  
@@ -508,8 +515,6 @@ Super users have access to contact us messages sent by users of the platform. Th
   
   ## Acknowledgments
 
-     
-  
   1. [CodeCademy](https://www.codecademy.com/)
 
   * I was having a course it help me be more confident with creating object, classes. "Learn Object Oriented Programming with Python.
@@ -519,10 +524,11 @@ Super users have access to contact us messages sent by users of the platform. Th
   3. [Stackoverflow](https://stackoverflow.com/tags)
 
   4. [Slack](https://slack.com/intl/en-ie/)
+     * Thanks to everyone in Slack who replied to my messages and their help. 
   5. [Code Institute](https://codeinstitute.net/ie/)
-     * Code institute for the amazing Tutors on the course.
-     * For amaizing help with Boutique Ago walkthrough project
-  6. My excellent Mentor Mitko 
+     * Code institute for the amazing Tutors on the course. It was very good support.
+     * For amazing help with the Boutique Ado walkthrough project.
+  6. Family. Who supported me all this time and believed in me even at the moment when I was losing faith in myself that I could get through this. 
 
   7. [Google](https://www.google.com/)
   8. [Boostrap Documentations](https://getbootstrap.com/docs/5.0/getting-started/introduction/)

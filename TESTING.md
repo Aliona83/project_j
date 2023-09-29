@@ -398,7 +398,7 @@ Resolution: I update the order history retrieval logic. When a user logs in, ens
 Issue: The home page is not dynamically updating with new products or information.
 Resolution: Found the right way how to fix this in Stack Overflow.
 
-3.Bag Item Limit vs. Checkout Item Limit Discrepancy:
+3. Bag Item Limit vs. Checkout Item Limit Discrepancy
 
 Issue: Users can add more than two items in the checkout process, even though there is a limit of two items in the bag.
 Resolution: Fixed item limits throughout the shopping process.  Had to make that input will be able to increase only until 2 quantity after 2 quantity button is disable.
@@ -406,14 +406,14 @@ Resolution: Fixed item limits throughout the shopping process.  Had to make that
 3. Pagination Breaking Functionality of Sort By, Search, and Categories:
 
 Issue: Pagination is interfering with the sorting, searching, and filtering functionality.
-Resolution: Was changin sort by search and categories view logical that the sorting, searching, and filtering parameters are maintained across paginated pages. 
+Resolution: Changed sort by, search and categories view logical that the sorting, searching, and filtering parameters are maintained across paginated pages. 
 
 4. 404 Page Not Working as Expected:
  
 Issue: The 404 page doesn't seem to be functioning correctly.
 Resolution: Should remove 500 error after that 404 error start show up.
 
-5.Mobile Responsiveness Issues:
+5. Mobile Responsiveness Issues
 
 Issue: The website doesn't display properly on mobile devices, leading to a poor mobile user experience.
 Resolution: Implement responsive web design to ensure that  website adapts to different screen sizes and devices. Test the website on various mobile devices and browsers to identify and fix layout and usability issues.
@@ -422,14 +422,13 @@ Resolution: Implement responsive web design to ensure that  website adapts to di
 
 1. Search bar
 
-Missing or Inadequate Search Functionality:
+Issue with  Search Functionality:
 
-Issue: Users have difficulty finding products due to limited or ineffective search functionality. Unable search by categories.Will show 0 product found.
+Issue: Users have difficulty finding products due to search functionality. Unable to search by categories.Will show 0 products found.Also by type gold you will be see silver products also.
 
 2. Issue: Sort By and Search  Not Working on Second Page. 
 
 2. Sort by
 
-* 
- 
+Having issue with clicking to next page, when click on next page functionality of sort by dont work as aspected. Sort by functionality works perfectly on each seperate category will sort products correctly.
  
