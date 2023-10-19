@@ -86,6 +86,7 @@ def checkout(request):
 
             order.order_total = stripe_total
             order.grand_total = stripe_total
+            order.discount_apply = 100 if stripe_total > 1000 else 0 
             order.save()
 
             request.session['save_info'] = 'save-info' in request.POST
