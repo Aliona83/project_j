@@ -5,9 +5,9 @@ from jewelleries.models import Jewellery
 class Review(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     jewellery = models.ForeignKey(Jewellery, on_delete=models.CASCADE)
-    comment = models.TextField()
+    comment = models.TextField(max_length=1000)
     created_at = models.DateTimeField(auto_now_add=True)
-
-    def __str__(self):
-        return f"Review by {self.user.username} for {self.jewellery.name}"
-
+    rate = models.FloatField(default=0)
+    
+def __str__(self):
+    return self.user.username

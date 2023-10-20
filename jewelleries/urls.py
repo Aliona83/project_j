@@ -16,4 +16,6 @@ urlpatterns = [
     path(
         'delete/<int:jewellery_id>/',
         views.delete_jewellery, name='delete_jewellery'),
+        
+          
 ]

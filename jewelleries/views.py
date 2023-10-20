@@ -9,6 +9,8 @@ from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.http import JsonResponse
 
 
+
+
 def all_jewelleries(request):
     """ A view to show all jewelleries, '
     'including sorting and search queries """
@@ -91,6 +93,7 @@ def all_jewelleries(request):
         'current_categories': categories,
         'sort': sort,
         'direction': direction,
+       
     }
 
     if categories:
@@ -106,9 +109,11 @@ def jewelleries_details(request, jewellery_id):
     """ A view to show individual product details """
 
     jewellery = get_object_or_404(Jewellery, pk=jewellery_id)
+  
 
     context = {
         'jewellery': jewellery,
+       
     }
 
     return render(request, 'jewelleries/jewelleries_details.html', context)
@@ -182,3 +187,4 @@ def delete_jewellery(request, jewellery_id):
     jewellery.delete()
     messages.success(request, 'Jewellery was successfully deleted!')
     return redirect(reverse('jewelleries:jewelleries'))
+
