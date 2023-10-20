@@ -7,6 +7,7 @@ from .models import Jewellery, Category
 from .forms import ProductForm
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.http import JsonResponse
+from review.models import Review
 
 
 
@@ -109,10 +110,12 @@ def jewelleries_details(request, jewellery_id):
     """ A view to show individual product details """
 
     jewellery = get_object_or_404(Jewellery, pk=jewellery_id)
-  
+
+    reviews = Review.objects.filter(jewellery = jewellery)
 
     context = {
         'jewellery': jewellery,
+        'reviews': reviews,
        
     }
 
