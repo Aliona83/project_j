@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Jewellery, Category
+from .models import Jewellery, Category, ReviewRating
 
 # Register your models here.
 
@@ -26,3 +26,4 @@ class CategoryAdmin(admin.ModelAdmin):
 
 admin.site.register(Jewellery)
 admin.site.register(Category)
+admin.site.register(ReviewRating)

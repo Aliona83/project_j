@@ -3,11 +3,11 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
-from .models import Jewellery, Category
-from .forms import ProductForm
+from .models import Jewellery, Category, ReviewRating
+from .forms import ProductForm, ReviewForm
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.http import JsonResponse
-from review.models import Review
+
 
 
 
@@ -105,21 +105,45 @@ def all_jewelleries(request):
 
     return render(request, 'jewelleries/jewelleries.html', context)
 
-
 def jewelleries_details(request, jewellery_id):
     """ A view to show individual product details """
 
     jewellery = get_object_or_404(Jewellery, pk=jewellery_id)
-
-    reviews = Review.objects.filter(jewellery = jewellery)
-
+    reviews = ReviewRating.objects.filter(jewellery=jewellery)
+     
     context = {
         'jewellery': jewellery,
         'reviews': reviews,
-       
     }
 
     return render(request, 'jewelleries/jewelleries_details.html', context)
+
+
+@login_required
+def submit_review(request, jewellery_id):
+    jewellery = get_object_or_404(Jewellery, pk=jewellery_id)
+    url = request.META.get('HTTP_REFERER')
+    if request.method == 'POST':
+        try:
+            review = ReviewRating.objects.get(user=request.user, jewellery_id=jewellery_id)
+            print(review)
+            form = ReviewForm(request.POST, instance=review)
+            if form.is_valid():
+                form.save()
+            messages.success(request, 'Thank you! Your review has been updated.')
+        except ReviewRating.DoesNotExist:
+            form = ReviewForm(request.POST)
+            if form.is_valid():
+                review = form.save(commit=False)
+                review.jewellery = jewellery
+                review.user = request.user
+                review.ip = request.META.get('HTTP_X_FORWARDED_FOR', request.META.get('REMOTE_ADDR'))
+                review.save()
+                messages.success(request, 'Thank you! Your review has been submitted.')
+    return redirect(url)
+
+
+
 
 
 @login_required

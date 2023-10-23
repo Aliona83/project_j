@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 
 class Category(models.Model):
@@ -35,3 +36,15 @@ class Jewellery(models.Model):
 
     def __str__(self):
         return self.name
+
+
+class ReviewRating(models.Model):
+    jewellery = models.ForeignKey(Jewellery, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    review = models.TextField(max_length=500, blank=False)
+    rating = models.FloatField()
+    created_at = models.DateTimeField(auto_now_add=True)
+    
+
+    def __str__(self):
+        return f"Review for {self.jewellery.name} by {self.user.username}"
