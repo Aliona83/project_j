@@ -74,6 +74,16 @@ def all_jewelleries(request):
             else:
                 messages.error(request,
                                "You didn't enter any search criteria!")
+        sort_key = 'name'  # Default sorting key if not provided in request.GET
+    if sort:
+        sort_key = sort
+
+    if direction == 'desc':
+        sort_key = f'-{sort_key}'
+
+    jewelleries = jewelleries.order_by(sort_key)
+
+
 
     items_per_page = 15
     paginator = Paginator(jewelleries, items_per_page)

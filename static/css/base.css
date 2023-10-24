@@ -305,14 +305,17 @@ a.category-badge > span.badge:hover {
     height: 2px;
 }
 
-/* Hide Radio button */
+/* -----------Hide Radio button------ */
 .rate > input{
     display: none;
+  
+   
   }
   
   .rate{
-    display: inline-block;;
+    display: inline-block;
     border: 0;
+    display: none;
   }
   
   .rate > label{
@@ -320,7 +323,7 @@ a.category-badge > span.badge:hover {
   }
   
   /* Showing the stars */
-  .rate > label:before{
+  .rate > label:before {
     display: inline-block;
     font-size: 1.1rem;
     font-family: FontAwesome;

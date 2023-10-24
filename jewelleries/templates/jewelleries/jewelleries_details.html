@@ -117,9 +117,9 @@
 
 					<div>
 						<!-- Rating stars -->
-						<label class="ml-3">How do you rate this product?</label>
+						<label>How do you rate this product?</label>
 						<br>
-						<div class="rate ml-3">
+						<div class="rate">
                             <input type="radio" name="rating" id="rating10" value="5" required>
                             <label for="rating10" title="5"></label>
                         
@@ -153,10 +153,10 @@
                         
 <br>
 						Review Title:
-						<input type="text" class="form-control" name="subject">
+						<input type="text" class="form-control" name="subject" required>
 						<br>
 						Review:
-						<textarea name="review" rows="4" class="form-control"></textarea>
+						<textarea name="review" rows="4" class="form-control" required></textarea>
 						<br>
 						
                     </div>
@@ -184,7 +184,8 @@
 
 						<div class="text">
 							<span class="date text-muted float-md-right">{{review.rate}} </span>
-							<h6 class="mb-1">{{review.created_at}} </h6>
+                            <h4><i class="fa-solid fa-user" style="color: #cd51c8;"></i> {{review.user}}</h4>
+							<h6 class="mb-1"><i class="fa-regular fa-clock" style="color: #c45dc6;"></i> {{review.created_at}}</h6>
 							<div class="rating-star">
 								<span>
 									<i class="fa fa-star{% if review.rating == 0.5 %}-half-o{% elif review.rating < 1 %}-o {% endif %}" aria-hidden="true"></i>
@@ -197,6 +198,7 @@
 						</div>
 					</div>
                     <div class="mt-3">
+                        
 						<h6>{{review.jewellery}}</h6>
 						<p>
 							{{review.review}}
@@ -204,6 +206,7 @@
 						</p>
 					</div>
 				</article>
+                <hr>
 {% endfor %}
 
 
@@ -211,7 +214,7 @@
 		</div> <!-- row.// -->
 
 
-	</div> <!-- container .//  -->
+	
                     
 
 
