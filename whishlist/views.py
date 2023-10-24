@@ -30,7 +30,7 @@ def wishlist(request):
 @login_required
 def add_to_wishlist(request, jewellery_id):
     """
-    Add a product from the store to the
+    Add a jewellery product from the store to the
     wishlist for the logged in user
     """
     jewellery = get_object_or_404(Jewellery, pk=jewellery_id)
@@ -53,7 +53,6 @@ def remove_from_wishlist(request, jewellery_id):
     wishlist = WishList.objects.get(user=request.user)
     jewellery = get_object_or_404(Jewellery, pk=jewellery_id)
 
-    # Remove product from the wishlist
     wishlist.jewelleries.remove(jewellery)
     messages.info(request, "A jewellery was removed from your wishlist")
 

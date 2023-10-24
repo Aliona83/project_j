@@ -134,13 +134,14 @@ def jewelleries_details(request, jewellery_id):
 
 @login_required
 def submit_review(request, jewellery_id):
+    """
+    A View to Submit Review
+    """
     jewellery = get_object_or_404(Jewellery, pk=jewellery_id)
     url = request.META.get('HTTP_REFERER')
     if request.method == 'POST':
-        print(request)
         try:
             review = ReviewRating.objects.get(user=request.user, jewellery_id=jewellery_id)
-            print(review)
             form = ReviewForm(request.POST, instance=review)
             if form.is_valid():
                 form.save()
@@ -148,13 +149,15 @@ def submit_review(request, jewellery_id):
         except ReviewRating.DoesNotExist:
             form = ReviewForm(request.POST)
             if form.is_valid():
+                
                 review = form.save(commit=False)
                 review.jewellery = jewellery
                 review.user = request.user
                 review.ip = request.META.get('HTTP_X_FORWARDED_FOR', request.META.get('REMOTE_ADDR'))
                 review.save()
-                messages.success(request, 'Thank you! Your review has been submitted.')
+                messages.success(request, 'Thank you! Your review has been submitted.')    
     return redirect(url)
+           
 
 
 

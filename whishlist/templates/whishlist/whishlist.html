@@ -35,12 +35,12 @@
 				</div>
 			</div>
 			<div class="col-12 col-md-6 col-lg-4">
-				<div class= jewellerys-detail-container my-5">
-					<h3 class="mb-4 pt-md-5 text-black font-weight-bold"> {{ jewellery.name }}</h3>
+				<div class="jewellerys-detail-container my-5">
+					<h3 class="mb-4 pt-md-3 text-black"> {{ jewellery.name }}</h3>
 					<h4 class="text-black lead mb-2 text-left font-weight-bold">£{{ jewellery.price }}</h4>
 					{% if jewellery.category %}
 					<p class="small">
-						<a class="text-muted text-black font-weight-bold"
+						<a class="text-muted text-black"
 							href="{% url 'jewelleries:jewelleries' %}?category={{ jewellery.category.name }}">
 							<i class="fas fa-hashtag"></i> {{ jewellery.category.friendly_name }}
 						</a>
@@ -50,10 +50,10 @@
 				<!-- Buttons -->
 				<div class="text-center">
 					<a class="btn btn-outline-black btn-width m-3" href="{% url 'jewelleries:jewelleries_details' jewellery.id %}">
-						<span class="text-uppercase font-weight-bold"> Jewellery Details</span>
+						<span class="font-weight-bold"> Jewellery Details</span>
 					</a>
 					<a class="btn btn-outline-black btn-width m-3" href="{% url 'whishlist:remove_from_wishlist' jewellery.id %}">
-						<span class="text-uppercase font-weight-bold">Remove from wishlist</span>
+						<span class="font-weight-bold">Remove from wishlist</span>
 					</a>
 				</div>
 			</div>
