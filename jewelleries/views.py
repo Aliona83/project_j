@@ -137,6 +137,7 @@ def submit_review(request, jewellery_id):
     jewellery = get_object_or_404(Jewellery, pk=jewellery_id)
     url = request.META.get('HTTP_REFERER')
     if request.method == 'POST':
+        print(request)
         try:
             review = ReviewRating.objects.get(user=request.user, jewellery_id=jewellery_id)
             print(review)

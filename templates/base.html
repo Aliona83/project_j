@@ -87,10 +87,18 @@
                         </div>
                     </li>
                     <li class="list-inline-item">
+                        <a class="nav-link" href="{% url 'whishlist:whishlist' %}">
+                            <div class="text-center">
+                                <div><i class="fa-solid fa-heart fa-lg text-black"></i></div>
+                                <p class="text-black my-0">Wishlist</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
                         <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-info{% endif %} nav-link" href="{% url 'view_bag:view_bag'%}">
                             <div class="text-center">
-                                <div><i class="fas fa-shopping-bag fa-lg text-info"></i></div>
-                                <p class="my-0 text-info">
+                                <div><i class="fas fa-shopping-bag fa-lg text-black"></i></div>
+                                <p class="my-0 text-black">
                                     {% if grand_total %}
                                         ${{ grand_total|floatformat:2 }}
                                     {% else %}

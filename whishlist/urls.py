@@ -4,7 +4,7 @@ from . import views
 app_name = 'whishlist' 
 
 urlpatterns = [
-    path('', views.wishlist, name='wishlist'),
+    path('', views.wishlist, name='whishlist'),
     path(
         'add_to_wishlist/<jewellery_id>',
         views.add_to_wishlist,

@@ -24,7 +24,7 @@ def wishlist(request):
         'wishlist': wishlist,
     }
 
-    return render(request, 'wishlist/wishlist.html', context)
+    return render(request, 'whishlist/whishlist.html', context)
 
 
 @login_required
@@ -39,7 +39,7 @@ def add_to_wishlist(request, jewellery_id):
     wishlist, _ = WishList.objects.get_or_create(user=request.user)
     # Add product to the wishlist
     wishlist.jewelleries.add(jewellery)
-    messages.info(request, "A new product was added to your wishlist")
+    messages.info(request, "A new jewellery was added to your wishlist")
 
     return redirect(request.META.get('HTTP_REFERER'))
 
@@ -55,6 +55,6 @@ def remove_from_wishlist(request, jewellery_id):
 
     # Remove product from the wishlist
     wishlist.jewelleries.remove(jewellery)
-    messages.info(request, "A product was removed from your wishlist")
+    messages.info(request, "A jewellery was removed from your wishlist")
 
     return redirect(request.META.get('HTTP_REFERER'))

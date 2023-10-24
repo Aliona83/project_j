@@ -306,16 +306,16 @@ a.category-badge > span.badge:hover {
 }
 
 /* -----------Hide Radio button------ */
-.rate > input{
+ .rate > input{
     display: none;
   
    
-  }
+  } 
   
   .rate{
     display: inline-block;
     border: 0;
-    display: none;
+    
   }
   
   .rate > label{
