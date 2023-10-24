@@ -93,6 +93,14 @@
                                     <span class="text-uppercase">Keep Shopping</span>
                                 </a>
                                 <input type="submit" class="btn  btn-outline-black rounded-0 text-uppercase mt-5" value="Add to Bag">
+                                {% if request.user.is_authenticated %}
+                                    <a class="btn btn-outline-black btn-width mt-3" href="{% url 'whishlist:add_to_wishlist' jewellery.id %}">
+                                        <span class="text-uppercase">Add to wishlist</span>
+                                        <span class="icon">
+                                            <i class="fas fa-chevron-right"></i>
+                                        </span> 
+                                    </a>
+                                {% endif %}
                             </div>
                             <input type="hidden" name="redirect_url" value="{{ request.path }}">
                         </div>
@@ -103,18 +111,13 @@
     </div>
 
 </div>
-
+<!-- Write Reviews  -->
 <br>
-
 		<div class="row">
 			<div class="col-md-9">
-
-
-
 				<form action="{% url 'jewelleries:submit_review' jewellery.id %}" method="POST">
 					{% csrf_token %}
 					<h5 class="ml-3">Write Your Review</h5>
-
 					<div>
 						<!-- Rating stars -->
 						<label>How do you rate this product?</label>
@@ -210,9 +213,8 @@
 {% endfor %}
 
 
-			</div> <!-- col.// -->
-		</div> <!-- row.// -->
-
+			</div> 
+		</div> 
 
 	
                     
