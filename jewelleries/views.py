@@ -20,6 +20,9 @@ def all_jewelleries(request):
     categories = None
     sort = None
     direction = None
+    sort_key = 'name'  
+    direction = 'asc'  
+
 
     if request.GET:
         valid_sort_keys = ['price', 'rating', 'name', 'category']
@@ -74,7 +77,7 @@ def all_jewelleries(request):
             else:
                 messages.error(request,
                                "You didn't enter any search criteria!")
-        sort_key = 'name'  # Default sorting key if not provided in request.GET
+        sort_key = 'name' 
     if sort:
         sort_key = sort
 
