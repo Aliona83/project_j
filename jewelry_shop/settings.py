@@ -53,6 +53,7 @@ INSTALLED_APPS = [
     'profiles',
     'CustomOrder',
     'contact',
+    'whishlist',
     
 
     # Other
