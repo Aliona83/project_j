@@ -314,9 +314,10 @@ Super users have access to contact us messages sent by users of the platform. Th
    * Main Jewellery page offer products on large resolutions in a row of three. Images are large to attract the user's attention, and clicking the image will redirect the user to the product detail page. 
    * The product title and description provide essential information about the product.
   2.
-  ![Product Details](/readmeImages/prodoctDetailsPage.png)
+  ![Product Details](/readmeImages/details_page.png)
    * Detailed specifications and additional information about the product are provided.
    * Users can learn about materials, dimensions, care instructions, and more.
+   * User can learn about products such as diamonds shape, diamonds carats and gold karats.
    * Users can easily add the product to their shopping cart for future purchase.
   3. 
   ![Sort By](/readmeImages/sortBy.png)
