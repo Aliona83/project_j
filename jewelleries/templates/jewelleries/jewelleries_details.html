@@ -45,6 +45,15 @@
                     {% else %}
                         <small class="text-dark">No Rating</small>
                     {% endif %}
+                {% if jewellery.gold_karats %}
+                    <p class="mt-1 mb-0"><i class="fa-solid fa-copyright"></i> <small class="text-dark">Gold Karats: {{ jewellery.gold_karats }}</small></p>
+                {% endif %}
+                {% if jewellery.diamond_carats %}
+                    <p class="mt-1 mb-0"><i class="fa-brands fa-kickstarter"></i><small> Diamond Carats: {{ jewellery.diamond_carats }}</small></p>
+                {% endif %}
+                {% if jewellery.diamond_shape %}
+                    <p><i class="fa-solid fa-diamond"></i><small class="text-dark"> {{ jewellery.diamond_shape }}</small></p>
+                {% endif %}    
                       <!-- Admin Edit/Delete Buttons -->
                     {% if request.user.is_superuser %}
                         <small class="ml-3">

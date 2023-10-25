@@ -9,6 +9,8 @@
          "price":1653.99,
          "category":1,
          "rating":4.8,
+         "diamond_carats": 1.5,
+         "diamond_shape": "Diamond-round",
          "image":"pp5001340155.jpg"
       }
    },
@@ -22,6 +24,8 @@
          "price":1858.99,
          "category":1,
          "rating":5.0,
+         "diamond_carats": 1.25,
+         "diamond_shape": "Diamond-princess",
          "image":"pexels-the-glorious-studio-10475791.jpg"
       }
    },
@@ -35,6 +39,8 @@
          "price":1205.99,
          "category":1,
          "rating":4.8,
+         "diamond_carats": 2.00,
+         "diamond_shape": "Diamond-emerald",
          "image":"pexels-the-glorious-studio-10976653.jpg"
       }
    },
@@ -48,6 +54,8 @@
          "price":1169.99,
          "category":1,
          "rating":4.0,
+         "diamond_carats": 0.75,
+         "diamond_shape": "Diamond-oval",
          "image":"pexels-the-glorious-studio-12680630.jpg"
       }
    },
@@ -61,6 +69,9 @@
          "price":932.99,
          "category":1,
          "rating":5.0,
+         "gold_karats": 24,
+         "diamond_carats": 1.75,
+         "diamond_shape": "Diamond-pear",
          "image":"jewelry-gf896c3c45_1920.jpg"
       }
    },
@@ -74,6 +85,7 @@
          "price":930.99,
          "category":1,
          "rating":4.3,
+         "gold_karats": 9,
          "image":"ring-g7b6dc9a0d_1920.jpg"
       }
    },
@@ -87,6 +99,8 @@
          "price":59.0,
          "category":1,
          "rating":4.7,
+         "diamond_carats": 1.25,
+         "diamond_shape": "Diamond-square",
          "image":"ring-g84dca4104_1920.jpg"
       }
    },
@@ -100,6 +114,9 @@
          "price":736.99,
          "category":1,
          "rating":4.1,
+         "gold_karats": 20,
+         "diamond_carats": 0.75,
+         "diamond_shape": "Diamond-square",
          "image":"pexels-the-glorious-studio-10475793.jpg"
       }
    },
@@ -113,6 +130,8 @@
          "price":469.99,
          "category":1,
          "rating":3.7,
+         "diamond_carats": 0.50,
+         "diamond_shape": "Diamond-oval",
          "image":"sabrianna-kuko1hX_kXw-unsplash.jpg"
       }
    },
@@ -139,6 +158,8 @@
          "price":749.99,
          "category":1,
          "rating":3.9,
+         "diamond_carats": 1.5,
+         "diamond_shape": "Diamond-princess",
          "image":"pexels-the-glorious-studio-15204302.jpg"
       }
    },
@@ -152,6 +173,8 @@
          "price":999.99,
          "category":1,
          "rating":4.6,
+         "diamond_carats": 1.0,
+         "diamond_shape": "Diamond-round",
          "image":"gold-jewelry-gf37471841_1280.jpg"
       }
    },
@@ -165,6 +188,8 @@
          "price":1200.0,
          "category":1,
          "rating":3.2,
+         "diamond_carats": 1.5,
+         "diamond_shape": "Diamond-emerald",
          "image":"sabrianna-9xJ5s00mCzY-unsplash.jpg"
       }
    },
@@ -178,6 +203,8 @@
          "price":526.99,
          "category":1,
          "rating":3.7,
+         "diamond_carats": 2.0,
+         "diamond_shape": "Diamond-pear",
          "image":"emerald_diamond_ring_888123.jpg"
       }
    },
@@ -191,6 +218,10 @@
          "price":848.99,
          "category":6,
          "rating":5.0,
+         "gold_karats": 24,
+         "diamond_carats": 1.5,
+         "diamond_shape": "Diamond-square",
+
          "image":"pexels-the-glorious-studio-7093769.jpg"
       }
    },
@@ -204,6 +235,9 @@
          "price":665.99,
          "category":2,
          "rating":5.0,
+         "diamond_carats": 1.25,
+         "diamond_shape": "Diamond-princess",
+
          "image":"pexels-the-glorious-studio-7618570.jpg"
       }
    },
@@ -217,6 +251,8 @@
          "price":533.99,
          "category":3,
          "rating":4.6,
+         "diamond_carats": 2.0,
+         "diamond_shape": "Diamond-round",
          "image":"pexels-the-glorious-studio-9332186.jpg"
       }
    },
@@ -230,6 +266,7 @@
          "price":259.99,
          "category":9,
          "rating":4.8,
+         "gold_karats": 18,
          "image":"pexels-superlens-photography-11203750.jpg"
       }
    },
@@ -243,6 +280,7 @@
          "price":160.99,
          "category":5,
          "rating":3.0,
+         "gold_karats": 10,
          "image":"pexels-freestocksorg-818649.jpg"
       }
    },
@@ -269,6 +307,7 @@
          "price":360.99,
          "category":7,
          "rating":4.8,
+         "gold_karats": 18,
          "image":"pexels-the-glorious-studio-13160939.jpg"
       }
    },
@@ -282,6 +321,7 @@
          "price":76.99,
          "category":8,
          "rating":3.0,
+         "gold_karats": 20,
          "image":"pexels-duygu-kamar-12124621.jpg"
       }
    },
@@ -296,6 +336,9 @@
          "price":529.99,
          "category":2,
          "rating":4.8,
+         "gold_karats": 14,
+         "diamond_carats": 1.25,
+         "diamond_shape": "Diamond-square",
          "image":"pexels-the-glorious-studio-8398842.jpg"
       }
    },
@@ -309,6 +352,8 @@
          "price":882.0,
          "category":2,
          "rating":4.6,
+         "diamond_carats": 2.0,
+         "diamond_shape": "Diamond-square",
          "image":"pexels-the-glorious-studio-9332187.jpg"
       }
    },
@@ -322,6 +367,8 @@
          "price":506.99,
          "category":2,
          "rating":4.1,
+         "diamond_carats": 0.50,
+         "diamond_shape": "Diamond-round",
          "image":"pexels-the-glorious-studio-5737290.jpg"
       }
    },
@@ -335,6 +382,9 @@
          "price":241.99,
          "category":2,
          "rating":5.0,
+         "gold_karats": 9,
+         "diamond_carats": 0.50,
+         "diamond_shape": "Diamond-round",
          "image":"pexels-the-glorious-studio-10976654.jpg"
       }
    },
@@ -348,6 +398,8 @@
          "price":1338.99,
          "category":2,
          "rating":5.0,
+         "diamond_carats": 2.0,
+         "diamond_shape": "Diamond-emerald",
          "image":"pexels-the-glorious-studio-10983781.jpg"
       }
    },
@@ -361,6 +413,9 @@
          "price":53.99,
          "category":2,
          "rating":4.3,
+         "gold_karats": 18,
+         "diamond_carats": 1.5,
+         "diamond_shape": "Diamond-oval",
          "image":"pexels-the-glorious-studio-10983783.jpg"
       }
    },
@@ -374,6 +429,8 @@
          "price":631.99,
          "category":2,
          "rating":4.6,
+         "diamond_carats": 2.0,
+         "diamond_shape": "Diamond-princess",
          "image":"pexels-the-glorious-studio-5370642.jpg"
       }
    },
@@ -387,6 +444,8 @@
          "price":272.99,
          "category":2,
          "rating":3.0,
+         "diamond_carats": 1.5,
+         "diamond_shape": "Diamond-round",
          "image":"silver-jewelry-g29c3e914c_1920.jpg"
       }
    },
@@ -400,6 +459,8 @@
          "price":369.99,
          "category":2,
          "rating":4.0,
+         "diamond_carats": 0.5,
+         "diamond_shape": "Diamond-pear",
          "image":"pexels-jana-kukebal-6689398.jpg"
       }
    },
@@ -413,6 +474,9 @@
          "price":1335.99,
          "category":2,
          "rating":5.0,
+         "gold_karats": 9,
+         "diamond_carats": 2.0,
+         "diamond_shape": "Diamond-oval",
          "image":"pexels-the-glorious-studio-10983778.jpg"
       }
    },
@@ -426,6 +490,9 @@
          "price":258.99,
          "category":2,
          "rating":4.0,
+         "gold_karats": 14,
+         "diamond_carats": 0.75,
+         "diamond_shape": "Diamond-oval",
          "image":"pexels-the-glorious-studio-9332189.jpg"
       }
    },
@@ -439,6 +506,8 @@
          "price":895.99,
          "category":3,
          "rating":4.0,
+         "diamond_carats": 2.0,
+         "diamond_shape": "Diamond-square",
          "image":"pexels-the-glorious-studio-5370650.jpg"
       }
    },
@@ -452,6 +521,8 @@
          "price":650.99,
          "category":3,
          "rating":4.7,
+         "diamond_carats": 2.0,
+         "diamond_shape": "Diamond-square",
          "image":"pexels-the-glorious-studio-10983780.jpg"
       }
    },
@@ -465,6 +536,9 @@
          "price":1123.99,
          "category":3,
          "rating":5.0,
+         "gold_karats": 10,
+         "diamond_carats": 0.50,
+         "diamond_shape": "Diamond-emerald",
          "image":"pexels-the-glorious-studio-10983785.jpg"
       }
    },
@@ -478,6 +552,8 @@
          "price":2221.99,
          "category":3,
          "rating":4.9,
+         "diamond_carats": 2.0,
+         "diamond_shape": "Diamond-square",
          "image":"pexels-the-glorious-studio-12026052.jpg"
       }
    },
@@ -491,6 +567,9 @@
          "price":460.99,
          "category":3,
          "rating":3.2,
+         "gold_karats": 10,
+         "diamond_carats": 0.75,
+         "diamond_shape": "Diamond-heard",
          "image":"pexels-the-glorious-studio-13204122.jpg"
       }
    },
@@ -504,6 +583,7 @@
          "price":341.99,
          "category":3,
          "rating":3.2,
+         "gold_karats": 14,
          "image":"pexels-walter-ipiña-7958254.jpg"
       }
    },
@@ -517,6 +597,8 @@
          "price":331.99,
          "category":3,
          "rating":4.6,
+         "diamond_carats": 1.5,
+         "diamond_shape": "Diamond-heard",
          "image":"pexels-the-glorious-studio-9924688.jpg"
       }
    },
@@ -530,6 +612,9 @@
          "price":541.99,
          "category":3,
          "rating":4.4,
+         "gold_karats": 9,
+         "diamond_carats": 1.25,
+         "diamond_shape": "Diamond-round",
          "image":"pexels-the-glorious-studio-10983782.jpg"
       }
    },
@@ -543,6 +628,8 @@
          "price":980.00,
          "category":3,
          "rating":4.2,
+         "diamond_carats": 0.75,
+         "diamond_shape": "Diamond-round",
          "image":"pexels-superlens-photography-15684182.jpg"
       }
    },
@@ -556,6 +643,9 @@
          "price":465.99,
          "category":3,
          "rating":4.0,
+         "gold_karats": 24,
+         "diamond_carats": 1.25,
+         "diamond_shape": "Diamond-oval",
          "image":"pexels-the-glorious-studio-5442469.jpg"
       }
    },
@@ -569,6 +659,8 @@
          "price":1560.99,
          "category":3,
          "rating":5.0,
+         "diamond_carats": 2.0,
+         "diamond_shape": "Diamond-round",
          "image":"pexels-the-glorious-studio-12026050.jpg"
       }
    },
@@ -582,6 +674,9 @@
          "price":241.0,
          "category":3,
          "rating":4.6,
+         "gold_karats": 20,
+         "diamond_carats": 0.50,
+         "diamond_shape": "Diamond-round",
          "image":"pexels-micky-jone-13325931.jpg"
       }
    },
@@ -595,6 +690,9 @@
          "price":362.99,
          "category":3,
          "rating":4.1,
+         "gold_karats": 18,
+         "diamond_carats": 0.5,
+         "diamond_shape": "Diamond-round",
          "image":"pexels-micky-jone-13325937.jpg"
       }
    },
@@ -608,6 +706,8 @@
          "price":448.99,
          "category":4,
          "rating":4.4,
+         "diamond_carats": 1.5,
+         "diamond_shape": "Diamond-oval",
          "image":"pexels-the-glorious-studio-12680628.jpg"
       }
    },
@@ -621,6 +721,7 @@
          "price":434.99,
          "category":4,
          "rating":4.1,
+         "gold_karats": 9,
          "image":"pexels-melike-benli-12194324.jpg"
       }
    },
@@ -634,6 +735,8 @@
          "price":360.99,
          "category":4,
          "rating":4.4,
+         "diamond_carats": 0.75,
+         "diamond_shape": "Diamond-princess",
          "image":"pexels-the-glorious-studio-5442455.jpg"
       }
    },
@@ -647,6 +750,8 @@
          "price":866.99,
          "category":4,
          "rating":4.6,
+         "diamond_carats": 2.0,
+         "diamond_shape": "Diamond-square",
          "image":"pexels-the-glorious-studio-8891956.jpg"
       }
    },
@@ -660,6 +765,8 @@
          "price":519.99,
          "category":4,
          "rating":3.8,
+         "diamond_carats": 1.75,
+         "diamond_shape": "Diamond-round",
          "image":"pexels-superlens-photography-15684127.jpg"
       }
    },
@@ -686,6 +793,8 @@
          "price":153.99,
          "category":4,
          "rating":3.7,
+         "diamond_carats": 0.5,
+         "diamond_shape": "Diamond-round",
          "image":"pexels-superlens-photography-4595717.jpg"
       }
    },
@@ -699,6 +808,8 @@
          "price":526.99,
          "category":4,
          "rating":5.0,
+         "diamond_carats": 1.5,
+         "diamond_shape": "Diamond-round",
          "image":"pexels-superlens-photography-16438531.jpg"
       }
    },
@@ -712,6 +823,7 @@
          "price":28.99,
          "category":4,
          "rating":4.5,
+         "gold_karats": 18,
          "image":"pexels-superlens-photography-15684182.jpg"
       }
    },
@@ -725,6 +837,7 @@
          "price":265.99,
          "category":5,
          "rating":3.9,
+         "gold_karats": 18,
          "image":"pexels-the-glorious-studio-14111392.jpg"
       }
    },
@@ -738,6 +851,7 @@
          "price":366.0,
          "category":5,
          "rating":4.7,
+         "gold_karats": 14,
          "image":"pexels-melike-benli-12194365.jpg"
       }
    },
@@ -751,6 +865,7 @@
          "price":265.0,
          "category":5,
          "rating":3.3,
+         "gold_karats": 18,
          "image":"pexels-melike-benli-12194385.jpg"
       }
    },
@@ -764,6 +879,7 @@
          "price":211.99,
          "category":5,
          "rating":4.0,
+         "gold_karats": 10,
          "image":"pexels-gustavo-gimenez-9726884.jpg"
       }
    },
@@ -777,6 +893,7 @@
          "price":365.99,
          "category":5,
          "rating":4.4,
+         "gold_karats": 18,
          "image":"pexels-the-glorious-studio-14111399.jpg"
       }
    },
@@ -790,6 +907,7 @@
          "price":544.99,
          "category":5,
          "rating":4.5,
+         "gold_karats": 18,
          "image":"pexels-melike-benli-12194301.jpg"
       }
    },
@@ -803,6 +921,7 @@
          "price":431.99,
          "category":5,
          "rating":5.0,
+         "gold_karats": 18,
          "image":"pexels-the-glorious-studio-14111397.jpg"
       }
    },
@@ -816,6 +935,7 @@
          "price":569.99,
          "category":5,
          "rating":5.0,
+         "gold_karats": 18,
          "image":"pexels-melike-benli-12194337.jpg"
       }
    },
@@ -829,6 +949,9 @@
          "price":419.99,
          "category":5,
          "rating":4.9,
+         "gold_karats": 9,
+         "diamond_carats": 0.5,
+         "diamond_shape": "Diamond-round",
          "image":"pexels-maryam-7250143.jpg"
       }
    },
@@ -842,6 +965,7 @@
          "price":269.99,
          "category":5,
          "rating":4.0,
+         "gold_karats": 18,
          "image":"pexels-bka-photos-9211671.jpg"
       }
    },
@@ -855,6 +979,9 @@
          "price":630.99,
          "category":6,
          "rating":4.6,
+         "gold_karats": 9,
+         "diamond_carats": 0.5,
+         "diamond_shape": "Diamond-emerald",
          "image":"pexels-the-glorious-studio-8891952.jpg"
       }
    },
@@ -868,6 +995,8 @@
          "price":572.99,
          "category":6,
          "rating":4.5,
+         "diamond_carats": 1.5,
+         "diamond_shape": "Diamond-round",
          "image":"pexels-the-glorious-studio-6716444.jpg"
       }
    },
@@ -881,6 +1010,9 @@
          "price":550.99,
          "category":6,
          "rating":4.7,
+         "gold_karats": 20,
+         "diamond_carats": 1.25,
+         "diamond_shape": "Diamond-round",
          "image":"pexels-the-glorious-studio-8891953.jpg"
       }
    },
@@ -894,6 +1026,9 @@
          "price":442.0,
          "category":6,
          "rating":4.3,
+         "gold_karats": 9,
+         "diamond_carats": 0.50,
+         "diamond_shape": "Diamond-heard",
          "image":"pexels-the-glorious-studio-7541801.jpg"
       }
    },
@@ -907,6 +1042,9 @@
          "price":608.99,
          "category":6,
          "rating":4.8,
+         "gold_karats": 10,
+         "diamond_carats": 1.5,
+         "diamond_shape": "Diamond-round",
          "image":"pexels-the-glorious-studio-8891955.jpg"
       }
    },
@@ -920,6 +1058,9 @@
          "price":708.99,
          "category":6,
          "rating":4.7,
+         "gold_karats": 18,
+         "diamond_carats": 2.0,
+         "diamond_shape": "Diamond-princess",
          "image":"pexels-the-glorious-studio-8891958.jpg"
       }
    },
@@ -933,6 +1074,9 @@
          "price":560.99,
          "category":6,
          "rating":4.6,
+         "gold_karats": 14,
+         "diamond_carats": 0.5,
+         "diamond_shape": "Diamond-pear",
          "image":"pexels-the-glorious-studio-7541805.jpg"
       }
    },
@@ -946,6 +1090,9 @@
          "price":560.99,
          "category":6,
          "rating":4.7,
+         "gold_karats": 18,
+         "diamond_carats": 0.5,
+         "diamond_shape": "Diamond-pear",
          "image":"pexels-the-glorious-studio-8891961.jpg"
       }
    },
@@ -959,6 +1106,9 @@
          "price":260.99,
          "category":6,
          "rating":4.2,
+         "gold_karats": 14,
+         "diamond_carats": 0.75,
+         "diamond_shape": "Diamond-round",
          "image":"pexels-superlens-photography-4595719.jpg"
       }
    },
@@ -972,6 +1122,7 @@
          "price":248.99,
          "category":7,
          "rating":4.4,
+         "gold_karats": 14,
          "image":"pexels-adi-wang-5116272.jpg"
       }
    },
@@ -985,6 +1136,7 @@
          "price":450.99,
          "category":7,
          "rating":5.0,
+         "gold_karats": 20,
          "image":"pexels-the-glorious-studio-8891954.jpg"
       }
    },
@@ -998,6 +1150,8 @@
          "price":336.99,
          "category":7,
          "rating":4.7,
+         "diamond_carats": 1.25,
+         "diamond_shape": "Diamond-square",
          "image":"pexels-the-glorious-studio-8398911.jpg"
       }
    },
@@ -1011,6 +1165,7 @@
          "price":360.99,
          "category":7,
          "rating":4.4,
+         "gold_karats": 14,
          "image":"pexels-melike-benli-12194353.jpg"
       }
    },
@@ -1024,6 +1179,7 @@
          "price":160.99,
          "category":7,
          "rating":4.5,
+         "gold_karats": 18,
          "image":"pexels-melike-benli-12194347.jpg"
       }
    },
@@ -1037,6 +1193,8 @@
          "price":429.0,
          "category":7,
          "rating":5.0,
+         "diamond_carats": 1.5,
+         "diamond_shape": "Diamond-square",
          "image":"pexels-the-glorious-studio-12680629.jpg"
       }
    },
@@ -1050,6 +1208,9 @@
          "price":560.99,
          "category":7,
          "rating":4.7,
+         "gold_karats": 24,
+         "diamond_carats": 0.5,
+         "diamond_shape": "Diamond-round",
          "image":"pexels-the-glorious-studio-8891950.jpg"
       }
    },
@@ -1063,6 +1224,7 @@
          "price":148.99,
          "category":7,
          "rating":4.3,
+         "gold_karats": 9,
          "image":"pexels-gustavo-gimenez-9726883.jpg"
       }
    },
@@ -1076,6 +1238,7 @@
          "price":127.0,
          "category":7,
          "rating":5.0,
+         "gold_karats": 14,
          "image":"pexels-superlens-photography-11655516.jpg"
       }
    },
@@ -1089,6 +1252,7 @@
          "price":129.99,
          "category":7,
          "rating":4.3,
+         "gold_karats": 10,
          "image":"pexels-soumia-photography-10662887.jpg"
       }
    },
@@ -1102,6 +1266,8 @@
          "price":338.99,
          "category":8,
          "rating":4.2,
+         "diamond_carats": 1.5,
+         "diamond_shape": "Diamond-round",
          "image":"pexels-the-glorious-studio-5442463.jpg"
       }
    },
@@ -1115,6 +1281,8 @@
          "price":326.99,
          "category":8,
          "rating":4.1,
+         "diamond_carats": 0.5,
+         "diamond_shape": "Diamond-square",
          "image":"pexels-the-glorious-studio-13907891.jpg"
       }
    },
@@ -1128,6 +1296,9 @@
          "price":258.99,
          "category":8,
          "rating":4.8,
+         "gold_karats": 10,
+         "diamond_carats": 0.75,
+         "diamond_shape": "Diamond-round",
          "image":"pexels-the-glorious-studio-5442446.jpg"
       }
    },
@@ -1141,6 +1312,9 @@
          "price":108.99,
          "category":8,
          "rating":4.0,
+         "gold_karats": 9,
+         "diamond_carats": 1.75,
+         "diamond_shape": "Diamond-square",
          "image":"pexels-the-glorious-studio-5737292.jpg"
       }
    },
@@ -1154,6 +1328,9 @@
          "price":352.99,
          "category":8,
          "rating":4.2,
+         "gold_karats": 18,
+         "diamond_carats": 2.0,
+         "diamond_shape": "Diamond-pear",
          "image":"pexels-the-glorious-studio-7093761.jpg"
       }
    },
@@ -1167,6 +1344,7 @@
          "price":144.99,
          "category":8,
          "rating":4.4,
+         "gold_karats": 18,
          "image":"pexels-superlens-photography-11655208.jpg"
       }
    },
@@ -1180,6 +1358,8 @@
          "price":233.99,
          "category":8,
          "rating":4.4,
+         "diamond_carats": 1.5,
+         "diamond_shape": "Diamond-round",
          "image":"pexels-pixabay-266621.jpg"
       }
    },
@@ -1193,6 +1373,7 @@
          "price":250.99,
          "category":8,
          "rating":4.3,
+         "gold_karats": 14,
          "image":"pexels-superlens-photography-11655459.jpg"
       }
    },
@@ -1206,6 +1387,7 @@
          "price":270.99,
          "category":8,
          "rating":4.9,
+         "gold_karats": 18,
          "image":"pexels-the-glorious-studio-13204125.jpg"
       }
    },
@@ -1232,6 +1414,7 @@
          "price":142.99,
          "category":8,
          "rating":4.0,
+         "gold_karats": 18,
          "image":"pexels-superlens-photography-11655206.jpg"
       }
    },
@@ -1245,6 +1428,7 @@
          "price":392.99,
          "category":9,
          "rating":5.0,
+         "gold_karats": 10,
          "image":"pexels-nurfa-khoirunnisa-11260679.jpg"
       }
    },
@@ -1284,6 +1468,8 @@
          "price":429.99,
          "category":9,
          "rating":4.4,
+         "diamond_carats": 1.5,
+         "diamond_shape": "Diamond-round",
          "image":"pexels-superlens-photography-15827695.jpg"
       }
    },
@@ -1297,6 +1483,9 @@
          "price":453.99,
          "category":9,
          "rating":4.8,
+         "gold_karats": 9,
+         "diamond_carats": 0.5,
+         "diamond_shape": "Diamond-round",
          "image":"pexels-kader-d-kahraman-11790271.jpg"
       }
    },
@@ -1310,6 +1499,9 @@
          "price":572.99,
          "category":9,
          "rating":5.0,
+         "gold_karats": 24,
+         "diamond_carats": 1.5,
+         "diamond_shape": "Diamond-square",
          "image":"perl_ring.png.jpg"
       }
    },
