@@ -137,7 +137,7 @@ class StripeWH_Handler:
                     if isinstance(item_data, int):
                         order_line_item = OrderLineItem(
                             order=order,
-                            jewellery=jewellery,
+                            product=jewellery,
                             quantity=item_data,
                         )
                         order_line_item.save()
