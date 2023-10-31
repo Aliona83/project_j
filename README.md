@@ -188,7 +188,11 @@ Super users have access to contact us messages sent by users of the platform. Th
         * 04/24 (MM/YY)
         * 424 or 242 (CVC)
   ![Stripe](/readmeImages/stripe.png)
-
+11. Whishlist
+    * Users can add products to their wishlist while browsing the app. Each product page will have an option to "Add to Wishlist," allowing users to save items they are interested in.
+    * Users can view their wishlist at any time to see the products they have saved. The wishlist will display product names, images, and prices for easy reference.
+    * Users can easily remove items from their wishlist. Each item in the wishlist will have a ' Remove from wishlist'  option, allowing users to declutter their wishlist as their preferences change.
+    ![Wishlist](/readmeImages/wishlist.png)  
    <br><hr>
 [🔼 Back to top](#table-of-contents)
 
@@ -240,7 +244,7 @@ Super users have access to contact us messages sent by users of the platform. Th
   1. Logo![Logo](./readmeImages/logo.png)
    * Logo: The home page prominently displays shop logo at the top, by clicking on the logo users will be able to return to homepage.
 
-  2. Navigation Bar ![Navigation bar](./readmeImages/navigation.png)
+  2. Navigation Bar ![Navigation](/readmeImages/navigation.png)
 
    * Navigation Bar with Categories:A navigation bar provides easy access to various product categories, making it simple for users to browse and find the products they're interested in.
     ![Burger Menu](./readmeImages/burgerMenu.png)
@@ -280,7 +284,7 @@ Super users have access to contact us messages sent by users of the platform. Th
     1. Login Success
 
    Upon a successful login, a personalized notification toast is displayed to greet the user by their name. This personalization helps create a more engaging and connected user experience. The notification is designed to be responsive, ensuring a consistent and visually appealing appearance across different screen sizes and devices.
- ![](/readmeImages/login.png)
+ ![](/readmeImages/logIn.png)
 
    2. Logout
 
@@ -298,7 +302,7 @@ Super users have access to contact us messages sent by users of the platform. Th
 
   * I've implemented error toast notifications to alert users when they encounter issues or input errors. These error messages are displayed when, for example, a user submits a form with missing or invalid data. Clear and informative error messages help users understand and address the issues at hand.
 
- ![](/readmeImages/error.png)
+ ![](/readmeImages/searchError.png)
 
  4. Alert Messages
 
@@ -319,6 +323,7 @@ Super users have access to contact us messages sent by users of the platform. Th
    * Users can learn about materials, dimensions, care instructions, and more.
    * User can learn about products such as diamonds shape, diamonds carats and gold karats.
    * Users can easily add the product to their shopping cart for future purchase.
+   * Users can create multiple wishlists and manage them easily. They can add or remove products from their wishlists with a simple click. Clicking on an item in the wishlist opens up product details for a comprehensive view.
   3. 
   ![Sort By](/readmeImages/sortBy.png)
    * The "Sort By" tool is a powerful feature that empowers users to customize how they view and interact with our extensive collection of jewelry products. It provides flexibility and control over the product listing, allowing users to tailor their browsing experience according to their needs and preferences.
@@ -327,6 +332,17 @@ Super users have access to contact us messages sent by users of the platform. Th
    * Pagination is a user interface feature that enhances the browsing experience for users when navigating through extensive lists of jewelry products. It ensures that the product listings remain organized and manageable, enabling users to explore our diverse collection with ease.
   5. 
   ![Arrow Up](/readmeImages/arrowUp.png)
+
+  6. 
+  ![ Leave Rate](/readmeImages/rateForm.png)
+  * Users can rate products using a visual system of yellow stars. Each product will have a set of empty stars, and users can click on the stars to fill them, indicating their rating. The more stars filled, the higher the rating.
+  * Below the star rating, users can find a text box where they can type their detailed review. The review form encourages users to share their experiences, thoughts, and opinions about the product.
+  * After submitting a review, users receive a thank-you message acknowledging their contribution. This message can include a note of appreciation for helping the community and other shoppers.
+
+  ![Message](/readmeImages/reviewMessage.png)
+  * Users can see a list of reviews left by other buyers, including their ratings (displayed as yellow stars) and detailed written feedback. Each review is accompanied by the reviewer's username or initials, indicating who provided the feedback.
+
+  ![](/readmeImages/reviewHistory.png)
 
   * Cart/ Shopping Bag 
 
@@ -345,6 +361,10 @@ Super users have access to contact us messages sent by users of the platform. Th
   ![Checkout Overlay](/readmeImages/spinner.png)
     * Users who checkout will see a simple overlay with a spinning icon while the payment is processed.
 
+  * After a successful purchase, users receive a confirmation email to acknowledge their order and provide essential details about the transaction.
+  
+  ![](/readmeImages/confirmationEmail.png)
+  
   * Jewellery Custom Form
   1. 
   ![Custom Form](/readmeImages/customForm.png)
