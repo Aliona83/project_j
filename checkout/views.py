@@ -85,6 +85,7 @@ def checkout(request):
                     return redirect(reverse('bag:view_bag'))
 
             order.order_total = stripe_total
+            # order.discount_apply = stripe_total
             order.grand_total = stripe_total
             order.discount_apply = 100 if stripe_total > 1000 else 0 
             order.save()
@@ -180,6 +181,7 @@ def checkout_success(request, order_number):
     template = 'checkout/checkout_success.html'
     context = {
         'order': order,
+        
     }
 
     return render(request, template, context)

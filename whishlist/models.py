@@ -10,9 +10,10 @@ class WishList(models.Model):
     Model to show all product items within the users wishlist
     """
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    jewelleries = models.ManyToManyField(Jewellery,
-                                      through="WishListItem",
-                                      related_name='product_wishlists')
+    jewelleries = models.ManyToManyField(
+        Jewellery,
+        through="WishListItem",
+        related_name='product_wishlists')
 
     def __str__(self):
         return f'WishList ({self.user})'
@@ -24,10 +25,11 @@ class WishListItem(models.Model):
     individual products to their wishlist.
     """
 
-    jewellery = models.ForeignKey(Jewellery,
-                                null=False,
-                                blank=False,
-                                on_delete=models.CASCADE)
+    jewellery = models.ForeignKey(
+        Jewellery,
+        null=False,
+        blank=False,
+        on_delete=models.CASCADE)
     wishlist = models.ForeignKey(WishList,
                                  null=False,
                                  blank=False,

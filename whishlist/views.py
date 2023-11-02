@@ -2,9 +2,7 @@ from django.shortcuts import render
 
 from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth.decorators import login_required
-
 from django.contrib import messages
-
 from jewelleries.models import Jewellery
 from .models import WishList
 
@@ -34,10 +32,7 @@ def add_to_wishlist(request, jewellery_id):
     wishlist for the logged in user
     """
     jewellery = get_object_or_404(Jewellery, pk=jewellery_id)
-
-    # Create a wishlist for the user if they don't have one
     wishlist, _ = WishList.objects.get_or_create(user=request.user)
-    # Add product to the wishlist
     wishlist.jewelleries.add(jewellery)
     messages.info(request, "A new jewellery was added to your wishlist")
 

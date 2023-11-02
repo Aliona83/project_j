@@ -35,7 +35,7 @@ class Jewellery(models.Model):
     gold_karats = models.PositiveIntegerField(default=24)
     diamond_carats = models.FloatField(null=True, blank=True)
     diamond_shape = models.CharField(
-        max_length=50, null=True, blank=True)    
+        max_length=50, null=True, blank=True)
     image = models.ImageField(null=True, blank=True)
 
     def __str__(self):
@@ -48,7 +48,6 @@ class ReviewRating(models.Model):
     review = models.TextField(max_length=500, blank=False)
     rating = models.FloatField()
     created_at = models.DateTimeField(auto_now_add=True)
-    
 
     def __str__(self):
         return f"Review for {self.jewellery.name} by {self.user.username}"

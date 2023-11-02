@@ -40,7 +40,7 @@
                         {% if total > 1000 %} You got {{ discount }} euro discount
                         {% endif %}: 
                     </strong>
-                        <span class="float-right">Total:${{ total|floatformat:2 }}</span>
+                        <span class="float-right">Total:${{ grand_total|floatformat:2 }}</span>
                 </div>
                     {% if total <  1000 %}
                         <p class="mb-0 p-2 bg-warning shadow-sm text-black text-center">

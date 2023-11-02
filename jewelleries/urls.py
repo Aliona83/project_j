@@ -16,7 +16,7 @@ urlpatterns = [
     path(
         'delete/<int:jewellery_id>/',
         views.delete_jewellery, name='delete_jewellery'),
-        path('submit_review/<int:jewellery_id>/', views.submit_review, name='submit_review'),
-        
-          
+    path(
+        'submit_review/<int:jewellery_id>/',
+        views.submit_review, name='submit_review'),
 ]

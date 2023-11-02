@@ -9,9 +9,6 @@ from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.http import JsonResponse
 
 
-
-
-
 def all_jewelleries(request):
     """ A view to show all jewelleries, '
     'including sorting and search queries """
@@ -20,9 +17,8 @@ def all_jewelleries(request):
     categories = None
     sort = None
     direction = None
-    sort_key = 'name'  
-    direction = 'asc'  
-
+    sort_key = 'name'
+    direction = 'asc'
 
     if request.GET:
         valid_sort_keys = ['price', 'rating', 'name', 'category']
@@ -77,7 +73,7 @@ def all_jewelleries(request):
             else:
                 messages.error(request,
                                "You didn't enter any search criteria!")
-        sort_key = 'name' 
+        sort_key = 'name'
     if sort:
         sort_key = sort
 
@@ -85,8 +81,6 @@ def all_jewelleries(request):
         sort_key = f'-{sort_key}'
 
     jewelleries = jewelleries.order_by(sort_key)
-
-
 
     items_per_page = 15
     paginator = Paginator(jewelleries, items_per_page)
@@ -107,7 +101,6 @@ def all_jewelleries(request):
         'current_categories': categories,
         'sort': sort,
         'direction': direction,
-       
     }
 
     if categories:
@@ -118,12 +111,12 @@ def all_jewelleries(request):
 
     return render(request, 'jewelleries/jewelleries.html', context)
 
+
 def jewelleries_details(request, jewellery_id):
     """ A view to show individual product details """
 
     jewellery = get_object_or_404(Jewellery, pk=jewellery_id)
     reviews = ReviewRating.objects.filter(jewellery=jewellery)
-     
     context = {
         'jewellery': jewellery,
         'reviews': reviews,
@@ -141,26 +134,25 @@ def submit_review(request, jewellery_id):
     url = request.META.get('HTTP_REFERER')
     if request.method == 'POST':
         try:
-            review = ReviewRating.objects.get(user=request.user, jewellery_id=jewellery_id)
+            review = ReviewRating.objects.get(
+                user=request.user, jewellery_id=jewellery_id)
             form = ReviewForm(request.POST, instance=review)
             if form.is_valid():
                 form.save()
-            messages.success(request, 'Thank you! Your review has been updated.')
+            messages.success(
+                request, 'Thank you! Your review has been updated.')
         except ReviewRating.DoesNotExist:
             form = ReviewForm(request.POST)
             if form.is_valid():
-                
                 review = form.save(commit=False)
                 review.jewellery = jewellery
                 review.user = request.user
-                review.ip = request.META.get('HTTP_X_FORWARDED_FOR', request.META.get('REMOTE_ADDR'))
+                review.ip = request.META.get(
+                    'HTTP_X_FORWARDED_FOR', request.META.get('REMOTE_ADDR'))
                 review.save()
-                messages.success(request, 'Thank you! Your review has been submitted.')    
+                messages.success(
+                    request, 'Thank you! Your review has been submitted.')    
     return redirect(url)
-           
-
-
-
 
 
 @login_required
@@ -231,4 +223,3 @@ def delete_jewellery(request, jewellery_id):
     jewellery.delete()
     messages.success(request, 'Jewellery was successfully deleted!')
     return redirect(reverse('jewelleries:jewelleries'))
-
