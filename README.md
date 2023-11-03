@@ -445,20 +445,21 @@ Super users have access to contact us messages sent by users of the platform. Th
 
   * Home Page
 
-  ![Home Desktop](/readmeImages/HomePage.png)
+  ![Home Desktop](/readmeImages/homePage.png)
   ![Home Mobile](/readmeImages/homeMobile.png)
     
   * Jewellery Page
 
-  ![Desktop](/readmeImages/jewlleryPage.png)
+  ![Desktop](/readmeImages/jewelleryPage.png)
 
-  ![Mobile](/readmeImages/jewelleyMobile.png)
+  ![Mobile](/readmeImages/jewelleryPageMobile.png)
 
   * Jewellery Details Page
 
   ![Desktop](/readmeImages/productDetails.png)
 
-  ![Mobile](/readmeImages/detailProductMobile.png)
+  ![Mobile](/readmeImages/detailsMobile.png)
+  
 
   * Add To Bag Page
 
@@ -486,7 +487,7 @@ Super users have access to contact us messages sent by users of the platform. Th
 
   * Contact Us Page
 
-  ![Desktop](/readmeImages/customOrderForm.png)
+  ![Desktop](/readmeImages/contactUsForm.png)
 
   ![Mobile](/readmeImages/contactUsMobile.png)
 </details>
