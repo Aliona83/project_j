@@ -11,6 +11,8 @@ This README document outlines the results of manual testing conducted on the hom
   * [SuperUser security test](#superuser-security-testing)
   * [CustomOrder form](#customorder-form-testing)
   * [Security Measures testing](#security-measures-testing)
+  * [Wishlist Testing](#wishlist-testing)
+  * [Review Testing](#review-testing)
 
 # [Code Validation](#code-validation)
   * [HTML](#html-home-page)
@@ -116,6 +118,27 @@ This README document outlines the results of manual testing conducted on the hom
 
 </details>
 
+### Wishlist Testing
+
+<details>
+   <summary>Click to see more</summary>
+
+  ![](/readmeImages/wishlistTest.png)
+
+</details>
+
+### Review Testing
+
+<details>
+   <summary>Click to see more</summary>
+
+  ![](/readmeImages/reviewTesting.png)
+
+</details>
+
+
+
+
 ## Code Validation
 
   ### HTML Home page
@@ -216,6 +239,20 @@ This README document outlines the results of manual testing conducted on the hom
    <summary>Click to see more</summary>
 
   ![](/readmeImages/registerpageValidation.png)
+
+</details>
+
+* HTML Wishlist page
+<details>
+   <summary>Click to see more</summary>
+![](/readmeImages/wishlistHtmlTesting.png)
+
+</details>
+
+* HTML Review page
+<details>
+   <summary>Click to see more</summary>
+![](/readmeImages/reviewHtmlTesting.png)
 
 </details>
 
@@ -385,6 +422,28 @@ The website was tested manually on a variety of devices, either personally by th
 
 </details>
 
+1. Wishlist Page
+  * Desktop
+
+  ![](/readmeImages)
+ 
+  * Mobile 
+
+  ![](/readmeImages)
+
+</details>
+
+1. Review Page
+  * Desktop
+
+  ![](/readmeImages)
+ 
+  * Mobile 
+
+  ![](/readmeImages)
+
+</details>
+
 ## Bugs
 
 * Bugs
@@ -417,6 +476,11 @@ Resolution: Should remove 500 error after that 404 error start show up.
 
 Issue: The website doesn't display properly on mobile devices, leading to a poor mobile user experience.
 Resolution: Implement responsive web design to ensure that  website adapts to different screen sizes and devices. Test the website on various mobile devices and browsers to identify and fix layout and usability issues.
+
+6. Users Can Add the Same Product Multiple Times to Wishlist
+
+Issue:Users are able to add the same product multiple times to their wishlist, which is not the intended behavior. This issue leads to duplicate entries in the wishlist, causing confusion and potential user experience problems.
+Revolution: Implement appropriate validation checks to prevent duplicate entries in the wishlist database.
 
 ## Unfixed Bugs
 
