@@ -18,7 +18,10 @@
                   <div class="thumb-content text-uppercase m-2 btn-outline-black"><a href="{% url 'home' %}" aria-label="Home Page">&nbsp;Home Page</a></div>
                 </li>
                 <li>
+                  {% if user.is_authenticated %}
+                  {% else %}
                   <div class="thumb-content text-uppercase m-2 btn-outline-black"><a href="{% url 'account_login' %}" aria-label="Login">&nbsp;Login</a></div>
+                  {% endif %}
                 </li>
                 <li>
                   <div class="thumb-content text-uppercase m-2 btn-outline-black"><a href="{% url 'jewelleries:jewelleries' %}" aria-label="Shop Now">&nbsp;Shop Now</a></div>
