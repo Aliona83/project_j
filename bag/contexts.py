@@ -35,8 +35,8 @@ def bag_contents(request):
                 })
     discount = 0
     if total > 1000:
-        discount = (total // 1000) * 100
-
+        # discount = (stripe_total // 1000) * 100
+        discount = (total// 1000) *100
     # Calculate the grand total after applying the discount
     grand_total = total - discount
     context = {
