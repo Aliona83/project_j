@@ -71,24 +71,25 @@ User stories help us understand the needs and expectations of our users. They se
   * As a user, I can use the navigation bar so that I can view all pages of the website easily
   * As a site user, I want to be able to sign up, so that I can have a personal account on the site.
   * As a site user, I want to be able to receive an email confirmation after registering, so that I can verify that my account registration was successful.
-  * As User I want to been able to add and remove products from my cart
-  * As User I want to recieve feedback that my order was processed successfully.
-  * As User I want to subscribe to the store newsletters.
+  * As a User I want to be able to add and remove products from my cart
+  * As a User I want to receive feedback that my order was processed successfully.
+  * As a User I want to subscribe to the store newsletters.
+  * As a User I want to be able to leave reviews for each product.
 
- As the Unregistered User I want to:
+ As the Unregistered User, I want to:
 
-  * As Unregistered User I want to see the purpose of the site when landing on it
-     * Landing page with clear reference to objective of the app
+  * As an Unregistered User I want to see the purpose of the site when landing on it
+     * Landing page with clear reference to the objective of the app
   * As an Unregistered User I want to get a benefit if I register*
-    * Information recieved in the registration mail
+    * Information received in the registration mail
   * As an Unregistered User, I want to be able to register so that I   can create my account and access to the registered user features
     *  Link for Sign Up in Navbar
-  * As an Unregistered User I want to see the detailed information of the jewelleries
+  * As an Unregistered User I want to see detailed information on the jewellery
     * Jewelleries details page
 
  Super User Features
 
- * As a super user, you have access to a range of powerful features that allow you to manage and oversee various aspects of the platform. These features are designed to provide you with control and insights into the system's operations.
+ * As a super user, you can access various powerful features that allow you to manage and oversee various aspects of the platform. These features are designed to provide you with control and insights into the system's operations.
 
 
 * Add Images
@@ -125,21 +126,21 @@ Super users have access to contact us messages sent by users of the platform. Th
 
 1. Epic - Project Setup
 
-  * Install Django framework that provides tools and libraries for building web application.
-  * Install Django Allauth, it allaows us to manage user authentication, registration,and account management seamlessly.
-  * Crispy Forms this Django package that will help us style our forms easily and effficiently.
+  * Install the Django framework that provides tools and libraries for building web applications.
+  * Install Django Allauth, it allows us to manage user authentication, registration, and account management seamlessly.
+  * Crispy Forms is this Django package that will help us style our forms easily and efficiently.
   * Create jewelry_shop app.
   * Create superuser
 2. Epic - Homepage and Navigation Setup 
 
-  * Navigation bar. Will provide easy access to different sections of application, easy to navigate on mobile screens.
+  * Navigation bar. Will provide easy access to different sections of the application, easy to navigate on mobile screens.
   * Implement categories links in the navigation bar for organized content access, also include a home button to quickly return to the home page. 
-  * Enhance the aesthetic appeal of the homepage with background image. 
+  * Enhance the aesthetic appeal of the homepage with the background image. 
   * Implement a search bar to enable to search for products or content.
-  * Create cart functionality for user to add items they want to purchase.
+  * Create cart functionality for users to add items they want to purchase.
   * Populate the homepage with fixture data to showcase new arrivals.
   * Implement user authentication with login and logout buttons.
-  * Create footer section with the links and newsletter subcription form.
+  * Create a footer section with the links and newsletter subscription form.
 3.   Implementing Login and Logout 
 
   * Create login, registration and logout pages.
@@ -147,17 +148,17 @@ Super users have access to contact us messages sent by users of the platform. Th
   * Implement email configuration for the user accounts to verify the authenticity of email addresses during registration.
 4. Creating a Product App
 
-  * Create Product app
-  * Design and create templates for displaying products,products_details.
-  * Populate your database with fixture data conatining product information, including images and categories.
-  * Implement functionality to cotegorize products and allow users to filter products by categories. Implement a search bar that enables users to search for specific products based on keywords. Also implement sorting options(by price, name, and letters..)
+  * Create a Product app
+  * Design and create templates for displaying products, and products_details.
+  * Populate your database with fixture data containing product information, including images and categories.
+  * Implement functionality to categorise products and allow users to filter products by categories. Implement a search bar that enables users to search for specific products based on keywords. Also implement sorting options(by price, name, and letters..)
   * Add pagination to the product listings to ensure that large catalogues can be easily navigated.
 5. Creating a Cart App
 
   * Create a Cart App, and add models, views and templates. 
   * Implement cart functionality to add, update and remove items from the cart.
   * Calculate the total cost of items in the cart, including discounts.
-  * Develop checkout process,including user authentication,address input and payment process.
+  * Develop checkout process, including user authentication, address input and payment process.
   * Create templates and view to display order confirmation details after a successful purchase.
 6. Creating a Profile App
 
@@ -315,7 +316,7 @@ Super users have access to contact us messages sent by users of the platform. Th
 
   1. 
   ![Products](/readmeImages/products.png) 
-   * Main Jewellery page offer products on large resolutions in a row of three. Images are large to attract the user's attention, and clicking the image will redirect the user to the product detail page. 
+   * The Main Jewellery page offers products on large resolutions in a row of three. Images are large to attract the user's attention, and clicking the image will redirect the user to the product detail page. 
    * The product title and description provide essential information about the product.
   2.
   ![Product Details](/readmeImages/details_page.png)
@@ -336,8 +337,15 @@ Super users have access to contact us messages sent by users of the platform. Th
   6. 
   ![ Leave Rate](/readmeImages/rateForm.png)
   * Users can rate products using a visual system of yellow stars. Each product will have a set of empty stars, and users can click on the stars to fill them, indicating their rating. The more stars filled, the higher the rating.
-  * Below the star rating, users can find a text box where they can type their detailed review. The review form encourages users to share their experiences, thoughts, and opinions about the product.
+  * Below the star rating, users can find a text box where they can type their detailed reviews. The review form encourages users to share their experiences, thoughts, and opinions about the product.
   * After submitting a review, users receive a thank-you message acknowledging their contribution. This message can include a note of appreciation for helping the community and other shoppers.
+
+  7.
+  ![Add to wishlist](/readmeImages/addWishlist.png)
+  * Users have the freedom to add any product they like to their wishlist. 
+  * Users can effortlessly manage their wishlist by adding new items and deleting ones they're no longer interested in.
+  * Once a user adds a product to their wishlist, the platform prevents thsem from adding the same product again.
+  * Once a product is on the user's wishlist, the system prevents you from adding the same item again, ensuring a streamlined and clutter-free experience.
 
   ![Message](/readmeImages/reviewMessage.png)
   * Users can see a list of reviews left by other buyers, including their ratings (displayed as yellow stars) and detailed written feedback. Each review is accompanied by the reviewer's username or initials, indicating who provided the feedback.
@@ -397,7 +405,7 @@ Super users have access to contact us messages sent by users of the platform. Th
    * Add New Products: Superusers can add new products to the system, specifying their details.
 
   * Customer Interaction
-  View Customer Contact Us Forms: Superusers can access and view contact us forms submitted by customers.
+  View Customer Contact Us Forms: Superusers can access and view Contact Us forms submitted by customers.
 
   * View Customer Order History: Superusers can view the order history of all users, including order details and statuses.
 
@@ -407,7 +415,7 @@ Super users have access to contact us messages sent by users of the platform. Th
   ![Profile User](/readmeImages/user.png)
 
   * Profile
-      *  Regular users can update their profile information, including their personal details.
+      *  Regular users can update their profile information, including their details.
       *  Regular users can access their order history, including order details and statuses.
   ![Delete Order](/readmeImages/deleteOrder.png) 
 

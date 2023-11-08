@@ -245,6 +245,7 @@ This README document outlines the results of manual testing conducted on the hom
 * HTML Wishlist page
 <details>
    <summary>Click to see more</summary>
+   
 ![](/readmeImages/wishlistHtmlTesting.png)
 
 </details>
