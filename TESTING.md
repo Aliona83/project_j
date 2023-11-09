@@ -335,7 +335,7 @@ Python codes used throughout the application were validated using CI Python Lint
 
 1. Responsive Test
 
-  * Ensuring that your website looks and functions well on various devices, including smartphones, tablets, and desktop computers, is crucial for providing a positive user experience. Responsive design ensures that users can access your content and navigate your site comfortably, regardless of the device they are using. It was done on website [DisignChecker](https://responsivedesignchecker.com/)
+  * Ensuring that your website looks and functions well on various devices, including smartphones, tablets, and desktop computers, is crucial for providing a positive user experience. Responsive design ensures that users can access your content and navigate your site comfortably, regardless of the device they are using. It was done on the website [DisignChecker](https://responsivedesignchecker.com/)
 
 ## Ax Tools
 
@@ -385,7 +385,7 @@ The website was tested manually on a variety of devices, either personally by th
 
   ![](/readmeImages/detailMobileLighthouse.png)
 
-   1. Jewellery Details Page
+   1. Jewellery Details/Review Page
   * Desktop
 
   ![](/readmeImages/eachProductLighthouse.png)
@@ -419,31 +419,20 @@ The website was tested manually on a variety of devices, either personally by th
  
   * Mobile 
 
-  ![](/readmeImages/profileMobileLigthouse.png)
+  ![](/readmeImages/profileMobileLigthouse.png)  
 
-</details>
-
-1. Wishlist Page
+  1. Wishlist Page
   * Desktop
 
-  ![](/readmeImages)
+  ![](/readmeImages/wishlistDesctop.png)
  
   * Mobile 
 
-  ![](/readmeImages)
+  ![](/readmeImages/wishlistMobile.png)
 
 </details>
 
-1. Review Page
-  * Desktop
 
-  ![](/readmeImages)
- 
-  * Mobile 
-
-  ![](/readmeImages)
-
-</details>
 
 ## Bugs
 
@@ -451,22 +440,22 @@ The website was tested manually on a variety of devices, either personally by th
 1. User and Superuser Seeing the Same Order History:
 
 Issue: Both regular users and superusers should have separate order histories.
-Resolution: I update the order history retrieval logic. When a user logs in, ensure that they only see their own orders. Superusers should have access to all orders. This can be done by checking the user's role and filtering the orders accordingly.
+Resolution: I update the order history retrieval logic. When a user logs in, ensure that they only see their orders. Superusers should have access to all orders. This can be done by checking the user's role and filtering the orders accordingly.
 
 2. HomePage Update Not Reflecting Changes:
 
 Issue: The home page is not dynamically updating with new products or information.
-Resolution: Found the right way how to fix this in Stack Overflow.
+Resolution: Found the right way to fix this in Stack Overflow.
 
 3. Bag Item Limit vs. Checkout Item Limit Discrepancy
 
 Issue: Users can add more than two items in the checkout process, even though there is a limit of two items in the bag.
-Resolution: Fixed item limits throughout the shopping process.  Had to make that input will be able to increase only until 2 quantity after 2 quantity button is disable.
+Resolution: Fixed item limits throughout the shopping process.  Had to make that input will be able to increase only until 2 quantities after the 2 quantity button is disabled.
 
 3. Pagination Breaking Functionality of Sort By, Search, and Categories:
 
 Issue: Pagination is interfering with the sorting, searching, and filtering functionality.
-Resolution: Changed sort by, search and categories view logical that the sorting, searching, and filtering parameters are maintained across paginated pages. 
+Resolution: Changed sort by, search and categories view logically so that the sorting, searching, and filtering parameters are maintained across paginated pages. 
 
 4. 404 Page Not Working as Expected:
  
@@ -476,7 +465,7 @@ Resolution: Should remove 500 error after that 404 error start show up.
 5. Mobile Responsiveness Issues
 
 Issue: The website doesn't display properly on mobile devices, leading to a poor mobile user experience.
-Resolution: Implement responsive web design to ensure that  website adapts to different screen sizes and devices. Test the website on various mobile devices and browsers to identify and fix layout and usability issues.
+Resolution: Implement responsive web design to ensure that website adapts to different screen sizes and devices. Test the website on various mobile devices and browsers to identify and fix layout and usability issues.
 
 6. Users Can Add the Same Product Multiple Times to Wishlist
 

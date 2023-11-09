@@ -33,14 +33,11 @@ def add_to_wishlist(request, jewellery_id):
     """
     jewellery = get_object_or_404(Jewellery, pk=jewellery_id)
     wishlist, _ = WishList.objects.get_or_create(user=request.user)
-     
     if jewellery not in wishlist.jewelleries.all():
         wishlist.jewelleries.add(jewellery)
         messages.info(request, "A new jewellery was added to your wishlist")
     else:
         messages.info(request, "This jewellery is already in your wishlist")
-    # wishlist.jewelleries.add(jewellery)
-    # messages.info(request, "A new jewellery was added to your wishlist")
 
     return redirect(request.META.get('HTTP_REFERER'))
 

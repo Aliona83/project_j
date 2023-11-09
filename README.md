@@ -219,22 +219,18 @@ Super users have access to contact us messages sent by users of the platform. Th
     * Relationships:
        * OrderLineItems belong to Orders (many-to-one).
        * OrderLineItems refer to Products (many-to-one).
-  5. ProductReview:
-    * Relationships:
-       * ProductReviews are written by Users (many-to-one).
-       * ProductReviews are about Products (many-to-one).
-  6. Product(Jewellery):
+  5. Product(Jewellery):
     * Relationships:
        * Products belong to Categories (many-to-one).
        * Products can have ProductReviews (one-to-many).
        * Products can be included in OrderLineItems (many-to-many through Orders).
-  7. CustomJewelleryDesign:
+  6. CustomJewelleryDesign:
     * Relationships:
        * CustomJewelleryDesign requests are made by Users (many-to-one).
-  8. ContactUs:
+  7. ContactUs:
     * Relationships:
        * "Contact Us" messages can be sent by Users (many-to-one).
-  9. Category:
+  8. Category:
     * Relationships:
        * Products belong to Categories (many-to-one).
 
@@ -358,7 +354,7 @@ Super users have access to contact us messages sent by users of the platform. Th
   ![Toasts](/readmeImages/bag.png)
 
    * Almost all actions provide feedback to the user via the bootstrap toasts written to provide user feedback.
-   * Users shopping can view the current items within the bag and total cost. The discount is visible and the user is told how much they need to spend to get discount.
+   * Users shopping can view the current items within the bag and the total cost. The discount is visible and the user is told how much they need to spend to get a discount.
   2. 
   ![Shopping bag](/readmeImages/shoppingBag.png) 
    * The shopping bag page is fully responsive, showing users a picture of the item, name, price per unit, and total price.

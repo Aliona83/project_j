@@ -151,7 +151,7 @@ def submit_review(request, jewellery_id):
                     'HTTP_X_FORWARDED_FOR', request.META.get('REMOTE_ADDR'))
                 review.save()
                 messages.success(
-                    request, 'Thank you! Your review has been submitted.')    
+                    request, 'Thank you! Your review has been submitted.')
     return redirect(url)
 
 

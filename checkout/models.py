@@ -54,18 +54,14 @@ class Order(models.Model):
         Update grand total each time a line item is added,
         accounting for delivery costs.
         """
-        print("Calculating order total...")
         self.order_total = self.lineitems.aggregate(Sum('lineitem_total'))[
             'lineitem_total__sum'] or 0
-        print(f"Order Total: {self.order_total}")    
         if self.order_total > settings.DISCOUNT_PER_1000_EURO:
-            self.discount_apply = (self.order_total // 1000) * settings.DISCOUNT_PER_1000_EURO
+            self.discount_apply = (
+                self.order_total // 1000) * settings.DISCOUNT_PER_1000_EURO
         else:
             self.discount_apply = 0
-        print(f"Discount Applied: {self.discount_apply}")   
-        print(f"Grand Total: {self.grand_total}") 
         self.grand_total = self.order_total - self.discount_apply
-        print(f"Grand Total: {self.grand_total}")  # Debug statement
 
         self.save()
 
