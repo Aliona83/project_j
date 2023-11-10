@@ -339,9 +339,9 @@ Super users have access to contact us messages sent by users of the platform. Th
 
   7.
   ![Add to wishlist](/readmeImages/addWishlist.png)
-  * Users have the freedom to add any product they like to their wishlist. 
+  * Only login users have the freedom to add any product they like to their wishlist. 
   * Users can effortlessly manage their wishlist by adding new items and deleting ones they're no longer interested in.
-  * Once a user adds a product to their wishlist, the platform prevents thsem from adding the same product again.
+  * Once a user adds a product to their wishlist, the platform prevents them from adding the same product again.
   * Once a product is on the user's wishlist, the system prevents you from adding the same item again, ensuring a streamlined and clutter-free experience.
 
   ![Message](/readmeImages/reviewMessage.png)
