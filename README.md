@@ -1,5 +1,7 @@
 ![image from i am response](/readmeImages/iAmResponse.png)
 
+[Live project](https://jewelryshop-4c4e9a0b748f.herokuapp.com/)
+
 Elegancy jewellery is my fifth and final project, part of the Code Institute, Full Stack Web Developer Course.
 The purpose of this project was a build a full-stack site based around a business logic used to control a centrally-owned dataset. The technologies used for this project are HTML, CSS, JavaScript, Python, and Django. Stripe handles online test payments and Heroku Postgres as a relational database.
 
@@ -9,7 +11,7 @@ The purpose of this project was a build a full-stack site based around a busines
 ## [Ux](#ux)
    * [User Stories](#user-stories)
    * [Agile Methodologies](#agile-methodologies)
-   * [Database Diagram](#deployment)
+   * [Database Diagram](#database-diagram)
    * [Surface](#surface)
    * [Structure](#structure)
    * [Skeleton](#skeleton)
@@ -39,7 +41,6 @@ The purpose of this project was a build a full-stack site based around a busines
 
 The Jewelry Shop is  an E-commerce shop where users can find and buy jewellery also search for jewelleries by filtering different categories. They can also register by filling in their personal information on the website’s profile page. The application has a good appearance with an easy, clear and concise site navigation. web application built using Python, JavaScript, and Django, designed to provide a seamless and user-friendly platform for buying and selling exquisite jewelery pieces. Whether you are a jewelery enthusiast, a buyer looking for the perfect gift, or an artisan seeking to showcase your creations, this platform caters to all.
 
-[Live project](https://jewelryshop-4c4e9a0b748f.herokuapp.com/)
 
 # UX 
 
@@ -199,7 +200,7 @@ Super users have access to contact us messages sent by users of the platform. Th
 
   ## Database Diagram    
   [Link Data Shema](https://drawsql.app/teams/aliona/diagrams/jewellery-shop)
-   ![](/readmeImages/databaDiagram.png)   
+   ![](/readmeImages/diagram.png)   
   1. User:
     * Relationships:
         * Users can have a UserProfile (one-to-one).
@@ -253,11 +254,11 @@ Super users have access to contact us messages sent by users of the platform. Th
    * The login and logout buttons are conveniently located in the header, allowing users to securely access their accounts or log out when needed.
     ![Profile.Mobile](./readmeImages/profile.png)
 
-  4. Shop Now Button ![Shop Now](./readmeImages/shopNow.png)
+  4. Shop Now Button ![Shop Now](/readmeImages/shopNow.png)
    * A prominent "Shop Now" button is strategically placed to encourage users to start shopping immediately upon viting the site.
 
-  5. Features ![Features](./readmeImages/features.png)  
-   * The home page features a dedicated section showcasing the latest arrivals. Users can quickly see and explore the newest products store has to offer. Everytime user will be update home page up features "New Arrivals " will be change products.
+  5. Features ![Features](/readmeImages/features.png)  
+   * The home page features a dedicated section showcasing the latest arrivals.***Users can quickly see and explore the newest products store has to offer.Everytime user will be update home page up features "New Arrivals " will be change products.***
 
   6. Footer ![Footer](/readmeImages/footer.png)  
    * At the button of the page, a comprehensive footer contains various links, such as Facebook, LinkedIn, Twitter, GitHub, Google, and Instagram.
@@ -317,22 +318,22 @@ Super users have access to contact us messages sent by users of the platform. Th
   2.
   ![Product Details](/readmeImages/details_page.png)
    * Detailed specifications and additional information about the product are provided.
-   * Users can learn about materials, dimensions, care instructions, and more.
    * User can learn about products such as diamonds shape, diamonds carats and gold karats.
    * Users can easily add the product to their shopping cart for future purchase.
    * Users can create multiple wishlists and manage them easily. They can add or remove products from their wishlists with a simple click. Clicking on an item in the wishlist opens up product details for a comprehensive view.
+   * Users can leave reviews underneath each product. Rate with stars and leave feedback.
   3. 
   ![Sort By](/readmeImages/sortBy.png)
-   * The "Sort By" tool is a powerful feature that empowers users to customize how they view and interact with our extensive collection of jewelry products. It provides flexibility and control over the product listing, allowing users to tailor their browsing experience according to their needs and preferences.
+   * The "Sort By" tool is a powerful feature that empowers users to customize how they view and interact with our extensive collection of jewellery products. It provides flexibility and control over the product listing, allowing users to tailor their browsing experience according to their needs and preferences.
   4. 
   ![Pgination](/readmeImages/pagination.png)
-   * Pagination is a user interface feature that enhances the browsing experience for users when navigating through extensive lists of jewelry products. It ensures that the product listings remain organized and manageable, enabling users to explore our diverse collection with ease.
+   * Pagination is a user interface feature that enhances the browsing experience for users when navigating through extensive lists of jewellery products. It ensures that the product listings remain organized and manageable, enabling users to explore our diverse collection with ease.
   5. 
   ![Arrow Up](/readmeImages/arrowUp.png)
 
   6. 
   ![ Leave Rate](/readmeImages/rateForm.png)
-  * Users can rate products using a visual system of yellow stars. Each product will have a set of empty stars, and users can click on the stars to fill them, indicating their rating. The more stars filled, the higher the rating.
+  * Users can rate products using a visual system of yellow stars. Each product will have a set of empty stars, and users can click on them to fill them, indicating their rating. The more stars filled, the higher the rating.
   * Below the star rating, users can find a text box where they can type their detailed reviews. The review form encourages users to share their experiences, thoughts, and opinions about the product.
   * After submitting a review, users receive a thank-you message acknowledging their contribution. This message can include a note of appreciation for helping the community and other shoppers.
 
@@ -554,10 +555,11 @@ Super users have access to contact us messages sent by users of the platform. Th
   5. [Code Institute](https://codeinstitute.net/ie/)
      * Code institute for the amazing Tutors on the course. It was very good support.
      * For amazing help with the Boutique Ado walkthrough project.
-  6. Family. Who supported me all this time and believed in me even at the moment when I was losing faith in myself that I could get through this. 
+  6. Family. Who supported me all this time and believed in me even at the moment when I was losing faith in myself that I could get through this they still believe that I can do this. 
 
   7. [Google](https://www.google.com/)
   8. [Boostrap Documentations](https://getbootstrap.com/docs/5.0/getting-started/introduction/)
+  9.[Youtube](https://www.youtube.com/watch?v=iz1GB_q5txM) help me to create a review with stars.
      
 <br><hr>
 [🔼 Back to top](#table-of-contents)
